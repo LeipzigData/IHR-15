@@ -1,0 +1,468 @@
+@import "../bootstrap/bootstrap";
+@import "../bootstrap/bootstrap/theme";
+
+/**
+ * CSS Anpassungen, damit das Theme dem von leipzig.de aehnlicher ist
+ */
+ 
+/* Font */ 
+@font-face {
+    font-family: "PT_Sans";
+    src: url("../font/PT_Sans-Web-Regular.eot?") format("eot"), url("../font/PT_Sans.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT_Sans_Bold";
+    src: url("../font/PT_Sans-Web-Bold.eot?") format("eot"), url("../font/PT_Sans_Bold.woff") format("woff");
+} 
+
+/* Allgemeines */
+body {
+    background-color: white;
+    font-family: "PT_Sans", arial, sans-serif;
+    text-align: left;
+    color: #454545;
+}
+
+a {
+    color: #0856ad;
+    text-decoration: none;
+    cursor: pointer;
+
+	&.active {
+		color: #323232;
+		text-decoration: underline;
+	}
+	
+	&.underline {
+		text-decoration: underline;
+		line-height: 1.25em;
+	}
+	
+	&:link, &:visited {
+		color: #0856ad;
+	}
+	
+	&:focus {
+		/* outline erstmal auskommentiert, weils ziemlich nervig ist...
+		outline: 4px solid #bd3900;*/
+		outline: none;
+	}
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "PT_Sans_Bold", arial, sans-serif;
+}
+
+
+h2 a, h2 a:link, h2 a:visited {
+    color: black;
+}
+
+
+em, i {
+    font-style: italic;
+}
+
+.modul {
+    font-family: "PT_Sans_Bold", arial, sans-serif;
+    font-size: 1.688em;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    color: #8d949d;
+    text-transform: uppercase;
+    cursor: text;
+}
+
+#copyright {
+    float: left;
+    font-size: 0.75em;
+    line-height: 0.875em;
+}
+
+/*
+ * NAVBAR
+ */
+.navbar-nav > li > a:hover {
+	text-decoration: underline;
+}
+
+.footer-nav > li > a {
+	padding: 0px 15px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+	&:hover {
+		background: none;
+	}
+}
+ 
+#navbar {
+	border: 0px;
+	border-bottom: thin solid #e1e7ef;
+	border-radius: 0px;
+	
+	margin-top: 0px;
+	background: url("../img/bg_header.png") repeat 0 0 #edf0f3;
+	
+	ul { 
+		a {
+			font-size: 1em;
+			color: #5d606a;
+			display: block;		
+		}
+		
+		li {
+			//float: left;
+			//height: 1.125em;
+			//padding: 0 0.2em;
+		}
+	}
+}
+
+@media only screen and (min-width : $screen-sm-min) {
+	#navbar .secondary {
+		float: right !important;
+	}
+}
+
+/*
+ * FOOTER
+ */
+#footer {
+    padding-bottom: 5em;
+    background: url("../img/bg_footer.png") repeat 0 0 #edf0f3;
+    border-top: thin solid #e1e7ef;
+	
+	li a {
+		font-size: 0.75em;
+		line-height: 0.875em;
+		color: #323232;	
+	}
+}	
+
+/*
+ * MAIN CONTENT
+ */
+#content {
+	margin-top: 10px;
+}
+
+
+@media only screen and (min-width : $screen-md-min) {
+	.startseite {
+		margin-top: 40px; 
+		min-height: 480px; 
+		background-repeat: no-repeat; 
+		background-position: center top; 
+		background-image:url(../img/design/startseite.jpg);
+		
+		& > div {
+			padding-top: 18%;
+			
+			& > a {
+				font-size: 2.5em; 
+				color: #bd3900;
+			}
+			
+			&.hintergrundinformationen {
+				padding-top: 7% !important;
+			}
+		}
+	}
+}
+/*
+ * Tab Navigations
+ */
+ul.tabulator  {
+	list-style: outside none none;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	padding-left: 0px;
+	
+	& > li {
+		float: left;
+		margin-right: -4px;
+		position: relative;
+		display: block;	
+		
+		& > a {
+			color: #072c98;
+			margin-right: 2px;
+			line-height: 1.42857;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: bold;
+
+			position: relative;
+			display: block;
+			padding-left: 15px;	
+			padding-right: 55px;	
+			padding-top: 10px;	
+			padding-bottom: 10px;
+			
+			border-bottom: #d1d3d2 5px solid;
+			transition: 0.3s ease 0s, box-shadow 0.3s ease 0s;		
+		}
+		
+		&.active > a {
+			border-bottom: #072c98 5px solid;	
+		}
+		
+		&:not(.active) > a:hover {
+			color: #74777b;
+			border-bottom: #74777b 5px solid;
+		}
+	}
+	
+	&:after {
+		content: '';
+		display: block;
+		clear: both;	
+	}
+}
+
+/*
+ * Tabelle unter Diagramm
+ */
+#table {
+	th {
+		&:nth-child(1) {
+			display: none;
+		}
+		&:nth-child(2) {
+			text-align: right;
+		}
+	}
+	
+	td {
+		cursor: pointer;
+
+		&:nth-child(1) {
+			display: none;
+		}
+		&:nth-child(2) {
+			width: 15%;
+			text-align: right;
+			font-weight: bold;
+			font-size: 1.25em;
+		}
+		&:nth-child(3) {
+			width: 75%;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&:nth-child(4) {
+			width: 10%;
+		}
+	}
+}
+
+/* 
+ * Forum
+ */
+.forum_head {
+	background-color: #ebeff2;
+
+	th {
+		padding-top: 14px !important;
+		padding-bottom: 14px !important;
+		
+		&:nth-child(3) {
+			text-align: center;
+		}
+		&:nth-child(4) {
+			text-align: center;
+		}
+	}
+}
+.forum_content {
+	td {
+		&:nth-child(1) {
+			max-width: 68px;
+			width: 5%;
+		}
+		&:nth-child(2) {
+			width: 55%;
+			max-width: 55%;
+		}
+		&:nth-child(3) {
+			width: 10%;
+		}
+		&:nth-child(4) {
+			width: 10%;
+		}
+	}
+}
+
+.forum-row {
+	transition: 0.3s ease 0s, box-shadow 0.3s ease 0s;		
+	
+	&:hover {
+		background-color: #f9f9f9 !important;
+	}
+	&:nth-last-child(1) {
+		border-bottom: 1px solid #ddd;
+	}
+	
+	& > td {
+		&:nth-child(1) {
+			border-left: 1px solid #ddd;
+		}
+		&:nth-child(5) {
+			border-right: 1px solid #ddd;
+		}
+	}
+	
+	a {
+		font-weight: bold;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : $screen-sm-max) {
+	.forum_head > tr > th {
+		&:nth-child(3) {
+			display: none;
+		}
+		
+		&:nth-child(4) {
+			display: none;
+		}
+	}
+	
+	.forum-row > td {
+		&:nth-child(3) {
+			display: none;
+		}
+		
+		&:nth-child(4) {
+			display: none;
+		}
+	}
+}
+
+.post-container {
+	border: 1px solid #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	margin-bottom: 20px;
+	
+	ul.links > li > a {
+			@extend .btn;
+			@extend .btn-default;
+			@extend .btn-xs;
+	}
+}
+
+.forum-add-node > a,
+.forum-add-forum > a {
+	@extend .btn;
+	@extend .btn-primary;
+	
+	color: white;
+	margin-bottom: 15px;
+}
+
+/*
+ * Baum
+ */
+.tree {
+	i {
+		cursor: pointer;
+	}
+	
+	ul {
+		margin-left: 1em;
+		position: relative;
+		
+		&:before {
+			content: "";
+			display: block;
+			width: 0;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			border-left: 1px solid;		
+		}
+		
+		ul {
+			margin-left: .5em;
+		}
+	}
+	
+	li {
+		margin:0;
+		padding:0 1em;
+		line-height:2em;
+		color:#369;
+		font-weight:700;
+		position:relative;	
+		
+		a {
+			text-decoration: none;
+			color:#369;		
+		}
+	}
+}
+ 
+.tree, .tree ul {
+    margin:0;
+    padding:0;
+    list-style:none
+}
+
+.tree ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.tree ul li:last-child:before {
+    background:#fff;
+    height:auto;
+    top:1em;
+    bottom:0
+}
+.indicator {
+    margin-right:5px;
+}
+
+.tree li button, .tree li button:active, .tree li button:focus {
+    text-decoration: none;
+    color:#369;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}
+
+/*
+ * Suche
+ */
+.ui-autocomplete
+ {
+     max-width: 450px !important;
+	 
+	 li.ui-menu-item {
+		font-size: 11px;
+	 }
+ }

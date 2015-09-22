@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+
+<http://haushaltsrechner.leipzig.de/Data/Config/> a owl:Ontology ;
+   rdfs:label "RDF Cube Haushaltsrechner - Konfigurationsdatei"@de ;
+   rdfs:comment "gibt an, welche Cubes zu welchen Jahren gehören" ;
+   dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" ;
+   dct:contributor "Hans-Gert Gräbe" .
+
+<http://haushaltsrechner.leipzig.de/Data/Config/C2014> a ihr:ConfigEntry ;
+    ihr:jahr "2014" ;
+    ihr:Cube <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan14/> ;
+    ihr:File "EH_15G_Plan14.ttl" .
+
+<http://haushaltsrechner.leipzig.de/Data/Config/C2015> a ihr:ConfigEntry ;
+    ihr:jahr "2015" ;
+    ihr:Cube <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan15/>;
+    ihr:File "EH_15G_Plan15.ttl" .
+
+<http://haushaltsrechner.leipzig.de/Data/Config/C2016> a ihr:ConfigEntry ;
+    ihr:jahr "2016" ;
+    ihr:Cube <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan16/>;
+    ihr:File "EH_15G_Plan16.ttl" .
+
+<http://haushaltsrechner.leipzig.de/Data/Config/C2017> a ihr:ConfigEntry ;
+    ihr:jahr "2017" ;
+    ihr:Cube <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan17/>;
+    ihr:File "EH_15G_Plan17.ttl" .
+
+<http://haushaltsrechner.leipzig.de/Data/Config/C2018> a ihr:ConfigEntry ;
+    ihr:jahr "2018" ;
+    ihr:Cube <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan18/>;
+    ihr:File "EH_15G_Plan18.ttl" .
+
+<http://haushaltsrechner.leipzig.de/Data/Config/C2019> a ihr:ConfigEntry ;
+    ihr:jahr "2019" ;
+    ihr:Cube <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan19/>;
+    ihr:File "EH_15G_Plan19.ttl" .
+

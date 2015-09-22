@@ -1,0 +1,506 @@
+\documentclass[a4paper,11pt,twoside]{article}
+% Encoding lokal, da manche Editoren danach schauen
+\usepackage[utf8]{inputenc} 
+\usepackage{ihr-15}
+
+\title{Entwurfsbeschreibung „Interaktiver Haushaltsplanrechner“}
+ 
+\date{Version vom 10. September 2015}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\seitezwei
+\newpage
+
+\section{Einführung (noch zu kürzen)}
+Im Rahmen der Beteiligungsprozesse wurde durch die Leipziger Agenda 21 Gruppe
+in Zusammenarbeit mit der Stadtverwaltung über mehrere Jahre (seit 2007) ein
+Haushaltsrechner angeboten, über den Bürgerinnen und Bürger im Zuge der
+Verabschiedung des jeweiligen Haushalts durch den Stadtrat interaktiv
+Vorschläge zur Änderung der Haushaltsplanung einbringen konnten. Diese
+Möglichkeit wurde zuletzt im Jahr 2012 für den Haushalt 2013 in überarbeiteter
+Form angeboten. Für den Haushalt 2014 wurde diese Beteiligungsoption
+aufgegeben. Ziel des Projekts „Interaktiver Haushaltsplanrechner für die Stadt
+Leipzig“ (IHR) ist die Neugestaltung des Haushaltsplanrechners der Stadt
+Leipzig, aufbauend auf den Anforderungsanalysen der Gruppe „haushalt-14“.
+
+Der neue Haushaltsrechner ermöglicht eine übersichtliche Darstellung des
+Ergebnishaushalts eines Jahres bis hin zur Ebene der 283 Schlüsselprodukte
+(Ebene~4 der Haushaltssystematik der Stadt Leipzig) und stellt ein
+Diskussionsforum mit Vorschlagsfunktion für die partizipative Haushaltsdebatte
+zur Verfügung. 
+
+Die Plattform basiert auf dem weit verbreiteten CMS Drupal und setzt
+konsequent auf semantische Technologien. Die Basisdaten des Prototyps wurden
+aus Daten extrahiert, welche die Kämmerei der Stadt Leipzig für diese Zwecke
+zur Verfügung gestellt hatte, und in eine RDF Data Cube Serie transformiert,
+die innerhalb der Plattform über einen RDF Data Store ausgeliefert wird.  
+
+Als RDF Data Store kommt eine Instanz von Virtuoso zum Einsatz, deren SPARQL
+Endpunkt öffentlich zugänglich ist und damit das Potenzial bietet, die
+Plattform in einen größeren Open Data Verbund zu integrieren. 
+
+\section{Grundsätzliche Struktur- und Entwurfsprinzipien}
+
+\subsection{Barrierefreiheit}
+Die gesamte Website soll gemäß BITV 2.0 \cite{bitv} barrierefrei gestaltet
+sein. Bei der Wahl der Farben muss also auf die üblichen Farbschwächen und
+Farbenblindheit geachtet werden. Beim Aufbau der Website sollte darauf
+geachtet werden, dass Programme und Techniken, die Websiten für blinde
+Personen aufbereiten, möglichst wenig behindert werden. Dies ermöglicht die
+Partizipation für alle Bürger/innen und wirkt nicht ausgrenzend, was für
+öffentliche Institutionen und für einen demokratischen Prozess notwendig ist.
+
+\subsection{MVC-Architekturmodell}
+Da die Kernfunktion des Projekts auf einer festen und einheitlichen Basis von
+Datensätzen basiert, haben wir uns an das MVC-Architekturmodell \cite{MVC}
+gehalten.  Eine typische HTTP-Anfrage wird dabei zunächst aufbereitet und an
+die Vermittlungsschicht („Controler“) weitergereicht, welche den Auftrag für
+die Verarbeitung in der Modellschicht vorbereitet. Die dort zusammengestellte
+inhaltliche Antwort wird an den „View“ weitergereicht, um die Daten
+entsprechend zu visualisieren (z.\,B.\ in einem Kreisdiagramm).
+
+Zur Verarbeitung der Anfrage in der Modellschicht wird auf die darunter
+liegende Datenschicht zugegriffen, die in unserem Fall aus einem RDF Data
+Store für die Haushaltsdaten sowie einer MySQL Datenbank für die
+Drupal-Funktionalitäten gebildet wird. 
+
+Da in Drupal und unserer Plattform insgesamt intensiv Javascript-Funktionen
+einsetzt werden, die auf dem DOM-Baum der Ein- und Ausgabe operieren, wird das
+MVC-Muster jedoch oft nicht strikt eingehalten. Eine zentrale Aufgabe des
+„Views“ ist zum Beispiel auch die Verwaltung von Formularen und Dokumenten zur
+allgemeinen und übersichtlichen Informationspräsentation für die Benutzer.
+
+\subsection{PAC-Architekturmodell}
+Die Verwaltung des Forums und der Vorschläge wird komplett über Drupal-interne
+Funktionen abgewickelt. Dabei kommt das PAC-Architekturmodell \cite{PAC} 
+(„Presentation-Abstraction-Control“) als ein spezifisches MVC-Modell zum
+Einsatz, in dem die Informationsverteilung über die Controler auf spezifische
+Weise organisiert ist -- Controler sind verschiedenen
+Datenabstraktionskonzepten zugeordnet, die als „Agenten“ bezeichnet werden.
+
+\subsection{Semantische Technologien}
+Der Haushaltsrechner verwendet auf der Datenebene die semantische Technologie
+RDF \cite{RDF} in der Form von RDF Data Cubes \cite{RDFCube}. Das bedeutet,
+dass die in unserer Datenbank dargestellten Ressourcen eindeutig bezeichnete
+Dinge der Welt sind, die durch Darstellung in Tripel in eine Relation mit
+anderen Ressourcen gebracht werden.
+
+\section{Frontendgestaltung -- Informationsteil}
+
+\subsection{Allgemeiner Aufbau}
+
+Zur Umsetzung des MVC-Architekturmodells muss im Informationsteil der
+Plattform intensiv mit der RDF Datenbasis über deren SPARQL Endpunkt
+kommuniziert werden. Dazu wurde die \emph{BorderCloud SPARQL 1.1 PHP
+  Bibliothek} \cite{BorderCloud} eingesetzt.
+
+Sämtlicher im Laufe des Projekts entstandener Code einschließlich der zur
+Verbindung mit dem SPARQL-Endpunkt benötigten BorderCloud Bibliothek ist im
+\emph{Theme}-Ordner \texttt{data} abgelegt.
+
+\subsubsection*{Abstraktionsebenen}
+Die Präsentation der Daten erfolgt über verschiedene Abstraktionsebenen. Die
+Abstraktionsebenen haben den Zweck, die Menge an Daten übersichtlich zu
+präsentieren und ein intuitives Verständnis sowohl der Größenverhältnisse als
+auch der Verteilung der Ausgaben und Einnahmen zu gewinnen. Die
+Abstraktionsebenen orientieren sich hierbei an den Hierarchien aus dem
+Haushaltsplan der Stadt Leipzig. Hierbei sollten möglichst alle
+Hierarchieebenen bis zum kleinsten Element verfügbar sein.
+
+\subsubsection*{Designkonzept}
+Das Aussehen der Website des interaktiven Haushaltsrechners der Stadt Leipzig
+orientiert sich stark am Look and Feel des Bundeshaushaltsrechners. Wie beim
+Bundeshaushaltsrechner werden die Daten in Form von Kreisdiagrammen
+angezeigt. Zusätzlich werden Produktbereiche, die kleine Beträge aufweisen (im
+Diagramm weniger als 2\,\%) zu einem Segment \textit{Sonstiges}
+zusammengefasst.  Dieses soll in einer Tabelle unterhalb des Diagramms
+aufgeschlüsselt dargestellt werden. Grundlage für die Implementation des
+Designs bildet das \textit{Bootstrap}-Framework \cite{Bootstrap} bzw.\ dessen
+Portierung für Drupal~7.
+
+\subsection{Controller-Struktur}
+
+Controller dienen dazu, SPARQL-Anfragen an das Model zu übergeben, damit
+das Model die Daten aus dem Datacube auslesen kann. Dabei werden entweder die
+Ausgaben oder die Einnahmen der Stadt ausgelesen, je nachdem wie der Modus
+gesetzt ist. Zudem parst der Controller noch die richtigen Namen der
+Kostenbeschreibung hinzu.
+
+\subsubsection{EndpointHandler (= Model)}
+Im EndpointHandler werden die Klarnamen der Produktnummer hinzugefügt, zudem
+wird die URI so gegekürzt, dass sie nur die Beschreibung anzeigt. Dies
+geschieht in der Funktion \texttt{sparqling}. Dabei werden die Daten in
+JSON-Format geparst. Dieses Format wird für das Diagramm benötigt. Im
+Konstruktor der Klasse wird der Endpunkt zu dem Datacube gelegt, welche über
+die Variable endpoint festgelegt wird.
+
+\subsubsection{QueryWriter (= Controller)}
+In der Variable \texttt{prefix} werden alle benötigten Präfixe für die Abfrage
+gespeichert. Der Präfix \texttt{xsd} wird für die Typkonvertierung benötigt,
+während \texttt{qb} für die Zeitangaben im Cube benötigt wird.
+
+In der Variablen \texttt{ihr\_uri} wird die URI des Datacube gespeichert. Wird
+der Name des Datacube geändert, so muss auch diese Variablen geändert
+werden. Dabei bleibt \texttt{PREFIX ihr:} immer gleich, da ansonsten Fehler in
+der Abfrage entstehen. 
+
+Das Array \texttt{attribut\_array} zeigt alle Kategorien des Datacube in
+chronologischer Reihenfolge an. Diese werden für die Erstellung der Abfrage
+benutzt. 
+
+Das Array \texttt{amount} wird für die Unterscheidung von Ausgaben und
+Eingaben benutzt. Die Variable \texttt{choose\_amount} setzt den Modus, ob
+Einnahmen oder Ausgaben genutzt werden. Diese Variable wird über die Funktion
+\texttt{setAmount} entweder auf 0 (Einnahmen) oder 1 (Ausgaben) gesetzt.  
+
+Die Funktion \texttt{firstRing(\$year = null} erstellt den ersten Ring, den
+der Nutzer sieht, dabei ist das Jahr optional. 
+
+Die Funktion \texttt{sparqlTransformation(array category, year)} erstellt eine
+SPARQL-An"|frage dynamisch auf Grundlage des Pfades, welchen der Nutzer
+ausgewählt hat.
+
+\texttt{searchLabel(\$term)} sucht in der Datenbasis nach der Nutzereingabe.
+Dabei werden nach Übereinstimmungen gesucht, somit findet er bei der Eingabe
+„Wesen“ auch „Gesundheitswesen“. Es werden dabei alle Nummer und das Label
+zurückgegeben. Dabei wird die Funktion durch \texttt{searchNumber(\$term)}
+unterstützt, welche noch alle Eingaben und Ausgaben gesucht wird.
+
+\texttt{getPath(\$number)} gibt den Pfad zur einer bestimmten Produktnummer
+zurück, welche für die Weiterleitung auf das Diagramm.  Die Funktion
+\texttt{setFrom(\$year)} ändert die From-Klausel für die Anfrage ab.
+\texttt{getFrom()} gibt die From-Klauseln zurück.
+
+\subsection{Suchfunktion}
+Die Suchfunktion ermöglicht die Suche von Labels etc.\ in dem RDF-Graphen.  Es
+nutzt JS UI für das Autocomplete und printed in php größtenteils JS-Code,
+welcher von php-RDF-Anfragen die benötigten Informationen erhält und daraus
+eine Tabelle erstellt.  Unter
+\texttt{Drupal/themes/[Themename]/templates/page.tpl.php} wird eine Form
+eingefügt, welche zur Suche verlinkt ist, damit sie Drupal oben als Suchleiste
+anzeigt.
+
+Die Suche selbst ist als normale Seite einzufügen. Als Textformat muss „PHP
+Code“ gewählt werden.
+
+\subsection{Diagramme}
+
+Die in der Plattform enthaltenen Kreisdiagramme sind mit der
+Javascript-Bibliothek D3 in der Version 3.5.6 \cite{D3} erstellt.  Kenntnisse
+im Umgang mit D3 sind erforderlich, um die Arbeitsweise der Datendarstellung
+zu verstehen.
+
+\subsubsection{Grundlegendes}
+
+Der Quelltext jedes Diagramms besteht aus drei Teilen: dem HTML-Teil am
+Anfang, der die Verankerung in der Seite festlegt, dem JavaScript-Teil für das
+Einnahmendiagramm und dem JavaScript-Teil für das Ausgabendiagramm. Dabei
+handelt es sich bei dem Ausgabendiagramm um eine fast exakte Kopie des
+Einnahmendiagramms, lediglich mit verschiedener Variablen- und
+Funktionenbezeichnern.  Deshalb wird im folgenden nur auf das
+Einnahmendiagramm im Detail eingegangen. Im HTML-Teil werden die Tabs zum
+Umschalten zwischen den verschiedenen Ansichten (Einnahmen, Ausgaben etc.)
+angelegt. Weiterhin werden hier verschiedene Behälter für die Diagramme und
+dem Infopanel neben den Tabs festgelegt.
+
+\subsection{Datenstruktur}
+Die Daten für die Diagramme und Tabellen sind in Levels/Layers organisiert.
+Entsprechend sind Arrays innerhalb des Quelltextes angelegt. So gehören zum
+Beispiel die Daten des ersten Diagrammrings zum Layer1, die Daten des zweiten
+zu Layer2 usw.
+
+Das Datenobjekt, in dem die vom Diagramm darzustellenden Informationen
+gespeichert sind, heißt \emph{dataset}.  Wichtige Arrays und Datenobjekte
+sind:
+\begin{itemize}
+\item \texttt{dataset} speichert die Daten des Diagramms in der Form
+  \begin{quote}\tt
+    \{ layer1: [[ProdNr11, Betrag11, ausgeschriebener Name11] {\ldots}\\{}
+      [P1n,B1n,aN1n]]\\ layer2: [[P21,B21,aN21] {\ldots} [P2m, B2m, aN2m]]
+       {\ldots} \}
+  \end{quote}
+\item \texttt{selectedArr} 
+  \begin{itemize}
+  \item speichert die Produktnummern ab, die durch einen Klick vom User
+    ausgewählt wurden, um deren Unterkategorien einzusehen
+  \item hält sich an die Levelstruktur, ist aber mit 0 beginnend
+  \item Form: \texttt{[ProdNr1, ProdNr2, ProdNr3 {\ldots}]}
+  \end{itemize}
+\item \texttt{pathArr} 
+  \begin{itemize}
+  \item enthält sämtliche im Diagramm angezeigte Diagramm-Stücke als mit D3
+    ausgewählte Path-Objekte 
+  \item hält sich an die Levelstrucktur, ist aber mit 0 beginnend
+  \item Form: \texttt{[[Path-Objekt11, PO12 {\ldots}, PO1n], [PO21,PO22,
+        {\ldots},PO2m] {\ldots} ]}
+  \end{itemize}
+\item \texttt{selectedIndexArr}
+  \begin{itemize}
+  \item ähnlich zu texttt{selectedArr}, enthält statt Produktnummern aber
+    Path-Objekte
+  \item Form: \texttt{[path-Objekt1, PO2, PO3 {\ldots}]}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Wichtige Funktionen}
+\begin{itemize}
+\item \texttt{clickFunction(d,i,j,k)} 
+
+  Hierbei handelt es sich um die Hauptfunktion der Diagramme. Sie baut neue
+  Diagrammringe auf und auch überflüssige Datenstrukturen wieder ab und ist
+  oft jeweils an einen bestimmten Ring gebunden, d.\,h.\ ein Diagrammring baut
+  den nächsten auf und alle folgenden ab.
+  \begin{itemize}
+  \item $d$ (optional) Datensatz des vorhergehenden Rings.
+  \item $i$ (pflicht) Index des aufgerufen Datenwertes.
+  \item $j$ (pflicht) Index des aufgerufen Datensatzes.
+  \item $k$ (abhängig) Wenn dieser Parameter gesetzt ist, wird davon
+    ausgegangen, dass diese Methode nicht von einem Diagrammring ausgeführt
+    wird. Sie muss deshalb eine Produktnummer enthalten.
+  \end{itemize}
+\item \texttt{cutOffArray(i)} 
+
+  Diese Funktion baut überflüssige Datenstrukturen ab und wird in der Regel
+  von der \texttt{clickFunction} aufgerufen.
+  \begin{itemize}
+  \item $i$ gibt an, bis zu welcher Stufe Datenstrukturen abgebaut werden.
+  \end{itemize}
+\item \texttt{urlPathDia} 
+
+  Diese Funktion wird stets beim Aufruf der Seite aufgerufen.  Sie prüft, ob
+  in der URL Parameter mitgegeben wurden, und baut diesen Parametern
+  entsprechend die Diagramme auf.
+\end{itemize}
+Alle weiteren Funktionen werden nur unterstützend hinzugezogen und dienen
+vorrangig der Realisierung von Darstellungsdetails.
+
+\subsubsection{Generelles Vorgehen}
+Beim Aufruf der Seite wird zunächst eine Anfrage mit Hilfe von Ajax gestartet,
+deren Antwort die Daten für das erste Level enthält. Diese werden mit Hilfe
+von verschieden Funktionen in die entsprechenden Arrays und Variablen
+eingespeichert. 
+
+Dann wird mit Hilfe von D3 der erste Diagrammring erstellt und mit
+Event-Listener-Funktio"|nen versehen (unter anderem die
+\texttt{clickFunction}).  Ab da werden weitere Ringe nur über die
+\texttt{clickFunktion} aufgebaut, welche weitere Daten über Ajax-Anfragen
+erhält. Für die Erstellung der Ajax-Anfragen werden die in
+\texttt{selectedArr} gespeicherten Daten ausgelesen und mit der Auswahl des
+Users (über die Parameter $i$ und $j$ ermittelbar) kombiniert, um
+festzustellen, welche Daten aus der Datenbasis ausgelesen werden müssen. Die
+Antwort auf die Ajax-Anfrage muss eine bestimmte Form haben, um lesbar zu
+sein:
+\begin{quote}  \tt
+  '[[KopfzeileName1, KopfzeileName2, KopfzeileName2]\\{}
+    [{\dq}Abteilungsnummer1{\dq}, Betrag1, {\dq}Abteilung1{\dq}]\\{}
+    [{\dq}An2{\dq},Betrag2,{\dq}B2{\dq}]{\ldots}]'
+\end{quote}
+Es handelt sich dabei um einen einzigen String, in dem nur eine Arraystruktur
+hineingeschrieben wurde.
+
+\subsubsection{Modifikationsvariablen}
+\begin{itemize}
+\item \texttt{SIZE} legt die Größe des Diagramms fest.
+\item \texttt{limit} legt die Anzahl der Diagrammringe fest.
+\item \texttt{DiaURL} legt fest, von welcher externen Datei das Diagramm seine
+  Daten bezieht.
+\item \texttt{steckURL} gibt an, von welcher Datei das Diagramm
+  Produktsteckbriefe beziehen kann.
+\item \texttt{colorRing}: In diesem Array sind die vom Diagramm verwendeten Farben als
+  Hexadezimalzahlen gespeichert.
+\item \texttt{grayFac} bestimmt, wie stark die Farbe eines nicht ausgewählten Segments
+  einem Grauton angenähert wird.
+\item \texttt{whiteFac} bestimmt, wie stark die Farbe eines nicht ausgewählten
+  Segments der Farbe weiß angenähert wird.
+\end{itemize}    
+
+\subsubsection{Diagramm}
+Neben den Tabellen Id's, die im oben genannten HTML-Teil vergeben werden,
+benötigt man nur die beiden Funktionen \texttt{drawTable(array,theTable)} und
+\texttt{clearTable(theTable)} (leicht umbenannt für das Ausgabendiagramm) zum
+Aufbau der Tabelle. \texttt{drawtable} übernimmt einen Array mit den zu
+zeichnenden Daten und erstellt daraus in dem angegebenen html-table Container
+die Tabelle. \texttt{clearTable} leert den angegebenen Container und sollte
+vor \texttt{drawTable} genutzt werden.
+
+\section{Frontendgestaltung -- Partizipationspaket}
+
+\subsection{Forum}
+Die erste zentrale Komponente der partizipativen Ebene des „Interaktiven
+Haushaltsrechners“ ist das Forum, welches sowohl für allgemeine Diskussionen,
+als auch zur Ausarbeitung oder Diskussion von Vorschlägen verwendet werden
+kann. 
+
+Das Forum wird durch die Drupal-eigenen Module \textit{Forum} und
+\textit{Advanced Forum} implementiert. Die Nutzerverwaltung wird so von Drupal
+selbst übernommen und muss nicht extern verwaltet werden. Weiterhin ist es so
+einfacher für Informationsebene und Partizipationsebene ein einheitliches
+Design zu erstellen, da beiden dasselbe Drupal Theme zu Grunde gelegt werden
+kann.
+
+Es ist wie folgt zu strukturieren:
+\begin{itemize}
+\item Das Forum muss moderiert sein.
+
+  Hierzu werden verschiedene Userrollen im Forum benötigt. Diese werden direkt
+  von Drupal verwaltet und mit entsprechenenden Rechten versehen.
+
+\item Es gibt bei der Registrierung einen Klarnamenzwang. Dieser Klarname wird
+  nicht öffentlich angezeigt.
+\item Es existiert ein Melde-Button zum Melden von Beiträgen. 
+
+  Der Melde-Button wird durch die Drupal-Module \textit{Flag} und \textit{Flag
+    Abuse} verwirklicht.
+
+\item Diskussionen zu einem konkreten Vorschlag finden sowohl unter dem
+  Vorschlag, als auch im Forum statt. Ein Kommentar unter dem Vorschlag wird
+  jedoch im Forum angezeigt und umgekehrt.
+\item Die Vorschläge und Kommentare sollen bewertet werden können. Dazu kommt
+  das Drupal-Modul \textit{Rate} zum Einsatz.
+\item Der Aufbau vom Forum sollte sich an folgenden Bereichen orientieren:
+  \begin{itemize}
+  \item[1.] Allgemeine Diskussionen
+  \item[2.] Vorschläge (Unterteilung in die Kategorien, verknüpft mit den
+    Vorschlägen, Diskussion / Fragen im Forum, liken etc beim Vorschlag)
+  \item[3.] Konkrete Themen zum Diskutieren (z.B.\ „Wie gehen wir mit
+    Investitionen in Leipzig in Zukunft um?“)
+  \end{itemize}
+\end{itemize}
+
+\subsection{Vorschläge}
+Die zweite zentrale Komponente des Partizipationspakets sollte sowohl bei der
+jeweiligen Kategorie im Informationsbereich zur Verfügung stehen, als auch in
+einem extra Formular. Nutzer sollen so in der Lage sein, Vorschläge zur
+Verbesserung des städtischen Haushalts einreichen zu können. Dazu soll es in
+der Informationsebene zu jeder Hierarchieebene des Haushalts einen Button geben
+der direkt auf ein Formular verweist über das ein Thread im Forum erstellt
+wird. Jeder Vorschlag wird in eine Kategorie eingeteilt, die der höchsten
+Abstraktionsebene entspricht. Die Kategorien, welche keine Möglichkeit zur
+Mitbestimmung liefern, sollten auch nicht auswählbar sein. Es sollte die
+Möglichkeit bestehen, Vorschläge zu bewerten und zu kommentieren. Die
+Vorschläge und die Diskussion dazu sind mit dem Forum verbunden.
+
+\section{Datenmodell}
+Da die Datenkonvertierung bereits in der Prototyp-Phase abgeschlossen wurde,
+gibt es beim Datenmodell keinerlei Änderungen gegenüber dem Prototyp. Die vom
+Auftraggeber zur Ver"|fügung gestellte Datengrundlage für unser Projekt besteht
+aus mehreren Excel-Dateien, die per dynamischer Listenausgabe aus SAP
+exportierte relevante Daten (derzeit noch aus dem Jahr 2014) enthalten. Im
+Vorprojekt wurde diese Datenbasis bereits schrittweise in das
+RDF-Data-Cube-Format übertragen und in einen RDF Data Store eingespielt, der
+über seinen SPARQL-Endpunkt
+\begin{center}
+  \url{http://pcai042.informatik.uni-leipzig.de:1524/sparql}
+\end{center}
+erreichbar ist. In der Entwurfsbeshreibung des Prototyps gibt es eine genauere
+Darstellung des Datenmodells.
+
+\section{Dokumentationskonzept}
+
+\subsection{Interne Dokumentation}
+Als internes Dokumentationsformat wird einerseits für in PHP programmierte
+Elemente das Software-Dokumentationswerkzeug \emph{PHPDoc} verwendet. Diese
+Dokumentation kann mit entsprechenden Tools wie z.\,B.\ \emph{phpDocumentor}
+aus dem Quelltext generiert werden. Andererseits wird für die Dokumentation
+des Diagramm-Quellcodes \emph{JSDoc} verwendet.
+
+\section{Glossar}
+
+\paragraph{Drupal.} 
+Drupal~7 ist ein freies (GPL) und kostenloses Content-Management-Framework auf
+der Basis von PHP. Es besteht aus einem Core, der aus anderen
+Content-Management-Systemen bekannte Funktionen liefert, und Modulen, mit
+denen man zusätzliche Funktionen implementieren kann.
+
+\paragraph{Forum.} 
+Ein Internetforum dient als virtueller Platz zum Austausch von Gedanken,
+Meinungen und Erfahrungen. Ein großer Vorteil dieser Kommunikationsform ist
+deren Asynchronität, d.\,h.\ dass Diskussionsteilnehmern ermöglicht wird,
+zeitversetzt zu antworten. Üblicherweise werden zur Unterhaltung sogenannte
+\textit{Threads} erstellt (= Themen), in denen einzelne Diskussionsstränge zu
+einem übergeordnetem Thema gebündelt sind.
+
+\paragraph{Model-View-Controller.} 
+Als eines der beliebtesten Architekturmodelle der objektorientierten
+Programmierung ermöglicht das MVC-Muster \cite{MVC} eine klare Rollenteilung
+im Programm in die drei Einheiten Datenmodell (\textit{model}), Präsentation
+(\textit{view}) und Programmsteuerung (\textit{controller}). Der „Observer“
+(controller) nimmt hierbei eine zentrale Rolle ein -- er ermöglicht es, auf
+Veränderungen in den zu beobachten Objekten zu reagieren. Diese werden durch
+das „Model“ und den „View“ beschrieben.
+
+Das „Model“ bietet Zugang zu zentralen Daten des Programms und Funktionen, um
+diese abzurufen oder zu verändern. Diese Daten werden dann in dieser
+Architektur vom „View“ dem Benutzer zugänglich gemacht. Auf Benutzereingaben
+reagiert von hier an wieder der „Observer“ und kann so die Daten abhängig vom
+Programmverlauf ändern.
+
+\paragraph{Presentation-Abstraction-Control.} 
+ist ein von Drupal verwendetes Architekturmodell \cite{PAC}, das MVC ähnelt.
+Es teilt ein System in die Komponenten „Presentation“, „Abstraction“ und
+„Control“ ein.  „Presentation“ ist dabei für die Darstellung der Daten
+zuständig, „Abstraction“ für die Verwaltung der Daten und „Control“ für
+Flusskontrolle und Kommunikation zwischen den beiden anderen Komponenten.
+
+\paragraph{RDF.}	
+Das Resource Description Framework \cite{RDF} als Konzept erweitert die
+Möglichkeit des Webs, Inhalte miteinander zu verbinden. Hierbei wird versucht,
+nach semantischen Zusammenhängen zu ordnen. Die Aussagen die die eigentlichen
+Daten in RDF sind, betreffen sogenannte Ressourcen. Diese Ressourcen sind
+eindeutig bezeichnete Dinge der Welt, die durch Tripel oder Graphen in eine
+Relation mit anderen Ressourcen gebracht werden. Nicht nur durch das mit RDF
+im Zusammenhang benutzten Vokabular ähnelt dieses Modell stark an die
+klassischen Modelle wie UML-Diagramme oder Entitiy-Relationship-Modelle, auch
+die Modellierungsweisen sind stark miteinander verknüpft, wodurch RDF als
+Grundansatz des Semantischen Webs an Bedeutung gewinnt.
+
+\paragraph{RDF Data Cube.} 
+RDF Data Cube \cite{RDFCube} ist ein spezielles Vokabular zur Beschreibung von
+Daten im RDF-Standard. Durch das Bereitstellen von einer beliebigen Anzahl von
+Dimensionen ist das Format vor allem zur Beschreibung von statistischen Daten
+oder Messdaten geeignet, die nach einem festen Schema mehrfach erhoben werden.
+
+\paragraph{SPARQL.} 
+SPARQL als rekursives Akronym für \textit{SPARQL Protocol And RDF Query
+  Language}) \cite{SPARQL} ist eine Abfragesprache für RDF, d.\,h.\ eine
+semantische Abfragesprache für Datenbanken, mit der man im RDF-Format
+gespeicherte Daten aufrufen, durchsuchen und manipulieren kann.
+
+\paragraph{Triplestore.}	
+Ein Triplestore ist eine spezielle Datenbank zur Speicherung und Abfrage von
+Tripeln durch semantische Abfragen. Ein Daten-Tripel besteht aus Subjekt,
+Prädikat und Objekt, z.\,B.\ „Franz kennt Fritz“.
+
+\paragraph{BorderClound SPARQL 1.1 PHP Bibliothek.} 
+BorderCloud \cite{BorderCloud} ist eine Programmierbibliothek für PHP, die
+Funktionen zum Senden von Anfragen und Verwalten von Antworten an einen
+Tripelstore-Endpunkt zur Verfügung stellt.
+
+\paragraph{Bootstrap-Framework.} 
+Bootstrap \cite{Bootstrap} ist ein Open-Source Framework für HTML, CSS und
+JavaScript zur Erstellung von Webseiten.
+
+
+\begin{thebibliography}{xxx}\raggedright
+\bibitem{bitv} BITV 2.0.  \url{https://github.com/BorderCloud/SPARQL}.
+\bibitem{Bootstrap} Bootstrap-Framework.  \url{http://getbootstrap.com/},
+  \url{https://www.drupal.org/project/bootstrap}. 
+\bibitem{BorderCloud} BorderCloud SPARQL 1.1 PHP Bibliothek.
+  \url{https://github.com/BorderCloud/SPARQL}.
+\bibitem{D3} Javascript-Bibliothek D3. \url{http://d3js.org/}.
+\bibitem{Drupal} Drupal 7. \url{http://de.wikipedia.org/wiki/Drupal}.
+\bibitem{MVC} MVC Konzept.
+  \url{http://de.wikipedia.org/wiki/Model_View_Controller}.
+\bibitem{PAC} PAC Konzept.
+  \url{http://de.wikipedia.org/wiki/Presentation-abstraction-control}.
+\bibitem{RDF} RDF.
+  \url{http://en.wikipedia.org/wiki/Resource_Description_Framework}.
+\bibitem{RDFCube} RDF Data Cube.  \url{http://www.w3.org/TR/vocab-data-cube/}.
+\bibitem{SPARQL} SPARQL. \url{http://en.wikipedia.org/wiki/SPARQL}.
+
+\end{thebibliography}
+
+\end{document}

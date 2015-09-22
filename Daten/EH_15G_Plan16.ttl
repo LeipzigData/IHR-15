@@ -1,0 +1,3842 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+@prefix ihrdata: <http://haushaltsrechner.leipzig.de/Data/Observation/> .
+@prefix ihrds: <http://haushaltsrechner.leipzig.de/Data/Dataset/> .
+
+<http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan16/>
+    dct:contributor "Hans-Gert Gräbe" ;
+    dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" ;
+    a owl:Ontology ;
+    rdfs:comment "Quelle: HH2015-2/EH_15G_Plan16.csv" ;
+    rdfs:label "RDF Cube Haushaltsdaten 2015. Ergebnishaushalt 2016."@de .
+
+#
+# DataSet
+# 
+ihrds:EH_15G_Plan16 a qb:DataSet ;
+        rdfs:label "Haushaltsdaten 2015 der Stadt Leipzig. Ergebnishaushalt Planansatz 2016."@de ;
+        rdfs:comment "Daten zum Haushalt 2015 der Stadt Leipzig"@de ;
+        dct:source "Kämmerei der Stadtverwaltung Leipzig" ;
+        qb:structure ihr:DSDShort .
+
+ihrdata:EH_15G_Plan16-PrBer11
+    ihr:relatesTo ihr:PrBer11 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "205123372.93"; ihr:aus "-107056615.3"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111101
+    ihr:relatesTo ihr:Bezug1100111101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2389414.3"; ihr:aus "-100172.45"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111102
+    ihr:relatesTo ihr:Bezug1100111102 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8484285.31"; ihr:aus "-2079167.51"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111103
+    ihr:relatesTo ihr:Bezug1100111103 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1409331.98"; ihr:aus "-11766.12"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111104
+    ihr:relatesTo ihr:Bezug1100111104 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1213651.64"; ihr:aus "-36880.82"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111201
+    ihr:relatesTo ihr:Bezug1100111201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2456079.55"; ihr:aus "-276079.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111202
+    ihr:relatesTo ihr:Bezug1100111202 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "33720414.27"; ihr:aus "-19433430.7"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111203
+    ihr:relatesTo ihr:Bezug1100111203 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5725423.42"; ihr:aus "-1596893.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111204
+    ihr:relatesTo ihr:Bezug1100111204 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1212650"; ihr:aus "-82800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111205
+    ihr:relatesTo ihr:Bezug1100111205 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2515283.4"; ihr:aus "-235060.04"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111206
+    ihr:relatesTo ihr:Bezug1100111206 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "827100"; ihr:aus "-14650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111207
+    ihr:relatesTo ihr:Bezug1100111207 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "356100"; ihr:aus "-27450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111301
+    ihr:relatesTo ihr:Bezug1100111301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6530623.07"; ihr:aus "-1171844.22"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111302
+    ihr:relatesTo ihr:Bezug1100111302 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10640774.85"; ihr:aus "-4332567.74"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111303
+    ihr:relatesTo ihr:Bezug1100111303 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4534948.31"; ihr:aus "-1389706.22"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111304
+    ihr:relatesTo ihr:Bezug1100111304 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "60878406.81"; ihr:aus "-39583059.53"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111305
+    ihr:relatesTo ihr:Bezug1100111305 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "30841507.56"; ihr:aus "-28687313.5"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111306
+    ihr:relatesTo ihr:Bezug1100111306 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1015854.04"; ihr:aus "-402819.36"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111308
+    ihr:relatesTo ihr:Bezug1100111308 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1547991.76"; ihr:aus "-272895.88"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111309
+    ihr:relatesTo ihr:Bezug1100111309 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2490523.96"; ihr:aus "-1200009.19"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111310
+    ihr:relatesTo ihr:Bezug1100111310 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "632240.24"; ihr:aus "-4595.12"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111311
+    ihr:relatesTo ihr:Bezug1100111311 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "124768.74"; ihr:aus "-55120.26"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111401
+    ihr:relatesTo ihr:Bezug1100111401 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3406308.72"; ihr:aus "-500246.31"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111601
+    ihr:relatesTo ihr:Bezug1100111601 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "574496.62"; ihr:aus "-79088.94"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111602
+    ihr:relatesTo ihr:Bezug1100111602 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6260834.79"; ihr:aus "-3287864.52"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111603
+    ihr:relatesTo ihr:Bezug1100111603 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "357408.42"; ihr:aus "-86022.76"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111604
+    ihr:relatesTo ihr:Bezug1100111604 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1304893.25"; ihr:aus "-471443.9"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111605
+    ihr:relatesTo ihr:Bezug1100111605 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1643063.54"; ihr:aus "-326729.32"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111606
+    ihr:relatesTo ihr:Bezug1100111606 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3293500.78"; ihr:aus "-271932.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111607
+    ihr:relatesTo ihr:Bezug1100111607 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5309042.3"; ihr:aus "-251965.18"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111608
+    ihr:relatesTo ihr:Bezug1100111608 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3355951.3"; ihr:aus "-685939.97"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100111609
+    ihr:relatesTo ihr:Bezug1100111609 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "70500"; ihr:aus "-101100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100121101
+    ihr:relatesTo ihr:Bezug1100121101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1095255.62"; ihr:aus "-261845.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100121102
+    ihr:relatesTo ihr:Bezug1100121102 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "443106.98"; ihr:aus "-209403.49"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100121201
+    ihr:relatesTo ihr:Bezug1100121201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "910600"; ihr:aus "-699850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122101
+    ihr:relatesTo ihr:Bezug1100122101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6330479.22"; ihr:aus "-1522227.99"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122102
+    ihr:relatesTo ihr:Bezug1100122102 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2432100.75"; ihr:aus "-1188662.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122103
+    ihr:relatesTo ihr:Bezug1100122103 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5573558.5"; ihr:aus "-4521270.84"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122104
+    ihr:relatesTo ihr:Bezug1100122104 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13850.5"; ihr:aus "-13850.5"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122105
+    ihr:relatesTo ihr:Bezug1100122105 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2578212.53"; ihr:aus "-385051.5"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122106
+    ihr:relatesTo ihr:Bezug1100122106 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1158683.4"; ihr:aus "-162711.48"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122107
+    ihr:relatesTo ihr:Bezug1100122107 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9829637.63"; ihr:aus "-13064833.63"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122108
+    ihr:relatesTo ihr:Bezug1100122108 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1190610.18"; ihr:aus "-577194.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122109
+    ihr:relatesTo ihr:Bezug1100122109 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1695078.85"; ihr:aus "-577259.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122201
+    ihr:relatesTo ihr:Bezug1100122201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5776813.03"; ihr:aus "-4409528.59"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122202
+    ihr:relatesTo ihr:Bezug1100122202 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4615592.37"; ihr:aus "-1493515.25"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122203
+    ihr:relatesTo ihr:Bezug1100122203 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21100"; ihr:aus "-7350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122204
+    ihr:relatesTo ihr:Bezug1100122204 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2346851.56"; ihr:aus "-831538.91"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100122205
+    ihr:relatesTo ihr:Bezug1100122205 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "850"; ihr:aus "-350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100126001
+    ihr:relatesTo ihr:Bezug1100126001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2099278.77"; ihr:aus "-774553.36"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100126002
+    ihr:relatesTo ihr:Bezug1100126002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "39569639.86"; ihr:aus "-8262614.21"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100127001
+    ihr:relatesTo ihr:Bezug1100127001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23002442.41"; ihr:aus "-24956582.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100127002
+    ihr:relatesTo ihr:Bezug1100127002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5414450"; ihr:aus "-1356000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100128001
+    ihr:relatesTo ihr:Bezug1100128001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "670028.91"; ihr:aus "-71106.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100211101
+    ihr:relatesTo ihr:Bezug1100211101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "48159586.86"; ihr:aus "-23313380.69"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100215101
+    ihr:relatesTo ihr:Bezug1100215101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27667859.54"; ihr:aus "-14488810.08"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100215301
+    ihr:relatesTo ihr:Bezug1100215301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "425918.25"; ihr:aus "-273714.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100215401
+    ihr:relatesTo ihr:Bezug1100215401 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1485132.78"; ihr:aus "-1123154.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100217101
+    ihr:relatesTo ihr:Bezug1100217101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27548701.18"; ihr:aus "-16569662.72"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100217301
+    ihr:relatesTo ihr:Bezug1100217301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "351843.39"; ihr:aus "-232099.97"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100221101
+    ihr:relatesTo ihr:Bezug1100221101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1237098.65"; ihr:aus "-774311.18"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100221301
+    ihr:relatesTo ihr:Bezug1100221301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2304389.87"; ihr:aus "-1211965.25"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100221401
+    ihr:relatesTo ihr:Bezug1100221401 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3139063.37"; ihr:aus "-1938641.1"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100221501
+    ihr:relatesTo ihr:Bezug1100221501 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8886263.42"; ihr:aus "-5511705.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100221601
+    ihr:relatesTo ihr:Bezug1100221601 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2503902.02"; ihr:aus "-1588502.33"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100221701
+    ihr:relatesTo ihr:Bezug1100221701 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3278125.98"; ihr:aus "-1812392.65"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100221801
+    ihr:relatesTo ihr:Bezug1100221801 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "164260.51"; ihr:aus "-100085.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100231101
+    ihr:relatesTo ihr:Bezug1100231101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21955942.55"; ihr:aus "-14336378.1"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100231301
+    ihr:relatesTo ihr:Bezug1100231301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1506434.44"; ihr:aus "-559050.34"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100241001
+    ihr:relatesTo ihr:Bezug1100241001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4446510.52"; ihr:aus "-311300.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100242001
+    ihr:relatesTo ihr:Bezug1100242001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "101353"; ihr:aus "-33000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100243001
+    ihr:relatesTo ihr:Bezug1100243001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "983487.62"; ihr:aus "-497914.62"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100243002
+    ihr:relatesTo ihr:Bezug1100243002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "272086.43"; ihr:aus "-8500.12"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100243003
+    ihr:relatesTo ihr:Bezug1100243003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "642780.08"; ihr:aus "-58727.21"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100243004
+    ihr:relatesTo ihr:Bezug1100243004 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1801474.79"; ihr:aus "-837605.37"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100252001
+    ihr:relatesTo ihr:Bezug1100252001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8007582.12"; ihr:aus "-3929596.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100252002
+    ihr:relatesTo ihr:Bezug1100252002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1473408.13"; ihr:aus "-467770.7"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100252003
+    ihr:relatesTo ihr:Bezug1100252003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8329184.97"; ihr:aus "-5665970.29"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100252004
+    ihr:relatesTo ihr:Bezug1100252004 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11395056.42"; ihr:aus "-6549850.26"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100253001
+    ihr:relatesTo ihr:Bezug1100253001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5201310.5"; ihr:aus "-1772915.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100254001
+    ihr:relatesTo ihr:Bezug1100254001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19296265.78"; ihr:aus "-39865927.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100261001
+    ihr:relatesTo ihr:Bezug1100261001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16312108.01"; ihr:aus "-187089.63"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100261002
+    ihr:relatesTo ihr:Bezug1100261002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3658338.15"; ihr:aus "-30931.33"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100261003
+    ihr:relatesTo ihr:Bezug1100261003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "48040656.54"; ihr:aus "-788580.58"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100262001
+    ihr:relatesTo ihr:Bezug1100262001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19644.4"; ihr:aus "-19394.4"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100262002
+    ihr:relatesTo ihr:Bezug1100262002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1713284.61"; ihr:aus "-1092396.84"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100262003
+    ihr:relatesTo ihr:Bezug1100262003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19729157.27"; ihr:aus "-758180.46"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100262004
+    ihr:relatesTo ihr:Bezug1100262004 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4816238.89"; ihr:aus "-2751614.07"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100263001
+    ihr:relatesTo ihr:Bezug1100263001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5439763.74"; ihr:aus "-2057340"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100271001
+    ihr:relatesTo ihr:Bezug1100271001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9248984.77"; ihr:aus "-8134807.45"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100272001
+    ihr:relatesTo ihr:Bezug1100272001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11158933.25"; ihr:aus "-1951285.83"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100281001
+    ihr:relatesTo ihr:Bezug1100281001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8284307.17"; ihr:aus "-6808601.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100291001
+    ihr:relatesTo ihr:Bezug1100291001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "52753.93"; ihr:aus "-29952.62"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100311101
+    ihr:relatesTo ihr:Bezug1100311101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8280913.01"; ihr:aus "-1521077.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100311201
+    ihr:relatesTo ihr:Bezug1100311201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14945158.49"; ihr:aus "-702727.3"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100311301
+    ihr:relatesTo ihr:Bezug1100311301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19244431.18"; ihr:aus "-1713794.22"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100311401
+    ihr:relatesTo ihr:Bezug1100311401 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6653218.8"; ihr:aus "-1183322.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100311501
+    ihr:relatesTo ihr:Bezug1100311501 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "691218.8"; ihr:aus "-26672.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100311601
+    ihr:relatesTo ihr:Bezug1100311601 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2891394.87"; ihr:aus "-755552.4"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100311701
+    ihr:relatesTo ihr:Bezug1100311701 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23631494.87"; ihr:aus "-23001002.4"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100312101
+    ihr:relatesTo ihr:Bezug1100312101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "201199219.47"; ihr:aus "-94703943.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100312201
+    ihr:relatesTo ihr:Bezug1100312201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "562069.47"; ihr:aus "-161393.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100312301
+    ihr:relatesTo ihr:Bezug1100312301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5632169.47"; ihr:aus "-388243.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100312601
+    ihr:relatesTo ihr:Bezug1100312601 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4594971.37"; ihr:aus "-1716299.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100313001
+    ihr:relatesTo ihr:Bezug1100313001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "35629020.64"; ihr:aus "-22287271.23"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100315001
+    ihr:relatesTo ihr:Bezug1100315001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6939196.2"; ihr:aus "-2285069.72"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100315002
+    ihr:relatesTo ihr:Bezug1100315002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-554750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100315003
+    ihr:relatesTo ihr:Bezug1100315003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-118700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100331001
+    ihr:relatesTo ihr:Bezug1100331001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3887194.74"; ihr:aus "-37596.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100341001
+    ihr:relatesTo ihr:Bezug1100341001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12931863.12"; ihr:aus "-8387732.55"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100343001
+    ihr:relatesTo ihr:Bezug1100343001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1223191.63"; ihr:aus "-101827.76"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100343002
+    ihr:relatesTo ihr:Bezug1100343002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "642993.63"; ihr:aus "-40681.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100344001
+    ihr:relatesTo ihr:Bezug1100344001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "174198.76"; ihr:aus "-115911.66"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100345101
+    ihr:relatesTo ihr:Bezug1100345101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "376721.51"; ihr:aus "-63293.54"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100345201
+    ihr:relatesTo ihr:Bezug1100345201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1675071.51"; ihr:aus "-583343.54"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100351001
+    ihr:relatesTo ihr:Bezug1100351001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "93677494.52"; ihr:aus "-87342385"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100351002
+    ihr:relatesTo ihr:Bezug1100351002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1266884.06"; ihr:aus "-196213.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100361001
+    ihr:relatesTo ihr:Bezug1100361001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "25602150.2"; ihr:aus "-2795812.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100362001
+    ihr:relatesTo ihr:Bezug1100362001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12458703.62"; ihr:aus "-4765004.3"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100363101
+    ihr:relatesTo ihr:Bezug1100363101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9904415.41"; ihr:aus "-3454845.35"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100363201
+    ihr:relatesTo ihr:Bezug1100363201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7967653.04"; ihr:aus "-2006190.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100363301
+    ihr:relatesTo ihr:Bezug1100363301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "59425002.13"; ihr:aus "-7545037.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100363401
+    ihr:relatesTo ihr:Bezug1100363401 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13661336.91"; ihr:aus "-1319616.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100363501
+    ihr:relatesTo ihr:Bezug1100363501 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5752013.71"; ihr:aus "-1393526.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100365001
+    ihr:relatesTo ihr:Bezug1100365001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "408348091.19"; ihr:aus "-271931027.02"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100366001
+    ihr:relatesTo ihr:Bezug1100366001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5753623.3"; ihr:aus "-2935290.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100367001
+    ihr:relatesTo ihr:Bezug1100367001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7884906.18"; ihr:aus "-4427715.08"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100411001
+    ihr:relatesTo ihr:Bezug1100411001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-67000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100414001
+    ihr:relatesTo ihr:Bezug1100414001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2673462.95"; ihr:aus "-1453703.7"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100414002
+    ihr:relatesTo ihr:Bezug1100414002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4694721.86"; ihr:aus "-2710957.73"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100414003
+    ihr:relatesTo ihr:Bezug1100414003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "17729512.01"; ihr:aus "-8297941.36"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100421001
+    ihr:relatesTo ihr:Bezug1100421001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3100302.2"; ihr:aus "-36972.52"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100421002
+    ihr:relatesTo ihr:Bezug1100421002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "724904.9"; ihr:aus "-10786.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100424101
+    ihr:relatesTo ihr:Bezug1100424101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "17752537.44"; ihr:aus "-7249006.2"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100424201
+    ihr:relatesTo ihr:Bezug1100424201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5231500"; ihr:aus "-50"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100511101
+    ihr:relatesTo ihr:Bezug1100511101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8105593.47"; ihr:aus "-1344709.39"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100511106
+    ihr:relatesTo ihr:Bezug1100511106 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14850542.49"; ihr:aus "-12798762.52"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100511108
+    ihr:relatesTo ihr:Bezug1100511108 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16303863.37"; ihr:aus "-8038781.55"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100511109
+    ihr:relatesTo ihr:Bezug1100511109 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "230000"; ihr:aus "-314800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100511110
+    ihr:relatesTo ihr:Bezug1100511110 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "30000"; ihr:aus "-63000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100511111
+    ihr:relatesTo ihr:Bezug1100511111 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1229950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100512001
+    ihr:relatesTo ihr:Bezug1100512001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "962400.39"; ihr:aus "-516430.16"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100512002
+    ihr:relatesTo ihr:Bezug1100512002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1251921.72"; ihr:aus "-584445.99"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100512003
+    ihr:relatesTo ihr:Bezug1100512003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1488102.79"; ihr:aus "-466350.35"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100512004
+    ihr:relatesTo ihr:Bezug1100512004 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2986643.84"; ihr:aus "-2215387.46"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100512005
+    ihr:relatesTo ihr:Bezug1100512005 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1930869.97"; ihr:aus "-897638.09"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100521001
+    ihr:relatesTo ihr:Bezug1100521001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6450013.41"; ihr:aus "-5082269.76"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100521002
+    ihr:relatesTo ihr:Bezug1100521002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3233712.44"; ihr:aus "-2244998.02"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100522001
+    ihr:relatesTo ihr:Bezug1100522001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "125465.8"; ihr:aus "-7400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100522002
+    ihr:relatesTo ihr:Bezug1100522002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "570488.93"; ihr:aus "-21130.66"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100523001
+    ihr:relatesTo ihr:Bezug1100523001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1408638.36"; ihr:aus "-263338.78"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100523002
+    ihr:relatesTo ihr:Bezug1100523002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "638200.31"; ihr:aus "-332258.58"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100531001
+    ihr:relatesTo ihr:Bezug1100531001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-22524200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100532001
+    ihr:relatesTo ihr:Bezug1100532001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "151600"; ihr:aus "-2030500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100533001
+    ihr:relatesTo ihr:Bezug1100533001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "179280.91"; ihr:aus "-139918.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100533002
+    ihr:relatesTo ihr:Bezug1100533002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "56065.42"; ihr:aus "-5378465.42"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100534001
+    ihr:relatesTo ihr:Bezug1100534001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1544300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100535001
+    ihr:relatesTo ihr:Bezug1100535001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100537001
+    ihr:relatesTo ihr:Bezug1100537001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "691550"; ihr:aus "-22400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100538001
+    ihr:relatesTo ihr:Bezug1100538001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "195280.91"; ihr:aus "-188968.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100538002
+    ihr:relatesTo ihr:Bezug1100538002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100538003
+    ihr:relatesTo ihr:Bezug1100538003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "150000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100541001
+    ihr:relatesTo ihr:Bezug1100541001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "215688427.54"; ihr:aus "-140974847.85"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100542001
+    ihr:relatesTo ihr:Bezug1100542001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10752736.07"; ihr:aus "-7103556.07"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100543001
+    ihr:relatesTo ihr:Bezug1100543001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5617026.56"; ihr:aus "-3788797.65"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100544001
+    ihr:relatesTo ihr:Bezug1100544001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16315367.4"; ihr:aus "-11500948.13"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100545101
+    ihr:relatesTo ihr:Bezug1100545101 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3800350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100545201
+    ihr:relatesTo ihr:Bezug1100545201 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2329300"; ihr:aus "-610100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100545301
+    ihr:relatesTo ihr:Bezug1100545301 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100545401
+    ihr:relatesTo ihr:Bezug1100545401 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100545501
+    ihr:relatesTo ihr:Bezug1100545501 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100546001
+    ihr:relatesTo ihr:Bezug1100546001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2909774.9"; ihr:aus "-4016554.52"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100547002
+    ihr:relatesTo ihr:Bezug1100547002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "107400"; ihr:aus "-107400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100549001
+    ihr:relatesTo ihr:Bezug1100549001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1810134.09"; ihr:aus "-3957113.83"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100549002
+    ihr:relatesTo ihr:Bezug1100549002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1703433.9"; ihr:aus "-133006.23"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100551001
+    ihr:relatesTo ihr:Bezug1100551001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27743858.46"; ihr:aus "-10055539.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100552001
+    ihr:relatesTo ihr:Bezug1100552001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3742004.15"; ihr:aus "-2647507.1"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100552002
+    ihr:relatesTo ihr:Bezug1100552002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2785920.92"; ihr:aus "-1412054.84"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100553001
+    ihr:relatesTo ihr:Bezug1100553001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13755255.11"; ihr:aus "-13946755.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100554001
+    ihr:relatesTo ihr:Bezug1100554001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1428513.97"; ihr:aus "-105925.34"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100554002
+    ihr:relatesTo ihr:Bezug1100554002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1429272.63"; ihr:aus "-535895.87"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100555001
+    ihr:relatesTo ihr:Bezug1100555001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3351533.75"; ihr:aus "-1849940.04"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100561001
+    ihr:relatesTo ihr:Bezug1100561001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1193297.73"; ihr:aus "-129797.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100561002
+    ihr:relatesTo ihr:Bezug1100561002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "643170.09"; ihr:aus "-10006.5"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100561003
+    ihr:relatesTo ihr:Bezug1100561003 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2319096.16"; ihr:aus "-1812303.46"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100561004
+    ihr:relatesTo ihr:Bezug1100561004 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1839698.25"; ihr:aus "-354158.12"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100561005
+    ihr:relatesTo ihr:Bezug1100561005 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "676398.61"; ihr:aus "-150846.59"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100561006
+    ihr:relatesTo ihr:Bezug1100561006 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "458136.78"; ihr:aus "-294620.66"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100571001
+    ihr:relatesTo ihr:Bezug1100571001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7289172.76"; ihr:aus "-1785615.09"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100571002
+    ihr:relatesTo ihr:Bezug1100571002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5649351.19"; ihr:aus "-1863896.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100571005
+    ihr:relatesTo ihr:Bezug1100571005 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-14250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573001
+    ihr:relatesTo ihr:Bezug1100573001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4750000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573002
+    ihr:relatesTo ihr:Bezug1100573002 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4270732.76"; ihr:aus "-4054225.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573004
+    ihr:relatesTo ihr:Bezug1100573004 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1581550"; ihr:aus "-127300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573005
+    ihr:relatesTo ihr:Bezug1100573005 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "200000"; ihr:aus "-230000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573006
+    ihr:relatesTo ihr:Bezug1100573006 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573008
+    ihr:relatesTo ihr:Bezug1100573008 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-10858000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573009
+    ihr:relatesTo ihr:Bezug1100573009 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "943038.76"; ihr:aus "-862513.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573010
+    ihr:relatesTo ihr:Bezug1100573010 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-33833600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573011
+    ihr:relatesTo ihr:Bezug1100573011 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "947500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573014
+    ihr:relatesTo ihr:Bezug1100573014 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100573015
+    ihr:relatesTo ihr:Bezug1100573015 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "100000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100575001
+    ihr:relatesTo ihr:Bezug1100575001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2657550"; ihr:aus "-50"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100611001
+    ihr:relatesTo ihr:Bezug1100611001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "968889700"; ihr:aus "-1841142330"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100612001
+    ihr:relatesTo ihr:Bezug1100612001 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "149213469.47"; ihr:aus "-156143556"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100742052
+    ihr:relatesTo ihr:Bezug1100742052 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Bezug1100755067
+    ihr:relatesTo ihr:Bezug1100755067 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr111
+    ihr:relatesTo ihr:PrGr111 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "205123372.93"; ihr:aus "-107056615.3"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1111
+    ihr:relatesTo ihr:PrUGr1111 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13496683.23"; ihr:aus "-2227986.9"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1112
+    ihr:relatesTo ihr:PrUGr1112 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "46813050.64"; ihr:aus "-21666363.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1113
+    ihr:relatesTo ihr:PrUGr1113 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "119237639.34"; ihr:aus "-77099931.02"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1114
+    ihr:relatesTo ihr:PrUGr1114 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3406308.72"; ihr:aus "-500246.31"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1116
+    ihr:relatesTo ihr:PrUGr1116 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22169691"; ihr:aus "-5562087.51"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer12
+    ihr:relatesTo ihr:PrBer12 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "116768221.07"; ihr:aus "-65347300.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr121
+    ihr:relatesTo ihr:PrGr121 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2448962.6"; ihr:aus "-1171098.73"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1211
+    ihr:relatesTo ihr:PrUGr1211 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1538362.6"; ihr:aus "-471248.73"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1212
+    ihr:relatesTo ihr:PrUGr1212 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "910600"; ihr:aus "-699850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr122
+    ihr:relatesTo ihr:PrGr122 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "43563418.52"; ihr:aus "-28755345.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1221
+    ihr:relatesTo ihr:PrUGr1221 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "30802211.56"; ihr:aus "-22013062.82"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1222
+    ihr:relatesTo ihr:PrUGr1222 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12761206.96"; ihr:aus "-6742282.75"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr126
+    ihr:relatesTo ihr:PrGr126 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "41668918.63"; ihr:aus "-9037167.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1260
+    ihr:relatesTo ihr:PrUGr1260 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "41668918.63"; ihr:aus "-9037167.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr127
+    ihr:relatesTo ihr:PrGr127 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "28416892.41"; ihr:aus "-26312582.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1270
+    ihr:relatesTo ihr:PrUGr1270 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "28416892.41"; ihr:aus "-26312582.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr128
+    ihr:relatesTo ihr:PrGr128 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "670028.91"; ihr:aus "-71106.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr1280
+    ihr:relatesTo ihr:PrUGr1280 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "670028.91"; ihr:aus "-71106.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer21
+    ihr:relatesTo ihr:PrBer21 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "105639042"; ihr:aus "-56000822.98"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr211
+    ihr:relatesTo ihr:PrGr211 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "48159586.86"; ihr:aus "-23313380.69"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2111
+    ihr:relatesTo ihr:PrUGr2111 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "48159586.86"; ihr:aus "-23313380.69"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr215
+    ihr:relatesTo ihr:PrGr215 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "29578910.57"; ihr:aus "-15885679.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2151
+    ihr:relatesTo ihr:PrUGr2151 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27667859.54"; ihr:aus "-14488810.08"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2153
+    ihr:relatesTo ihr:PrUGr2153 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "425918.25"; ihr:aus "-273714.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2154
+    ihr:relatesTo ihr:PrUGr2154 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1485132.78"; ihr:aus "-1123154.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr217
+    ihr:relatesTo ihr:PrGr217 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27900544.57"; ihr:aus "-16801762.69"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2171
+    ihr:relatesTo ihr:PrUGr2171 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27548701.18"; ihr:aus "-16569662.72"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2173
+    ihr:relatesTo ihr:PrUGr2173 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "351843.39"; ihr:aus "-232099.97"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer22
+    ihr:relatesTo ihr:PrBer22 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21513103.82"; ihr:aus "-12937603.33"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr221
+    ihr:relatesTo ihr:PrGr221 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21513103.82"; ihr:aus "-12937603.33"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2211
+    ihr:relatesTo ihr:PrUGr2211 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1237098.65"; ihr:aus "-774311.18"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2213
+    ihr:relatesTo ihr:PrUGr2213 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2304389.87"; ihr:aus "-1211965.25"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2214
+    ihr:relatesTo ihr:PrUGr2214 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3139063.37"; ihr:aus "-1938641.1"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2215
+    ihr:relatesTo ihr:PrUGr2215 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8886263.42"; ihr:aus "-5511705.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2216
+    ihr:relatesTo ihr:PrUGr2216 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2503902.02"; ihr:aus "-1588502.33"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2217
+    ihr:relatesTo ihr:PrUGr2217 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3278125.98"; ihr:aus "-1812392.65"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2218
+    ihr:relatesTo ihr:PrUGr2218 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "164260.51"; ihr:aus "-100085.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer23
+    ihr:relatesTo ihr:PrBer23 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23462376.99"; ihr:aus "-14895428.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr231
+    ihr:relatesTo ihr:PrGr231 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23462376.99"; ihr:aus "-14895428.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2311
+    ihr:relatesTo ihr:PrUGr2311 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21955942.55"; ihr:aus "-14336378.1"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2313
+    ihr:relatesTo ihr:PrUGr2313 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1506434.44"; ihr:aus "-559050.34"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer24
+    ihr:relatesTo ihr:PrBer24 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8247692.44"; ihr:aus "-1747047.46"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr241
+    ihr:relatesTo ihr:PrGr241 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4446510.52"; ihr:aus "-311300.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2410
+    ihr:relatesTo ihr:PrUGr2410 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4446510.52"; ihr:aus "-311300.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr242
+    ihr:relatesTo ihr:PrGr242 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "101353"; ihr:aus "-33000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2420
+    ihr:relatesTo ihr:PrUGr2420 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "101353"; ihr:aus "-33000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr243
+    ihr:relatesTo ihr:PrGr243 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3699828.92"; ihr:aus "-1402747.32"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2430
+    ihr:relatesTo ihr:PrUGr2430 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3699828.92"; ihr:aus "-1402747.32"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer25
+    ihr:relatesTo ihr:PrBer25 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "53702807.92"; ihr:aus "-58252031.01"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr252
+    ihr:relatesTo ihr:PrGr252 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "29205231.64"; ihr:aus "-16613187.81"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2520
+    ihr:relatesTo ihr:PrUGr2520 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "29205231.64"; ihr:aus "-16613187.81"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr253
+    ihr:relatesTo ihr:PrGr253 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5201310.5"; ihr:aus "-1772915.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2530
+    ihr:relatesTo ihr:PrUGr2530 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5201310.5"; ihr:aus "-1772915.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr254
+    ihr:relatesTo ihr:PrGr254 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19296265.78"; ihr:aus "-39865927.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2540
+    ihr:relatesTo ihr:PrUGr2540 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19296265.78"; ihr:aus "-39865927.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer26
+    ihr:relatesTo ihr:PrBer26 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "99729191.61"; ihr:aus "-7685527.31"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr261
+    ihr:relatesTo ihr:PrGr261 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "68011102.7"; ihr:aus "-1006601.54"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2610
+    ihr:relatesTo ihr:PrUGr2610 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "68011102.7"; ihr:aus "-1006601.54"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr262
+    ihr:relatesTo ihr:PrGr262 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "26278325.17"; ihr:aus "-4621585.77"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2620
+    ihr:relatesTo ihr:PrUGr2620 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "26278325.17"; ihr:aus "-4621585.77"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr263
+    ihr:relatesTo ihr:PrGr263 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5439763.74"; ihr:aus "-2057340"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2630
+    ihr:relatesTo ihr:PrUGr2630 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5439763.74"; ihr:aus "-2057340"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer27
+    ihr:relatesTo ihr:PrBer27 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "20407918.02"; ihr:aus "-10086093.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr271
+    ihr:relatesTo ihr:PrGr271 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9248984.77"; ihr:aus "-8134807.45"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2710
+    ihr:relatesTo ihr:PrUGr2710 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9248984.77"; ihr:aus "-8134807.45"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr272
+    ihr:relatesTo ihr:PrGr272 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11158933.25"; ihr:aus "-1951285.83"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2720
+    ihr:relatesTo ihr:PrUGr2720 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11158933.25"; ihr:aus "-1951285.83"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer28
+    ihr:relatesTo ihr:PrBer28 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8284307.17"; ihr:aus "-6808601.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr281
+    ihr:relatesTo ihr:PrGr281 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8284307.17"; ihr:aus "-6808601.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2810
+    ihr:relatesTo ihr:PrUGr2810 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8284307.17"; ihr:aus "-6808601.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer29
+    ihr:relatesTo ihr:PrBer29 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "52753.93"; ihr:aus "-29952.62"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr291
+    ihr:relatesTo ihr:PrGr291 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "52753.93"; ihr:aus "-29952.62"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr2910
+    ihr:relatesTo ihr:PrUGr2910 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "52753.93"; ihr:aus "-29952.62"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer31
+    ihr:relatesTo ihr:PrBer31 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "330894476.64"; ihr:aus "-151119819.79"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr311
+    ihr:relatesTo ihr:PrGr311 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "76337830.02"; ihr:aus "-28904148.96"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3111
+    ihr:relatesTo ihr:PrUGr3111 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8280913.01"; ihr:aus "-1521077.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3112
+    ihr:relatesTo ihr:PrUGr3112 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14945158.49"; ihr:aus "-702727.3"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3113
+    ihr:relatesTo ihr:PrUGr3113 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19244431.18"; ihr:aus "-1713794.22"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3114
+    ihr:relatesTo ihr:PrUGr3114 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6653218.8"; ihr:aus "-1183322.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3115
+    ihr:relatesTo ihr:PrUGr3115 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "691218.8"; ihr:aus "-26672.68"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3116
+    ihr:relatesTo ihr:PrUGr3116 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2891394.87"; ihr:aus "-755552.4"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3117
+    ihr:relatesTo ihr:PrUGr3117 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23631494.87"; ihr:aus "-23001002.4"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr312
+    ihr:relatesTo ihr:PrGr312 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "211988429.78"; ihr:aus "-96969879.88"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3121
+    ihr:relatesTo ihr:PrUGr3121 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "201199219.47"; ihr:aus "-94703943.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3122
+    ihr:relatesTo ihr:PrUGr3122 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "562069.47"; ihr:aus "-161393.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3123
+    ihr:relatesTo ihr:PrUGr3123 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5632169.47"; ihr:aus "-388243.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3126
+    ihr:relatesTo ihr:PrUGr3126 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4594971.37"; ihr:aus "-1716299.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr313
+    ihr:relatesTo ihr:PrGr313 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "35629020.64"; ihr:aus "-22287271.23"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3130
+    ihr:relatesTo ihr:PrUGr3130 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "35629020.64"; ihr:aus "-22287271.23"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr315
+    ihr:relatesTo ihr:PrGr315 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6939196.2"; ihr:aus "-2958519.72"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3150
+    ihr:relatesTo ihr:PrUGr3150 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6939196.2"; ihr:aus "-2958519.72"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer33
+    ihr:relatesTo ihr:PrBer33 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3887194.74"; ihr:aus "-37596.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr331
+    ihr:relatesTo ihr:PrGr331 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3887194.74"; ihr:aus "-37596.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3310
+    ihr:relatesTo ihr:PrUGr3310 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3887194.74"; ihr:aus "-37596.24"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer34
+    ihr:relatesTo ihr:PrBer34 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "17024040.16"; ihr:aus "-9292790.72999999"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr341
+    ihr:relatesTo ihr:PrGr341 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12931863.12"; ihr:aus "-8387732.55"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3410
+    ihr:relatesTo ihr:PrUGr3410 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12931863.12"; ihr:aus "-8387732.55"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr343
+    ihr:relatesTo ihr:PrGr343 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1866185.26"; ihr:aus "-142509.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3430
+    ihr:relatesTo ihr:PrUGr3430 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1866185.26"; ihr:aus "-142509.44"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr344
+    ihr:relatesTo ihr:PrGr344 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "174198.76"; ihr:aus "-115911.66"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3440
+    ihr:relatesTo ihr:PrUGr3440 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "174198.76"; ihr:aus "-115911.66"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr345
+    ihr:relatesTo ihr:PrGr345 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2051793.02"; ihr:aus "-646637.08"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3451
+    ihr:relatesTo ihr:PrUGr3451 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "376721.51"; ihr:aus "-63293.54"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3452
+    ihr:relatesTo ihr:PrUGr3452 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1675071.51"; ihr:aus "-583343.54"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer35
+    ihr:relatesTo ihr:PrBer35 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "94944378.58"; ihr:aus "-87538598.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr351
+    ihr:relatesTo ihr:PrGr351 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "94944378.58"; ihr:aus "-87538598.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3510
+    ihr:relatesTo ihr:PrUGr3510 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "94944378.58"; ihr:aus "-87538598.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer36
+    ihr:relatesTo ihr:PrBer36 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "556757895.69"; ihr:aus "-302574066.47"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr361
+    ihr:relatesTo ihr:PrGr361 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "25602150.2"; ihr:aus "-2795812.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3610
+    ihr:relatesTo ihr:PrUGr3610 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "25602150.2"; ihr:aus "-2795812.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr362
+    ihr:relatesTo ihr:PrGr362 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12458703.62"; ihr:aus "-4765004.3"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3620
+    ihr:relatesTo ihr:PrUGr3620 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12458703.62"; ihr:aus "-4765004.3"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr363
+    ihr:relatesTo ihr:PrGr363 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "96710421.2"; ihr:aus "-15719216.23"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3631
+    ihr:relatesTo ihr:PrUGr3631 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9904415.41"; ihr:aus "-3454845.35"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3632
+    ihr:relatesTo ihr:PrUGr3632 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7967653.04"; ihr:aus "-2006190.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3633
+    ihr:relatesTo ihr:PrUGr3633 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "59425002.13"; ihr:aus "-7545037.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3634
+    ihr:relatesTo ihr:PrUGr3634 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13661336.91"; ihr:aus "-1319616.14"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3635
+    ihr:relatesTo ihr:PrUGr3635 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5752013.71"; ihr:aus "-1393526.57"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr365
+    ihr:relatesTo ihr:PrGr365 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "408348091.19"; ihr:aus "-271931027.02"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3650
+    ihr:relatesTo ihr:PrUGr3650 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "408348091.19"; ihr:aus "-271931027.02"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr366
+    ihr:relatesTo ihr:PrGr366 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5753623.3"; ihr:aus "-2935290.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3660
+    ihr:relatesTo ihr:PrUGr3660 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5753623.3"; ihr:aus "-2935290.92"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr367
+    ihr:relatesTo ihr:PrGr367 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7884906.18"; ihr:aus "-4427715.08"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr3670
+    ihr:relatesTo ihr:PrUGr3670 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7884906.18"; ihr:aus "-4427715.08"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer41
+    ihr:relatesTo ihr:PrBer41 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "25097696.82"; ihr:aus "-12529602.79"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr411
+    ihr:relatesTo ihr:PrGr411 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-67000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr4110
+    ihr:relatesTo ihr:PrUGr4110 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-67000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr414
+    ihr:relatesTo ihr:PrGr414 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "25097696.82"; ihr:aus "-12462602.79"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr4140
+    ihr:relatesTo ihr:PrUGr4140 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "25097696.82"; ihr:aus "-12462602.79"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer42
+    ihr:relatesTo ihr:PrBer42 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "26809244.54"; ihr:aus "-7296815.32"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr421
+    ihr:relatesTo ihr:PrGr421 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3825207.1"; ihr:aus "-47759.12"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr4210
+    ihr:relatesTo ihr:PrUGr4210 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3825207.1"; ihr:aus "-47759.12"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr424
+    ihr:relatesTo ihr:PrGr424 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22984037.44"; ihr:aus "-7249056.2"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr4241
+    ihr:relatesTo ihr:PrUGr4241 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "17752537.44"; ihr:aus "-7249006.2"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr4242
+    ihr:relatesTo ihr:PrUGr4242 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5231500"; ihr:aus "-50"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer51
+    ihr:relatesTo ihr:PrBer51 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "48139938.04"; ihr:aus "-28470255.51"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr511
+    ihr:relatesTo ihr:PrGr511 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "39519999.33"; ihr:aus "-23790003.46"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5111
+    ihr:relatesTo ihr:PrUGr5111 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "39519999.33"; ihr:aus "-23790003.46"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr512
+    ihr:relatesTo ihr:PrGr512 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8619938.71"; ihr:aus "-4680252.05"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5120
+    ihr:relatesTo ihr:PrUGr5120 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8619938.71"; ihr:aus "-4680252.05"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer52
+    ihr:relatesTo ihr:PrBer52 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12426519.25"; ihr:aus "-7951395.8"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr521
+    ihr:relatesTo ihr:PrGr521 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9683725.85"; ihr:aus "-7327267.78"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5210
+    ihr:relatesTo ihr:PrUGr5210 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9683725.85"; ihr:aus "-7327267.78"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr522
+    ihr:relatesTo ihr:PrGr522 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "695954.73"; ihr:aus "-28530.66"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5220
+    ihr:relatesTo ihr:PrUGr5220 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "695954.73"; ihr:aus "-28530.66"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr523
+    ihr:relatesTo ihr:PrGr523 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2046838.67"; ihr:aus "-595597.36"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5230
+    ihr:relatesTo ihr:PrUGr5230 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2046838.67"; ihr:aus "-595597.36"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer53
+    ihr:relatesTo ihr:PrBer53 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1423777.24"; ihr:aus "-31828752.54"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr531
+    ihr:relatesTo ihr:PrGr531 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-22524200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5310
+    ihr:relatesTo ihr:PrUGr5310 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-22524200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr532
+    ihr:relatesTo ihr:PrGr532 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "151600"; ihr:aus "-2030500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5320
+    ihr:relatesTo ihr:PrUGr5320 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "151600"; ihr:aus "-2030500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr533
+    ihr:relatesTo ihr:PrGr533 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "235346.33"; ihr:aus "-5518383.98"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5330
+    ihr:relatesTo ihr:PrUGr5330 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "235346.33"; ihr:aus "-5518383.98"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr534
+    ihr:relatesTo ihr:PrGr534 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1544300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5340
+    ihr:relatesTo ihr:PrUGr5340 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1544300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr535
+    ihr:relatesTo ihr:PrGr535 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5350
+    ihr:relatesTo ihr:PrUGr5350 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr537
+    ihr:relatesTo ihr:PrGr537 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "691550"; ihr:aus "-22400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5370
+    ihr:relatesTo ihr:PrUGr5370 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "691550"; ihr:aus "-22400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr538
+    ihr:relatesTo ihr:PrGr538 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "345280.91"; ihr:aus "-188968.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5380
+    ihr:relatesTo ihr:PrUGr5380 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "345280.91"; ihr:aus "-188968.56"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer54
+    ihr:relatesTo ihr:PrBer54 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "261033950.46"; ihr:aus "-172192324.28"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr541
+    ihr:relatesTo ihr:PrGr541 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "215688427.54"; ihr:aus "-140974847.85"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5410
+    ihr:relatesTo ihr:PrUGr5410 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "215688427.54"; ihr:aus "-140974847.85"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr542
+    ihr:relatesTo ihr:PrGr542 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10752736.07"; ihr:aus "-7103556.07"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5420
+    ihr:relatesTo ihr:PrUGr5420 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10752736.07"; ihr:aus "-7103556.07"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr543
+    ihr:relatesTo ihr:PrGr543 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5617026.56"; ihr:aus "-3788797.65"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5430
+    ihr:relatesTo ihr:PrUGr5430 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5617026.56"; ihr:aus "-3788797.65"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr544
+    ihr:relatesTo ihr:PrGr544 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16315367.4"; ihr:aus "-11500948.13"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5440
+    ihr:relatesTo ihr:PrUGr5440 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16315367.4"; ihr:aus "-11500948.13"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr545
+    ihr:relatesTo ihr:PrGr545 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6129650"; ihr:aus "-610100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5451
+    ihr:relatesTo ihr:PrUGr5451 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3800350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5452
+    ihr:relatesTo ihr:PrUGr5452 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2329300"; ihr:aus "-610100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5453
+    ihr:relatesTo ihr:PrUGr5453 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5454
+    ihr:relatesTo ihr:PrUGr5454 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5455
+    ihr:relatesTo ihr:PrUGr5455 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr546
+    ihr:relatesTo ihr:PrGr546 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2909774.9"; ihr:aus "-4016554.52"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5460
+    ihr:relatesTo ihr:PrUGr5460 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2909774.9"; ihr:aus "-4016554.52"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr547
+    ihr:relatesTo ihr:PrGr547 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "107400"; ihr:aus "-107400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5470
+    ihr:relatesTo ihr:PrUGr5470 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "107400"; ihr:aus "-107400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr549
+    ihr:relatesTo ihr:PrGr549 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3513567.99"; ihr:aus "-4090120.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5490
+    ihr:relatesTo ihr:PrUGr5490 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3513567.99"; ihr:aus "-4090120.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer55
+    ihr:relatesTo ihr:PrBer55 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "54236358.99"; ihr:aus "-30553617.85"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr551
+    ihr:relatesTo ihr:PrGr551 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27743858.46"; ihr:aus "-10055539.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5510
+    ihr:relatesTo ihr:PrUGr5510 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27743858.46"; ihr:aus "-10055539.06"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr552
+    ihr:relatesTo ihr:PrGr552 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6527925.07"; ihr:aus "-4059561.94"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5520
+    ihr:relatesTo ihr:PrUGr5520 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6527925.07"; ihr:aus "-4059561.94"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr553
+    ihr:relatesTo ihr:PrGr553 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13755255.11"; ihr:aus "-13946755.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5530
+    ihr:relatesTo ihr:PrUGr5530 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13755255.11"; ihr:aus "-13946755.6"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr554
+    ihr:relatesTo ihr:PrGr554 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2857786.6"; ihr:aus "-641821.21"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5540
+    ihr:relatesTo ihr:PrUGr5540 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2857786.6"; ihr:aus "-641821.21"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr555
+    ihr:relatesTo ihr:PrGr555 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3351533.75"; ihr:aus "-1849940.04"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5550
+    ihr:relatesTo ihr:PrUGr5550 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3351533.75"; ihr:aus "-1849940.04"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer56
+    ihr:relatesTo ihr:PrBer56 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7129797.62"; ihr:aus "-2751732.89"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr561
+    ihr:relatesTo ihr:PrGr561 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7129797.62"; ihr:aus "-2751732.89"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5610
+    ihr:relatesTo ihr:PrUGr5610 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7129797.62"; ihr:aus "-2751732.89"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer57
+    ihr:relatesTo ihr:PrBer57 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "28388895.47"; ihr:aus "-53630150.49"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr571
+    ihr:relatesTo ihr:PrGr571 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12938523.95"; ihr:aus "-3663761.33"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5710
+    ihr:relatesTo ihr:PrUGr5710 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12938523.95"; ihr:aus "-3663761.33"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr573
+    ihr:relatesTo ihr:PrGr573 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12792821.52"; ihr:aus "-49966339.16"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5730
+    ihr:relatesTo ihr:PrUGr5730 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12792821.52"; ihr:aus "-49966339.16"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr575
+    ihr:relatesTo ihr:PrGr575 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2657550"; ihr:aus "-50"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr5750
+    ihr:relatesTo ihr:PrUGr5750 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2657550"; ihr:aus "-50"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer61
+    ihr:relatesTo ihr:PrBer61 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1118103169.47"; ihr:aus "-1997285886"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr611
+    ihr:relatesTo ihr:PrGr611 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "968889700"; ihr:aus "-1841142330"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr6110
+    ihr:relatesTo ihr:PrUGr6110 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "968889700"; ihr:aus "-1841142330"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr612
+    ihr:relatesTo ihr:PrGr612 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "149213469.47"; ihr:aus "-156143556"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr6120
+    ihr:relatesTo ihr:PrUGr6120 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "149213469.47"; ihr:aus "-156143556"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer74
+    ihr:relatesTo ihr:PrBer74 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr742
+    ihr:relatesTo ihr:PrGr742 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr7420
+    ihr:relatesTo ihr:PrUGr7420 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrBer75
+    ihr:relatesTo ihr:PrBer75 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrGr755
+    ihr:relatesTo ihr:PrGr755 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-PrUGr7550
+    ihr:relatesTo ihr:PrUGr7550 ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan16-Top
+    ihr:relatesTo ihr:Top ;
+    ihr:jahr "2016" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3249228121.61"; ihr:aus "-3235900428.85";
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan16 ;
+    a qb:Observation .

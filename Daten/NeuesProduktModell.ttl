@@ -1,0 +1,3290 @@
+# Exported with the Erfurt API - http://aksw.org/Projects/Erfurt
+
+@base <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+@prefix ihrdata: <http://haushaltsrechner.leipzig.de/Data/Observation/> .
+@prefix ihrds: <http://haushaltsrechner.leipzig.de/Data/Dataset/> .
+@prefix ihramt: <http://leipzig-data.de/Data/Amt/> .
+
+ihr:PSP a rdfs:Class ;
+          rdfs:label "PSP-Element"@de ;
+          rdfs:comment "PSP-Ebene" .
+
+ihr:Bezug1100111101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Stadtrat, Ortschaftsrat, Stadtbezirksbeirat, Ausschüsse, Beiräte, Ortsvorsteher, Eigenbetriebe"@de ;
+                    ihr:BezeichnungStadt "Stadtrat,Ortsch.rat,Stadtbez.Beir.Eigenb" ;
+                    ihr:hatStadtId "1.100.11.1.1.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100111102 a ihr:Schluesselprodukt ;
+                    rdfs:label "Leitungshilfe und Unterstützung"@de ;
+                    ihr:BezeichnungStadt "Leitungshilfe und Unterstützung" ;
+                    ihr:hatStadtId "1.100.11.1.1.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100111103 a ihr:Schluesselprodukt ;
+                    rdfs:label "Fraktionen"@de ;
+                    ihr:BezeichnungStadt "Fraktionen" ;
+                    ihr:hatStadtId "1.100.11.1.1.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100111104 a ihr:Schluesselprodukt ;
+                    rdfs:label "Repräsentationen, Ehrungen, partnerschaftliche Beziehungen"@de ;
+                    ihr:BezeichnungStadt "Repräsentationen,partnerschaftl.Bez." ;
+                    ihr:hatStadtId "1.100.11.1.1.04" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100111201 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Organisationsentwicklung und Stellenwirtschaft"@de ;
+                    ihr:BezeichnungStadt "Organisationsangelegenheiten" ;
+                    ihr:hatStadtId "1.100.11.1.2.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111202 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Personalangelegenheiten"@de ;
+                    ihr:BezeichnungStadt "Personalangelegenheiten" ;
+                    ihr:hatStadtId "1.100.11.1.2.02" ;
+                    ihr:hatGrad "1.4" ;
+                    ihr:zumAmt ihramt:Amt11 .
+
+ihr:Bezug1100111203 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Allgemeine Rechtsangelegenheiten"@de ;
+                    ihr:BezeichnungStadt "Allgemeine Rechtsangelegenheiten" ;
+                    ihr:hatStadtId "1.100.11.1.2.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt30 .
+
+ihr:Bezug1100111204 a ihr:Schluesselprodukt ;
+                    rdfs:label "Rats- oder Verwaltungsbeauftragte für besondere Aufgaben"@de ;
+                    ihr:BezeichnungStadt "Rats- oder Verwaltungsbeauftragte" ;
+                    ihr:hatStadtId "1.100.11.1.2.04" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt57, ihramt:Amt17, ihramt:Amt18 .
+
+ihr:Bezug1100111205 a ihr:Schluesselprodukt ;
+                    rdfs:label "Presse- und Öffentlichkeitsarbeit, Bürgerbeteiligung, Interne Kommunikation"@de ;
+                    ihr:BezeichnungStadt "PR, Bürgerbeteiligung, Interne Kommunik." ;
+                    ihr:hatStadtId "1.100.11.1.2.05" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100111206 a ihr:Schluesselprodukt ;
+                    rdfs:label "Personalvertretung Schwerbehinderte, Frauenbeauftragte, Jugend- uund Ausbildungsbeauftrage"@de ;
+                    ihr:BezeichnungStadt "Persvertr.Schwerb.,Frauenbe.,Jug.-u.Aus." ;
+                    ihr:hatStadtId "1.100.11.1.2.06" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt17, ihramt:Amt13, ihramt:Amt19, ihramt:Amt801 .
+
+ihr:Bezug1100111207 a ihr:Schluesselprodukt ;
+                    rdfs:label "Gesetzliche Vertretung"@de ;
+                    ihr:BezeichnungStadt "Gesetzliche Vertretung" ;
+                    ihr:hatStadtId "1.100.11.1.2.07" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt30 .
+
+ihr:Bezug1100111301 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Haushalts- und Finanzmanagement"@de ;
+                    ihr:BezeichnungStadt "Haushalts- und Finanzmanagement" ;
+                    ihr:hatStadtId "1.100.11.1.3.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt20 .
+
+ihr:Bezug1100111302 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Kassen- uund Rechnungswesen, Vollstreckung"@de ;
+                    ihr:BezeichnungStadt "Kassen- u. Rechnungswesen, Vollstreckung" ;
+                    ihr:hatStadtId "1.100.11.1.3.02" ;
+                    ihr:hatGrad "1.3" ;
+                    ihr:zumAmt ihramt:Amt21 .
+
+ihr:Bezug1100111303 a ihr:Schluesselprodukt ;
+                    rdfs:label "Veranlagung von Steuern und steuerlichen Nebenleistungen"@de ;
+                    ihr:BezeichnungStadt "Steuerveranlagung" ;
+                    ihr:hatStadtId "1.100.11.1.3.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt20 .
+
+ihr:Bezug1100111304 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Zentrales Gebäudemanagement"@de ;
+                    ihr:BezeichnungStadt "Zentrales Gebäudemanagement" ;
+                    ihr:hatStadtId "1.100.11.1.3.04" ;
+                    ihr:hatGrad "2.3" ;
+                    ihr:zumAmt ihramt:Amt10, ihramt:Amt65 .
+
+ihr:Bezug1100111305 a ihr:Schluesselprodukt ;
+                    rdfs:label "Liegenschaftsmanagement"@de ;
+                    ihr:BezeichnungStadt "Liegenschaftsmanagement" ;
+                    ihr:hatStadtId "1.100.11.1.3.05" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt23 .
+
+ihr:Bezug1100111306 a ihr:Schluesselprodukt ;
+                    rdfs:label "Besteuerung/BgA"@de ;
+                    ihr:BezeichnungStadt "Besteuerung/BgA" ;
+                    ihr:hatStadtId "1.100.11.1.3.06" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt20 .
+
+ihr:Bezug1100111308 a ihr:Schluesselprodukt ;
+                    rdfs:label "Regelung offener Vermögensfragen"@de ;
+                    ihr:BezeichnungStadt "Regelung offener Vermögensfragen" ;
+                    ihr:hatStadtId "1.100.11.1.3.08" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt21 .
+
+ihr:Bezug1100111309 a ihr:Schluesselprodukt ;
+                    rdfs:label "Projekt NKF"@de ;
+                    ihr:BezeichnungStadt "Projekt NKF" ;
+                    ihr:hatStadtId "1.100.11.1.3.09" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt21 .
+
+ihr:Bezug1100111310 a ihr:Schluesselprodukt ;
+                    rdfs:label "Steuerung Beteiligungen und Zweckverbände"@de ;
+                    ihr:BezeichnungStadt "Steuerung Beteiligungen u. Zweckverbände" ;
+                    ihr:hatStadtId "1.100.11.1.3.10" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100111311 a ihr:Schluesselprodukt ;
+                    rdfs:label "Steuerung Gesamtabschluss BU und ZV"@de ;
+                    ihr:BezeichnungStadt "Steuerung Gesamtabschluss BU und ZV" ;
+                    ihr:hatStadtId "1.100.11.1.3.11" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100111401 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Örtliche Rechnungsprüfung"@de ;
+                    ihr:BezeichnungStadt "Örtliche Rechnungsprüfung" ;
+                    ihr:hatStadtId "1.100.11.1.4.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt14 .
+
+ihr:Bezug1100111601 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Zentrale Reise- und Transportorganisation"@de ;
+                    ihr:BezeichnungStadt "Zentr. Reise- und Transportorganisation" ;
+                    ihr:hatStadtId "1.100.11.1.6.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111602 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Stadtarchiv"@de ;
+                    ihr:BezeichnungStadt "Stadtarchiv" ;
+                    ihr:hatStadtId "1.100.11.1.6.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111603 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Zentraler Druck und Formularservice"@de ;
+                    ihr:BezeichnungStadt "Zentraler Druck/Formularservice" ;
+                    ihr:hatStadtId "1.100.11.1.6.03" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111604 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Zentrale Poststelle und Verwaltungskurierdienst"@de ;
+                    ihr:BezeichnungStadt "Zentrale Poststelle/Verwaltungskurier" ;
+                    ihr:hatStadtId "1.100.11.1.6.04" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111605 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Zentrale Beschaffungs- und Ausschreibungsstelle"@de ;
+                    ihr:BezeichnungStadt "Zentr. Beschaff.-u. Ausschreibungsstelle" ;
+                    ihr:hatStadtId "1.100.11.1.6.05" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111606 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "IT-Koordination"@de ;
+                    ihr:BezeichnungStadt "IT-Koordination" ;
+                    ihr:hatStadtId "1.100.11.1.6.06" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111607 a ihr:Schluesselprodukt ;
+                    rdfs:label "Bürgerämter"@de ;
+                    ihr:BezeichnungStadt "Bürgerämter" ;
+                    ihr:hatStadtId "1.100.11.1.6.07" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111608 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Bauhöfe"@de ;
+                    ihr:BezeichnungStadt "Bauhöfe" ;
+                    ihr:hatStadtId "1.100.11.1.6.08" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100111609 a ihr:Schluesselprodukt ;
+                    rdfs:label "Lecos GmbH"@de ;
+                    ihr:BezeichnungStadt "Lecos GmbH" ;
+                    ihr:hatStadtId "1.100.11.1.6.09" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt921 .
+
+ihr:Bezug1100121101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Statistische Angelegenheiten"@de ;
+                    ihr:BezeichnungStadt "Statistische Angelegenheiten" ;
+                    ihr:hatStadtId "1.100.12.1.1.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt12 .
+
+ihr:Bezug1100121102 a ihr:Schluesselprodukt ;
+                    rdfs:label "Gebietsgliederung, Straßennamen, Hausnummern"@de ;
+                    ihr:BezeichnungStadt "Gebietsgliederung,Straßennamen, Hausnr." ;
+                    ihr:hatStadtId "1.100.12.1.1.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt12 .
+
+ihr:Bezug1100121201 a ihr:Schluesselprodukt ;
+                    rdfs:label "Wahlen und Abstimmungen"@de ;
+                    ihr:BezeichnungStadt "Wahlen und Abstimmungen" ;
+                    ihr:hatStadtId "1.100.12.1.2.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt12 .
+
+ihr:Bezug1100122101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Allgemeine Gefahrenabweht, Sicherheit, Ordnung"@de ;
+                    ihr:BezeichnungStadt "Allgem. Gefahrenabw., Sicherh./Ordnung" ;
+                    ihr:hatStadtId "1.100.12.2.1.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt32 .
+
+ihr:Bezug1100122102 a ihr:Schluesselprodukt ;
+                    rdfs:label "Gewerbeangelegenheiten"@de ;
+                    ihr:BezeichnungStadt "Gewerbeangelegenheiten" ;
+                    ihr:hatStadtId "1.100.12.2.1.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt32 .
+
+ihr:Bezug1100122103 a ihr:Schluesselprodukt ;
+                    rdfs:label "Fahr- und Beförderungserlaubnisse, Kfz-Zulassungen"@de ;
+                    ihr:BezeichnungStadt "Fahr- u. Beförderungserlaub., Kfz-Zulas." ;
+                    ihr:hatStadtId "1.100.12.2.1.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt32 .
+
+ihr:Bezug1100122104 a ihr:Schluesselprodukt ;
+                    rdfs:label "Überwachung von Lebensmitteln tierischer Herkunft"@de ;
+                    ihr:BezeichnungStadt "Überwachung von LM tierischer Herkunft" ;
+                    ihr:hatStadtId "1.100.12.2.1.04" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt56 .
+
+ihr:Bezug1100122105 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "LM- und Bedarfsgegenständeüberwachung"@de ;
+                    ihr:BezeichnungStadt "LM- und Bedarfsgegenständeüberwachung" ;
+                    ihr:hatStadtId "1.100.12.2.1.05" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt56 .
+
+ihr:Bezug1100122106 a ihr:Schluesselprodukt ;
+                    rdfs:label "Tierseuchenbekämpfung und Tierschutz"@de ;
+                    ihr:BezeichnungStadt "Tierseuchenbekämpfung und Tierschutz" ;
+                    ihr:hatStadtId "1.100.12.2.1.06" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt56 .
+
+ihr:Bezug1100122107 a ihr:Schluesselprodukt ;
+                    rdfs:label "Überwachung des ruhenden und fließenden Verkehrs"@de ;
+                    ihr:BezeichnungStadt "Überwach. ruhend. u. fließend. Verkehr" ;
+                    ihr:hatStadtId "1.100.12.2.1.07" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt32 .
+
+ihr:Bezug1100122108 a ihr:Schluesselprodukt ;
+                    rdfs:label "Verkehrsrechtliche Genehmigungen"@de ;
+                    ihr:BezeichnungStadt "Verkehrsrechtliche Genehmigungen" ;
+                    ihr:hatStadtId "1.100.12.2.1.08" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt32 .
+
+ihr:Bezug1100122109 a ihr:Schluesselprodukt ;
+                    rdfs:label "Verkehrsrechtliche Anordnungen"@de ;
+                    ihr:BezeichnungStadt "Verkehrsrechtliche Anordnungen" ;
+                    ihr:hatStadtId "1.100.12.2.1.09" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100122202 a ihr:Schluesselprodukt ;
+                    rdfs:label "Ausländer- und Staatsangehörigkeitsangelegenheiten"@de ;
+                    ihr:BezeichnungStadt "Ausländer- u. Staatsangehör.-angeleg." ;
+                    ihr:hatStadtId "1.100.12.2.2.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt32 .
+
+ihr:Bezug1100122203 a ihr:Schluesselprodukt ;
+                    rdfs:label "Behördliche Namensänderungen"@de ;
+                    ihr:BezeichnungStadt "Behördliche Namensänderungen" ;
+                    ihr:hatStadtId "1.100.12.2.2.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt30 .
+
+ihr:Bezug1100122204 a ihr:Schluesselprodukt ;
+                    rdfs:label "Beurkundung von Personenstandsfällen"@de ;
+                    ihr:BezeichnungStadt "Beurkundung von Personenstandsfällen" ;
+                    ihr:hatStadtId "1.100.12.2.2.04" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt34 .
+
+ihr:Bezug1100122205 a ihr:Schluesselprodukt ;
+                    rdfs:label "Standesamtsaufsicht"@de ;
+                    ihr:BezeichnungStadt "Standesamtsaufsicht" ;
+                    ihr:hatStadtId "1.100.12.2.2.05" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt30 .
+
+ihr:Bezug1100126001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Vorbeugender Brandschutz"@de ;
+                    ihr:BezeichnungStadt "Vorbeugender Brandschutz" ;
+                    ihr:hatStadtId "1.100.12.6.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt37 .
+
+ihr:Bezug1100126002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Abwehrender Brandschutz und Feuerwehr-Leitstelle"@de ;
+                    ihr:BezeichnungStadt "Abwehrender Brandschutz u. Fw-Leitstelle" ;
+                    ihr:hatStadtId "1.100.12.6.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt37 .
+
+ihr:Bezug1100127001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Rettungsdienst und Rettungsleitstelle"@de ;
+                    ihr:BezeichnungStadt "Rettungsdienst und Rettungsleitstelle" ;
+                    ihr:hatStadtId "1.100.12.7.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt37 .
+
+ihr:Bezug1100127002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Integrierte Regionalleitstelle Leipzig"@de ;
+                    ihr:BezeichnungStadt "Integrierte Regionalleitstelle Leipzig" ;
+                    ihr:hatStadtId "1.100.12.7.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt37 .
+
+ihr:Bezug1100128001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Katastrophenschutz"@de ;
+                    ihr:BezeichnungStadt "Katastrophenschutz" ;
+                    ihr:hatStadtId "1.100.12.8.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt37 .
+
+ihr:Bezug1100211101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Grundschulen in öffentlicher Trägerschaft"@de ;
+                    ihr:BezeichnungStadt "Grundschulen in öffentl. Trägerschaft" ;
+                    ihr:hatStadtId "1.100.21.1.1.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100215101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Oberschulen in öffentlicher Trägerschaft"@de ;
+                    ihr:BezeichnungStadt "Oberschulen in öffentl. Trägerschaft" ;
+                    ihr:hatStadtId "1.100.21.5.1.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100215301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Abendoberschulen"@de ;
+                    ihr:BezeichnungStadt "Abendoberschulen" ;
+                    ihr:hatStadtId "1.100.21.5.3.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100215401 a ihr:Schluesselprodukt ;
+                    rdfs:label "Gemeinschaftsschulen in öffentlicher Trägerschaft"@de ;
+                    ihr:BezeichnungStadt "Gemeinschaftsschulen in öffentl. Träger." ;
+                    ihr:hatStadtId "1.100.21.5.4.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100217101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Gymnasien und Kollegs (ohne berufliche Gymnasien) in öffentlicher Trägerschaft"@de ;
+                    ihr:BezeichnungStadt "Gymnasien,Kollegs (ohne ber.Gym) öff.Tr." ;
+                    ihr:hatStadtId "1.100.21.7.1.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100217301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Abendgymnasien"@de ;
+                    ihr:BezeichnungStadt "Abendgymnasien" ;
+                    ihr:hatStadtId "1.100.21.7.3.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100221101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schule für Blinde und Sehbehinderte"@de ;
+                    ihr:BezeichnungStadt "Schule für Blinde und Sehbehinderte" ;
+                    ihr:hatStadtId "1.100.22.1.1.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100221301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schulen für geistig Behinderte"@de ;
+                    ihr:BezeichnungStadt "Schulen für geistig Behinderte" ;
+                    ihr:hatStadtId "1.100.22.1.3.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100221401 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schule für Körperbehinderte"@de ;
+                    ihr:BezeichnungStadt "Schule für Körperbehinderte" ;
+                    ihr:hatStadtId "1.100.22.1.4.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100221501 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schulen zur Lernförderung"@de ;
+                    ihr:BezeichnungStadt "Schulen zur Lernförderung" ;
+                    ihr:hatStadtId "1.100.22.1.5.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100221601 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sprachheilschule"@de ;
+                    ihr:BezeichnungStadt "Sprachheilschule" ;
+                    ihr:hatStadtId "1.100.22.1.6.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100221701 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schulen für Erziehungshilfe"@de ;
+                    ihr:BezeichnungStadt "Schulen für Erziehungshilfe" ;
+                    ihr:hatStadtId "1.100.22.1.7.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100221801 a ihr:Schluesselprodukt ;
+                    rdfs:label "Klinik- und Krankenhausschule"@de ;
+                    ihr:BezeichnungStadt "Klinik- und Krankenhausschule" ;
+                    ihr:hatStadtId "1.100.22.1.8.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100231101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Berufliche Schulen in öffentlicher Trägerschaft"@de ;
+                    ihr:BezeichnungStadt "Berufliche Schulen in öffentl.Träger." ;
+                    ihr:hatStadtId "1.100.23.1.1.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100231301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Berufsbildende Förderschule in öffentlicher Trägerschaft"@de ;
+                    ihr:BezeichnungStadt "Berufsbildende Förderschul. öffentl. Tr." ;
+                    ihr:hatStadtId "1.100.23.1.3.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100241001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schülerbeförderung"@de ;
+                    ihr:BezeichnungStadt "Schülerbeförderung" ;
+                    ihr:hatStadtId "1.100.24.1.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100242001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Fördermaßnahmen für Schüler"@de ;
+                    ihr:BezeichnungStadt "Fördermaßnahmen für Schüler" ;
+                    ihr:hatStadtId "1.100.24.2.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100243001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schulübergreifende Maßnahmen öffentlicher und freier Träger"@de ;
+                    ihr:BezeichnungStadt "Schulübergr. Maßn.öffentl.u.freier Tr." ;
+                    ihr:hatStadtId "1.100.24.3.0.01" ;
+                    ihr:hatGrad "2.5" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100243002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schulnetzplanung und örtliche Standortplanung"@de ;
+                    ihr:BezeichnungStadt "Schulnetzplanung und örtl. Standortplan." ;
+                    ihr:hatStadtId "1.100.24.3.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100243003 a ihr:Schluesselprodukt ;
+                    rdfs:label "Medienpädagogisches Zentrum"@de ;
+                    ihr:BezeichnungStadt "Medienpädagogisches Zentrum" ;
+                    ihr:hatStadtId "1.100.24.3.0.03" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100243004 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sonstige schulische Einrichtungen"@de ;
+                    ihr:BezeichnungStadt "Sonstige schulische Einrichtungen" ;
+                    ihr:hatStadtId "1.100.24.3.0.04" ;
+                    ihr:hatGrad "2.7" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100252001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Museum für Angewandte Kunst"@de ;
+                    ihr:BezeichnungStadt "Museum für Angewandte Kunst" ;
+                    ihr:hatStadtId "1.100.25.2.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100252002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Naturkundemuseum"@de ;
+                    ihr:BezeichnungStadt "Naturkundemuseum" ;
+                    ihr:hatStadtId "1.100.25.2.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100252003 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Stadtgeschichtliches Museum"@de ;
+                    ihr:BezeichnungStadt "Stadtgeschichtliches Museum" ;
+                    ihr:hatStadtId "1.100.25.2.0.03" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100252004 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Museum der bildenden Künste"@de ;
+                    ihr:BezeichnungStadt "Museum der bildenden Künste" ;
+                    ihr:hatStadtId "1.100.25.2.0.04" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt43 .
+
+ihr:Bezug1100253001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Zoo GmbH"@de ;
+                    ihr:BezeichnungStadt "Zoo GmbH" ;
+                    ihr:hatStadtId "1.100.25.3.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt924 .
+
+ihr:Bezug1100254001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sonstige Sparten- und regionsübergreifende Förderung"@de ;
+                    ihr:BezeichnungStadt "Sonst. Sparten- u. regionsübergr. Förd." ;
+                    ihr:hatStadtId "1.100.25.4.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100261001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schauspiel Leipzig"@de ;
+                    ihr:BezeichnungStadt "Schauspiel Leipzig" ;
+                    ihr:hatStadtId "1.100.26.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100261002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Theater der Jungen Welt"@de ;
+                    ihr:BezeichnungStadt "Theater der Jungen Welt" ;
+                    ihr:hatStadtId "1.100.26.1.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100261003 a ihr:Schluesselprodukt ;
+                    rdfs:label "Oper Leipzig"@de ;
+                    ihr:BezeichnungStadt "Oper Leipzig" ;
+                    ihr:hatStadtId "1.100.26.1.0.03" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100262001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Thomasalumnat"@de ;
+                    ihr:BezeichnungStadt "Thomasalumnat" ;
+                    ihr:hatStadtId "1.100.26.2.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100262002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Thomanerchor"@de ;
+                    ihr:BezeichnungStadt "Thomanerchor" ;
+                    ihr:hatStadtId "1.100.26.2.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100262003 a ihr:Schluesselprodukt ;
+                    rdfs:label "Gewandhaus zu Leipzig"@de ;
+                    ihr:BezeichnungStadt "Gewandhaus zu Leipzig" ;
+                    ihr:hatStadtId "1.100.26.2.0.03" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100262004 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Thomasalumnat"@de ;
+                    ihr:BezeichnungStadt "Thomasalumnat" ;
+                    ihr:hatStadtId "1.100.26.2.0.04" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100263001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "MS Leipzig Johann Sebastian Bach"@de ;
+                    ihr:BezeichnungStadt "MS Leipzig Johann Sebastian Bach" ;
+                    ihr:hatStadtId "1.100.26.3.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100271001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Volkshochschule"@de ;
+                    ihr:BezeichnungStadt "Volkshochschule" ;
+                    ihr:hatStadtId "1.100.27.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt42 .
+
+ihr:Bezug1100272001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Leipziger Städtische Bibliotheken"@de ;
+                    ihr:BezeichnungStadt "Leipziger Städtische Bibliotheken" ;
+                    ihr:hatStadtId "1.100.27.2.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt45 .
+
+ihr:Bezug1100281001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Heimat- und sonstige Kulturpflege"@de ;
+                    ihr:BezeichnungStadt "Heimat- und sonstige Kulturpflege" ;
+                    ihr:hatStadtId "1.100.28.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100291001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Förderung von Kirchengemeinden und sonstigen Religionsgemeinschaften"@de ;
+                    ihr:BezeichnungStadt "Förd.v. Kirchengem./sonst. Religionsgem." ;
+                    ihr:hatStadtId "1.100.29.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100311101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfe zum Lebensunterhalt (HLU)"@de ;
+                    ihr:BezeichnungStadt "Hilfe zum Lebensunterhalt (HLU)" ;
+                    ihr:hatStadtId "1.100.31.1.1.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100311201 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfe zur Pflege"@de ;
+                    ihr:BezeichnungStadt "Hilfe zur Pflege" ;
+                    ihr:hatStadtId "1.100.31.1.2.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100311301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Eingliederungshilfe für behindinderte Menschen"@de ;
+                    ihr:BezeichnungStadt "Eingliederungshilfe für behind. Menschen" ;
+                    ihr:hatStadtId "1.100.31.1.3.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100311401 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfen zur Gesundheit"@de ;
+                    ihr:BezeichnungStadt "Hilfen zur Gesundheit" ;
+                    ihr:hatStadtId "1.100.31.1.4.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100311501 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfe zur Überwindung besonderere sozialer Schwierigkeiten"@de ;
+                    ihr:BezeichnungStadt "Hilfe Überwind. bes.soz. Schwierigkeiten" ;
+                    ihr:hatStadtId "1.100.31.1.5.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100311601 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfen in anderen Lebenslagen und Senioren"@de ;
+                    ihr:BezeichnungStadt "Hilfen in anderen Lebenslagen / Senioren" ;
+                    ihr:hatStadtId "1.100.31.1.6.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100311701 a ihr:Schluesselprodukt ;
+                    rdfs:label "Grundsicherung im Alter und bei Erwerbsminderung"@de ;
+                    ihr:BezeichnungStadt "Grundsicherung im Alter u. Erwerbsmind." ;
+                    ihr:hatStadtId "1.100.31.1.7.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100312101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Leistungen für Unterkunft und Heizung"@de ;
+                    ihr:BezeichnungStadt "Leistungen für Unterkunft und Heizung" ;
+                    ihr:hatStadtId "1.100.31.2.1.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100312201 a ihr:Schluesselprodukt ;
+                    rdfs:label "Eingliederungsleistungen"@de ;
+                    ihr:BezeichnungStadt "Eingliederungsleistungen" ;
+                    ihr:hatStadtId "1.100.31.2.2.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100312301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Einmalige Leistungen"@de ;
+                    ihr:BezeichnungStadt "Einmalige Leistungen" ;
+                    ihr:hatStadtId "1.100.31.2.3.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100312601 a ihr:Schluesselprodukt ;
+                    rdfs:label "Leistungen für Bildung und Teilhabe SGB II"@de ;
+                    ihr:BezeichnungStadt "Leistungen für Bildung/Teilhabe SGB II" ;
+                    ihr:hatStadtId "1.100.31.2.6.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100313001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfen für Asylbewerber"@de ;
+                    ihr:BezeichnungStadt "Hilfen für Asylbewerber" ;
+                    ihr:hatStadtId "1.100.31.3.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100315001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Soziale Einrichtungen"@de ;
+                    ihr:BezeichnungStadt "Soziale Einrichtungen" ;
+                    ihr:hatStadtId "1.100.31.5.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100315002 a ihr:Schluesselprodukt ;
+                    rdfs:label "SAH Leipzig gGmbH"@de ;
+                    ihr:BezeichnungStadt "SAH Leipzig gGmbH" ;
+                    ihr:hatStadtId "1.100.31.5.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt23, ihramt:Amt98, ihramt:Amt925 .
+
+ihr:Bezug1100315003 a ihr:Schluesselprodukt ;
+                    rdfs:label "BBWL gGmbH"@de ;
+                    ihr:BezeichnungStadt "BBWL gGmbH" ;
+                    ihr:hatStadtId "1.100.31.5.0.03" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt925 .
+
+ihr:Bezug1100331001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Förderung von Trägern der Wohlfahrtspflege"@de ;
+                    ihr:BezeichnungStadt "Förderung v. Trägern d. Wohlfahrtspflege" ;
+                    ihr:hatStadtId "1.100.33.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100341001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Unterhaltsvorschussleistungen"@de ;
+                    ihr:BezeichnungStadt "Unterhaltsvorschussleistungen" ;
+                    ihr:hatStadtId "1.100.34.1.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100343001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Betreuungsleistungen"@de ;
+                    ihr:BezeichnungStadt "Betreuungsleistungen" ;
+                    ihr:hatStadtId "1.100.34.3.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100343002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Betreuungsleistungen durch den Allgemeinen Sozialen Dienst"@de ;
+                    ihr:BezeichnungStadt "ASD-Leistungen nach SGB XII" ;
+                    ihr:hatStadtId "1.100.34.3.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100344001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfen für Heimkehrer und politische Häftlinge"@de ;
+                    ihr:BezeichnungStadt "Hilfen f. Heimkehrer u. polit. Häftlinge" ;
+                    ihr:hatStadtId "1.100.34.4.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100345101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Leistungen für Bildung und Teilhabe BKGG"@de ;
+                    ihr:BezeichnungStadt "Leistungen für Bildung und Teilhabe BKGG" ;
+                    ihr:hatStadtId "1.100.34.5.1.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100345201 a ihr:Schluesselprodukt ;
+                    rdfs:label "Leistungen für Bildung und Teilhabe WOGG"@de ;
+                    ihr:BezeichnungStadt "Leistungen für Bildung und Teilhabe WOGG" ;
+                    ihr:hatStadtId "1.100.34.5.2.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100351001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sonstige soziale Hilfen und Leistungen"@de ;
+                    ihr:BezeichnungStadt "Sonstige soziale Hilfen und Leistungen" ;
+                    ihr:hatStadtId "1.100.35.1.0.01" ;
+                    ihr:hatGrad "1.1" ;
+                    ihr:zumAmt ihramt:Amt51, ihramt:Amt50 .
+
+ihr:Bezug1100351002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Eltern- und Erziehungsgeld"@de ;
+                    ihr:BezeichnungStadt "Eltern- und Erziehungsgeld" ;
+                    ihr:hatStadtId "1.100.35.1.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100361001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Übernahme Elternbeiträge für Kinder in Tageseinrichtungen und Kindertagespflege"@de ;
+                    ihr:BezeichnungStadt "Übernahme Elternbeiträge Kitas/Tagespfl." ;
+                    ihr:hatStadtId "1.100.36.1.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100362001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Jugendarbeit § 11"@de ;
+                    ihr:BezeichnungStadt "Jugendarbeit § 11" ;
+                    ihr:hatStadtId "1.100.36.2.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100363101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Jugendsozialarbeit und erzieherischer Kinder- und Jugendschutz"@de ;
+                    ihr:BezeichnungStadt "Jugendsozialarb.;erz.Kind.-Jugendschutz" ;
+                    ihr:hatStadtId "1.100.36.3.1.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100363201 a ihr:Schluesselprodukt ;
+                    rdfs:label "Förderung der Erziehung in der Familie §§ 16-21"@de ;
+                    ihr:BezeichnungStadt "Förd. d. Erzieh.i.d. Familie §§ 16-21" ;
+                    ihr:hatStadtId "1.100.36.3.2.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100363301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfe zur Erziehung §§ 27, 29 - 35"@de ;
+                    ihr:BezeichnungStadt "Hilfe zur Erziehung §§ 27, 29 - 35" ;
+                    ihr:hatStadtId "1.100.36.3.3.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100363401 a ihr:Schluesselprodukt ;
+                    rdfs:label "Hilfe für junge Volljährige, Inobhutnahme, Eingliederungshilfe"@de ;
+                    ihr:BezeichnungStadt "Hilfe f. j. Vollj./ Inobh./ Eingl.hilfe" ;
+                    ihr:hatStadtId "1.100.36.3.4.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100363501 a ihr:Schluesselprodukt ;
+                    rdfs:label "Adoptionen, Beistand, Pflegschaft, Vormundschaft, Gerichtshilfe"@de ;
+                    ihr:BezeichnungStadt "Adopt./Beist./Pfleg./Vorm./ Gerichtsh." ;
+                    ihr:hatStadtId "1.100.36.3.5.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100365001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Kindertageseinrichtungen und Kindertagespflege"@de ;
+                    ihr:BezeichnungStadt "Kindertageseinricht. / Kindertagespflege" ;
+                    ihr:hatStadtId "1.100.36.5.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100366001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Einrichtungen der Jugendarbeit"@de ;
+                    ihr:BezeichnungStadt "Einrichtungen der Jugendarbeit" ;
+                    ihr:hatStadtId "1.100.36.6.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100367001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sonstige Einrichtungen der Kinder-, Jugend- und Familienhilfe"@de ;
+                    ihr:BezeichnungStadt "Sonst. Einricht.d.Kin.-,Jug.-u.Fam.hilfe" ;
+                    ihr:hatStadtId "1.100.36.7.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100411001 a ihr:Schluesselprodukt ;
+                    rdfs:label "St. Georg Unternehmensgruppe"@de ;
+                    ihr:BezeichnungStadt "St. Georg Unternehmensgruppe" ;
+                    ihr:hatStadtId "1.100.41.1.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt53 .
+
+ihr:Bezug1100414001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Amtsärztlicher Dienst"@de ;
+                    ihr:BezeichnungStadt "Amtsärztlicher Dienst" ;
+                    ihr:hatStadtId "1.100.41.4.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt53 .
+
+ihr:Bezug1100414002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Gesundheitsschutz"@de ;
+                    ihr:BezeichnungStadt "Gesundheitsschutz" ;
+                    ihr:hatStadtId "1.100.41.4.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt53 .
+
+ihr:Bezug1100414003 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Gesundheitsförderung, -vorsorge, -hilfen"@de ;
+                    ihr:BezeichnungStadt "Gesundheitsförderung, -vorsorge, -hilfen" ;
+                    ihr:hatStadtId "1.100.41.4.0.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt53 .
+
+ihr:Bezug1100421001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Förderung des Sports"@de ;
+                    ihr:BezeichnungStadt "Förderung des Sports" ;
+                    ihr:hatStadtId "1.100.42.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt52 .
+
+ihr:Bezug1100421002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Sportgroßveranstaltungen"@de ;
+                    ihr:BezeichnungStadt "Sportgroßveranstaltungen" ;
+                    ihr:hatStadtId "1.100.42.1.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt52 .
+
+ihr:Bezug1100424101 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Sportstätten und Sporteinrichtungen"@de ;
+                    ihr:BezeichnungStadt "Sportstätten und Sporteinrichtungen" ;
+                    ihr:hatStadtId "1.100.42.4.1.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt52 .
+
+ihr:Bezug1100424201 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Sportbäder Leipzig GmbH"@de ;
+                    ihr:BezeichnungStadt "Sportbäder Leipzig GmbH" ;
+                    ihr:hatStadtId "1.100.42.4.2.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt52 .
+
+ihr:Bezug1100511101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Stadtplanung und Stadtentwicklung"@de ;
+                    ihr:BezeichnungStadt "Stadtplanung/Stadtentwicklung" ;
+                    ihr:hatStadtId "1.100.51.1.1.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt61 .
+
+ihr:Bezug1100511106 a ihr:Schluesselprodukt ;
+                    rdfs:label "Verkehrsplanung"@de ;
+                    ihr:BezeichnungStadt "Verkehrsplanung" ;
+                    ihr:hatStadtId "1.100.51.1.1.06" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100511108 a ihr:Schluesselprodukt ;
+                    rdfs:label "Maßnahmen der Stadterneuerung"@de ;
+                    ihr:BezeichnungStadt "Maßnahmen der Stadterneuerung" ;
+                    ihr:hatStadtId "1.100.51.1.1.08" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt64 .
+
+ihr:Bezug1100511109 a ihr:Schluesselprodukt ;
+                    rdfs:label "LESG Gesellschaft der Stadt Leipzig mbH"@de ;
+                    ihr:BezeichnungStadt "LESG Gesellschaft der Stadt Leipzig mbH" ;
+                    ihr:hatStadtId "1.100.51.1.1.09" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt926 .
+
+ihr:Bezug1100511110 a ihr:Schluesselprodukt ;
+                    rdfs:label "LEVG mbH & Co. KG"@de ;
+                    ihr:BezeichnungStadt "LEVG mbH & Co. KG" ;
+                    ihr:hatStadtId "1.100.51.1.1.10" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt23, ihramt:Amt98, ihramt:Amt926 .
+
+ihr:Bezug1100511111 a ihr:Schluesselprodukt ;
+                    rdfs:label "LGH GmbH & Co. KG"@de ;
+                    ihr:BezeichnungStadt "LGH GmbH & Co. KG" ;
+                    ihr:hatStadtId "1.100.51.1.1.11" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt23, ihramt:Amt98, ihramt:Amt927 .
+
+ihr:Bezug1100512001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Grundstücksneuordnung"@de ;
+                    ihr:BezeichnungStadt "Grundstücksneuordnung" ;
+                    ihr:hatStadtId "1.100.51.2.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt62 .
+
+ihr:Bezug1100512002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Grundstückswertermittlung"@de ;
+                    ihr:BezeichnungStadt "Grundstückswertermittlung" ;
+                    ihr:hatStadtId "1.100.51.2.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt62 .
+
+ihr:Bezug1100512003 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Geodatenerfassung und Vertragsmanagement"@de ;
+                    ihr:BezeichnungStadt "Geodatenerfassung und Vertragsmanagement" ;
+                    ihr:hatStadtId "1.100.51.2.0.03" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt62 .
+
+ihr:Bezug1100512004 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Führung des Liegenschaftskatasters"@de ;
+                    ihr:BezeichnungStadt "Führung des Liegenschaftskatasters" ;
+                    ihr:hatStadtId "1.100.51.2.0.04" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt62 .
+
+ihr:Bezug1100512005 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Geoinformationsdienste, Kartografische Serviceprodukte"@de ;
+                    ihr:BezeichnungStadt "Geoinfo-dienste/Kartogr.Serviceprod." ;
+                    ihr:hatStadtId "1.100.51.2.0.05" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt62 .
+
+ihr:Bezug1100521001 a ihr:Schluesselprodukt ;
+                    rdfs:label "BG sonstige baurechtliche Entscheidungen"@de ;
+                    ihr:BezeichnungStadt "BG sonst.baurechtl. Entscheidungen" ;
+                    ihr:hatStadtId "1.100.52.1.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt63 .
+
+ihr:Bezug1100521002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Baukontrolle und Maßnahmen der Bauaufsicht"@de ;
+                    ihr:BezeichnungStadt "Baukontrolle u. Maßnahmen d. Bauaufsicht" ;
+                    ihr:hatStadtId "1.100.52.1.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt63 .
+
+ihr:Bezug1100522001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Wohnungsbauförderung"@de ;
+                    ihr:BezeichnungStadt "Wohnungsbauförderung" ;
+                    ihr:hatStadtId "1.100.52.2.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt64 .
+
+ihr:Bezug1100522002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Wohnungsvermittlung und -versorgung"@de ;
+                    ihr:BezeichnungStadt "Wohnungsvermittlung und -versorgung" ;
+                    ihr:hatStadtId "1.100.52.2.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100523001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Denkmalschutzrechtliche Entscheidungen"@de ;
+                    ihr:BezeichnungStadt "Denkmalschutzrechtliche Entscheidungen" ;
+                    ihr:hatStadtId "1.100.52.3.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt63 .
+
+ihr:Bezug1100523002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Denkmalpflege und -förderung"@de ;
+                    ihr:BezeichnungStadt "Denkmalpflege und -förderung" ;
+                    ihr:hatStadtId "1.100.52.3.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt63 .
+
+ihr:Bezug1100531001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Elektrizitätsversorgung"@de ;
+                    ihr:BezeichnungStadt "Elektrizitätsversorgung" ;
+                    ihr:hatStadtId "1.100.53.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100532001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Gasversorgung"@de ;
+                    ihr:BezeichnungStadt "Gasversorgung" ;
+                    ihr:hatStadtId "1.100.53.2.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100533001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Wasserversorgung für die Stadt Leipzig"@de ;
+                    ihr:BezeichnungStadt "Wasserversorgung für die Stadt Leipzig" ;
+                    ihr:hatStadtId "1.100.53.3.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100533002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Wasserversorgung für Umland und Stadt"@de ;
+                    ihr:BezeichnungStadt "Wasserversorgung für Umland und Stadt" ;
+                    ihr:hatStadtId "1.100.53.3.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100533003 a ihr:Schluesselprodukt ;
+                    rdfs:label "KWL GmbH"@de ;
+                    ihr:BezeichnungStadt "KWL GmbH" ;
+                    ihr:hatStadtId "1.100.53.3.0.03" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100534001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Fernwärmeversorgung"@de ;
+                    ihr:BezeichnungStadt "Fernwärmeversorgung" ;
+                    ihr:hatStadtId "1.100.53.4.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100535001 a ihr:Schluesselprodukt ;
+                    rdfs:label "SWL GmbH"@de ;
+                    ihr:BezeichnungStadt "SWL GmbH" ;
+                    ihr:hatStadtId "1.100.53.5.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt23 .
+
+ihr:Bezug1100537001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Abfallwirtschaft"@de ;
+                    ihr:BezeichnungStadt "Abfallwirtschaft" ;
+                    ihr:hatStadtId "1.100.53.7.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100537002 a ihr:Schluesselprodukt ;
+                    rdfs:label "ALL/AVL "@de ;
+                    ihr:BezeichnungStadt "ALL/AVL " ;
+                    ihr:hatStadtId "1.100.53.7.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100538001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Abwasserbeseitigung für die Stadt Leipzig"@de ;
+                    ihr:BezeichnungStadt "Abwasserbeseitigung für d. Stadt Leipzig" ;
+                    ihr:hatStadtId "1.100.53.8.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100538002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Abwasserbeseitigung für das Umlandgebiet"@de ;
+                    ihr:BezeichnungStadt "Abwasserbeseitigung für das Umlandgebiet" ;
+                    ihr:hatStadtId "1.100.53.8.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100538003 a ihr:Schluesselprodukt ;
+                    rdfs:label "IP Nord Grundwassermonitoring"@de ;
+                    ihr:BezeichnungStadt "IP Nord Grundwassermonitoring" ;
+                    ihr:hatStadtId "1.100.53.8.0.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100541001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Gemeindestraßen"@de ;
+                    ihr:BezeichnungStadt "Gemeindestraßen" ;
+                    ihr:hatStadtId "1.100.54.1.0.01" ;
+                    ihr:hatGrad "2.9" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100542001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Kreisstraßen"@de ;
+                    ihr:BezeichnungStadt "Kreisstraßen" ;
+                    ihr:hatStadtId "1.100.54.2.0.01" ;
+                    ihr:hatGrad "2.5" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100543001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Staatsstraßen"@de ;
+                    ihr:BezeichnungStadt "Staatsstraßen" ;
+                    ihr:hatStadtId "1.100.54.3.0.01" ;
+                    ihr:hatGrad "2.5" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100544001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Bundesstraßen"@de ;
+                    ihr:BezeichnungStadt "Bundesstraßen" ;
+                    ihr:hatStadtId "1.100.54.4.0.01" ;
+                    ihr:hatGrad "2.5" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100545101 a ihr:Schluesselprodukt ;
+                    rdfs:label "Straßenreinigung"@de ;
+                    ihr:BezeichnungStadt "Straßenreinigung" ;
+                    ihr:hatStadtId "1.100.54.5.1.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100545201 a ihr:Schluesselprodukt ;
+                    rdfs:label "Winterdienst Gemeindestraßen, Wege, Plätze"@de ;
+                    ihr:BezeichnungStadt "Winterdienst Gemeindestraßen,Wege,Plätze" ;
+                    ihr:hatStadtId "1.100.54.5.2.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100545301 a ihr:Schluesselprodukt ;
+                    rdfs:label "Winterdienst an Kreisstraßen"@de ;
+                    ihr:BezeichnungStadt "Winterdienst an Kreisstraßen" ;
+                    ihr:hatStadtId "1.100.54.5.3.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100545401 a ihr:Schluesselprodukt ;
+                    rdfs:label "Winterdienst an Staatsstraßen"@de ;
+                    ihr:BezeichnungStadt "Winterdienst an Staatsstraßen" ;
+                    ihr:hatStadtId "1.100.54.5.4.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100545501 a ihr:Schluesselprodukt ;
+                    rdfs:label "Winterdienst an Bundesstraßen"@de ;
+                    ihr:BezeichnungStadt "Winterdienst an Bundesstraßen" ;
+                    ihr:hatStadtId "1.100.54.5.5.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100546001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Bereitstellung und Bewirtschaftung von PE"@de ;
+                    ihr:BezeichnungStadt "Bereitstellung u. Bewirtschaftung von PE" ;
+                    ihr:hatStadtId "1.100.54.6.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100547001 a ihr:Schluesselprodukt ;
+                    rdfs:label "MDV GmbH"@de ;
+                    ihr:BezeichnungStadt "MDV GmbH" ;
+                    ihr:hatStadtId "1.100.54.7.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt926 .
+
+ihr:Bezug1100547002 a ihr:Schluesselprodukt ;
+                    rdfs:label "LVB GmbH"@de ;
+                    ihr:BezeichnungStadt "LVB GmbH" ;
+                    ihr:hatStadtId "1.100.54.7.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt926 .
+
+ihr:Bezug1100549001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Straßenrechtliche Sondernutzungen"@de ;
+                    ihr:BezeichnungStadt "Straßenrechtliche Sondernutzungen" ;
+                    ihr:hatStadtId "1.100.54.9.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt66, ihramt:Amt72 .
+
+ihr:Bezug1100549002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Verkehrsmanagement"@de ;
+                    ihr:BezeichnungStadt "Verkehrsmanagement" ;
+                    ihr:hatStadtId "1.100.54.9.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100551001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Grün- und Parkanlagen, Kleingartenwesen"@de ;
+                    ihr:BezeichnungStadt "Grün- und Parkanlagen, Kleingartenwesen" ;
+                    ihr:hatStadtId "1.100.55.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100552001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Ausbau und Unterhaltung der Gewässer II. Ordnung"@de ;
+                    ihr:BezeichnungStadt "Ausbau/Unterhaltung Gewässer II.Ordnung" ;
+                    ihr:hatStadtId "1.100.55.2.0.01" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100552002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Wasserrechtliche Maßnahmen"@de ;
+                    ihr:BezeichnungStadt "Wasserrechtliche Maßnahmen" ;
+                    ihr:hatStadtId "1.100.55.2.0.02" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100553001 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Bestattungsdienstleistungen und Krematorium"@de ;
+                    ihr:BezeichnungStadt "Bestattungsdienstleistungen/Krematorium" ;
+                    ihr:hatStadtId "1.100.55.3.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100554001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Naturschutzbehördliche Maßnahmen"@de ;
+                    ihr:BezeichnungStadt "Naturschutzbehördliche Maßnahmen" ;
+                    ihr:hatStadtId "1.100.55.4.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100554002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Flächenmanagement"@de ;
+                    ihr:BezeichnungStadt "Flächenmanagement" ;
+                    ihr:hatStadtId "1.100.55.4.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100555001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Land- und Forstwirtschaft"@de ;
+                    ihr:BezeichnungStadt "Land- und Forstwirtschaft" ;
+                    ihr:hatStadtId "1.100.55.5.0.01" ;
+                    ihr:hatGrad "2.8" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100561001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Umweltplanung, Stadtökologie, Integrierter Umweltschutz"@de ;
+                    ihr:BezeichnungStadt "Umweltpl./Stadtöl./Integr. Umweltschutz" ;
+                    ihr:hatStadtId "1.100.56.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100561002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Umweltinformation, -beratung, -bildung"@de ;
+                    ihr:BezeichnungStadt "Umweltinformat./-beratung/Umweltbildung" ;
+                    ihr:hatStadtId "1.100.56.1.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100561003 a ihr:Schluesselprodukt ;
+                    rdfs:label "Abfall- und bodenschutzrechtliche Maßnahmen"@de ;
+                    ihr:BezeichnungStadt "Abfall-/Bodenschutzr. Maßnahmen" ;
+                    ihr:hatStadtId "1.100.56.1.0.03" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100561004 a ihr:Schluesselprodukt ;
+                    rdfs:label "Immissionsschutzrechtliche Maßnahmen"@de ;
+                    ihr:BezeichnungStadt "Immissionsschutzrechtliche Maßnahmen" ;
+                    ihr:hatStadtId "1.100.56.1.0.04" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100561005 a ihr:Schluesselprodukt ;
+                    rdfs:label "Luftreinhaltung, Lärmminderung, Klimaschutz"@de ;
+                    ihr:BezeichnungStadt "Luftreinhaltg./Lärmminderung/Klimaschutz" ;
+                    ihr:hatStadtId "1.100.56.1.0.05" ;
+                    ihr:hatGrad "2" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100561006 a ihr:Schluesselprodukt ;
+                    rdfs:label "Grüner Ring Leipzig (GRL)"@de ;
+                    ihr:BezeichnungStadt "Grüner Ring Leipzig (GRL)" ;
+                    ihr:hatStadtId "1.100.56.1.0.06" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100571001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Wirtschaftsförderung"@de ;
+                    ihr:BezeichnungStadt "Wirtschaftsförderung" ;
+                    ihr:hatStadtId "1.100.57.1.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt80 .
+
+ihr:Bezug1100571002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Arbeitsmarkt- und Beschäftigungsförderung"@de ;
+                    ihr:BezeichnungStadt "Arbeitsmarkt- u. Beschäftigungsförderung" ;
+                    ihr:hatStadtId "1.100.57.1.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt81 .
+
+ihr:Bezug1100571003 a ihr:Schluesselprodukt ;
+                    rdfs:label "PUUL GmbH"@de ;
+                    ihr:BezeichnungStadt "PUUL GmbH" ;
+                    ihr:hatStadtId "1.100.57.1.0.03" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt927 .
+
+ihr:Bezug1100571004 a ihr:Schluesselprodukt ;
+                    rdfs:label "BIC GmbH (AGIL)"@de ;
+                    ihr:BezeichnungStadt "BIC GmbH (AGIL)" ;
+                    ihr:hatStadtId "1.100.57.1.0.04" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt927 .
+
+ihr:Bezug1100571005 a ihr:Schluesselprodukt ;
+                    rdfs:label "Aufbauwerk GmbH"@de ;
+                    ihr:BezeichnungStadt "Aufbauwerk GmbH" ;
+                    ihr:hatStadtId "1.100.57.1.0.05" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt927 .
+
+ihr:Bezug1100573001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Leipziger Messe GmbH"@de ;
+                    ihr:BezeichnungStadt "Leipziger Messe GmbH" ;
+                    ihr:hatStadtId "1.100.57.3.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573002 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Märkte"@de ;
+                    ihr:BezeichnungStadt "Märkte" ;
+                    ihr:hatStadtId "1.100.57.3.0.02" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt72 .
+
+ihr:Bezug1100573003 a ihr:Schluesselprodukt ;
+                    rdfs:label "WV Energie AG"@de ;
+                    ihr:BezeichnungStadt "WV Energie AG" ;
+                    ihr:hatStadtId "1.100.57.3.0.03" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573004 a ihr:Schluesselprodukt ;
+                    rdfs:label "bbvl mbH"@de ;
+                    ihr:BezeichnungStadt "bbvl mbH" ;
+                    ihr:hatStadtId "1.100.57.3.0.04" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573005 a ihr:Schluesselprodukt ;
+                    rdfs:label "Saatzucht Plaußig GmbH"@de ;
+                    ihr:BezeichnungStadt "Saatzucht Plaußig GmbH" ;
+                    ihr:hatStadtId "1.100.57.3.0.05" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt927 .
+
+ihr:Bezug1100573006 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sachsen-Finanzgruppe"@de ;
+                    ihr:BezeichnungStadt "Sachsen-Finanzgruppe" ;
+                    ihr:hatStadtId "1.100.57.3.0.06" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573007 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sparkasse Leipzig"@de ;
+                    ihr:BezeichnungStadt "Sparkasse Leipzig" ;
+                    ihr:hatStadtId "1.100.57.3.0.07" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573008 a ihr:Schluesselprodukt ;
+                    rdfs:label "LWB mbH"@de ;
+                    ihr:BezeichnungStadt "LWB mbH" ;
+                    ihr:hatStadtId "1.100.57.3.0.08" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012, ihramt:Amt98 .
+
+ihr:Bezug1100573009 a ihr:GebuehrenberechnenderBereich, ihr:Schluesselprodukt ;
+                    rdfs:label "Kleinmesseplatz Cottaweg"@de ;
+                    ihr:BezeichnungStadt "Kleinmesseplatz Cottaweg" ;
+                    ihr:hatStadtId "1.100.57.3.0.09" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt72 .
+
+ihr:Bezug1100573010 a ihr:Schluesselprodukt ;
+                    rdfs:label "LVV mbH"@de ;
+                    ihr:BezeichnungStadt "LVV mbH" ;
+                    ihr:hatStadtId "1.100.57.3.0.10" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012, ihramt:Amt98 .
+
+ihr:Bezug1100573011 a ihr:Schluesselprodukt ;
+                    rdfs:label "Mitteldeutsche Flughafen AG"@de ;
+                    ihr:BezeichnungStadt "Mitteldeutsche Flughafen AG" ;
+                    ihr:hatStadtId "1.100.57.3.0.11" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573012 a ihr:Schluesselprodukt ;
+                    rdfs:label "Fernwasser GmbH"@de ;
+                    ihr:BezeichnungStadt "Fernwasser GmbH" ;
+                    ihr:hatStadtId "1.100.57.3.0.12" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573013 a ihr:Schluesselprodukt ;
+                    rdfs:label "VWA Leipzig GmbH"@de ;
+                    ihr:BezeichnungStadt "VWA Leipzig GmbH" ;
+                    ihr:hatStadtId "1.100.57.3.0.13" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt921 .
+
+ihr:Bezug1100573014 a ihr:Schluesselprodukt ;
+                    rdfs:label "EEX AG"@de ;
+                    ihr:BezeichnungStadt "EEX AG" ;
+                    ihr:hatStadtId "1.100.57.3.0.14" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt012 .
+
+ihr:Bezug1100573015 a ihr:Schluesselprodukt ;
+                    rdfs:label "Zweckverband KISA"@de ;
+                    ihr:BezeichnungStadt "Zweckverband KISA" ;
+                    ihr:hatStadtId "1.100.57.3.0.15" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt921 .
+
+ihr:Bezug1100575001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Tourismusförderung"@de ;
+                    ihr:BezeichnungStadt "Tourismusförderung" ;
+                    ihr:hatStadtId "1.100.57.5.0.01" ;
+                    ihr:hatGrad "3" ;
+                    ihr:zumAmt ihramt:Amt80 .
+
+ihr:Bezug1100611001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Steuern, allgemeine Zuweisungen, allgemeine Umlagen"@de ;
+                    ihr:BezeichnungStadt "Steuern, allg. Zuweisungen,allg. Umlagen" ;
+                    ihr:hatStadtId "1.100.61.1.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt98 .
+
+ihr:Bezug1100612001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Sonstige allgemeine Finanzwirtschaft"@de ;
+                    ihr:BezeichnungStadt "Sonstige allgemeine Finanzwirtschaft" ;
+                    ihr:hatStadtId "1.100.61.2.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt98 .
+
+ihr:Bezug1100613001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Abwicklung der Vorjahre"@de ;
+                    ihr:BezeichnungStadt "Abwicklung der Vorjahre" ;
+                    ihr:hatStadtId "1.100.61.3.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt98 .
+
+ihr:Bezug1100711001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – OBM 1"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – OBM 1" ;
+                    ihr:hatStadtId "1.100.71.1.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100711002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – OBM 2"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – OBM 2" ;
+                    ihr:hatStadtId "1.100.71.1.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt2 .
+
+ihr:Bezug1100711010 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 10"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 10" ;
+                    ihr:hatStadtId "1.100.71.1.0.10" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt10 .
+
+ihr:Bezug1100711011 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 11"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 11" ;
+                    ihr:hatStadtId "1.100.71.1.0.11" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt11 .
+
+ihr:Bezug1100711012 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 12"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 12" ;
+                    ihr:hatStadtId "1.100.71.1.0.12" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt12 .
+
+ihr:Bezug1100711013 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 13"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 13" ;
+                    ihr:hatStadtId "1.100.71.1.0.13" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt13 .
+
+ihr:Bezug1100711014 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 14"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 14" ;
+                    ihr:hatStadtId "1.100.71.1.0.14" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt14 .
+
+ihr:Bezug1100711017 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 17"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 17" ;
+                    ihr:hatStadtId "1.100.71.1.0.17" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt17 .
+
+ihr:Bezug1100711018 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 18"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 18" ;
+                    ihr:hatStadtId "1.100.71.1.0.18" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt18 .
+
+ihr:Bezug1100711019 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 19"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 19" ;
+                    ihr:hatStadtId "1.100.71.1.0.19" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt19 .
+
+ihr:Bezug1100711020 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 20"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 20" ;
+                    ihr:hatStadtId "1.100.71.1.0.20" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt20 .
+
+ihr:Bezug1100711021 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 21"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 21" ;
+                    ihr:hatStadtId "1.100.71.1.0.21" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt21 .
+
+ihr:Bezug1100711023 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 23"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 23" ;
+                    ihr:hatStadtId "1.100.71.1.0.23" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt23 .
+
+ihr:Bezug1100711027 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 27"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 27" ;
+                    ihr:hatStadtId "1.100.71.1.0.27" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt27 .
+
+ihr:Bezug1100711030 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 30"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 30" ;
+                    ihr:hatStadtId "1.100.71.1.0.30" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt30 .
+
+ihr:Bezug1100711057 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 57"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 57" ;
+                    ihr:hatStadtId "1.100.71.1.0.57" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt57 .
+
+ihr:Bezug1100711065 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 65"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 65" ;
+                    ihr:hatStadtId "1.100.71.1.0.65" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt65 .
+
+ihr:Bezug1100711080 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 801"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 801" ;
+                    ihr:hatStadtId "1.100.71.1.0.80" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt801 .
+
+ihr:Bezug1100711091 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 921"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 921" ;
+                    ihr:hatStadtId "1.100.71.1.0.91" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt921 .
+
+ihr:Bezug1100711092 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Innere Verwaltung – Amt 922"@de ;
+                    ihr:BezeichnungStadt "Schaden Innere Verwaltung – Amt 922" ;
+                    ihr:hatStadtId "1.100.71.1.0.92" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt922 .
+
+ihr:Bezug1100712012 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Zivil- und Katastrophenschutz – Amt 12"@de ;
+                    ihr:BezeichnungStadt "Schaden Zivil- und Kat.schutz – Amt 12" ;
+                    ihr:hatStadtId "1.100.71.2.0.12" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt12 .
+
+ihr:Bezug1100721051 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schadensereignisse Schulen – Amt 51"@de ;
+                    ihr:BezeichnungStadt "Schadensereignisse Schulen – Amt 51" ;
+                    ihr:hatStadtId "1.100.72.1.0.51" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100725041 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Kultur und Wissenschaft – Amt 41"@de ;
+                    ihr:BezeichnungStadt "Schaden Kultur und Wissenschaft – Amt 41" ;
+                    ihr:hatStadtId "1.100.72.5.0.41" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt41 .
+
+ihr:Bezug1100725042 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Kultur und Wissenschaft – Amt 42"@de ;
+                    ihr:BezeichnungStadt "Schaden Kultur und Wissenschaft – Amt 42" ;
+                    ihr:hatStadtId "1.100.72.5.0.42" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt42 .
+
+ihr:Bezug1100725043 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Kultur und Wissenschaft – Amt 43"@de ;
+                    ihr:BezeichnungStadt "Schaden Kultur und Wissenschaft – Amt 43" ;
+                    ihr:hatStadtId "1.100.72.5.0.43" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt43 .
+
+ihr:Bezug1100725045 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Kultur und Wissenschaft – Amt 45"@de ;
+                    ihr:BezeichnungStadt "Schaden Kultur und Wissenschaft – Amt 45" ;
+                    ihr:hatStadtId "1.100.72.5.0.45" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt45 .
+
+ihr:Bezug1100725094 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Kultur und Wissenschaft – Amt 924"@de ;
+                    ihr:BezeichnungStadt "Schaden Kultur und Wissenschaft –Amt 924" ;
+                    ihr:hatStadtId "1.100.72.5.0.94" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt924 .
+
+ihr:Bezug1100731023 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Soziale Hilfen – Amt 23"@de ;
+                    ihr:BezeichnungStadt "Schaden Soziale Hilfen – Amt 23" ;
+                    ihr:hatStadtId "1.100.73.1.0.23" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt23 .
+
+ihr:Bezug1100731050 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Soziale Hilfen – Amt 50"@de ;
+                    ihr:BezeichnungStadt "Schaden Soziale Hilfen – Amt 50" ;
+                    ihr:hatStadtId "1.100.73.1.0.50" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100731095 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Soziale Hilfen – Amt 925"@de ;
+                    ihr:BezeichnungStadt "Schaden Soziale Hilfen – Amt 925" ;
+                    ihr:hatStadtId "1.100.73.1.0.95" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt925 .
+
+ihr:Bezug1100736051 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Kinder-, Jugend-, Familie – Amt 51"@de ;
+                    ihr:BezeichnungStadt "Schaden Kinder-, Jugend-, Familie Amt 51" ;
+                    ihr:hatStadtId "1.100.73.6.0.51" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt51 .
+
+ihr:Bezug1100741053 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Gesundheitsdienste – Amt 53"@de ;
+                    ihr:BezeichnungStadt "Schaden Gesundheitsdienste – Amt 53" ;
+                    ihr:hatStadtId "1.100.74.1.0.53" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt53 .
+
+ihr:Bezug1100742052 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Sportförderung – Amt 52"@de ;
+                    ihr:BezeichnungStadt "Schaden Sportförderung – Amt 52" ;
+                    ihr:hatStadtId "1.100.74.2.0.52" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt52 .
+
+ihr:Bezug1100751023 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Räumliche Planung – Amt 23"@de ;
+                    ihr:BezeichnungStadt "Schaden Räumliche Planung – Amt 23" ;
+                    ihr:hatStadtId "1.100.75.1.0.23" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt23 .
+
+ihr:Bezug1100751061 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Räumliche Planung – Amt 61"@de ;
+                    ihr:BezeichnungStadt "Schaden Räumliche Planung – Amt 61" ;
+                    ihr:hatStadtId "1.100.75.1.0.61" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt61 .
+
+ihr:Bezug1100751062 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Räumliche Planung – Amt 62"@de ;
+                    ihr:BezeichnungStadt "Schaden Räumliche Planung – Amt 62" ;
+                    ihr:hatStadtId "1.100.75.1.0.62" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt62 .
+
+ihr:Bezug1100751064 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Räumliche Planung – Amt 64"@de ;
+                    ihr:BezeichnungStadt "Schaden Räumliche Planung – Amt 64" ;
+                    ihr:hatStadtId "1.100.75.1.0.64" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt64 .
+
+ihr:Bezug1100751066 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Räumliche Planung – Amt 66"@de ;
+                    ihr:BezeichnungStadt "Schaden Räumliche Planung – Amt 66" ;
+                    ihr:hatStadtId "1.100.75.1.0.66" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100751096 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Räumliche Planung – Amt 96"@de ;
+                    ihr:BezeichnungStadt "Schaden Räumliche Planung – Amt 96" ;
+                    ihr:hatStadtId "1.100.75.1.0.96" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt926 .
+
+ihr:Bezug1100752050 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Bauordnung – Amt 50"@de ;
+                    ihr:BezeichnungStadt "Schaden Bauordnung – Amt 50" ;
+                    ihr:hatStadtId "1.100.75.2.0.50" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt50 .
+
+ihr:Bezug1100752063 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Bauordnung – Amt 63"@de ;
+                    ihr:BezeichnungStadt "Schaden Bauordnung – Amt 63" ;
+                    ihr:hatStadtId "1.100.75.2.0.63" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt63 .
+
+ihr:Bezug1100752064 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Bauordnung – Amt 64"@de ;
+                    ihr:BezeichnungStadt "Schaden Bauordnung – Amt 64" ;
+                    ihr:hatStadtId "1.100.75.2.0.64" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt64 .
+
+ihr:Bezug1100753001 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Ver-/Entsorgung – OBM 1"@de ;
+                    ihr:BezeichnungStadt "Schaden Ver-/Entsorgung – OBM 1" ;
+                    ihr:hatStadtId "1.100.75.3.0.01" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt011 .
+
+ihr:Bezug1100753002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Ver-/Entsorgung – OBM 2"@de ;
+                    ihr:BezeichnungStadt "Schaden Ver-/Entsorgung – OBM 2" ;
+                    ihr:hatStadtId "1.100.75.3.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt2 .
+
+ihr:Bezug1100753023 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Ver-/Entsorgung – Amt 23"@de ;
+                    ihr:BezeichnungStadt "Schaden Ver-/Entsorgung – Amt 23" ;
+                    ihr:hatStadtId "1.100.75.3.0.23" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt23 .
+
+ihr:Bezug1100753066 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Ver-/Entsorgung – Amt 66"@de ;
+                    ihr:BezeichnungStadt "Schaden Ver-/Entsorgung – Amt 66" ;
+                    ihr:hatStadtId "1.100.75.3.0.66" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100753091 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Ver-/Entsorgung – Amt 91"@de ;
+                    ihr:BezeichnungStadt "Schaden Ver-/Entsorgung – Amt 91" ;
+                    ihr:hatStadtId "1.100.75.3.0.91" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt921 .
+
+ihr:Bezug1100753093 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Ver-/Entsorgung – Amt 93"@de ;
+                    ihr:BezeichnungStadt "Schaden Ver-/Entsorgung – Amt 93" ;
+                    ihr:hatStadtId "1.100.75.3.0.93" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100754066 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Verkehrsflächen – Amt 66"@de ;
+                    ihr:BezeichnungStadt "Schaden Verkehrsflächen – Amt 66" ;
+                    ihr:hatStadtId "1.100.75.4.0.66" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Bezug1100754072 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Verkehrsflächen – Amt 72"@de ;
+                    ihr:BezeichnungStadt "Schaden Verkehrsflächen – Amt 72" ;
+                    ihr:hatStadtId "1.100.75.4.0.72" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt72 .
+
+ihr:Bezug1100754093 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Verkehrsflächen – Amt 923"@de ;
+                    ihr:BezeichnungStadt "Schaden Verkehrsflächen – Amt 923" ;
+                    ihr:hatStadtId "1.100.75.4.0.93" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt923 .
+
+ihr:Bezug1100754096 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Verkehrsflächen – Amt 926"@de ;
+                    ihr:BezeichnungStadt "Schaden Verkehrsflächen – Amt 926" ;
+                    ihr:hatStadtId "1.100.75.4.0.96" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt926 .
+
+ihr:Bezug1100755036 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Naturpflege – Amt 36"@de ;
+                    ihr:BezeichnungStadt "Schaden Naturpflege – Amt 36" ;
+                    ihr:hatStadtId "1.100.75.5.0.36" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100755067 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Naturpflege – Amt 67"@de ;
+                    ihr:BezeichnungStadt "Schaden Naturpflege – Amt 67" ;
+                    ihr:hatStadtId "1.100.75.5.0.67" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100756036 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Umweltschutz – Amt 36"@de ;
+                    ihr:BezeichnungStadt "Schaden Umweltschutz – Amt 36" ;
+                    ihr:hatStadtId "1.100.75.6.0.36" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt36 .
+
+ihr:Bezug1100756067 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Umweltschutz – Amt 67"@de ;
+                    ihr:BezeichnungStadt "Schaden Umweltschutz – Amt 67" ;
+                    ihr:hatStadtId "1.100.75.6.0.67" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt67 .
+
+ihr:Bezug1100757002 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Wirtschaft und Tourismus – OBM 2"@de ;
+                    ihr:BezeichnungStadt "Schaden Wirtschaft und Tourismus –OBM 2" ;
+                    ihr:hatStadtId "1.100.75.7.0.02" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt2 .
+
+ihr:Bezug1100757072 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Wirtschaft und Tourismus – Amt 72"@de ;
+                    ihr:BezeichnungStadt "Schaden Wirtschaft und Tourismus –Amt 72" ;
+                    ihr:hatStadtId "1.100.75.7.0.72" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt72 .
+
+ihr:Bezug1100757080 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Wirtschaft und Tourismus – Amt 80"@de ;
+                    ihr:BezeichnungStadt "Schaden Wirtschaft und Tourismus –Amt 80" ;
+                    ihr:hatStadtId "1.100.75.7.0.80" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt80 .
+
+ihr:Bezug1100757081 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Wirtschaft und Tourismus – Amt 81"@de ;
+                    ihr:BezeichnungStadt "Schaden Wirtschaft und Tourismus –Amt 81" ;
+                    ihr:hatStadtId "1.100.75.7.0.81" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt81 .
+
+ihr:Bezug1100757091 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Wirtschaft und Tourismus – Amt 91"@de ;
+                    ihr:BezeichnungStadt "Schaden Wirtschaft und Tourismus –Amt 91" ;
+                    ihr:hatStadtId "1.100.75.7.0.91" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt921 .
+
+ihr:Bezug1100757097 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Wirtschaft und Tourismus – Amt 97"@de ;
+                    ihr:BezeichnungStadt "Schaden Wirtschaft und Tourismus –Amt 97" ;
+                    ihr:hatStadtId "1.100.75.7.0.97" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt927 .
+
+ihr:Bezug1100761098 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Allgemeine Finanzwirtschaft – Amt 98"@de ;
+                    ihr:BezeichnungStadt "Schaden Allg. Finanzwirtschaft – Amt 98" ;
+                    ihr:hatStadtId "1.100.76.1.0.98" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt98 .
+
+ihr:Bezug2100712030 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Zivil- und Katastrophenschutz – Amt 30"@de ;
+                    ihr:BezeichnungStadt "Schaden Zivil- und Kat.schutz – Amt 30" ;
+                    ihr:hatStadtId "2.100.71.2.0.30" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt30 .
+
+ihr:Bezug3100712032 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Zivil- und Katastrophenschutz – Amt 32"@de ;
+                    ihr:BezeichnungStadt "Schaden Zivil- und Kat.schutz – Amt 32" ;
+                    ihr:hatStadtId "3.100.71.2.0.32" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt32 .
+
+ihr:Bezug4100712034 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Zivil- und Katastrophenschutz – Amt 34"@de ;
+                    ihr:BezeichnungStadt "Schaden Zivil- und Kat.schutz – Amt 34" ;
+                    ihr:hatStadtId "4.100.71.2.0.34" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt34 .
+
+ihr:Bezug6100712056 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Zivil- und Katastrophenschutz – Amt 56"@de ;
+                    ihr:BezeichnungStadt "Schaden Zivil- und Kat.schutz – Amt 56" ;
+                    ihr:hatStadtId "6.100.71.2.0.56" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt56 .
+
+ihr:Bezug7100712066 a ihr:Schluesselprodukt ;
+                    rdfs:label "Schaden Zivil- und Katastrophenschutz – Amt 66"@de ;
+                    ihr:BezeichnungStadt "Schaden Zivil- und Kat.schutz – Amt 66" ;
+                    ihr:hatStadtId "7.100.71.2.0.66" ;
+                    ihr:hatGrad "1" ;
+                    ihr:zumAmt ihramt:Amt66 .
+
+ihr:Ergebnishaushalt a ihr:Kategorie ;
+                     rdfs:label "Ergebnishaushalt"@de ;
+                     ihr:BezeichnungStadt "Ergebnishaushalt" .
+
+ihr:Finanzhaushalt a ihr:Kategorie ;
+                   rdfs:label "Finanzhaushalt"@de ;
+                   ihr:BezeichnungStadt "Finanzhaushalt" .
+
+ihr:Kategorie a rdfs:Class ;
+              rdfs:label "Haushaltskategorie"@de ;
+              rdfs:comment "Ergebnishaushalt oder Erstragshaushalt" .
+
+ihr:PrBer a rdfs:Class ;
+          rdfs:label "Produktbereich"@de ;
+          rdfs:comment "Erste Gliederungsebene" .
+
+ihr:PrBer11 a ihr:PrBer ;
+            rdfs:label "Innere Verwaltung"@de ;
+            ihr:BezeichnungStadt "Innere Verwaltung" ;
+            ihr:hatStadtId "11" .
+
+ihr:PrBer12 a ihr:PrBer ;
+            rdfs:label "Sicherheit und Ordnung"@de ;
+            ihr:BezeichnungStadt "Sicherheit und Ordnung" ;
+            ihr:hatStadtId "12" .
+
+ihr:PrBer21 a ihr:PrBer ;
+            rdfs:label "Schulträgeraufgaben"@de ;
+            ihr:BezeichnungStadt "Schulträgeraufgaben" ;
+            ihr:hatStadtId "21" .
+
+ihr:PrBer22 a ihr:PrBer ;
+            rdfs:label "Schulträgeraufgaben"@de ;
+            ihr:BezeichnungStadt "Schulträgeraufgaben" ;
+            ihr:hatStadtId "22" .
+
+ihr:PrBer23 a ihr:PrBer ;
+            rdfs:label "Schulträgeraufgaben"@de ;
+            ihr:BezeichnungStadt "Schulträgeraufgaben" ;
+            ihr:hatStadtId "23" .
+
+ihr:PrBer24 a ihr:PrBer ;
+            rdfs:label "Schulträgeraufgaben"@de ;
+            ihr:BezeichnungStadt "Schulträgeraufgaben" ;
+            ihr:hatStadtId "24" .
+
+ihr:PrBer25 a ihr:PrBer ;
+            rdfs:label "Kultur und Wissenschaft"@de ;
+            ihr:BezeichnungStadt "Kultur und Wissenschaft" ;
+            ihr:hatStadtId "25" .
+
+ihr:PrBer26 a ihr:PrBer ;
+            rdfs:label "Kultur und Wissenschaft"@de ;
+            ihr:BezeichnungStadt "Kultur und Wissenschaft" ;
+            ihr:hatStadtId "26" .
+
+ihr:PrBer27 a ihr:PrBer ;
+            rdfs:label "Kultur und Wissenschaft"@de ;
+            ihr:BezeichnungStadt "Kultur und Wissenschaft" ;
+            ihr:hatStadtId "27" .
+
+ihr:PrBer28 a ihr:PrBer ;
+            rdfs:label "Kultur und Wissenschaft"@de ;
+            ihr:BezeichnungStadt "Kultur und Wissenschaft" ;
+            ihr:hatStadtId "28" .
+
+ihr:PrBer29 a ihr:PrBer ;
+            rdfs:label "Kultur und Wissenschaft"@de ;
+            ihr:BezeichnungStadt "Kultur und Wissenschaft" ;
+            ihr:hatStadtId "29" .
+
+ihr:PrBer31 a ihr:PrBer ;
+            rdfs:label "Soziale Hilfen"@de ;
+            ihr:BezeichnungStadt "Soziale Hilfen" ;
+            ihr:hatStadtId "31" .
+
+ihr:PrBer33 a ihr:PrBer ;
+            rdfs:label "Soziale Hilfen"@de ;
+            ihr:BezeichnungStadt "Soziale Hilfen" ;
+            ihr:hatStadtId "33" .
+
+ihr:PrBer34 a ihr:PrBer ;
+            rdfs:label "Soziale Hilfen"@de ;
+            ihr:BezeichnungStadt "Soziale Hilfen" ;
+            ihr:hatStadtId "34" .
+
+ihr:PrBer35 a ihr:PrBer ;
+            rdfs:label "Soziale Hilfen"@de ;
+            ihr:BezeichnungStadt "Soziale Hilfen" ;
+            ihr:hatStadtId "35" .
+
+ihr:PrBer36 a ihr:PrBer ;
+            rdfs:label "Kinder-, Jugend und Familienhilfe (SGB VIII)"@de ;
+            ihr:BezeichnungStadt "Kinder-, Jugend und Familienhilfe (SGB VIII)" ;
+            ihr:hatStadtId "36" .
+
+ihr:PrBer41 a ihr:PrBer ;
+            rdfs:label "Gesundheitsdienste"@de ;
+            ihr:BezeichnungStadt "Gesundheitsdienste" ;
+            ihr:hatStadtId "41" .
+
+ihr:PrBer42 a ihr:PrBer ;
+            rdfs:label "Sportförderung"@de ;
+            ihr:BezeichnungStadt "Sportförderung" ;
+            ihr:hatStadtId "42" .
+
+ihr:PrBer51 a ihr:PrBer ;
+            rdfs:label "Räumliche Planung und Entwicklung"@de ;
+            ihr:BezeichnungStadt "Räumliche Planung und Entwicklung" ;
+            ihr:hatStadtId "51" .
+
+ihr:PrBer52 a ihr:PrBer ;
+            rdfs:label "Bau- und Grundstücksordnung"@de ;
+            ihr:BezeichnungStadt "Bau- und Grundstücksordnung" ;
+            ihr:hatStadtId "52" .
+
+ihr:PrBer53 a ihr:PrBer ;
+            rdfs:label "Ver- und Entsorgung"@de ;
+            ihr:BezeichnungStadt "Ver- und Entsorgung" ;
+            ihr:hatStadtId "53" .
+
+ihr:PrBer54 a ihr:PrBer ;
+            rdfs:label "Verkehrsflächen und -anlagen, ÖPNV"@de ;
+            ihr:BezeichnungStadt "Verkehrsflächen und -anlagen, ÖPNV" ;
+            ihr:hatStadtId "54" .
+
+ihr:PrBer55 a ihr:PrBer ;
+            rdfs:label "Natur- und Landschaftspflege"@de ;
+            ihr:BezeichnungStadt "Natur- und Landschaftspflege" ;
+            ihr:hatStadtId "55" .
+
+ihr:PrBer56 a ihr:PrBer ;
+            rdfs:label "Umweltschutz"@de ;
+            ihr:BezeichnungStadt "Umweltschutz" ;
+            ihr:hatStadtId "56" .
+
+ihr:PrBer57 a ihr:PrBer ;
+            rdfs:label "Wirtschaft und Tourismus"@de ;
+            ihr:BezeichnungStadt "Wirtschaft und Tourismus" ;
+            ihr:hatStadtId "57" .
+
+ihr:PrBer61 a ihr:PrBer ;
+            rdfs:label "Allgemeine Finanzwirtschaft"@de ;
+            ihr:BezeichnungStadt "Allgemeine Finanzwirtschaft" ;
+            ihr:hatStadtId "61" .
+
+ihr:PrBer71 a ihr:PrBer ;
+            rdfs:label "Besondere Schadensereignisse im Bereich \"Zentrale Verwaltung\""@de ;
+            ihr:BezeichnungStadt "Besondere Schadensereignisse im Bereich \"Zentrale Verwaltung\"" ;
+            ihr:hatStadtId "71" .
+
+ihr:PrBer72 a ihr:PrBer ;
+            rdfs:label "Besondere Schadensereignisse im Bereich \"Schule und Kultur\""@de ;
+            ihr:BezeichnungStadt "Besondere Schadensereignisse im Bereich \"Schule und Kultur\"" ;
+            ihr:hatStadtId "72" .
+
+ihr:PrBer73 a ihr:PrBer ;
+            rdfs:label "Besondere Schadensereignisse im Bereich \"Soziales und Jugend\""@de ;
+            ihr:BezeichnungStadt "Besondere Schadensereignisse im Bereich \"Soziales und Jugend\"" ;
+            ihr:hatStadtId "73" .
+
+ihr:PrBer74 a ihr:PrBer ;
+            rdfs:label "Besondere Schadensereignisse im Bereich \"Gesundheit und Sport\""@de ;
+            ihr:BezeichnungStadt "Besondere Schadensereignisse im Bereich \"Gesundheit und Sport\"" ;
+            ihr:hatStadtId "74" .
+
+ihr:PrBer75 a ihr:PrBer ;
+            rdfs:label "Besondere Schadensereignisse im Bereich \"Gestaltung der Umwelt\""@de ;
+            ihr:BezeichnungStadt "Besondere Schadensereignisse im Bereich \"Gestaltung der Umwelt\"" ;
+            ihr:hatStadtId "75" .
+
+ihr:PrBer76 a ihr:PrBer ;
+            rdfs:label "Besondere Schadensereignisse im Bereich \"Allgemeine Finanzwirtschaft\""@de ;
+            ihr:BezeichnungStadt "Besondere Schadensereignisse im Bereich \"Allgemeine Finanzwirtschaft\"" ;
+            ihr:hatStadtId "76" .
+
+ihr:PrGr a rdfs:Class ;
+         rdfs:label "Produktgruppe"@de ;
+         rdfs:comment "Zweite Gliederungsebene" .
+
+ihr:PrGr111 a ihr:PrGr ;
+            rdfs:label "Verwaltungssteuerung und -service"@de ;
+            ihr:BezeichnungStadt "Verwaltungssteuerung und -service" ;
+            ihr:hatStadtId "111" .
+
+ihr:PrGr121 a ihr:PrGr ;
+            rdfs:label "Statistik und Wahlen"@de ;
+            ihr:BezeichnungStadt "Statistik und Wahlen" ;
+            ihr:hatStadtId "121" .
+
+ihr:PrGr122 a ihr:PrGr ;
+            rdfs:label "Ordnungsangelegenheiten"@de ;
+            ihr:BezeichnungStadt "Ordnungsangelegenheiten" ;
+            ihr:hatStadtId "122" .
+
+ihr:PrGr126 a ihr:PrGr ;
+            rdfs:label "Brandschutz"@de ;
+            ihr:BezeichnungStadt "Brandschutz" ;
+            ihr:hatStadtId "126" .
+
+ihr:PrGr127 a ihr:PrGr ;
+            rdfs:label "Rettungsdienst"@de ;
+            ihr:BezeichnungStadt "Rettungsdienst" ;
+            ihr:hatStadtId "127" .
+
+ihr:PrGr128 a ihr:PrGr ;
+            rdfs:label "Katastrophenschutz"@de ;
+            ihr:BezeichnungStadt "Katastrophenschutz" ;
+            ihr:hatStadtId "128" .
+
+ihr:PrGr211 a ihr:PrGr ;
+            rdfs:label "Grundschulen"@de ;
+            ihr:BezeichnungStadt "Grundschulen" ;
+            ihr:hatStadtId "211" .
+
+ihr:PrGr215 a ihr:PrGr ;
+            rdfs:label "Mittelschulen"@de ;
+            ihr:BezeichnungStadt "Mittelschulen" ;
+            ihr:hatStadtId "215" .
+
+ihr:PrGr217 a ihr:PrGr ;
+            rdfs:label "Gymnasien, Kollegs"@de ;
+            ihr:BezeichnungStadt "Gymnasien, Kollegs" ;
+            ihr:hatStadtId "217" .
+
+ihr:PrGr221 a ihr:PrGr ;
+            rdfs:label "Förderschulen"@de ;
+            ihr:BezeichnungStadt "Förderschulen" ;
+            ihr:hatStadtId "221" .
+
+ihr:PrGr231 a ihr:PrGr ;
+            rdfs:label "Berufliche Schulen"@de ;
+            ihr:BezeichnungStadt "Berufliche Schulen" ;
+            ihr:hatStadtId "231" .
+
+ihr:PrGr241 a ihr:PrGr ;
+            rdfs:label "Schülerbeförderung"@de ;
+            ihr:BezeichnungStadt "Schülerbeförderung" ;
+            ihr:hatStadtId "241" .
+
+ihr:PrGr242 a ihr:PrGr ;
+            rdfs:label "Fördermaßnahmen für Schüler"@de ;
+            ihr:BezeichnungStadt "Fördermaßnahmen für Schüler" ;
+            ihr:hatStadtId "242" .
+
+ihr:PrGr243 a ihr:PrGr ;
+            rdfs:label "Sonstige schulische Aufgaben"@de ;
+            ihr:BezeichnungStadt "Sonstige schulische Aufgaben" ;
+            ihr:hatStadtId "243" .
+
+ihr:PrGr252 a ihr:PrGr ;
+            rdfs:label "Nichtwissenschaftliche Museen, Sammlungen"@de ;
+            ihr:BezeichnungStadt "Nichtwissenschaftl. Museen, Sammlungen" ;
+            ihr:hatStadtId "252" .
+
+ihr:PrGr253 a ihr:PrGr ;
+            rdfs:label "Zoologische und Botanische Gärten"@de ;
+            ihr:BezeichnungStadt "Zoologische und Botanische Gärten" ;
+            ihr:hatStadtId "253" .
+
+ihr:PrGr254 a ihr:PrGr ;
+            rdfs:label "Sonstige Sparten- und regionsübergreifende Förderung"@de ;
+            ihr:BezeichnungStadt "Sonst. Sparten- u. regionsübergr. Förd." ;
+            ihr:hatStadtId "254" .
+
+ihr:PrGr261 a ihr:PrGr ;
+            rdfs:label "Theater"@de ;
+            ihr:BezeichnungStadt "Theater" ;
+            ihr:hatStadtId "261" .
+
+ihr:PrGr262 a ihr:PrGr ;
+            rdfs:label "Musikpflege"@de ;
+            ihr:BezeichnungStadt "Musikpflege" ;
+            ihr:hatStadtId "262" .
+
+ihr:PrGr263 a ihr:PrGr ;
+            rdfs:label "Musikschulen"@de ;
+            ihr:BezeichnungStadt "Musikschulen" ;
+            ihr:hatStadtId "263" .
+
+ihr:PrGr271 a ihr:PrGr ;
+            rdfs:label "Volkshochschulen"@de ;
+            ihr:BezeichnungStadt "Volkshochschulen" ;
+            ihr:hatStadtId "271" .
+
+ihr:PrGr272 a ihr:PrGr ;
+            rdfs:label "Bibliotheken"@de ;
+            ihr:BezeichnungStadt "Bibliotheken" ;
+            ihr:hatStadtId "272" .
+
+ihr:PrGr281 a ihr:PrGr ;
+            rdfs:label "Heimat- und sonstige Kulturpflege"@de ;
+            ihr:BezeichnungStadt "Heimat- und sonstige Kulturpflege" ;
+            ihr:hatStadtId "281" .
+
+ihr:PrGr291 a ihr:PrGr ;
+            rdfs:label "Förderung von Kirchengemeinden und sonstigen Religionsgemeinschaften"@de ;
+            ihr:BezeichnungStadt "Förd.v. Kirchengem./sonst. Religionsgem." ;
+            ihr:hatStadtId "291" .
+
+ihr:PrGr311 a ihr:PrGr ;
+            rdfs:label "Grundversorgung und Hilfen (SGB XII)"@de ;
+            ihr:BezeichnungStadt "Grundversorgung und Hilfen (SGB XII)" ;
+            ihr:hatStadtId "311" .
+
+ihr:PrGr312 a ihr:PrGr ;
+            rdfs:label "Grundsicherung für Arbeitsuchende"@de ;
+            ihr:BezeichnungStadt "Grundsicherung für Arbeitsuchende" ;
+            ihr:hatStadtId "312" .
+
+ihr:PrGr313 a ihr:PrGr ;
+            rdfs:label "Hilfen für Asylbewerber"@de ;
+            ihr:BezeichnungStadt "Hilfen für Asylbewerber" ;
+            ihr:hatStadtId "313" .
+
+ihr:PrGr315 a ihr:PrGr ;
+            rdfs:label "Soziale Einrichtungen"@de ;
+            ihr:BezeichnungStadt "Soziale Einrichtungen" ;
+            ihr:hatStadtId "315" .
+
+ihr:PrGr331 a ihr:PrGr ;
+            rdfs:label "Förderung von Trägern der Wohlfahrtspflege"@de ;
+            ihr:BezeichnungStadt "Förderung v. Trägern d. Wohlfahrtspflege" ;
+            ihr:hatStadtId "331" .
+
+ihr:PrGr341 a ihr:PrGr ;
+            rdfs:label "Unterhaltsvorschussleistungen"@de ;
+            ihr:BezeichnungStadt "Unterhaltsvorschussleistungen" ;
+            ihr:hatStadtId "341" .
+
+ihr:PrGr343 a ihr:PrGr ;
+            rdfs:label "Betreuungsleistungen"@de ;
+            ihr:BezeichnungStadt "Betreuungsleistungen" ;
+            ihr:hatStadtId "343" .
+
+ihr:PrGr344 a ihr:PrGr ;
+            rdfs:label "Hilfen für Heimkehrer und politische Häftlinge"@de ;
+            ihr:BezeichnungStadt "Hilfen f. Heimkehrer u. polit. Häftlinge" ;
+            ihr:hatStadtId "344" .
+
+ihr:PrGr345 a ihr:PrGr ;
+            rdfs:label "Leistungen für Bildung und Teilhabe"@de ;
+            ihr:BezeichnungStadt "Leistungen für Bildung und Teilhabe" ;
+            ihr:hatStadtId "345" .
+
+ihr:PrGr351 a ihr:PrGr ;
+            rdfs:label "Sonstige soziale Hilfen und Leistungen"@de ;
+            ihr:BezeichnungStadt "Sonstige soziale Hilfen und Leistungen" ;
+            ihr:hatStadtId "351" .
+
+ihr:PrGr361 a ihr:PrGr ;
+            rdfs:label "Förderung von Kindern in Tageseinrichtungen und in Tagespflege und Übernahme des Elternanteils durch die Kommune"@de ;
+            ihr:BezeichnungStadt "Förd.v.Kind.i.Kitas/Tagespfl.u.Übern.EB" ;
+            ihr:hatStadtId "361" .
+
+ihr:PrGr362 a ihr:PrGr ;
+            rdfs:label "Jugendarbeit"@de ;
+            ihr:BezeichnungStadt "Jugendarbeit" ;
+            ihr:hatStadtId "362" .
+
+ihr:PrGr363 a ihr:PrGr ;
+            rdfs:label "Sonstige Leistungen der Kinder-, Jugend- und Familienhilfe"@de ;
+            ihr:BezeichnungStadt "Sonst. Leist. d. Ki.-, Ju.- u. Fam.hilfe" ;
+            ihr:hatStadtId "363" .
+
+ihr:PrGr365 a ihr:PrGr ;
+            rdfs:label "Tageseinrichtungen für Kinder"@de ;
+            ihr:BezeichnungStadt "Tageseinrichtungen für Kinder" ;
+            ihr:hatStadtId "365" .
+
+ihr:PrGr366 a ihr:PrGr ;
+            rdfs:label "Einrichtungen der Jugendarbeit"@de ;
+            ihr:BezeichnungStadt "Einrichtungen der Jugendarbeit" ;
+            ihr:hatStadtId "366" .
+
+ihr:PrGr367 a ihr:PrGr ;
+            rdfs:label "Sonstige Einrichtungen der Kinder-, Jugend- und Familienhilfe"@de ;
+            ihr:BezeichnungStadt "Sonst. Einricht.d.Kin.-,Jug.-u.Fam.hilfe" ;
+            ihr:hatStadtId "367" .
+
+ihr:PrGr411 a ihr:PrGr ;
+            rdfs:label "Krankenhäuser"@de ;
+            ihr:BezeichnungStadt "Krankenhäuser" ;
+            ihr:hatStadtId "411" .
+
+ihr:PrGr414 a ihr:PrGr ;
+            rdfs:label "Gesundheitspflege"@de ;
+            ihr:BezeichnungStadt "Gesundheitspflege" ;
+            ihr:hatStadtId "414" .
+
+ihr:PrGr421 a ihr:PrGr ;
+            rdfs:label "Förderung des Sports"@de ;
+            ihr:BezeichnungStadt "Förderung des Sports" ;
+            ihr:hatStadtId "421" .
+
+ihr:PrGr424 a ihr:PrGr ;
+            rdfs:label "Sportstätten und Bäder"@de ;
+            ihr:BezeichnungStadt "Sportstätten und Bäder" ;
+            ihr:hatStadtId "424" .
+
+ihr:PrGr511 a ihr:PrGr ;
+            rdfs:label "Räumliche Planungs- und Entwicklungsmaßnahmen und Flurneuordnung"@de ;
+            ihr:BezeichnungStadt "Räuml. Planungs-u. Entwicklungsmaßnahmen" ;
+            ihr:hatStadtId "511" .
+
+ihr:PrGr512 a ihr:PrGr ;
+            rdfs:label "Flächen- und grundstücksbezogene Daten und Grundlagen"@de ;
+            ihr:BezeichnungStadt "Flächen-u.Grundstücksbez.Daten u.Grundl." ;
+            ihr:hatStadtId "512" .
+
+ihr:PrGr521 a ihr:PrGr ;
+            rdfs:label "Bau- und Grundstücksordnung"@de ;
+            ihr:BezeichnungStadt "Bau- und Grundstücksordnung" ;
+            ihr:hatStadtId "521" .
+
+ihr:PrGr522 a ihr:PrGr ;
+            rdfs:label "Wohnbauförderung"@de ;
+            ihr:BezeichnungStadt "Wohnbauförderung" ;
+            ihr:hatStadtId "522" .
+
+ihr:PrGr523 a ihr:PrGr ;
+            rdfs:label "Denkmalschutz und -pflege"@de ;
+            ihr:BezeichnungStadt "Denkmalschutz und -pflege" ;
+            ihr:hatStadtId "523" .
+
+ihr:PrGr531 a ihr:PrGr ;
+            rdfs:label "Elektrizitätsversorgung"@de ;
+            ihr:BezeichnungStadt "Elektrizitätsversorgung" ;
+            ihr:hatStadtId "531" .
+
+ihr:PrGr532 a ihr:PrGr ;
+            rdfs:label "Gasversorgung"@de ;
+            ihr:BezeichnungStadt "Gasversorgung" ;
+            ihr:hatStadtId "532" .
+
+ihr:PrGr533 a ihr:PrGr ;
+            rdfs:label "Wasserversorgung"@de ;
+            ihr:BezeichnungStadt "Wasserversorgung" ;
+            ihr:hatStadtId "533" .
+
+ihr:PrGr534 a ihr:PrGr ;
+            rdfs:label "Fernwärmeversorgung"@de ;
+            ihr:BezeichnungStadt "Fernwärmeversorgung" ;
+            ihr:hatStadtId "534" .
+
+ihr:PrGr535 a ihr:PrGr ;
+            rdfs:label "Kombinierte Versorgung"@de ;
+            ihr:BezeichnungStadt "Kombinierte Versorgung" ;
+            ihr:hatStadtId "535" .
+
+ihr:PrGr537 a ihr:PrGr ;
+            rdfs:label "Abfallwirtschaft"@de ;
+            ihr:BezeichnungStadt "Abfallwirtschaft" ;
+            ihr:hatStadtId "537" .
+
+ihr:PrGr538 a ihr:PrGr ;
+            rdfs:label "Abwasserbeseitigung"@de ;
+            ihr:BezeichnungStadt "Abwasserbeseitigung" ;
+            ihr:hatStadtId "538" .
+
+ihr:PrGr541 a ihr:PrGr ;
+            rdfs:label "Gemeindestraßen"@de ;
+            ihr:BezeichnungStadt "Gemeindestraßen" ;
+            ihr:hatStadtId "541" .
+
+ihr:PrGr542 a ihr:PrGr ;
+            rdfs:label "Kreisstraßen"@de ;
+            ihr:BezeichnungStadt "Kreisstraßen" ;
+            ihr:hatStadtId "542" .
+
+ihr:PrGr543 a ihr:PrGr ;
+            rdfs:label "Staatsstraßen"@de ;
+            ihr:BezeichnungStadt "Staatsstraßen" ;
+            ihr:hatStadtId "543" .
+
+ihr:PrGr544 a ihr:PrGr ;
+            rdfs:label "Bundesstraßen"@de ;
+            ihr:BezeichnungStadt "Bundesstraßen" ;
+            ihr:hatStadtId "544" .
+
+ihr:PrGr545 a ihr:PrGr ;
+            rdfs:label "Straßenreinigung und Winterdienst"@de ;
+            ihr:BezeichnungStadt "Straßenreinigung und Winterdienst" ;
+            ihr:hatStadtId "545" .
+
+ihr:PrGr546 a ihr:PrGr ;
+            rdfs:label "Parkeinrichtungen"@de ;
+            ihr:BezeichnungStadt "Parkeinrichtungen" ;
+            ihr:hatStadtId "546" .
+
+ihr:PrGr547 a ihr:PrGr ;
+            rdfs:label "Öffentlicher Personennahverkehr"@de ;
+            ihr:BezeichnungStadt "Öffentlicher Personennahverkehr" ;
+            ihr:hatStadtId "547" .
+
+ihr:PrGr549 a ihr:PrGr ;
+            rdfs:label "Sonstige Leistungen der Straßenbaulastträger"@de ;
+            ihr:BezeichnungStadt "Sonst. Leistungen d.Straßenbaulastträger" ;
+            ihr:hatStadtId "549" .
+
+ihr:PrGr551 a ihr:PrGr ;
+            rdfs:label "Öffentliches Grün/Landschaftsbau"@de ;
+            ihr:BezeichnungStadt "Öffentliches Grün/Landschaftsbau" ;
+            ihr:hatStadtId "551" .
+
+ihr:PrGr552 a ihr:PrGr ;
+            rdfs:label "Öffentliche Gewässer und Wasserbauliche Anlagen"@de ;
+            ihr:BezeichnungStadt "Öffentl. Gewässer/Wasserbauliche Anlagen" ;
+            ihr:hatStadtId "552" .
+
+ihr:PrGr553 a ihr:PrGr ;
+            rdfs:label "Friedhofs- und Bestattungswesen"@de ;
+            ihr:BezeichnungStadt "Friedhofs- und Bestattungswesen" ;
+            ihr:hatStadtId "553" .
+
+ihr:PrGr554 a ihr:PrGr ;
+            rdfs:label "Naturschutz und Landschaftspflege"@de ;
+            ihr:BezeichnungStadt "Naturschutz und Landschaftspflege" ;
+            ihr:hatStadtId "554" .
+
+ihr:PrGr555 a ihr:PrGr ;
+            rdfs:label "Land- und Forstwirtschaft"@de ;
+            ihr:BezeichnungStadt "Land- und Forstwirtschaft" ;
+            ihr:hatStadtId "555" .
+
+ihr:PrGr561 a ihr:PrGr ;
+            rdfs:label "Umweltschutzmaßnahmen"@de ;
+            ihr:BezeichnungStadt "Umweltschutzmaßnahmen" ;
+            ihr:hatStadtId "561" .
+
+ihr:PrGr571 a ihr:PrGr ;
+            rdfs:label "Wirtschaftsförderung"@de ;
+            ihr:BezeichnungStadt "Wirtschaftsförderung" ;
+            ihr:hatStadtId "571" .
+
+ihr:PrGr573 a ihr:PrGr ;
+            rdfs:label "Allgemeine Einrichtungen und Unternehmen"@de ;
+            ihr:BezeichnungStadt "Allgemeine Einrichtungen u. Unternehmen" ;
+            ihr:hatStadtId "573" .
+
+ihr:PrGr575 a ihr:PrGr ;
+            rdfs:label "Tourismus"@de ;
+            ihr:BezeichnungStadt "Tourismus" ;
+            ihr:hatStadtId "575" .
+
+ihr:PrGr611 a ihr:PrGr ;
+            rdfs:label "Steuern, allgemeine Zuweisungen, allgemeine Umlagen"@de ;
+            ihr:BezeichnungStadt "Steuern, allg. Zuweisungen,allg. Umlagen" ;
+            ihr:hatStadtId "611" .
+
+ihr:PrGr612 a ihr:PrGr ;
+            rdfs:label "Sonstige allgemeine Finanzwirtschaft"@de ;
+            ihr:BezeichnungStadt "Sonstige allgemeine Finanzwirtschaft" ;
+            ihr:hatStadtId "612" .
+
+ihr:PrGr613 a ihr:PrGr ;
+            rdfs:label "Abwicklung der Vorjahre"@de ;
+            ihr:BezeichnungStadt "Abwicklung der Vorjahre" ;
+            ihr:hatStadtId "613" .
+
+ihr:PrGr711 a ihr:PrGr ;
+            rdfs:label "Innere Verwaltung"@de ;
+            ihr:BezeichnungStadt "Innere Verwaltung" ;
+            ihr:hatStadtId "711" .
+
+ihr:PrGr712 a ihr:PrGr ;
+            rdfs:label "Sicherheit und Ordnung"@de ;
+            ihr:BezeichnungStadt "Sicherheit und Ordnung" ;
+            ihr:hatStadtId "712" .
+
+ihr:PrGr721 a ihr:PrGr ;
+            rdfs:label "Schulen"@de ;
+            ihr:BezeichnungStadt "Schulen" ;
+            ihr:hatStadtId "721" .
+
+ihr:PrGr725 a ihr:PrGr ;
+            rdfs:label "Kultur und Wissenschaft"@de ;
+            ihr:BezeichnungStadt "Kultur und Wissenschaft" ;
+            ihr:hatStadtId "725" .
+
+ihr:PrGr731 a ihr:PrGr ;
+            rdfs:label "Soziale Hilfen"@de ;
+            ihr:BezeichnungStadt "Soziale Hilfen" ;
+            ihr:hatStadtId "731" .
+
+ihr:PrGr736 a ihr:PrGr ;
+            rdfs:label "Kinder-, Jugend- und Familienhilfe"@de ;
+            ihr:BezeichnungStadt "Kinder-, Jugend- und Familienhilfe" ;
+            ihr:hatStadtId "736" .
+
+ihr:PrGr741 a ihr:PrGr ;
+            rdfs:label "Gesundheitsdienste"@de ;
+            ihr:BezeichnungStadt "Gesundheitsdienste" ;
+            ihr:hatStadtId "741" .
+
+ihr:PrGr742 a ihr:PrGr ;
+            rdfs:label "Sportförderung"@de ;
+            ihr:BezeichnungStadt "Sportförderung" ;
+            ihr:hatStadtId "742" .
+
+ihr:PrGr751 a ihr:PrGr ;
+            rdfs:label "Räumliche Planung und Entwicklung"@de ;
+            ihr:BezeichnungStadt "Räumliche Planung und Entwicklung" ;
+            ihr:hatStadtId "751" .
+
+ihr:PrGr752 a ihr:PrGr ;
+            rdfs:label "Bau- und Grundstücksordnung"@de ;
+            ihr:BezeichnungStadt "Bau- und Grundstücksordnung" ;
+            ihr:hatStadtId "752" .
+
+ihr:PrGr753 a ihr:PrGr ;
+            rdfs:label "Ver- und Entsorgung"@de ;
+            ihr:BezeichnungStadt "Ver- und Entsorgung" ;
+            ihr:hatStadtId "753" .
+
+ihr:PrGr754 a ihr:PrGr ;
+            rdfs:label "Verkehrsflächen und -anlagen, Öffentlicher Personennahverkehr"@de ;
+            ihr:BezeichnungStadt "Verkehrsflächen und -anlagen, Öffentlicher Personennahverkehr" ;
+            ihr:hatStadtId "754" .
+
+ihr:PrGr755 a ihr:PrGr ;
+            rdfs:label "Natur- und Landschaftspflege"@de ;
+            ihr:BezeichnungStadt "Natur- und Landschaftspflege" ;
+            ihr:hatStadtId "755" .
+
+ihr:PrGr756 a ihr:PrGr ;
+            rdfs:label "Umweltschutz"@de ;
+            ihr:BezeichnungStadt "Umweltschutz" ;
+            ihr:hatStadtId "756" .
+
+ihr:PrGr757 a ihr:PrGr ;
+            rdfs:label "Wirtschaft und Tourismus"@de ;
+            ihr:BezeichnungStadt "Wirtschaft und Tourismus" ;
+            ihr:hatStadtId "757" .
+
+ihr:PrGr761 a ihr:PrGr ;
+            rdfs:label "Allgemeine Finanzwirtschaft"@de ;
+            ihr:BezeichnungStadt "Allgemeine Finanzwirtschaft" ;
+            ihr:hatStadtId "761" .
+
+ihr:PrUGr a rdfs:Class ;
+          rdfs:label "Produktuntergruppe"@de ;
+          rdfs:comment "Dritte Gliederungsebene" .
+
+ihr:PrUGr1111 a ihr:PrUGr ;
+              rdfs:label "Gemeindeorgane"@de ;
+              ihr:BezeichnungStadt "Gemeindeorgane" ;
+              ihr:hatStadtId "1111" .
+
+ihr:PrUGr1112 a ihr:PrUGr ;
+              rdfs:label "Innere Verwaltungsangelegenheiten"@de ;
+              ihr:BezeichnungStadt "Innere Verwaltungsangelegenheiten" ;
+              ihr:hatStadtId "1112" .
+
+ihr:PrUGr1113 a ihr:PrUGr ;
+              rdfs:label "Finanzverwaltung"@de ;
+              ihr:BezeichnungStadt "Finanzverwaltung" ;
+              ihr:hatStadtId "1113" .
+
+ihr:PrUGr1114 a ihr:PrUGr ;
+              rdfs:label "Rechnungsprüfung"@de ;
+              ihr:BezeichnungStadt "Rechnungsprüfung" ;
+              ihr:hatStadtId "1114" .
+
+ihr:PrUGr1116 a ihr:PrUGr ;
+              rdfs:label "Einrichtungen für die gesamte Verwaltung sowie Verwaltungsangehörige"@de ;
+              ihr:BezeichnungStadt "Einrichtungen für die gesamte Verwaltung sowie Verwaltungsangehörige" ;
+              ihr:hatStadtId "1116" .
+
+ihr:PrUGr1211 a ihr:PrUGr ;
+              rdfs:label "Statistik"@de ;
+              ihr:BezeichnungStadt "Statistik" ;
+              ihr:hatStadtId "1211" .
+
+ihr:PrUGr1212 a ihr:PrUGr ;
+              rdfs:label "Wahlen"@de ;
+              ihr:BezeichnungStadt "Wahlen" ;
+              ihr:hatStadtId "1212" .
+
+ihr:PrUGr1221 a ihr:PrUGr ;
+              rdfs:label "Ordnungsaufgaben"@de ;
+              ihr:BezeichnungStadt "Ordnungsaufgaben" ;
+              ihr:hatStadtId "1221" .
+
+ihr:PrUGr1222 a ihr:PrUGr ;
+              rdfs:label "Melde- und Personenstandswesen"@de ;
+              ihr:BezeichnungStadt "Melde- und Personenstandswesen" ;
+              ihr:hatStadtId "1222" .
+
+ihr:PrUGr1260 a ihr:PrUGr ;
+              rdfs:label "Brandschutz"@de ;
+              ihr:BezeichnungStadt "Brandschutz" ;
+              ihr:hatStadtId "1260" .
+
+ihr:PrUGr1270 a ihr:PrUGr ;
+              rdfs:label "Brandschutz"@de ;
+              ihr:BezeichnungStadt "Brandschutz" ;
+              ihr:hatStadtId "1270" .
+
+ihr:PrUGr1280 a ihr:PrUGr ;
+              rdfs:label "Katastrophenschutz"@de ;
+              ihr:BezeichnungStadt "Katastrophenschutz" ;
+              ihr:hatStadtId "1280" .
+
+ihr:PrUGr2111 a ihr:PrUGr ;
+              rdfs:label "Grundschulen in öffentlicher Trägerschaft"@de ;
+              ihr:BezeichnungStadt "Grundschulen in öffentlicher Trägerschaft" ;
+              ihr:hatStadtId "2111" .
+
+ihr:PrUGr2151 a ihr:PrUGr ;
+              rdfs:label "Mittelschulen in öffentlicher Trägerschaft"@de ;
+              ihr:BezeichnungStadt "Mittelschulen in öffentlicher Trägerschaft" ;
+              ihr:hatStadtId "2151" .
+
+ihr:PrUGr2153 a ihr:PrUGr ;
+              rdfs:label "Abendmittelschulen"@de ;
+              ihr:BezeichnungStadt "Abendmittelschulen" ;
+              ihr:hatStadtId "2153" .
+
+ihr:PrUGr2154 a ihr:PrUGr ;
+              rdfs:label "Gemeinschaftsschulen, sonstige Alternativmodelle"@de ;
+              ihr:BezeichnungStadt "Gemeinschaftsschulen, sonstige Alternativmodelle" ;
+              ihr:hatStadtId "2154" .
+
+ihr:PrUGr2171 a ihr:PrUGr ;
+              rdfs:label "Gymnasien, Kollegs (ohne berufliche Gymnasien) in öffentlicher Trägerschaft"@de ;
+              ihr:BezeichnungStadt "Gymnasien, Kollegs (ohne berufliche Gymnasien) in öffentlicher Trägerschaft" ;
+              ihr:hatStadtId "2171" .
+
+ihr:PrUGr2173 a ihr:PrUGr ;
+              rdfs:label "Abendgymnasien"@de ;
+              ihr:BezeichnungStadt "Abendgymnasien" ;
+              ihr:hatStadtId "2173" .
+
+ihr:PrUGr2211 a ihr:PrUGr ;
+              rdfs:label "Schulen für Blinde und Sehbehinderte"@de ;
+              ihr:BezeichnungStadt "Schulen für Blinde und Sehbehinderte" ;
+              ihr:hatStadtId "2211" .
+
+ihr:PrUGr2213 a ihr:PrUGr ;
+              rdfs:label "Schulen für geistige Behinderte"@de ;
+              ihr:BezeichnungStadt "Schulen für geistige Behinderte" ;
+              ihr:hatStadtId "2213" .
+
+ihr:PrUGr2214 a ihr:PrUGr ;
+              rdfs:label "Schulen für Körperbehinderte"@de ;
+              ihr:BezeichnungStadt "Schulen für Körperbehinderte" ;
+              ihr:hatStadtId "2214" .
+
+ihr:PrUGr2215 a ihr:PrUGr ;
+              rdfs:label "Schulen zur Lernförderung"@de ;
+              ihr:BezeichnungStadt "Schulen zur Lernförderung" ;
+              ihr:hatStadtId "2215" .
+
+ihr:PrUGr2216 a ihr:PrUGr ;
+              rdfs:label "Sprachheilschulen"@de ;
+              ihr:BezeichnungStadt "Sprachheilschulen" ;
+              ihr:hatStadtId "2216" .
+
+ihr:PrUGr2217 a ihr:PrUGr ;
+              rdfs:label "Schulen für Erziehungshilfe"@de ;
+              ihr:BezeichnungStadt "Schulen für Erziehungshilfe" ;
+              ihr:hatStadtId "2217" .
+
+ihr:PrUGr2218 a ihr:PrUGr ;
+              rdfs:label "Klinik- und Krankenhausschulen"@de ;
+              ihr:BezeichnungStadt "Klinik- und Krankenhausschulen" ;
+              ihr:hatStadtId "2218" .
+
+ihr:PrUGr2311 a ihr:PrUGr ;
+              rdfs:label "Berufsschulen, Fachschulen, Berufsfachschulen, berufliche Gymnasien, Fachoberschulen, einschl. Berufskollegs, Vorbereitungs- und Berufsgrundbildungsjahr"@de ;
+              ihr:BezeichnungStadt "Berufsschulen, Fachschulen, Berufsfachschulen, berufliche Gymnasien, Fachoberschulen, einschl. Berufskollegs, Vorbereitungs- und Berufsgrundbildungsjahr" ;
+              ihr:hatStadtId "2311" .
+
+ihr:PrUGr2313 a ihr:PrUGr ;
+              rdfs:label "Berufsbildende Förderschulen in öffentlicher Trägerschaft"@de ;
+              ihr:BezeichnungStadt "Berufsbildende Förderschulen in öffentlicher Trägerschaft" ;
+              ihr:hatStadtId "2313" .
+
+ihr:PrUGr2410 a ihr:PrUGr ;
+              rdfs:label "Schülerbeförderung"@de ;
+              ihr:BezeichnungStadt "Schülerbeförderung" ;
+              ihr:hatStadtId "2410" .
+
+ihr:PrUGr2420 a ihr:PrUGr ;
+              rdfs:label "Fördermaßnahmen für Schüler"@de ;
+              ihr:BezeichnungStadt "Fördermaßnahmen für Schüler" ;
+              ihr:hatStadtId "2420" .
+
+ihr:PrUGr2430 a ihr:PrUGr ;
+              rdfs:label "Sonstige schulische Aufgaben"@de ;
+              ihr:BezeichnungStadt "Sonstige schulische Aufgaben" ;
+              ihr:hatStadtId "2430" .
+
+ihr:PrUGr2520 a ihr:PrUGr ;
+              rdfs:label "Nichtwissenschaftliche Museen, Sammlungen"@de ;
+              ihr:BezeichnungStadt "Nichtwissenschaftliche Museen, Sammlungen" ;
+              ihr:hatStadtId "2520" .
+
+ihr:PrUGr2530 a ihr:PrUGr ;
+              rdfs:label "Zoologische und Botanische Gärten"@de ;
+              ihr:BezeichnungStadt "Zoologische und Botanische Gärten" ;
+              ihr:hatStadtId "2530" .
+
+ihr:PrUGr2540 a ihr:PrUGr ;
+              rdfs:label "Sonstige Sparten- und regionsübergreifende Förderung (z.B. Kulturraumgesetz)"@de ;
+              ihr:BezeichnungStadt "Sonstige Sparten- und regionsübergreifende Förderung (z. B. Kulturraumgesetz)" ;
+              ihr:hatStadtId "2540" .
+
+ihr:PrUGr2610 a ihr:PrUGr ;
+              rdfs:label "Theater"@de ;
+              ihr:BezeichnungStadt "Theater" ;
+              ihr:hatStadtId "2610" .
+
+ihr:PrUGr2620 a ihr:PrUGr ;
+              rdfs:label "Musikpflege"@de ;
+              ihr:BezeichnungStadt "Musikpflege" ;
+              ihr:hatStadtId "2620" .
+
+ihr:PrUGr2630 a ihr:PrUGr ;
+              rdfs:label "Musikschulen"@de ;
+              ihr:BezeichnungStadt "Musikschulen" ;
+              ihr:hatStadtId "2630" .
+
+ihr:PrUGr2710 a ihr:PrUGr ;
+              rdfs:label "Volkshochschulen"@de ;
+              ihr:BezeichnungStadt "Volkshochschulen" ;
+              ihr:hatStadtId "2710" .
+
+ihr:PrUGr2720 a ihr:PrUGr ;
+              rdfs:label "Bibliotheken"@de ;
+              ihr:BezeichnungStadt "Bibliotheken" ;
+              ihr:hatStadtId "2720" .
+
+ihr:PrUGr2810 a ihr:PrUGr ;
+              rdfs:label "Heimat- und sonstige Kulturpflege"@de ;
+              ihr:BezeichnungStadt "Heimat- und sonstige Kulturpflege" ;
+              ihr:hatStadtId "2810" .
+
+ihr:PrUGr2910 a ihr:PrUGr ;
+              rdfs:label "Förderung von Kirchengemeinden und sonstigen Religionsgemeinschaften"@de ;
+              ihr:BezeichnungStadt "Förderung von Kirchengemeinden und sonstigen Religionsgemeinschaften" ;
+              ihr:hatStadtId "2910" .
+
+ihr:PrUGr3111 a ihr:PrUGr ;
+              rdfs:label "Hilfen zum Lebensunterhalt"@de ;
+              ihr:BezeichnungStadt "Hilfen zum Lebensunterhalt" ;
+              ihr:hatStadtId "3111" .
+
+ihr:PrUGr3112 a ihr:PrUGr ;
+              rdfs:label "Hilfe zur Pflege"@de ;
+              ihr:BezeichnungStadt "Hilfe zur Pflege" ;
+              ihr:hatStadtId "3112" .
+
+ihr:PrUGr3113 a ihr:PrUGr ;
+              rdfs:label "Eingliederungshilfe für behinderte Menschen"@de ;
+              ihr:BezeichnungStadt "Eingliederungshilfe für behinderte Menschen" ;
+              ihr:hatStadtId "3113" .
+
+ihr:PrUGr3114 a ihr:PrUGr ;
+              rdfs:label "Hilfen zur Gesundheit"@de ;
+              ihr:BezeichnungStadt "Hilfen zur Gesundheit" ;
+              ihr:hatStadtId "3114" .
+
+ihr:PrUGr3115 a ihr:PrUGr ;
+              rdfs:label "Hilfe zur Überwindung besonderer sozialer Schwierigkeiten"@de ;
+              ihr:BezeichnungStadt "Hilfe zur Überwindung besonderer sozialer Schwierigkeiten" ;
+              ihr:hatStadtId "3115" .
+
+ihr:PrUGr3116 a ihr:PrUGr ;
+              rdfs:label "Hilfe in anderen Lebenslagen"@de ;
+              ihr:BezeichnungStadt "Hilfe in anderen Lebenslagen" ;
+              ihr:hatStadtId "3116" .
+
+ihr:PrUGr3117 a ihr:PrUGr ;
+              rdfs:label "Grundsicherung im Alter und bei Erwerbsminderung"@de ;
+              ihr:BezeichnungStadt "Grundsicherung im Alter und bei Erwerbsminderung" ;
+              ihr:hatStadtId "3117" .
+
+ihr:PrUGr3121 a ihr:PrUGr ;
+              rdfs:label "Leistungen für Unterkunft und Heizung"@de ;
+              ihr:BezeichnungStadt "Leistungen für Unterkunft und Heizung" ;
+              ihr:hatStadtId "3121" .
+
+ihr:PrUGr3122 a ihr:PrUGr ;
+              rdfs:label "Eingliederungshilfen"@de ;
+              ihr:BezeichnungStadt "Eingliederungshilfen" ;
+              ihr:hatStadtId "3122" .
+
+ihr:PrUGr3123 a ihr:PrUGr ;
+              rdfs:label "Einmalige Leistungen"@de ;
+              ihr:BezeichnungStadt "Einmalige Leistungen" ;
+              ihr:hatStadtId "3123" .
+
+ihr:PrUGr3126 a ihr:PrUGr ;
+              rdfs:label "Leistungen für Bildung und Teilhabe nach § 28 SGB II"@de ;
+              ihr:BezeichnungStadt "Leistungen für Bildung und Teilhabe nach § 28 SGB II" ;
+              ihr:hatStadtId "3126" .
+
+ihr:PrUGr3130 a ihr:PrUGr ;
+              rdfs:label "Hilfen für Asylbewerber"@de ;
+              ihr:BezeichnungStadt "Hilfen für Asylbewerber" ;
+              ihr:hatStadtId "3130" .
+
+ihr:PrUGr3150 a ihr:PrUGr ;
+              rdfs:label "Soziale Einrichtungen (ohne Einrichtungen der Jugendhilfe)"@de ;
+              ihr:BezeichnungStadt "Soziale Einrichtungen (ohne Einrichtungen der Jugendhilfe)" ;
+              ihr:hatStadtId "3150" .
+
+ihr:PrUGr3310 a ihr:PrUGr ;
+              rdfs:label "Förderung von Trägern der Wohlfahrtspflege"@de ;
+              ihr:BezeichnungStadt "Förderung von Trägern der Wohlfahrtspflege" ;
+              ihr:hatStadtId "3310" .
+
+ihr:PrUGr3410 a ihr:PrUGr ;
+              rdfs:label "Unterhaltsvorschussleistungen"@de ;
+              ihr:BezeichnungStadt "Unterhaltsvorschussleistungen" ;
+              ihr:hatStadtId "3410" .
+
+ihr:PrUGr3430 a ihr:PrUGr ;
+              rdfs:label "Betreuungsleistungen"@de ;
+              ihr:BezeichnungStadt "Betreuungsleistungen" ;
+              ihr:hatStadtId "3430" .
+
+ihr:PrUGr3440 a ihr:PrUGr ;
+              rdfs:label "Hilfen für Heimkehrer und politische Häftlinge"@de ;
+              ihr:BezeichnungStadt "Hilfen für Heimkehrer und politische Häftlinge" ;
+              ihr:hatStadtId "3440" .
+
+ihr:PrUGr3451 a ihr:PrUGr ;
+              rdfs:label "Bildung und Teilhabe für Kinder von Kinderzuschlagsempfängern"@de ;
+              ihr:BezeichnungStadt "Bildung und Teilhabe für Kinder von Kinderzuschlagsempfängern" ;
+              ihr:hatStadtId "3451" .
+
+ihr:PrUGr3452 a ihr:PrUGr ;
+              rdfs:label "Bildung und Teilhabe für Kinder von Wohngeldempfängern"@de ;
+              ihr:BezeichnungStadt "Bildung und Teilhabe für Kinder von Wohngeldempfängern" ;
+              ihr:hatStadtId "3452" .
+
+ihr:PrUGr3510 a ihr:PrUGr ;
+              rdfs:label "Sonstige soziale Hilfen und Leistungen"@de ;
+              ihr:BezeichnungStadt "Sonstige soziale Hilfen und Leistungen" ;
+              ihr:hatStadtId "3510" .
+
+ihr:PrUGr3610 a ihr:PrUGr ;
+              rdfs:label "Förderung von Kindern in Tageseinrichtungen und in Tagespflege und Übernahme des Elternanteils durch die Kommune"@de ;
+              ihr:BezeichnungStadt "Förderung von Kindern in Tageseinrichtungen und in Tagespflege und Übernahme des Elternanteils durch die Kommune" ;
+              ihr:hatStadtId "3610" .
+
+ihr:PrUGr3620 a ihr:PrUGr ;
+              rdfs:label "Jugendarbeit"@de ;
+              ihr:BezeichnungStadt "Jugendarbeit" ;
+              ihr:hatStadtId "3620" .
+
+ihr:PrUGr3631 a ihr:PrUGr ;
+              rdfs:label "Jugendsozialarbeit, Erzieherischer Kinder- und Jugendschutz"@de ;
+              ihr:BezeichnungStadt "Jugendsozialarbeit, Erzieherischer Kinder- und Jugendschutz" ;
+              ihr:hatStadtId "3631" .
+
+ihr:PrUGr3632 a ihr:PrUGr ;
+              rdfs:label "Förderung der Erziehung in der Familie"@de ;
+              ihr:BezeichnungStadt "Förderung der Erziehung in der Familie" ;
+              ihr:hatStadtId "3632" .
+
+ihr:PrUGr3633 a ihr:PrUGr ;
+              rdfs:label "Hilfe zur Erziehung"@de ;
+              ihr:BezeichnungStadt "Hilfe zur Erziehung" ;
+              ihr:hatStadtId "3633" .
+
+ihr:PrUGr3634 a ihr:PrUGr ;
+              rdfs:label "Hilfen für junge Volljährige, Inobhutnahme, Eingliederungshilfe"@de ;
+              ihr:BezeichnungStadt "Hilfen für junge Volljährige/ Inobhutnahme/ Eingliederungshilfe" ;
+              ihr:hatStadtId "3634" .
+
+ihr:PrUGr3635 a ihr:PrUGr ;
+              rdfs:label "Adoptionsvermittlung, Beistandschaft, Amtspflegeschaft und -vormundschaft, Gerichtshilfen"@de ;
+              ihr:BezeichnungStadt "Adoptionsvermittlung, Beistandschaft, Amtspflegeschaft und -vormundschaft, Gerichtshilfen" ;
+              ihr:hatStadtId "3635" .
+
+ihr:PrUGr3650 a ihr:PrUGr ;
+              rdfs:label "Tageseinrichtungen für Kinder"@de ;
+              ihr:BezeichnungStadt "Tageseinrichtungen für Kinder" ;
+              ihr:hatStadtId "3650" .
+
+ihr:PrUGr3660 a ihr:PrUGr ;
+              rdfs:label "Einrichtungen der Jugendarbeit"@de ;
+              ihr:BezeichnungStadt "Einrichtungen der Jugendarbeit" ;
+              ihr:hatStadtId "3660" .
+
+ihr:PrUGr3670 a ihr:PrUGr ;
+              rdfs:label "Sonstige Einrichtungen der Kinder-, Jugend- und Familienhilfe"@de ;
+              ihr:BezeichnungStadt "Sonstige Einrichtungen der Kinder-, Jugend- und Familienhilfe" ;
+              ihr:hatStadtId "3670" .
+
+ihr:PrUGr4110 a ihr:PrUGr ;
+              rdfs:label "Krankenhäuser"@de ;
+              ihr:BezeichnungStadt "Krankenhäuser" ;
+              ihr:hatStadtId "4110" .
+
+ihr:PrUGr4140 a ihr:PrUGr ;
+              rdfs:label "Gesundheitspflege"@de ;
+              ihr:BezeichnungStadt "Gesundheitspflege" ;
+              ihr:hatStadtId "4140" .
+
+ihr:PrUGr4210 a ihr:PrUGr ;
+              rdfs:label "Förderung des Sports"@de ;
+              ihr:BezeichnungStadt "Förderung des Sports" ;
+              ihr:hatStadtId "4210" .
+
+ihr:PrUGr4241 a ihr:PrUGr ;
+              rdfs:label "Sports und Sporteinrichtungen"@de ;
+              ihr:BezeichnungStadt "Sports und Sporteinrichtungen" ;
+              ihr:hatStadtId "4241" .
+
+ihr:PrUGr4242 a ihr:PrUGr ;
+              rdfs:label "Bäder"@de ;
+              ihr:BezeichnungStadt "Bäder" ;
+              ihr:hatStadtId "4242" .
+
+ihr:PrUGr5111 a ihr:PrUGr ;
+              rdfs:label "Räumliche Planungs- und Entwicklungsmaßnahmen"@de ;
+              ihr:BezeichnungStadt "Räumliche Planungs- und Entwicklungsmaßnahmen" ;
+              ihr:hatStadtId "5111" .
+
+ihr:PrUGr5120 a ihr:PrUGr ;
+              rdfs:label "Flächen- und Grundstücksbezogene Daten und Grundlagen"@de ;
+              ihr:BezeichnungStadt "Flächen- und Grundstücksbezogene Daten und Grundlagen" ;
+              ihr:hatStadtId "5120" .
+
+ihr:PrUGr5210 a ihr:PrUGr ;
+              rdfs:label "Bau- und Grundstücksordnung"@de ;
+              ihr:BezeichnungStadt "Bau- und Grundstücksordnung" ;
+              ihr:hatStadtId "5210" .
+
+ihr:PrUGr5220 a ihr:PrUGr ;
+              rdfs:label "Wohnbauförderung"@de ;
+              ihr:BezeichnungStadt "Wohnbauförderung" ;
+              ihr:hatStadtId "5220" .
+
+ihr:PrUGr5230 a ihr:PrUGr ;
+              rdfs:label "Denkmalschutz und -pflege"@de ;
+              ihr:BezeichnungStadt "Denkmalschutz und -pflege" ;
+              ihr:hatStadtId "5230" .
+
+ihr:PrUGr5310 a ihr:PrUGr ;
+              rdfs:label "Elekrizitätsversorgung"@de ;
+              ihr:BezeichnungStadt "Elekrizitätsversorgung" ;
+              ihr:hatStadtId "5310" .
+
+ihr:PrUGr5320 a ihr:PrUGr ;
+              rdfs:label "Gasversorgung"@de ;
+              ihr:BezeichnungStadt "Gasversorgung" ;
+              ihr:hatStadtId "5320" .
+
+ihr:PrUGr5330 a ihr:PrUGr ;
+              rdfs:label "Wasserversorgung"@de ;
+              ihr:BezeichnungStadt "Wasserversorgung" ;
+              ihr:hatStadtId "5330" .
+
+ihr:PrUGr5340 a ihr:PrUGr ;
+              rdfs:label "Fernwärmeversorgung"@de ;
+              ihr:BezeichnungStadt "Fernwärmeversorgung" ;
+              ihr:hatStadtId "5340" .
+
+ihr:PrUGr5350 a ihr:PrUGr ;
+              rdfs:label "Kombinierte Versorgung"@de ;
+              ihr:BezeichnungStadt "Kombinierte Versorgung" ;
+              ihr:hatStadtId "5350" .
+
+ihr:PrUGr5370 a ihr:PrUGr ;
+              rdfs:label "Abfallwirtschaft"@de ;
+              ihr:BezeichnungStadt "Abfallwirtschaft" ;
+              ihr:hatStadtId "5370" .
+
+ihr:PrUGr5380 a ihr:PrUGr ;
+              rdfs:label "Abwasserbeseitigung"@de ;
+              ihr:BezeichnungStadt "Abwasserbeseitigung" ;
+              ihr:hatStadtId "5380" .
+
+ihr:PrUGr5410 a ihr:PrUGr ;
+              rdfs:label "Gemeindestraßen"@de ;
+              ihr:BezeichnungStadt "Gemeindestraßen" ;
+              ihr:hatStadtId "5410" .
+
+ihr:PrUGr5420 a ihr:PrUGr ;
+              rdfs:label "Kreisstraßen"@de ;
+              ihr:BezeichnungStadt "Kreisstraßen" ;
+              ihr:hatStadtId "5420" .
+
+ihr:PrUGr5430 a ihr:PrUGr ;
+              rdfs:label "Staatsstraßen"@de ;
+              ihr:BezeichnungStadt "Staatsstraßen" ;
+              ihr:hatStadtId "5430" .
+
+ihr:PrUGr5440 a ihr:PrUGr ;
+              rdfs:label "Bundesstraßen"@de ;
+              ihr:BezeichnungStadt "Bundesstraßen" ;
+              ihr:hatStadtId "5440" .
+
+ihr:PrUGr5451 a ihr:PrUGr ;
+              rdfs:label "Straßenreinigung"@de ;
+              ihr:BezeichnungStadt "Straßenreinigung" ;
+              ihr:hatStadtId "5451" .
+
+ihr:PrUGr5452 a ihr:PrUGr ;
+              rdfs:label "Winterdienst an Gemeindestraßen, Wegen, Plätzen"@de ;
+              ihr:BezeichnungStadt "Winterdienst an Gemeindestraßen, Wegen, Plätzen" ;
+              ihr:hatStadtId "5452" .
+
+ihr:PrUGr5453 a ihr:PrUGr ;
+              rdfs:label "Winterdienst an Kreisstraßen"@de ;
+              ihr:BezeichnungStadt "Winterdienst an Kreisstraßen" ;
+              ihr:hatStadtId "5453" .
+
+ihr:PrUGr5454 a ihr:PrUGr ;
+              rdfs:label "Winterdienst an Staatsstraßen"@de ;
+              ihr:BezeichnungStadt "Winterdienst an Staatsstraßen" ;
+              ihr:hatStadtId "5454" .
+
+ihr:PrUGr5455 a ihr:PrUGr ;
+              rdfs:label "Winterdienst an Bundesstraßen"@de ;
+              ihr:BezeichnungStadt "Winterdienst an Bundesstraßen" ;
+              ihr:hatStadtId "5455" .
+
+ihr:PrUGr5460 a ihr:PrUGr ;
+              rdfs:label "Parkeinrichtungen"@de ;
+              ihr:BezeichnungStadt "Parkeinrichtungen" ;
+              ihr:hatStadtId "5460" .
+
+ihr:PrUGr5470 a ihr:PrUGr ;
+              rdfs:label "Öffentlicher Personennahverkehr"@de ;
+              ihr:BezeichnungStadt "Öffentlicher Personennahverkehr" ;
+              ihr:hatStadtId "5470" .
+
+ihr:PrUGr5490 a ihr:PrUGr ;
+              rdfs:label "Sonstige Leistungen der Straßenbaulastträger"@de ;
+              ihr:BezeichnungStadt "Sonstige Leistungen der Straßenbaulastträger" ;
+              ihr:hatStadtId "5490" .
+
+ihr:PrUGr5510 a ihr:PrUGr ;
+              rdfs:label "Öffentliches Grün und Landschaftsbau"@de ;
+              ihr:BezeichnungStadt "Öffentliches Grün/Landschaftsbau" ;
+              ihr:hatStadtId "5510" .
+
+ihr:PrUGr5520 a ihr:PrUGr ;
+              rdfs:label "Öffentliche Gewässer und Wasserbauliche Anlagen"@de ;
+              ihr:BezeichnungStadt "Öffentliche Gewässer/Wasserbauliche Anlagen" ;
+              ihr:hatStadtId "5520" .
+
+ihr:PrUGr5530 a ihr:PrUGr ;
+              rdfs:label "Friedhofs- und Bestattungswesen"@de ;
+              ihr:BezeichnungStadt "Friedhofs- und Bestattungswesen" ;
+              ihr:hatStadtId "5530" .
+
+ihr:PrUGr5540 a ihr:PrUGr ;
+              rdfs:label "Naturschutz und Landschaftspflege"@de ;
+              ihr:BezeichnungStadt "Naturschutz und Landschaftspflege" ;
+              ihr:hatStadtId "5540" .
+
+ihr:PrUGr5550 a ihr:PrUGr ;
+              rdfs:label "Land- und Forstwirtschaftspflege"@de ;
+              ihr:BezeichnungStadt "Land- und Forstwirtschaftspflege" ;
+              ihr:hatStadtId "5550" .
+
+ihr:PrUGr5610 a ihr:PrUGr ;
+              rdfs:label "Umweltschutzmaßnahmen"@de ;
+              ihr:BezeichnungStadt "Umweltschutzmaßnahmen" ;
+              ihr:hatStadtId "5610" .
+
+ihr:PrUGr5710 a ihr:PrUGr ;
+              rdfs:label "Wirtschaftsförderung"@de ;
+              ihr:BezeichnungStadt "Wirtschaftsförderung" ;
+              ihr:hatStadtId "5710" .
+
+ihr:PrUGr5730 a ihr:PrUGr ;
+              rdfs:label "Allgemeine Einrichtungen und Unternehmen"@de ;
+              ihr:BezeichnungStadt "Allgemeine Einrichtungen und Unternehmen" ;
+              ihr:hatStadtId "5730" .
+
+ihr:PrUGr5750 a ihr:PrUGr ;
+              rdfs:label "Tourismus"@de ;
+              ihr:BezeichnungStadt "Tourismus" ;
+              ihr:hatStadtId "5750" .
+
+ihr:PrUGr6110 a ihr:PrUGr ;
+              rdfs:label "Steuern, allgemeine Zuweisungen, allgemeine Umlagen"@de ;
+              ihr:BezeichnungStadt "Steuern, allgemeine Zuweisungen, allgemeine Umlagen" ;
+              ihr:hatStadtId "6110" .
+
+ihr:PrUGr6120 a ihr:PrUGr ;
+              rdfs:label "Sonstige allgemeine Finanzwirtschaft"@de ;
+              ihr:BezeichnungStadt "Sonstige allgemeine Finanzwirtschaft" ;
+              ihr:hatStadtId "6120" .
+
+ihr:PrUGr6130 a ihr:PrUGr ;
+              rdfs:label "Abwicklung der Vorjahre"@de ;
+              ihr:BezeichnungStadt "Abwicklung der Vorjahre" ;
+              ihr:hatStadtId "6130" .
+
+ihr:PrUGr7110 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Innere Verwaltung"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Innere Verwaltung" ;
+              ihr:hatStadtId "7110" .
+
+ihr:PrUGr7120 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Zivil- und Katastrophenschutz"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Zivil- und Katastrophenschutz" ;
+              ihr:hatStadtId "7120" .
+
+ihr:PrUGr7210 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Schulen"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Schulen" ;
+              ihr:hatStadtId "7210" .
+
+ihr:PrUGr7250 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Kultur und Wissenschaft"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Kultur und Wissenschaft" ;
+              ihr:hatStadtId "7250" .
+
+ihr:PrUGr7310 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Soziale Hilfen"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Soziale Hilfen" ;
+              ihr:hatStadtId "7310" .
+
+ihr:PrUGr7360 a ihr:PrUGr ;
+              rdfs:label "Schaden Kinder-, Jugend- und Familie"@de ;
+              ihr:BezeichnungStadt "Schaden Kinder-, Jugend- und Familie" ;
+              ihr:hatStadtId "7360" .
+
+ihr:PrUGr7410 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Gesundheitsdienste"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Gesundheitsdienste" ;
+              ihr:hatStadtId "7410" .
+
+ihr:PrUGr7420 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Sportförderung "@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Sportförderung " ;
+              ihr:hatStadtId "7420" .
+
+ihr:PrUGr7510 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Räumliche Planung und Entwicklung"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Räuml. Planung u. Entwicklung" ;
+              ihr:hatStadtId "7510" .
+
+ihr:PrUGr7520 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Bau- und Grundstücksordnung"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Bau- und Grundstücksordnung" ;
+              ihr:hatStadtId "7520" .
+
+ihr:PrUGr7530 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Ver- und Entsorgung"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Ver- und Entsorgung" ;
+              ihr:hatStadtId "7530" .
+
+ihr:PrUGr7540 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Verkehrsflächen und -anlagen"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Verkehrsflächen und -anlagen" ;
+              ihr:hatStadtId "7540" .
+
+ihr:PrUGr7550 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Natur- und Land-schaftspflege"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Natur- und Land-schaftspflege" ;
+              ihr:hatStadtId "7550" .
+
+ihr:PrUGr7560 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Umweltschutz"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Umweltschutz" ;
+              ihr:hatStadtId "7560" .
+
+ihr:PrUGr7570 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Wirtschaft und Tourismus"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Wirtschaft und Tourismus" ;
+              ihr:hatStadtId "7570" .
+
+ihr:PrUGr7610 a ihr:PrUGr ;
+              rdfs:label "Schadensereignisse Allgemeine Finanzwirtschaft"@de ;
+              ihr:BezeichnungStadt "Schadensereignisse Allgemeine Finanzwirtschaft" ;
+              ihr:hatStadtId "7610" .
+
+<> a owl:Ontology ;
+   rdfs:label "RDF Cube Haushaltsrechner - Neues Produktmodell des Ergebnishaushalts"@de ;
+   rdfs:comment "abgeglichen mit dem Produktplan der Stadt, siehe NeueDaten/Produktplan_2015_mit_Spielraumangaben.csv", "unterscheidet nun zwischen Schlüsselprodukten (SSP) und PSP, Klasse ihr:Bezug fällt weg zugunsten ihr:PSP" ;
+   dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" ;
+   dct:contributor "Hans-Gert Gräbe" .
+
+
+ihr:Schluesselprodukt a rdfs:Class ;
+          rdfs:label "Schlüsselprodukt"@de ;
+          rdfs:comment "Vierte Gliederungsebene" .
+
+ihr:GebuehrenberechnenderBereich a rdfs:Class ;
+          rdfs:label "Gebührenberechnender Bereich"@de .
+
+ihr:Node a rdfs:Class ;
+          rdfs:label "Knoten des Produktbaums"@de .
+
+ihr:Top a ihr:Node ;
+            rdfs:label "Wurzel-Knoten des Produktbaums"@de .
+
+ihr:PrBer rdfs:subClassOf ihr:Node .
+ihr:PrGr rdfs:subClassOf ihr:Node .
+ihr:PrUGr rdfs:subClassOf ihr:Node .
+ihr:Schluesselprodukt rdfs:subClassOf ihr:Node .
+

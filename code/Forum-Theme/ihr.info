@@ -1,0 +1,5 @@
+name = IHR
+description = Forentheme für den IHR
+version = 0.x
+base style = naked
+hidden = TRUE

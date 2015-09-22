@@ -1,0 +1,520 @@
+# Exported with the Erfurt API - http://aksw.org/Projects/Erfurt
+
+@base <http://haushaltsrechner.leipzig.de/Data/NeuerProduktgraph/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+
+ihr:PrBer11 ihr:hasChild ihr:PrGr111 .
+
+ihr:PrBer12 ihr:hasChild ihr:PrGr121, ihr:PrGr122, ihr:PrGr126, ihr:PrGr127, ihr:PrGr128 .
+
+ihr:PrBer21 ihr:hasChild ihr:PrGr211, ihr:PrGr215, ihr:PrGr217 .
+
+ihr:PrBer22 ihr:hasChild ihr:PrGr221 .
+
+ihr:PrBer23 ihr:hasChild ihr:PrGr231 .
+
+ihr:PrBer24 ihr:hasChild ihr:PrGr241, ihr:PrGr242, ihr:PrGr243 .
+
+ihr:PrBer25 ihr:hasChild ihr:PrGr252, ihr:PrGr253, ihr:PrGr254 .
+
+ihr:PrBer26 ihr:hasChild ihr:PrGr261, ihr:PrGr262, ihr:PrGr263 .
+
+ihr:PrBer27 ihr:hasChild ihr:PrGr271, ihr:PrGr272 .
+
+ihr:PrBer28 ihr:hasChild ihr:PrGr281 .
+
+ihr:PrBer29 ihr:hasChild ihr:PrGr291 .
+
+ihr:PrBer31 ihr:hasChild ihr:PrGr311, ihr:PrGr312, ihr:PrGr313, ihr:PrGr315 .
+
+ihr:PrBer33 ihr:hasChild ihr:PrGr331 .
+
+ihr:PrBer34 ihr:hasChild ihr:PrGr341, ihr:PrGr343, ihr:PrGr344, ihr:PrGr345 .
+
+ihr:PrBer35 ihr:hasChild ihr:PrGr351 .
+
+ihr:PrBer36 ihr:hasChild ihr:PrGr361, ihr:PrGr362, ihr:PrGr363, ihr:PrGr365, ihr:PrGr366, ihr:PrGr367 .
+
+ihr:PrBer41 ihr:hasChild ihr:PrGr411, ihr:PrGr414 .
+
+ihr:PrBer42 ihr:hasChild ihr:PrGr421, ihr:PrGr424 .
+
+ihr:PrBer51 ihr:hasChild ihr:PrGr511, ihr:PrGr512 .
+
+ihr:PrBer52 ihr:hasChild ihr:PrGr521, ihr:PrGr522, ihr:PrGr523 .
+
+ihr:PrBer53 ihr:hasChild ihr:PrGr535, ihr:PrGr531, ihr:PrGr532, ihr:PrGr533, ihr:PrGr534, ihr:PrGr537, ihr:PrGr538 .
+
+ihr:PrBer54 ihr:hasChild ihr:PrGr541, ihr:PrGr542, ihr:PrGr543, ihr:PrGr544, ihr:PrGr545, ihr:PrGr546, ihr:PrGr547, ihr:PrGr549 .
+
+ihr:PrBer55 ihr:hasChild ihr:PrGr551, ihr:PrGr552, ihr:PrGr553, ihr:PrGr554, ihr:PrGr555 .
+
+ihr:PrBer56 ihr:hasChild ihr:PrGr561 .
+
+ihr:PrBer57 ihr:hasChild ihr:PrGr571, ihr:PrGr573, ihr:PrGr575 .
+
+ihr:PrBer61 ihr:hasChild ihr:PrGr613, ihr:PrGr611, ihr:PrGr612 .
+
+ihr:PrBer71 ihr:hasChild ihr:PrGr711, ihr:PrGr712 .
+
+ihr:PrBer72 ihr:hasChild ihr:PrGr721, ihr:PrGr725 .
+
+ihr:PrBer73 ihr:hasChild ihr:PrGr731, ihr:PrGr736 .
+
+ihr:PrBer74 ihr:hasChild ihr:PrGr741, ihr:PrGr742 .
+
+ihr:PrBer75 ihr:hasChild ihr:PrGr751, ihr:PrGr752, ihr:PrGr753, ihr:PrGr754, ihr:PrGr755, ihr:PrGr756, ihr:PrGr757 .
+
+ihr:PrBer76 ihr:hasChild ihr:PrGr761 .
+
+ihr:PrGr111 ihr:hasChild ihr:PrUGr1111, ihr:PrUGr1112, ihr:PrUGr1113, ihr:PrUGr1114, ihr:PrUGr1116 .
+
+ihr:PrGr121 ihr:hasChild ihr:PrUGr1211, ihr:PrUGr1212 .
+
+ihr:PrGr122 ihr:hasChild ihr:PrUGr1221, ihr:PrUGr1222 .
+
+ihr:PrGr126 ihr:hasChild ihr:PrUGr1260 .
+
+ihr:PrGr127 ihr:hasChild ihr:PrUGr1270 .
+
+ihr:PrGr128 ihr:hasChild ihr:PrUGr1280 .
+
+ihr:PrGr211 ihr:hasChild ihr:PrUGr2111 .
+
+ihr:PrGr215 ihr:hasChild ihr:PrUGr2151, ihr:PrUGr2153, ihr:PrUGr2154 .
+
+ihr:PrGr217 ihr:hasChild ihr:PrUGr2171, ihr:PrUGr2173 .
+
+ihr:PrGr221 ihr:hasChild ihr:PrUGr2211, ihr:PrUGr2213, ihr:PrUGr2214, ihr:PrUGr2215, ihr:PrUGr2216, ihr:PrUGr2217, ihr:PrUGr2218 .
+
+ihr:PrGr231 ihr:hasChild ihr:PrUGr2311, ihr:PrUGr2313 .
+
+ihr:PrGr241 ihr:hasChild ihr:PrUGr2410 .
+
+ihr:PrGr242 ihr:hasChild ihr:PrUGr2420 .
+
+ihr:PrGr243 ihr:hasChild ihr:PrUGr2430 .
+
+ihr:PrGr252 ihr:hasChild ihr:PrUGr2520 .
+
+ihr:PrGr253 ihr:hasChild ihr:PrUGr2530 .
+
+ihr:PrGr254 ihr:hasChild ihr:PrUGr2540 .
+
+ihr:PrGr261 ihr:hasChild ihr:PrUGr2610 .
+
+ihr:PrGr262 ihr:hasChild ihr:PrUGr2620 .
+
+ihr:PrGr263 ihr:hasChild ihr:PrUGr2630 .
+
+ihr:PrGr271 ihr:hasChild ihr:PrUGr2710 .
+
+ihr:PrGr272 ihr:hasChild ihr:PrUGr2720 .
+
+ihr:PrGr281 ihr:hasChild ihr:PrUGr2810 .
+
+ihr:PrGr291 ihr:hasChild ihr:PrUGr2910 .
+
+ihr:PrGr311 ihr:hasChild ihr:PrUGr3111, ihr:PrUGr3112, ihr:PrUGr3113, ihr:PrUGr3114, ihr:PrUGr3115, ihr:PrUGr3116, ihr:PrUGr3117 .
+
+ihr:PrGr312 ihr:hasChild ihr:PrUGr3121, ihr:PrUGr3122, ihr:PrUGr3123, ihr:PrUGr3126 .
+
+ihr:PrGr313 ihr:hasChild ihr:PrUGr3130 .
+
+ihr:PrGr315 ihr:hasChild ihr:PrUGr3150 .
+
+ihr:PrGr331 ihr:hasChild ihr:PrUGr3310 .
+
+ihr:PrGr341 ihr:hasChild ihr:PrUGr3410 .
+
+ihr:PrGr343 ihr:hasChild ihr:PrUGr3430 .
+
+ihr:PrGr344 ihr:hasChild ihr:PrUGr3440 .
+
+ihr:PrGr345 ihr:hasChild ihr:PrUGr3451, ihr:PrUGr3452 .
+
+ihr:PrGr351 ihr:hasChild ihr:PrUGr3510 .
+
+ihr:PrGr361 ihr:hasChild ihr:PrUGr3610 .
+
+ihr:PrGr362 ihr:hasChild ihr:PrUGr3620 .
+
+ihr:PrGr363 ihr:hasChild ihr:PrUGr3631, ihr:PrUGr3632, ihr:PrUGr3633, ihr:PrUGr3634, ihr:PrUGr3635 .
+
+ihr:PrGr365 ihr:hasChild ihr:PrUGr3650 .
+
+ihr:PrGr366 ihr:hasChild ihr:PrUGr3660 .
+
+ihr:PrGr367 ihr:hasChild ihr:PrUGr3670 .
+
+ihr:PrGr411 ihr:hasChild ihr:PrUGr4110 .
+
+ihr:PrGr414 ihr:hasChild ihr:PrUGr4140 .
+
+ihr:PrGr421 ihr:hasChild ihr:PrUGr4210 .
+
+ihr:PrGr424 ihr:hasChild ihr:PrUGr4241, ihr:PrUGr4242 .
+
+ihr:PrGr511 ihr:hasChild ihr:PrUGr5111 .
+
+ihr:PrGr512 ihr:hasChild ihr:PrUGr5120 .
+
+ihr:PrGr521 ihr:hasChild ihr:PrUGr5210 .
+
+ihr:PrGr522 ihr:hasChild ihr:PrUGr5220 .
+
+ihr:PrGr523 ihr:hasChild ihr:PrUGr5230 .
+
+ihr:PrGr531 ihr:hasChild ihr:PrUGr5310 .
+
+ihr:PrGr532 ihr:hasChild ihr:PrUGr5320 .
+
+ihr:PrGr533 ihr:hasChild ihr:PrUGr5330 .
+
+ihr:PrGr534 ihr:hasChild ihr:PrUGr5340 .
+
+ihr:PrGr535 ihr:hasChild ihr:PrUGr5350 .
+
+ihr:PrGr537 ihr:hasChild ihr:PrUGr5370 .
+
+ihr:PrGr538 ihr:hasChild ihr:PrUGr5380 .
+
+ihr:PrGr541 ihr:hasChild ihr:PrUGr5410 .
+
+ihr:PrGr542 ihr:hasChild ihr:PrUGr5420 .
+
+ihr:PrGr543 ihr:hasChild ihr:PrUGr5430 .
+
+ihr:PrGr544 ihr:hasChild ihr:PrUGr5440 .
+
+ihr:PrGr545 ihr:hasChild ihr:PrUGr5451, ihr:PrUGr5452, ihr:PrUGr5453, ihr:PrUGr5454, ihr:PrUGr5455 .
+
+ihr:PrGr546 ihr:hasChild ihr:PrUGr5460 .
+
+ihr:PrGr547 ihr:hasChild ihr:PrUGr5470 .
+
+ihr:PrGr549 ihr:hasChild ihr:PrUGr5490 .
+
+ihr:PrGr551 ihr:hasChild ihr:PrUGr5510 .
+
+ihr:PrGr552 ihr:hasChild ihr:PrUGr5520 .
+
+ihr:PrGr553 ihr:hasChild ihr:PrUGr5530 .
+
+ihr:PrGr554 ihr:hasChild ihr:PrUGr5540 .
+
+ihr:PrGr555 ihr:hasChild ihr:PrUGr5550 .
+
+ihr:PrGr561 ihr:hasChild ihr:PrUGr5610 .
+
+ihr:PrGr571 ihr:hasChild ihr:PrUGr5710 .
+
+ihr:PrGr573 ihr:hasChild ihr:PrUGr5730 .
+
+ihr:PrGr575 ihr:hasChild ihr:PrUGr5750 .
+
+ihr:PrGr611 ihr:hasChild ihr:PrUGr6110 .
+
+ihr:PrGr612 ihr:hasChild ihr:PrUGr6120 .
+
+ihr:PrGr613 ihr:hasChild ihr:PrUGr6130 .
+
+ihr:PrGr711 ihr:hasChild ihr:PrUGr7110 .
+
+ihr:PrGr712 ihr:hasChild ihr:PrUGr7120 .
+
+ihr:PrGr721 ihr:hasChild ihr:PrUGr7210 .
+
+ihr:PrGr725 ihr:hasChild ihr:PrUGr7250 .
+
+ihr:PrGr731 ihr:hasChild ihr:PrUGr7310 .
+
+ihr:PrGr736 ihr:hasChild ihr:PrUGr7360 .
+
+ihr:PrGr741 ihr:hasChild ihr:PrUGr7410 .
+
+ihr:PrGr742 ihr:hasChild ihr:PrUGr7420 .
+
+ihr:PrGr751 ihr:hasChild ihr:PrUGr7510 .
+
+ihr:PrGr752 ihr:hasChild ihr:PrUGr7520 .
+
+ihr:PrGr753 ihr:hasChild ihr:PrUGr7530 .
+
+ihr:PrGr754 ihr:hasChild ihr:PrUGr7540 .
+
+ihr:PrGr755 ihr:hasChild ihr:PrUGr7550 .
+
+ihr:PrGr756 ihr:hasChild ihr:PrUGr7560 .
+
+ihr:PrGr757 ihr:hasChild ihr:PrUGr7570 .
+
+ihr:PrGr761 ihr:hasChild ihr:PrUGr7610 .
+
+ihr:PrUGr1111 ihr:hasChild ihr:Bezug1100111102, ihr:Bezug1100111101, ihr:Bezug1100111103, ihr:Bezug1100111104 .
+
+ihr:PrUGr1112 ihr:hasChild ihr:Bezug1100111204, ihr:Bezug1100111205, ihr:Bezug1100111206, ihr:Bezug1100111201, ihr:Bezug1100111202, ihr:Bezug1100111203, ihr:Bezug1100111207 .
+
+ihr:PrUGr1113 ihr:hasChild ihr:Bezug1100111302, ihr:Bezug1100111301, ihr:Bezug1100111303, ihr:Bezug1100111304, ihr:Bezug1100111305, ihr:Bezug1100111306, ihr:Bezug1100111308, ihr:Bezug1100111309, ihr:Bezug1100111310, ihr:Bezug1100111311 .
+
+ihr:PrUGr1114 ihr:hasChild ihr:Bezug1100111401 .
+
+ihr:PrUGr1116 ihr:hasChild ihr:Bezug1100111608, ihr:Bezug1100111601, ihr:Bezug1100111602, ihr:Bezug1100111603, ihr:Bezug1100111604, ihr:Bezug1100111605, ihr:Bezug1100111606, ihr:Bezug1100111607, ihr:Bezug1100111609 .
+
+ihr:PrUGr1211 ihr:hasChild ihr:Bezug1100121101, ihr:Bezug1100121102 .
+
+ihr:PrUGr1212 ihr:hasChild ihr:Bezug1100121201 .
+
+ihr:PrUGr1221 ihr:hasChild ihr:Bezug1100122101, ihr:Bezug1100122102, ihr:Bezug1100122103, ihr:Bezug1100122104, ihr:Bezug1100122105, ihr:Bezug1100122106, ihr:Bezug1100122107, ihr:Bezug1100122108, ihr:Bezug1100122109 .
+
+ihr:PrUGr1222 ihr:hasChild ihr:Bezug1100122201, ihr:Bezug1100122202, ihr:Bezug1100122203, ihr:Bezug1100122204, ihr:Bezug1100122205 .
+
+ihr:PrUGr1260 ihr:hasChild ihr:Bezug1100126001, ihr:Bezug1100126002 .
+
+ihr:PrUGr1270 ihr:hasChild ihr:Bezug1100127002, ihr:Bezug1100127001 .
+
+ihr:PrUGr1280 ihr:hasChild ihr:Bezug1100128001 .
+
+ihr:PrUGr2111 ihr:hasChild ihr:Bezug1100211101 .
+
+ihr:PrUGr2151 ihr:hasChild ihr:Bezug1100215101 .
+
+ihr:PrUGr2153 ihr:hasChild ihr:Bezug1100215301 .
+
+ihr:PrUGr2154 ihr:hasChild ihr:Bezug1100215401 .
+
+ihr:PrUGr2171 ihr:hasChild ihr:Bezug1100217101 .
+
+ihr:PrUGr2173 ihr:hasChild ihr:Bezug1100217301 .
+
+ihr:PrUGr2211 ihr:hasChild ihr:Bezug1100221101 .
+
+ihr:PrUGr2213 ihr:hasChild ihr:Bezug1100221301 .
+
+ihr:PrUGr2214 ihr:hasChild ihr:Bezug1100221401 .
+
+ihr:PrUGr2215 ihr:hasChild ihr:Bezug1100221501 .
+
+ihr:PrUGr2216 ihr:hasChild ihr:Bezug1100221601 .
+
+ihr:PrUGr2217 ihr:hasChild ihr:Bezug1100221701 .
+
+ihr:PrUGr2218 ihr:hasChild ihr:Bezug1100221801 .
+
+ihr:PrUGr2311 ihr:hasChild ihr:Bezug1100231101 .
+
+ihr:PrUGr2313 ihr:hasChild ihr:Bezug1100231301 .
+
+ihr:PrUGr2410 ihr:hasChild ihr:Bezug1100241001 .
+
+ihr:PrUGr2420 ihr:hasChild ihr:Bezug1100242001 .
+
+ihr:PrUGr2430 ihr:hasChild ihr:Bezug1100243001, ihr:Bezug1100243002, ihr:Bezug1100243003, ihr:Bezug1100243004 .
+
+ihr:PrUGr2520 ihr:hasChild ihr:Bezug1100252001, ihr:Bezug1100252002, ihr:Bezug1100252003, ihr:Bezug1100252004 .
+
+ihr:PrUGr2530 ihr:hasChild ihr:Bezug1100253001 .
+
+ihr:PrUGr2540 ihr:hasChild ihr:Bezug1100254001 .
+
+ihr:PrUGr2610 ihr:hasChild ihr:Bezug1100261001, ihr:Bezug1100261002, ihr:Bezug1100261003 .
+
+ihr:PrUGr2620 ihr:hasChild ihr:Bezug1100262001, ihr:Bezug1100262002, ihr:Bezug1100262003, ihr:Bezug1100262004 .
+
+ihr:PrUGr2630 ihr:hasChild ihr:Bezug1100263001 .
+
+ihr:PrUGr2710 ihr:hasChild ihr:Bezug1100271001 .
+
+ihr:PrUGr2720 ihr:hasChild ihr:Bezug1100272001 .
+
+ihr:PrUGr2810 ihr:hasChild ihr:Bezug1100281001 .
+
+ihr:PrUGr2910 ihr:hasChild ihr:Bezug1100291001 .
+
+ihr:PrUGr3111 ihr:hasChild ihr:Bezug1100311101 .
+
+ihr:PrUGr3112 ihr:hasChild ihr:Bezug1100311201 .
+
+ihr:PrUGr3113 ihr:hasChild ihr:Bezug1100311301 .
+
+ihr:PrUGr3114 ihr:hasChild ihr:Bezug1100311401 .
+
+ihr:PrUGr3115 ihr:hasChild ihr:Bezug1100311501 .
+
+ihr:PrUGr3116 ihr:hasChild ihr:Bezug1100311601 .
+
+ihr:PrUGr3117 ihr:hasChild ihr:Bezug1100311701 .
+
+ihr:PrUGr3121 ihr:hasChild ihr:Bezug1100312101 .
+
+ihr:PrUGr3122 ihr:hasChild ihr:Bezug1100312201 .
+
+ihr:PrUGr3123 ihr:hasChild ihr:Bezug1100312301 .
+
+ihr:PrUGr3126 ihr:hasChild ihr:Bezug1100312601 .
+
+ihr:PrUGr3130 ihr:hasChild ihr:Bezug1100313001 .
+
+ihr:PrUGr3150 ihr:hasChild ihr:Bezug1100315002, ihr:Bezug1100315003, ihr:Bezug1100315001 .
+
+ihr:PrUGr3310 ihr:hasChild ihr:Bezug1100331001 .
+
+ihr:PrUGr3410 ihr:hasChild ihr:Bezug1100341001 .
+
+ihr:PrUGr3430 ihr:hasChild ihr:Bezug1100343001, ihr:Bezug1100343002 .
+
+ihr:PrUGr3440 ihr:hasChild ihr:Bezug1100344001 .
+
+ihr:PrUGr3451 ihr:hasChild ihr:Bezug1100345101 .
+
+ihr:PrUGr3452 ihr:hasChild ihr:Bezug1100345201 .
+
+ihr:PrUGr3510 ihr:hasChild ihr:Bezug1100351001, ihr:Bezug1100351002 .
+
+ihr:PrUGr3610 ihr:hasChild ihr:Bezug1100361001 .
+
+ihr:PrUGr3620 ihr:hasChild ihr:Bezug1100362001 .
+
+ihr:PrUGr3631 ihr:hasChild ihr:Bezug1100363101 .
+
+ihr:PrUGr3632 ihr:hasChild ihr:Bezug1100363201 .
+
+ihr:PrUGr3633 ihr:hasChild ihr:Bezug1100363301 .
+
+ihr:PrUGr3634 ihr:hasChild ihr:Bezug1100363401 .
+
+ihr:PrUGr3635 ihr:hasChild ihr:Bezug1100363501 .
+
+ihr:PrUGr3650 ihr:hasChild ihr:Bezug1100365001 .
+
+ihr:PrUGr3660 ihr:hasChild ihr:Bezug1100366001 .
+
+ihr:PrUGr3670 ihr:hasChild ihr:Bezug1100367001 .
+
+ihr:PrUGr4110 ihr:hasChild ihr:Bezug1100411001 .
+
+ihr:PrUGr4140 ihr:hasChild ihr:Bezug1100414001, ihr:Bezug1100414002, ihr:Bezug1100414003 .
+
+ihr:PrUGr4210 ihr:hasChild ihr:Bezug1100421001, ihr:Bezug1100421002 .
+
+ihr:PrUGr4241 ihr:hasChild ihr:Bezug1100424101 .
+
+ihr:PrUGr4242 ihr:hasChild ihr:Bezug1100424201 .
+
+ihr:PrUGr5111 ihr:hasChild ihr:Bezug1100511110, ihr:Bezug1100511111, ihr:Bezug1100511101, ihr:Bezug1100511106, ihr:Bezug1100511108, ihr:Bezug1100511109 .
+
+ihr:PrUGr5120 ihr:hasChild ihr:Bezug1100512001, ihr:Bezug1100512002, ihr:Bezug1100512003, ihr:Bezug1100512004, ihr:Bezug1100512005 .
+
+ihr:PrUGr5210 ihr:hasChild ihr:Bezug1100521001, ihr:Bezug1100521002 .
+
+ihr:PrUGr5220 ihr:hasChild ihr:Bezug1100522001, ihr:Bezug1100522002 .
+
+ihr:PrUGr5230 ihr:hasChild ihr:Bezug1100523001, ihr:Bezug1100523002 .
+
+ihr:PrUGr5310 ihr:hasChild ihr:Bezug1100531001 .
+
+ihr:PrUGr5320 ihr:hasChild ihr:Bezug1100532001 .
+
+ihr:PrUGr5330 ihr:hasChild ihr:Bezug1100533003, ihr:Bezug1100533001, ihr:Bezug1100533002 .
+
+ihr:PrUGr5340 ihr:hasChild ihr:Bezug1100534001 .
+
+ihr:PrUGr5350 ihr:hasChild ihr:Bezug1100535001 .
+
+ihr:PrUGr5370 ihr:hasChild ihr:Bezug1100537002, ihr:Bezug1100537001 .
+
+ihr:PrUGr5380 ihr:hasChild ihr:Bezug1100538001, ihr:Bezug1100538002, ihr:Bezug1100538003 .
+
+ihr:PrUGr5410 ihr:hasChild ihr:Bezug1100541001 .
+
+ihr:PrUGr5420 ihr:hasChild ihr:Bezug1100542001 .
+
+ihr:PrUGr5430 ihr:hasChild ihr:Bezug1100543001 .
+
+ihr:PrUGr5440 ihr:hasChild ihr:Bezug1100544001 .
+
+ihr:PrUGr5451 ihr:hasChild ihr:Bezug1100545101 .
+
+ihr:PrUGr5452 ihr:hasChild ihr:Bezug1100545201 .
+
+ihr:PrUGr5453 ihr:hasChild ihr:Bezug1100545301 .
+
+ihr:PrUGr5454 ihr:hasChild ihr:Bezug1100545401 .
+
+ihr:PrUGr5455 ihr:hasChild ihr:Bezug1100545501 .
+
+ihr:PrUGr5460 ihr:hasChild ihr:Bezug1100546001 .
+
+ihr:PrUGr5470 ihr:hasChild ihr:Bezug1100547002, ihr:Bezug1100547001 .
+
+ihr:PrUGr5490 ihr:hasChild ihr:Bezug1100549001, ihr:Bezug1100549002 .
+
+ihr:PrUGr5510 ihr:hasChild ihr:Bezug1100551001 .
+
+ihr:PrUGr5520 ihr:hasChild ihr:Bezug1100552001, ihr:Bezug1100552002 .
+
+ihr:PrUGr5530 ihr:hasChild ihr:Bezug1100553001 .
+
+ihr:PrUGr5540 ihr:hasChild ihr:Bezug1100554001, ihr:Bezug1100554002 .
+
+ihr:PrUGr5550 ihr:hasChild ihr:Bezug1100555001 .
+
+ihr:PrUGr5610 ihr:hasChild ihr:Bezug1100561001, ihr:Bezug1100561002, ihr:Bezug1100561003, ihr:Bezug1100561004, ihr:Bezug1100561005, ihr:Bezug1100561006 .
+
+ihr:PrUGr5710 ihr:hasChild ihr:Bezug1100571002, ihr:Bezug1100571001, ihr:Bezug1100571003, ihr:Bezug1100571004, ihr:Bezug1100571005 .
+
+ihr:PrUGr5730 ihr:hasChild ihr:Bezug1100573015, ihr:Bezug1100573006, ihr:Bezug1100573007, ihr:Bezug1100573008, ihr:Bezug1100573010, ihr:Bezug1100573001, ihr:Bezug1100573002, ihr:Bezug1100573003, ihr:Bezug1100573004, ihr:Bezug1100573005, ihr:Bezug1100573009, ihr:Bezug1100573011, ihr:Bezug1100573012, ihr:Bezug1100573013, ihr:Bezug1100573014 .
+
+ihr:PrUGr5750 ihr:hasChild ihr:Bezug1100575001 .
+
+ihr:PrUGr6110 ihr:hasChild ihr:Bezug1100611001 .
+
+ihr:PrUGr6120 ihr:hasChild ihr:Bezug1100612001 .
+
+ihr:PrUGr6130 ihr:hasChild ihr:Bezug1100613001 .
+
+ihr:PrUGr7110 ihr:hasChild ihr:Bezug1100711001, ihr:Bezug1100711002, ihr:Bezug1100711010, ihr:Bezug1100711011, ihr:Bezug1100711012, ihr:Bezug1100711013, ihr:Bezug1100711014, ihr:Bezug1100711017, ihr:Bezug1100711018, ihr:Bezug1100711019, ihr:Bezug1100711020, ihr:Bezug1100711021, ihr:Bezug1100711023, ihr:Bezug1100711027, ihr:Bezug1100711030, ihr:Bezug1100711057, ihr:Bezug1100711065, ihr:Bezug1100711080, ihr:Bezug1100711091, ihr:Bezug1100711092 .
+
+ihr:PrUGr7120 ihr:hasChild ihr:Bezug1100712012, ihr:Bezug2100712030, ihr:Bezug3100712032, ihr:Bezug4100712034, ihr:Bezug6100712056, ihr:Bezug7100712066 .
+
+ihr:PrUGr7210 ihr:hasChild ihr:Bezug1100721051 .
+
+ihr:PrUGr7250 ihr:hasChild ihr:Bezug1100725041, ihr:Bezug1100725042, ihr:Bezug1100725043, ihr:Bezug1100725045, ihr:Bezug1100725094 .
+
+ihr:PrUGr7310 ihr:hasChild ihr:Bezug1100731023, ihr:Bezug1100731050, ihr:Bezug1100731095 .
+
+ihr:PrUGr7360 ihr:hasChild ihr:Bezug1100736051 .
+
+ihr:PrUGr7410 ihr:hasChild ihr:Bezug1100741053 .
+
+ihr:PrUGr7420 ihr:hasChild ihr:Bezug1100742052 .
+
+ihr:PrUGr7510 ihr:hasChild ihr:Bezug1100751023, ihr:Bezug1100751061, ihr:Bezug1100751062, ihr:Bezug1100751064, ihr:Bezug1100751066, ihr:Bezug1100751096 .
+
+ihr:PrUGr7520 ihr:hasChild ihr:Bezug1100752050, ihr:Bezug1100752063, ihr:Bezug1100752064 .
+
+ihr:PrUGr7530 ihr:hasChild ihr:Bezug1100753001, ihr:Bezug1100753002, ihr:Bezug1100753023, ihr:Bezug1100753066, ihr:Bezug1100753091, ihr:Bezug1100753093 .
+
+ihr:PrUGr7540 ihr:hasChild ihr:Bezug1100754066, ihr:Bezug1100754072, ihr:Bezug1100754093, ihr:Bezug1100754096 .
+
+ihr:PrUGr7550 ihr:hasChild ihr:Bezug1100755036, ihr:Bezug1100755067 .
+
+ihr:PrUGr7560 ihr:hasChild ihr:Bezug1100756036, ihr:Bezug1100756067 .
+
+ihr:PrUGr7570 ihr:hasChild ihr:Bezug1100757002, ihr:Bezug1100757072, ihr:Bezug1100757080, ihr:Bezug1100757081, ihr:Bezug1100757091, ihr:Bezug1100757097 .
+
+ihr:PrUGr7610 ihr:hasChild ihr:Bezug1100761098 .
+
+ihr:Top ihr:hasChild ihr:PrBer71, ihr:PrBer72, ihr:PrBer73, ihr:PrBer74, ihr:PrBer75, ihr:PrBer76, ihr:PrBer11, ihr:PrBer12, ihr:PrBer21, ihr:PrBer22, ihr:PrBer23, ihr:PrBer24, ihr:PrBer25, ihr:PrBer26, ihr:PrBer27, ihr:PrBer28, ihr:PrBer29, ihr:PrBer31, ihr:PrBer33, ihr:PrBer34, ihr:PrBer35, ihr:PrBer36, ihr:PrBer41, ihr:PrBer42, ihr:PrBer51, ihr:PrBer52, ihr:PrBer53, ihr:PrBer54, ihr:PrBer55, ihr:PrBer56, ihr:PrBer57, ihr:PrBer61 .
+
+<> a owl:Ontology ;
+   rdfs:label "Neuer Graph der Produktkategorien"@de ;
+   rdfs:comment "Darstellung der Zusammenhänge bis zur Ebene 4 der Schlüsselprodukte" ;
+   dct:contributor "Hans-Gert Gräbe" ;
+   dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" .

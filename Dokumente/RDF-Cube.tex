@@ -1,0 +1,663 @@
+\documentclass[a4paper,11pt,twoside]{article}
+% Encoding lokal, da manche Editoren danach schauen
+\usepackage[utf8]{inputenc} 
+\usepackage{ihr-15}
+
+\title{Designprinzipien des IHR-15 RDF Data Stores}
+ 
+\date{Version vom 21. August 2015}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\seitezwei
+\newpage
+
+\section{Allgemeines}
+
+Mit dem Übergang zum „Doppik“ haben sich 2012 auch in Leipzig die Grundsätze
+der Haushaltsführung geändert.  Mit \emph{Ergebnishaushalt} und
+\emph{Finanzhaushalt} unterscheidet die „doppelte Buchführung“ zwischen der
+Darstellung von Einnahmen und Ausgaben (Ergebnishaushalt) sowie von
+Aufwendungen und Ergebnissen (Finanzhaushalt).  Die Darstellung im
+veröffentlichten Haushalt der Stadt Leipzig (4 Bände pro Jahr, die als PDF
+online bei \url{http://leipzig.de} eingesehen werden können) nach
+verschiedenen Systematiken (Produktgruppen und Produkte, Finanzpositionen,
+Kostenstellen und Kostenarten) macht die Sache zusätzlich unübersichtlich.
+
+Weiterhin sind in einem einzelnen Haushaltsplan nicht nur die Daten für das
+aktuelle Jahr berücksichtigt, sondern auch Prognosen für die Folgejahre
+ausgewiesen.  Schließlich ist noch zu unterscheiden zwischen zu verschiedenen
+Zeitpunkten fixierten \emph{Plandaten} und dem erst retrospektiv verfügbaren
+\emph{Haushaltsergebnis}, so dass selbst für ein Jahr verschiedene
+Zahlenmaterialien im Umlauf sind.
+
+\begin{quote}
+  Bis zum Projektende konnten fundamentale Unstimmigkeiten in der
+  Interpretation der durch die Kämmerei zur Verfügung gestellten Haushaltsdaten
+  nicht ausgeräumt werden, so dass die mit dem Prototyp ausgelieferten Daten
+  \textbf{nur kursorisch die Funktionalitäten des Haushaltsplanrechners
+    demonstrieren, nicht aber belastbare Informationen zur Haushaltssituation
+    der Stadt Leipzig wiedergeben.} 
+\end{quote}
+
+
+Im folgenden Text wird ein Grundverständnis der kommunalen Haushaltssystematik
+vorausgesetzt.
+
+\section{Die Datenlage}
+
+Dem Projekt standen initial (seit Oktober 2014) seitens die Kämmerei
+\begin{itemize}
+\item[(1)] \emph{Haushaltsplandaten zum Jahr 2014}
+\end{itemize}
+zur Verfügung, welche in einer Datei \texttt{Ratsinfo} die Haushaltssystematik
+in einer zusammenfassenden Darstellung bis zur Ebene 4 der
+\emph{Bezüge}\footnote{So lautet die für Ergebnishaushalt und Finanzhaushalt
+  gemeinsame Spaltenüberschrift in der Datenquelle.}  sowohl des
+Ergebnishaushalts als auch des Finanzhaushalts abbildeten sowie in einer Datei
+\texttt{ErgHH\_PB11\_2014} beispielhaft detailliertere Daten für einen
+Produktbereich (PB 11) des Ergebnishaushalts sowie in einer Datei
+\texttt{FinHH} Daten zum Finanzhaushalt enthielten. In den Haushaltsplandaten
+waren Planansätze für die Jahre 2013 bis 2017 enthalten.
+\begin{quote}
+  Problematisch war von Anfang an die Interpretation der uns übergebenen Daten.
+  Kumuliert über alle 1128 Posten des Produktbereichs 11 ergaben sich etwa
+  folgende Summen für Einnahmen und Ausgaben im Planansatz 2014:
+  \begin{center}
+    \begin{tabular}{l|r|r}
+      & \texttt{ErgHH\_PB11\_2014}& \texttt{Ratsinfo}\\\hline
+      Einnahmen & 976\,928\,992 & 84\,642\,290 \\
+      Ausgaben & -938\,157\,157 & -620\,150
+    \end{tabular}
+  \end{center}
+Im Weiteren wurde mit den Daten aus der Datei \texttt{Ratsinfo} gearbeitet. 
+\end{quote}
+
+An diesen Daten ließ sich im Teil \emph{Ergebnishaushalt} die Systematik der
+Produktbezeichnungen rekonstruieren (ein Bezug pro Zeile, jede Zeile ist mit
+Angaben zu Produktbereich, -gruppe und -untergruppe versehen).  Diese
+4-Ebenen-Systematik wird im folgenden als \textbf{Produktgraph} bezeichnet, die
+genauere Charakterisierung der einzelnen Knoten dieses Graphen als
+\textbf{Produktmodell}. 
+
+Am 27. Juli 2015 wurde in einem Gespräch mit der Kämmerei klar, dass die in der
+Systematik angegebenen Produkte nicht gleichwertig sind, sondern Produkte mit
+10-stelligen Nummern die Rolle von \emph{Schlüsselprodukten} spielen, zu denen
+auch zum großen Teil ausführlichere Produktsteckbriefe existieren, während
+andere Produkte als Unterprodukte anzusehen sind. Auf dieser Basis wurden in
+einem \emph{Redesign des Produktmodells} allein die Schlüsselprodukte als
+vierte Ebene des Produktgraphen belassen, diese aber begriff"|lich von
+PSP-Elementen getrennt\footnote{Zu einer 10-stelligen Produktnummer gibt es nun
+  sowohl ein PSP-Element als auch ein Schlüsselprodukt.}. Das PSP-Element eines
+einzelnen Datensatzes der Primärdaten wird eindeutig einem Schlüsselprodukt
+zugeordnet und damit nun Einnahmen und Ausgaben bereits auf dieser Ebene
+kumuliert.
+
+Eine solche Systematik konnte aus den Angaben im Teil \emph{Finanzhaushalt}
+nicht rekonstruiert werden, da hier Bezüge in mehreren Zeilen vorkamen und in
+den meisten Fällen auch die Einordnung in den Produktgraphen fehlte.
+
+Der Entwicklung unseres Haushaltsrechners wurden deshalb die Plandaten des
+Ergebnishaushalts aus dem Jahr 2014 zu Grunde gelegt.
+
+Im Mai 2015 wurde uns durch die Kämmerei
+\begin{itemize}
+\item [(2)] ein \emph{Produktplan 2015 mit Spielraumangaben} 
+\end{itemize}
+und im Juni 2015 
+\begin{itemize}
+\item [(3)] eine \emph{Übersicht mit 205 Produktsteckbriefen} 
+\end{itemize}
+übergeben, aus denen sich weitere Informationen zur Systematik des
+Ergebnishaushalts entnehmen ließen: 
+\begin{itemize}
+\item Im \emph{Produktplan} sind in jeder Zeile entweder ein PSP-Element mit
+  einer Bezeichnung \texttt{1.100.*} oder ein „Innenauftrag“ dargestellt. Die
+  PSP-Nummern stimmen mit dem überein, was in der Ratsinfo-Darstellung im
+  Bereich \emph{Ergebnishaushalt} als \emph{Bezug} bezeichnet ist.
+\item Unter Weglassung der Punkte ergeben sich mindestens 10-stellige
+  PSP-Nummern, wobei sich die 10-stelligen PSP-Nummern zum überwiegenden Teil
+  auch in den Produktsteckbriefen wiederfinden.  Der Präfix 1100 weist darauf
+  hin, dass es sich um ein Produkt aus dem Ergebnishaushalt handelt. 
+\item In einem Gespräch am 27. Juli 2015 wurde uns der Hintergrund erläutert --
+  die 10-stelligen PSP sind \emph{Schlüsselprodukte}, weitere PSP werden als
+  \emph{Unterprodukte} bezeichnet und haben eine Nummer, aus der sich die
+  Nummer des zugehörigen Schlüsselprodukts als Präfix ergibt. Unterprodukte
+  haben im Gegensatz zu Schlüsselprodukten keine ausführ"|liche Beschreibung. 
+\item Aus diesen PSP-Nummern lässt sich die Einordnung in den Produktgraphen
+  unmittelbar ablesen. 
+\end{itemize}
+Auf dieser Basis wurden die RDF-Graphen \textbf{NeuesProduktModell}
+(Produktmodell des Ergebnishaushalts), \textbf{NeuerProduktgraph} und
+\textbf{Produktsteckbriefe} im Rahmen eines Redesigns neu erstellt, in denen
+die Systematik des Ergebnishaushalts für die Zwecke des HH-Rechners umfassend
+dargestellt ist.  Diese Darstellung ist mit dem Produktplan
+(S. 686\,ff. Haushaltsplan, Band 1) abgeglichen.
+
+Im Mai 2015 wurden uns seitens der Kämmerei 
+\begin{itemize}
+\item [(4)] \emph{detaillierte Daten zum Haushaltsplan 2015/16} übergeben: 
+  \begin{itemize}
+  \item \texttt{ErgHH\_1} -- Darstellung des \emph{Ergebnishaushalts} in
+    ähnlicher Systematik wie die Datei \texttt{ErgHH\_PB11\_2014},
+  \item \texttt{FinHH\_lfd\_Verwaltungsteaetigkeit} -- Darstellung des
+    \emph{Finanzhaushalts laufende Verwaltungstätigkeit} sowie 
+  \item \texttt{invest\_F8} -- Darstellung des \emph{Finanzhaushalts} in
+    ähnlicher Systematik wie \texttt{FinHH}.
+  \end{itemize}
+\end{itemize}
+Es fehlte eine kumulierte Übersicht \texttt{Ratsinfo}, so dass sich die
+bisherige Datentransformation auf die neuen Daten so nicht anwenden ließ. 
+
+In den folgenden Monaten wurde eine Datentransformation auf der Basis des
+vorgelegten Ergebnishaushalts\texttt{ErgHH\_1} neu aufgebaut, welche die
+bisherigen Erfahrungen berücksichtigt.  Die Datensätze dieses
+Ergebnishaushalts sind als „Rechnungsendbetrag 2013“ oder „Planwert 2014“ bis
+„Planwert 2018“ ausgewiesen, so dass sich zunächst einmal aus einer
+csv-Version der Primärquelle entsprechende Datensätze für die einzelnen Jahre
+für die weiteren Transformationen extrahieren lassen.
+
+Diese Datenbasis wurde noch einmal Ende Juli 2015 aktualisiert und uns durch
+die Kämmerei auch die Daten zum Haushalt 2016 sowie eine kumulierte Übersicht
+\texttt{Ratsinfo} (allerdings mit fehlerhafter Zeichensatz-Kodierung) zur
+Verfügung gestellt.  Diese Planwertdaten für die Ergebnishaushalte der
+Jahre 2014 bis 2019 bildeten die Basis für die weiteren Datentransformationen. 
+\begin{quote}
+  Auch in diesen Daten gibt es erhebliche Differenzen.  Kumuliert über alle
+  18\,848 Posten des aus der Primärquelle \texttt{ErgHH\_1} extrahierten
+  detaillierten Ergebnishaushalts bzw.\ über alle 1\,158 Posten des
+  Ergebnishaushalts der Datei \texttt{Ratsinfo\_2015} ergaben sich folgende
+  Summen für Einnahmen und Ausgaben im Planansatz 2015:
+  \begin{center}
+    \begin{tabular}{l|r|r}
+      & \texttt{ErgHH\_2015}& \texttt{Ratsinfo}\\\hline
+      Einnahmen & -3\,399\,306\,619,31 & -1\,487\,889\,183,26 \\
+      Ausgaben & 3\,384\,184\,302,47 & 1\,472\,766\,866,42
+    \end{tabular}
+  \end{center}
+Da allerdings in der Datei \texttt{Ratsinfo\_2015} eine detaillierte
+Gegenüberstellung von Einnahmen und Ausgaben nur für 2015 gegeben wird, für
+Vergleichsjahre aber nur eine konsumierte Sicht dargestellt ist, im
+detaillierten Ergebnishaushalt dagegen in den Planansätzen für die Jahre 2014
+bis 2019 Einnahmen und Ausgaben gegenübergestellt werden, wurde das Redesign
+auf der Basis dieser detaillierten Daten ausgeführt, um die Möglichkeiten der
+visuellen und tabellarischen Gegenüberstellung von Haushaltsdaten verschiedener
+Jahre auszuloten.
+\end{quote}
+Im Gespräch am 27. Juli 2015 wurde auch besprochen, dass für den HH-Rechner die
+Einnahmen und Ausgaben auf der Ebene der Schlüsselprodukte aggregiert werden
+sollen, da nur für diese Produktsteckbriefe vorliegen und damit eine
+ausreichende Informationsbasis für Erläuterungen zur Verfügung steht.  
+
+Für eine ähnlich systematische Transformation der Finanzhaushalte in eine
+Datenbasis für den HH-Rechner bleiben nach wie vor viele Fragen offen.
+
+\section{RDF Data Cube -- Konzeptionelle Vorbemerkungen}
+
+\subsection{Die RDF Data Cube Systematik}
+
+Im weiteren Text wird davon ausgegangen, dass die grundlegenden Konzepte des
+RDF Data Cube Ansatzes \cite{RDF-Cube} bekannt sind.  \texttt{qb:} steht wie
+üblich für den RDF Cube Namensraum.
+
+Im weiteren Text wird an verschiedenen Stellen im Kontext des RDF Data Cube
+Konzepts immer wieder von RDF-Klassen und deren Instanzen die Rede sein.  Ich
+benutze dabei für Instanzen der RDF-Klasse \texttt{qb:WasAuchImmer}
+durchgängig Bezeichnungen wie \emph{ein WasAuch\-Immer}.
+
+\subsection{RDF Data Cubes}
+
+Die Datenbasis des HH-Rechners ist in einzelne \emph{RDF Data Cubes} als
+Datasets aufgeteilt, in denen jeweils alle Datensätze (Observations) aus einer
+Quelle und zu einem Jahr zusammen mit dem Verweis auf die formale Beschreibung
+der Struktur dieser Observations zusammengefasst sind.
+
+Ein RDF Data Cube enthält \emph{ein DataSet} (eine Instanz der RDF-Klasse
+\texttt{qb:DataSet}) sowie gleichartig strukturierte \emph{Observations}
+(Instanzen vom RDF-Typ \texttt{qb:Observation}), die alle einer gemeinsamen
+\emph{Modellstruktur} für die Datenerfassung folgen, deren Beschreibung sowohl
+syntaktisch als auch semantisch als eine \emph{DataStructureDefinition} über
+das Prädikat \texttt{qb:structure} des DataSets referenziert ist.  Im folgenden
+Code-Beispiel ist der Zusammenhang zwischen einer Observation
+\texttt{ihrdata:EH\_15G\_Plan14-Bezug1100111101} und dem Dataset
+\texttt{ihrds:EH\_15G\_Plan14} aus einem unserer Cubes prototypisch
+dargestellt.
+\begin{code}
+ihrds:EH\_15G\_Plan14 a qb:DataSet ;\+\\
+  rdfs:label {\dq}Haushaltsdaten 2015 der Stadt Leipzig ...{\dq}@de ;\\
+  rdfs:comment {\dq}...{\dq}@de ;\\
+  dct:source {\dq}Kämmerei der Stadtverwaltung Leipzig{\dq} ;\\
+  qb:structure ihr:DSDShort .\-\\[6pt]
+ihrdata:EH\_15G\_Plan14-Bezug1100111101 a qb:Observation ; ... \+\\
+  qb:dataSet ihrds:EH\_15G\_Plan14 . 
+\end{code}
+
+Um statistische Vergleichbarkeit zu erreichen, folgt eine zusammengehörende
+Serie von solchen \emph{DataSets} derselben Modellstruktur, also derselben
+\emph{DataStructureDefinition}, die im Fall unseres HH-Rechners die URI
+\texttt{ihr:DSDShort} hat und in der Datei \texttt{HaushaltLeipzigCube.ttl}
+definiert ist, die wir uns nun genauer anschauen wollen.
+
+Eine \emph{DataStructureDefinition} beschreibt ein RDF-Schema, das seinerseits
+das RDF-Schema der Observations beschreibt. Die Beschreibung dieser
+Beschreibung (Metamodellebene) setzt dabei konsequent auf den (Meta)-Konzepten
+von RDF-Modellen \cite{RDFS} wie \texttt{rdfs:subClassOf} und
+\texttt{rdfs:subPropertyOf} auf.  Eine \emph{DataStructureDefinition} besteht
+aus einer Menge von Instanzen vom RDF-Typ \texttt{qb:ComponentSpecification},
+die der \emph{DataStructureDefinition} über das Prädikat \texttt{qb:component}
+zugeordnet sind und mit denen die in den Observations verwendeten
+\emph{Prädikate} genauer beschrieben werden. Hierbei wird ein besonderes
+syntaktisches Moment von RDF ausgenutzt -- Prädikate einer Ebene können auf
+einer Metaebene selbst \emph{Subjekt} von Beschreibungen sein. 
+
+\subsection{ComponentSpecification und ComponentProperties}
+
+Um solche Prädikate zu verschiedenen Prädikatklassen zusammenzufassen, wird ein
+weiteres Indirektionsprinzip angewendet, mit dem Vererbungsstrukturen in RDF
+modelliert werden können: Über das RDF-Oberprädikat
+\texttt{qb:componentProperty} ist einer \emph{ComponentSpecification} eine
+Instanz vom RDF-Obertyp \texttt{qb:ComponentProperty} zugeordnet, von denen es
+verschiedene Unterprädikate mit zugehörigen Unterklassen als Range gibt:
+\begin{itemize}\itemsep0pt
+\item \texttt{qb:dimension} mit Range \texttt{qb:DimensionProperty},
+\item \texttt{qb:attribute} mit Range \texttt{qb:AttributeProperty},
+\item \texttt{qb:measure} mit Range \texttt{qb:MeasureProperty}.
+\end{itemize}
+Im folgenden Beispiel ist in der DataStructureDefinition \texttt{ihr:DSDShort}
+eine ComponentSpecification \texttt{ihr:jahrComponent} definiert, die
+ihrerseits eine spezielle DimensionProperty \texttt{ihr:jahr} definiert, die
+den Wertebereich (Range) \texttt{xsd:gYear} hat und als Prädikat in
+Observations verwendet werden kann.
+\begin{code}
+ihr:DSDShort a qb:DataStructureDefinition ;\+\\
+  rdfs:label {\dq}Data Structure Definition für den Leipziger Haushalt{\dq}@de ;\\
+  qb:component ihr:jahrComponent .\-\\[6pt]
+ihr:jahrComponent a qb:ComponentSpecification ;\+\\
+  rdfs:label {\dq}Jahr-Component{\dq}@de ;\\
+  qb:dimension ihr:jahr .\-\\[6pt]
+ihr:jahr a rdf:Property, qb:DimensionProperty ;\+\\
+  rdfs:label {\dq}Jahr{\dq}@de ;\\
+  rdfs:range xsd:gYear .
+\end{code}
+Jeder \emph{ComponentSpecification} ist auf diese Weise eine
+\emph{ComponentProperty} zugeordnet, die zu einer der drei definierten
+Unterklassen gehören kann, was daran zu erkennen ist, welches der Prädikate
+\texttt{qb:dimension}, \texttt{qb:attribute} oder \texttt{qb:measure} in der
+Definition verwendet wird.  
+
+Diese auf den ersten Blick etwas umständliche Indirektion macht sich
+erforderlich, weil RDF nur 3-Wort-Sätze kennt.  Explizite URIs für
+\emph{ComponentSpecifications} können durch „blank nodes“ umgangen werden,
+allerdings folgen wir der Empfehlung, „blank nodes“ aus anderen syntaktischen
+Gründen konsequent zu vermeiden.  
+
+Wichtig für das weitere Verständnis der Struktur der Observations sind allein
+die \emph{ComponentProperties} in ihren drei Typ-Ausprägungen als
+\emph{DimensionProperties}, \emph{AttributeProperties} und
+\emph{MeasureProperties}.  Jede \emph{ComponentProperty} ist insbesondere eine
+\texttt{rdf:Property} mit den Prädikaten \texttt{rdfs:label},
+\texttt{rdfs:comment} und \texttt{rdfs:range}.
+
+Als \texttt{rdfs:range} können standardmäßige RDF-Typbezeichner-Klassen
+verwendet werden.  Oft müssen aber für spezielle Modelle weitere Klassen
+definiert werden, insbesondere als Wertebereich für \emph{DimensionProperties}.
+Für derartige Definitionen wurde das Konzept des \texttt{qb:mea\-sure\-Type}
+entwickelt, um einen generischen Rahmen für entsprechende Typklassen zu
+entwickeln.  Dieses Konzept kommt im IHR-Cube derzeit nicht zum Einsatz.
+
+Für die eingeführten Properties sind neben syntaktischen auch semantische
+Aspekte zu definieren. Dies erfolgt mit dem Prädikat \texttt{qb:concept}, über
+welches jeder ComponentProperty (und damit auch jeder der drei möglichen
+UnterProperties) eine formal definierte Semantik aus geeigneten Konzeptwerken
+zugeordnet werden kann.  Im IHR-Modell wird hierfür konsequent das im
+Statistikbereich inzwischen etablierte SDMX-Vokabular \cite{SDMX} referenziert.
+
+\section{Zur Struktur unserer Daten}
+
+\subsection{Die Struktur unserer RDF Data Cubes}
+
+Jeder unserer Daten-Cubes enthält eine Menge von Observations (jeweils aus
+einer spezifizierten Primärquelle zu einem Jahr) zusammen mit der zugehörigen
+DataSet-Definition und einer Beschreibung des RDF-Graphen als Instanz von
+\texttt{owl:Ontology}.  Dazu sind zwei Namensraum-Präfixe
+\begin{itemize}
+\item \texttt{ihrdata: <http://haushaltsrechner.leipzig.de/Data/Observation/>}
+  und 
+\item \texttt{ihrds: <http://haushaltsrechner.leipzig.de/Data/Dataset/>}
+\end{itemize}
+definiert, die als Präfixe für URIs der Observations (\texttt{ihrdata})
+bzw.\ des Datasets (\texttt{ihrds}) dienen.  
+
+Die Bezeichnungen des RDF Graphen, des dort enthaltenen Datasets und der
+einzelnen Observations folgen einem einheitlichen Muster, das von einer
+\emph{Kennung} des Cubes ausgeht.  Für die Kennung \texttt{EH\_15G\_Plan14}
+(Ergebnishaushalt Plandaten 2014 aus den Haushaltsdaten 2015/16) lauten die
+URIs wie folgt:
+\begin{itemize}\itemsep0pt
+\item \texttt{http://haushaltsrechner.leipzig.de/Data/EH\_15G\_Plan14/} ist die
+  URI des RDF Graphen, der auch als Turtle-Datei \texttt{EH\_15G\_Plan14.ttl}
+  im git-Repo gespeichert ist;
+\item \texttt{ihrds:EH\_15G\_Plan14} ist die URI des Datasets und 
+\item \texttt{ihrdata:EH\_15G\_Plan14-Bezug1100111101} ist die URI einer
+  Observation, die sich aus der gewählten Kennung und der Produktnummer -- in
+  diesem Fall eines Schlüssel"|pro"|dukts -- zusammensetzt, auf die sich die
+  jeweilige Observation bezieht.
+
+  Da es in jedem Dataset zu jedem Produkt nur einen Datensatz gibt, wird auf
+  diese Weise die eindeutige Referenzierbarkeit der Observations auch über der
+  Grenzen des jeweiligen Datasets hinaus gewährleistet.
+\end{itemize}
+Unter der URI des RDF Graphen ist die genaue Primärdatenquelle auch noch einmal
+als \texttt{rdfs:comment} angegeben. 
+
+Eine \emph{Observation} hat typischerweise folgende Struktur:
+\begin{code}
+ihrdata:EH\_15G\_Plan14-Bezug1100111101\+\\
+    ihr:relatesTo ihr:Bezug1100111101 ;\\
+    ihr:jahr {\dq}2014{\dq};\\
+    ihr:kategorie ihr:Ergebnishaushalt ;\\
+    ihr:ein {\dq}2341177.24{\dq}; ihr:aus {\dq}-153900{\dq};\\
+    ihr:waehrung dbpedia:Euro ;\\
+    qb:dataSet ihrds:EH\_15G\_Plan14 ;\\
+    a qb:Observation .
+\end{code}
+Die einzelnen Prädikate sind in der \emph{DatasetDefinition}
+\texttt{ihr:DSDShort} definiert, die im DataSet \texttt{ihrds:EH\_15G\_Plan14}
+referenziert wird:
+\begin{itemize}\itemsep0pt
+\item \texttt{ihr:relatesTo} -- eine \emph{DimensionProperty}, die auf die
+  Produktnummer verweist, auf welche sich die \emph{Measure} bezieht,
+\item \texttt{ihr:jahr} -- eine \emph{DimensionProperty}, die auf das Jahr
+  verweist, auf welches sich die \emph{Measure} bezieht\footnote{Der Range
+    dieser Property ist \texttt{xsd:gYear}, allerdings wird auf die
+    Range-Angabe als Datentyp in den einzelnen Cubes verzichtet, da diese
+    Angaben beim Ontowiki-Import aktuell falsch behandelt werden.},
+\item \texttt{ihr:kategorie}  -- eine \emph{DimensionProperty}, die auf den
+  Haushalttyp verweist, auf welchen sich die \emph{Measure} bezieht,
+\item \texttt{ihr:ein}, \texttt{ihr:aus} -- zwei \emph{MeasureProperties},
+  unter denen die Einnahmen und Ausgaben zu diesem Sachverhalt zahlenmäßig als
+  \texttt{xsd:decimal} erfasst sind, 
+\item \texttt{ihr:waehrung} -- eine \emph{AttributeProperty}, die angibt, auf
+  welche Einheit sich die Maßzahlen beziehen.  Wert dieser Property ist in
+  allen Fällen \texttt{dbpedia:Euro}, eine Referenz auf die Definition der
+  Währungseinheit „Euro“ in der weit verbreiteten Dbpedia-Ontologie.  
+\end{itemize}
+In jedem Daten-Cube sind zusammen mit einer Observation zu einem Knoten im
+Produktbaum auch zu jedem Vorgängerknoten eine Observation enthalten. Einnahmen
+und Ausgaben in einer Observation zu einem Knoten im Inneren des Produktbaums
+ergeben sich als Summe der Einnahmen bzw.\ Ausgaben aller Kindknoten zu diesem
+Knoten.  \textbf{Die Einnahmen und Ausgaben sind also auf allen Ebenen des
+  Produktbaums aus den Angaben in den Blättern kumuliert vorberechnet.}
+
+\subsection{Das Produktmodell}
+
+Wie bereits im Kapitel „Die Datenlage“ beschrieben ist unser Produktmodell der
+Systematik des Ergebnishaushalts in einem \textbf{Produktgraphen} erfasst und
+die genauere Charakterisierung der einzelnen Knoten dieses Graphen als
+\textbf{Produktmodell} formalisiert.  Beide liegen als RDF-Graphen vor, der
+Produktgraph in der Datei \texttt{NeuerProduktgraph.ttl} und das Produktmodell
+in der Datei \texttt{NeuesProduktModell.ttl}.
+
+Das Produktmodell umfasst die vier Ebenen Produktbereich, Produktgruppe,
+Produktuntergruppe und Schlüsselprodukte.  Für jede dieser vier Ebenen ist ein
+RDF-Typ definiert. Die URIs der Instanzen des jeweiligen Typs werden aus einem
+typspezifischen Präfix und einer ID in der Form \texttt{ihr:<Präfix><ID>}
+gebildet.  Die entsprechenden Informationen wurden für den Ergebnishaushalt
+aus verschiedenen Quellen extrahiert und mit dem Produktplan
+(S.~686\,ff. Haushaltsplan, Band~1) abgeglichen.
+
+Die Details sind in der folgenden Tabelle zusammengestellt.
+\begin{center}
+  \begin{tabular}{rlll}
+    Anzahl & Ebene & Präfix & RDF-Typ \\\hline
+    32 & Produktbereiche & PrBer & \texttt{ihr:PrBer}\\
+    92 & Produktgruppen & PrGr & \texttt{ihr:PrGr} \\
+    127 & Produktuntergruppen & PrUGr & \texttt{ihr:PrUGr} \\
+    282 & Schlüsselprodukte & Bezug & \texttt{ihr:Schluesselprodukt}\\
+  \end{tabular}
+\end{center}
+Die Beziehungen zwischen den Elementen benachbarter Ebenen sind als Kanten des
+(gerichteten) Produktgraphen durch das Prädikat \texttt{ihr:hasChild}
+beschrieben.
+
+Im Redesign wurden die Schlüsselprodukte konsequent von den PSP-Elementen
+getrennt und für letztere ein weiterer RDF-Typ \texttt{ihr:PSP-Element}
+eingeführt, der über ein Prädikat \texttt{ihr:belongsTo} einem Schlüsselprodukt
+zugeordnet werden kann.  Damit besteht in Zukunft die Möglichkeit, die
+Haushaltsdaten nicht nur auf der Ebene der Schlüsselprodukte zu kumulieren,
+sondern auch noch den Bezug zur Ebene der PSP-Elemente genauer darzustellen.
+Dies ist im aktuellen HH-Rechner allerdings noch nicht umgesetzt. 
+
+Zu den drei Ebenen Produktbereich, Produktgruppe und Produktuntergruppe liegen
+typischerweise Informationen in folgender Form vor:
+\begin{code}
+  ihr:PrUGr7520 a ihr:PrUGr ;\+\\
+  rdfs:label {\dq}Schadensereignisse Bau- und Grundstücksordnung{\dq}@de ;\\
+  ihr:BezeichnungStadt {\dq}Schadensereignisse Bau- und Grundstücksordnung{\dq} ;\\
+  ihr:hatStadtId {\dq}7520{\dq} .
+\end{code}
+
+Hierbei sind den einzelnen Prädikaten folgende Informationen als Werte
+zugeordnet:
+\begin{itemize}
+\item \texttt{ihr:PrUGr7520} die URI des Produkts, die sich in diesem Fall
+  einer Produktuntergruppe aus dem Präfix \texttt{ihr:PrUGr} und der ID der
+  Untergruppe in der Stadtsystematik zusammensetzt,
+\item \texttt{ihr:PrUGr} der RDF-Typ des Produkts,
+\item \texttt{rdfs:label} eine aus den Stadtdaten entnommene und
+  ggf. korrigierte oder aus anderen Quellen konsolidierte Bezeichnung des
+  Produkts,
+\item \texttt{ihr:BezeichnungStadt} die aus den Stadtdaten übernommene genaue
+  Bezeichnung mit allen Punkten, Abkürzungen und Sinnentstellungen, die sich
+  aus den Größenbeschrän"|kungen der Felder in der Primärquelle ergeben. Diese
+  Bezeichnung dient bei der Suche in Primärdaten als Fremdschlüssel, um Bezüge
+  zwischen verschiedenen Datenquellen aufzudecken.
+\item \texttt{ihr:hatStadtId} die Referenznummer des Produkts in den Stadtdaten.
+\end{itemize}
+Letzteres ist für Produktbereiche, Produktgruppen, Produktuntergruppen
+identisch mit der aus der Stadtsystematik inferierten ID, für Schlüsselelemente
+und PSP-Elemente wird die ID durch Entfernen der Punkte auf einen reinen
+Zahlenwert reduziert -- in diesem Fall ist der Wert des Prädikats
+\texttt{ihr:hatStadtId} die ursprüngliche Referenz mit Punkten.
+
+Schlüsselelemente enthalten weitere Informationen wie in folgendem Beispiel:
+\begin{code}
+  ihr:Bezug1100111102 a ihr:Schluesselprodukt ;\+\\
+  rdfs:label {\dq}Leitungshilfe und Unterstützung{\dq}@de ;\\
+  ihr:BezeichnungStadt {\dq}Leitungshilfe und Unterstützung{\dq} ;\\
+  ihr:hatStadtId {\dq}1.100.11.1.1.02{\dq} ;\\
+  ihr:hatGrad {\dq}2{\dq} ;\\
+  ihr:zumAmt ihr:Amt011 .
+\end{code}
+
+wobei 
+\begin{itemize}
+\item \texttt{ihr:hatGrad} den finanziellen Gestaltungsspielraum der Kommune
+  bei diesem Schlüssel"|produkt angibt und 
+\item \texttt{ihr:zumAmt} eine Referenz auf eine URI des Amts entsprechend der
+  Ämterübersicht  (S. 634\,ff. Haushaltsplan, Band 1) ist, welchem dieses
+  Schlüsselprodukt zugeordnet ist. 
+\end{itemize} 
+Der Gestaltungsspielraum $g$ ist eine Kommazahl im Bereich $1\le g\le 3$, wobei
+\begin{center}
+  $1$ für nicht beeinflussbar, $2$ für bedingt beeinflussbar und $3$ für stark
+  beeinflussbar 
+\end{center}
+steht. Da $g$ in der Primärquelle
+\texttt{Produktplan\_2015\_mit\_Spielraumangaben} teilweise nicht direkt den
+Schlüsselprodukten zugeordnet war, sondern nur verschieden ausgezeichneten
+Unterprodukten, sind die Werte $g$ für einige Schlüsselprodukte interpoliert
+und dann auch nicht mehr ganzzahlig.  Da die Gestaltungsspielräume für
+einzelne Knoten höherer Ebenen im Produktgraphen sowieso auf eine noch zu
+bestimmende Weise aus den Gestaltungsspielräumen der Kindknoten zu berechnen
+sind, ist diese Setzung naheliegend.
+
+\subsection{Der Produktgraph}
+
+Zur Aufstellung einer ersten Version des Produktgraphen wurden alle Zeilen mit
+10-stelligen PSP-Nummern (Schlüsselprodukte) aus der Datei
+\texttt{HH2014/EH\_14Ratsinfo.csv} extrahiert und die Verbindungen von
+Produktbereich, Produktgruppe, Produktuntergruppe und Schlüssel"|pro"|dukt
+extrahiert und mit dem Prädikat \texttt{ihr:hasChild} beschrieben.
+
+Ein typischer Eintrag sieht wie folgt aus
+\begin{code}
+  ihr:PrBer42 ihr:hasChild ihr:PrGr421, ihr:PrGr424 .
+\end{code}
+
+und ist mit Verweis auf die obigen Ausführungen zum Produktmodell weitgehend
+selbsterklärend. Dieser RDF Graph dient dazu, die Beziehungen zwischen den
+verschiedenen Einheiten auf der Ebene der URIs darzustellen.  Er wurde im
+weiteren Projektverlauf mehrfach mit anderen Quellen abgeglichen und auf diese
+Weise konsolidiert. 
+
+\section{Die Datentransformation der Primärdaten}
+
+Dem Projekt wurden folgende Primärdaten in Form von Exceldateien zur Verfügung
+gestellt, die aus dem SAP-System der Kämmerei extrahiert wurden:
+\begin{itemize}\raggedright
+\item Zu Projektbeginn im Oktober 2014 Plandaten zum Haushaltsansatz 2014,
+  siehe Verzeichnis \texttt{Primaerdaten/HH2014},
+\item im Mai 2015 Plandaten zum Haushaltsansatz 2015, siehe Verzeichnis
+  \texttt{Primaerdaten/HH2015-1} und
+\item Ende Juli 2015 Plandaten zu den Haushaltsansätzen 2015 und 2016, siehe
+  Verzeichnis \texttt{Primaerdaten/HH2015-2}.
+\end{itemize}
+Diese Excel-Dateien wurden in der Regel nach folgendem Schema aufbereitet:
+\begin{itemize}
+\item Umwandlung der Excel-Datei in eine csv-Datei,
+\item Extraktion relevanter Datensätze über das Kommando \texttt{grep}, das
+  Zeilen nach vorgegebenem Muster (etwa „Planansatz2017“) aus der csv-Datei
+  auswählt,
+\item Transformation dieser Daten in RDF-Graphen mit verschiedenen
+  Perl-Skripten\footnote{\url{https://de.wikipedia.org/wiki/Perl_(Programmiersprache)}}.
+\end{itemize}
+\subsection{Verzeichnis \texttt{Primaerdaten/HH2014}}
+Dieses Verzeichnis enthält die zum Projektbeginn im Oktober 2014 übergebenen
+Plandaten zum Haushaltsansatz 2014.
+\begin{itemize}
+\item \texttt{ErgHH\_PB11\_2014}
+
+Detaillierte Planwertdaten zum Produktbereich 11 des Ergebnishaushalts für die
+Jahre 2013 bis 2017. 
+
+\item \texttt{FinHH} 
+
+Datensätze zum Finanzhaushalt für die Jahre 2013 bis 2017.
+
+\item \texttt{Ratsinfo} 
+
+Datensätze mit Jahresvergleichen (1128 Datensätze zum Ergebnishaushalt, 3947
+Datensätze zum Finanzhaushalt)
+\end{itemize}
+Die Datensätze aus \texttt{Ratsinfo} wurden zur weiteren Verarbeitung in
+die Dateien 
+\begin{quote}
+  \texttt{EH\_14Ratsinfo.csv} (Datensätze zum Ergebnishaushalt) und\\
+  \texttt{FH\_14Ratsinfo.csv} (Datensätze zum Finanzhaushalt)
+\end{quote}
+separiert. 
+
+\subsection{Verzeichnis \texttt{Primaerdaten/HH2015-1}}
+Dieses Verzeichnis enthält die im Mai 2015 übergebenen Plandaten zum
+Haushaltsansatz 2015
+\begin{itemize}
+\item \texttt{ErgHH\_1} 
+
+Detaillierte Planwertdaten zum Ergebnishaushalt für die Jahre 2014 bis 2018
+sowie Rechnungsendbeträge 2013.
+\item \texttt{FinHH\_lfd\_Verwaltungsteaetigkeit} 
+
+Datensätze zum Finanzhaushalt aus laufender Verwaltungstätigkeit für die Jahre
+2014 bis 2018 sowie Rechnungsendbeträge 2013.
+\item \texttt{invest\_F8} 
+
+Datensätze zum Investitionshaushalt für die Jahre 2014 bis 2018 sowie
+Rechnungsergebnisse 2013.
+\end{itemize}
+Die Datensätze aus \texttt{ErgHH\_1} wurden zur weiteren Verarbeitung 
+\begin{center}
+  in die Dateien \texttt{EH\_15N\_Plan<j>.csv} mit $j\in \{14,15,16,17,18\}$
+\end{center}
+separiert, mit Blick auf die später als \texttt{HH2015-2} zur Verfügung
+gestellten aktuelleren Daten gleicher Struktur aber nicht weiter verwendet.
+
+\subsection{Verzeichnis \texttt{Primaerdaten/HH2015-2}}
+Dieses Verzeichnis enthält die Ende Juli 2015 übergebenen Plandaten zum
+Haushaltsansatz 2015 und 2016
+\begin{itemize}
+\item \texttt{ErgHH\_2015} und \texttt{ErgHH\_2016} 
+
+Detaillierte Planwertdaten zum Ergebnishaushalt für die Jahre 2014 bis 2019
+sowie Rechnungsendbeträge 2013 und 2014.
+\item \texttt{FinHH\_lfd.Vw\_2015} und \texttt{FinHH\_lfd.Vw\_2016}
+
+Datensätze zum Finanzhaushalt aus laufender Verwaltungstätigkeit für die Jahre
+2014 bis 2019 sowie Rechnungsendbeträge 2013 und 2014.
+\item \texttt{invest\_2015} und \texttt{invest\_2016} 
+
+Datensätze zum Investitionshaushalt für die Jahre 2014 bis 2019 sowie
+Rechnungsergebnisse 2013 und 2014.
+\item \texttt{Ratsinfo\_2015} und \texttt{Ratsinfo\_2016} 
+
+Datensätze mit Jahresvergleichen zum Ergebnishaushalt und zum Finanzhaushalt
+\end{itemize}
+Die Datensätze aus \texttt{ErgHH\_2015} und \texttt{ErgHH\_2016} wurden zur
+weiteren Verarbeitung in die Dateien
+\begin{center}
+  \texttt{EH\_15G\_Plan<j>.csv} mit $j\in \{14,15,16,17,18,19\}$
+\end{center}
+separiert.  Die Plandaten zu einem Jahr, das in beiden Dateien erfasst ist,
+waren identisch, so dass hier keine weitere Unterscheidung erforderlich war.
+
+Die Datensätze zum Ergebnishaushalt aus \texttt{Ratsinfo\_2015} und
+\texttt{Ratsinfo\_2016} wurden zur weiteren Verarbeitung
+\begin{center}
+  in die Dateien \texttt{EH\_15Ratsinfo.csv} und \texttt{EH\_16Ratsinfo.csv}
+\end{center}
+separiert.  Hierbei ist zu beachten, dass in den Ratsinfo-Dateien nur für die
+Daten des jeweiligen Jahrs nach Einnahmen und Ausgaben unterschieden wird, die
+Daten der Folgejahre dagegen nur in konsumierter Sicht vorliegen, wo Einnahmen
+und Ausgaben zu einer Zahl zusammengezogen sind.  Deshalb können aus einer
+solchen Datei auch nur Einnahmen und Ausgaben für das jeweils aktuelle Jahr
+entnommen werden.
+
+\subsection{Transformation}
+
+Im Transformationsprozess für die Plandaten aus dem Ergebnishaushalt des
+jeweiligen Jahres wurden die Zahlen aus den Spalten „Einnahmen“ und „Ausgaben“
+sowie die PSP-Nummer übernommen. 
+\begin{itemize}
+\item Aus der PSP-Nummer wurden die zugehörigen URIs von „Schlüsselprodukt“,
+  „Produktuntergruppe“, „Produktgruppe“ und „Produktbereich“ generiert.
+\item Die Zahlen aus den Spalten „Einnahmen“ und „Ausgaben“ wurden in das
+  internationale Zahlenformat transformiert.
+\item Diese Zahlen wurden auf auf einem Hash mit den jeweiligen URIs als
+  Schlüssel auf jeder Ebene des Produktbaums aggregiert.
+\item Der Hash wurde ausgewertet, eine Observation pro Schlüssel erzeugt und
+  als RDF Cube abgespeichert.
+\end{itemize}
+Der RDF Cube hat denselben Namen wie die Quelle, aus der er erzeugt wurde.  Für
+den aktuellen Haushalt wird mit der Cube-Serie \texttt{EH\_15G\_Plan*}
+gearbeitet, als zweite Serie steht \texttt{EH\_*Ratsinfo} zur Verfügung.
+
+Für beide Serien weisen die Primärdaten aus der Kämmerei noch erhebliche
+qualitative Defizite auf, so dass die Entscheidung über die Datenbasis, die im
+HH-Rechner schließlich Verwendung findet, aktuell noch nicht möglich ist.  Die
+Datenbasis des HH-Rechners kann in der Datei \texttt{Config.ttl} konfiguriert
+werden.
+
+
+\begin{thebibliography}{xxx}
+\bibitem{RDFS} RDF Schema 1.1.  W3C Recommendation 25 February 2014.
+  \url{http://www.w3.org/TR/rdf-schema/}.
+\bibitem{RDF-Cube} The RDF Data Cube Vocabulary.  W3C Recommendation 16 January
+  2014.  \url{http://www.w3.org/TR/vocab-data-cube/}.
+\bibitem{SDMX} The Statistical Data and Metadata Exchange (SDMX) Initiative.
+  \url{http://www.sdmx.org}.
+\end{thebibliography}
+
+\end{document}

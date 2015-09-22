@@ -1,0 +1,840 @@
+<!--Load the AJAX API-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.1/css/theme.default.min.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.1/js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+ // Load the Visualization API and the piechart package.
+ google.load('visualization', '1.0', {'packages':['corechart']});
+ // Set a callback to run when the Google Visualization API is loaded.
+ google.setOnLoadCallback(drawChart);
+
+// Mapping fuer Vorschlagsfunktion
+var forumURL = "http://pcai042.informatik.uni-leipzig.de/~swp15-ihr/Drupal/?q=forum"
+var map ={};
+map["PrBer11"] = 3;
+map["PrBer12"] = 14;
+map["PrBer21"] = 4;
+map["PrBer22"] = 4;
+map["PrBer23"] = 4;
+map["PrBer24"] = 13;
+map["PrBer26"] = 13;
+map["PrBer27"] = 13;
+map["PrBer28"] = 13;
+map["PrBer29"] = 13;
+map["PrBer31"] = 2;
+map["PrBer33"] = 2;
+map["PrBer34"] = 2;
+map["PrBer35"] = 2;
+map["PrBer36"] = 7;
+map["PrBer41"] = 8;
+map["PrBer42"] = 9;
+map["PrBer51"] = 10;
+map["PrBer52"] = 11;
+map["PrBer54"] = 12;
+map["PrBer55"] = 15;
+map["PrBer56"] = 17;
+map["PrBer57"] = 16;
+map["PrBer61"] = 19;
+var colorRing=[];
+colorRing[0]='#4D4D4D';
+colorRing[1]='#5DA5DA';
+colorRing[2]='#FAA43A';
+//colorRing[3]='#B582CE';
+colorRing[3]='#60BD68';
+colorRing[4]='#F17CB0';
+colorRing[5]='#B2912F';
+colorRing[6]='#B276B2';
+colorRing[7]='#DECF3F';
+//colorRing[9]='#ff7f00';
+colorRing[8]='#F15854';
+//colorRing[9]='#E7E700';
+var colorRingIndex=0;
+
+var SIZE = 700;                             //größe des Diagramms
+var PIE_HOLE = 0.8;
+var pie_holeArr=[];
+pie_holeArr.push(PIE_HOLE);
+var pHExtFak=0.75;
+var REDUCTION = 4/5;                        //Veränderung brgl der Größe zum vorhergehenden Diagramm 
+var redArr=[];
+redArr.push(REDUCTION);                  //Veränderung brgl der Größe zum vorhergehenden Diagramm 
+var DiaURL="http://pcai042.informatik.uni-leipzig.de/~swp15-ihr/Drupal/themes/IHR/data/main.php?q=";
+//globales
+var xmlhttp = new XMLHttpRequest();         //used for ajax
+var selectedArr=[];                         //speichert den Auswahlpfad des Benutzers
+var rect;                                   //speichert die Eckpunkte von "#chart_div1"   
+var rect2;                                  //ahnlich wie rect nur für alle anderen "#chart_divX"
+var offsetX;                                //gehört zu rect
+var offsetY;
+var offsetX2;                               //gehört zu rect2
+var offsetY2;
+var chartArray=[];                          //speichert alle vorhandenen Diagramme
+var changedFlag=false;
+var aktOpt;                                 //speichert immer die Optionen fuer den innersten Ring
+var gesamtSum = 0;				// Gesamtsumme
+var lengthCounts=[];
+var colorFields=[];
+var selectListenerArr=[];
+var mousemoveListenerArr=[];
+/**
+* Hauptfunktion
+* verwaltet alle Diagramme
+*/
+function drawChart() {
+	var rightLayer=false;   
+	// Create the data-table-Array.
+	var data =[];                           //speichert alle Daten der jeweiligen Diagramme
+	var data2 =[];                          //data als explizites Array aus Arrays
+        
+        function genColorObj(colorCount){
+            var colorObj={};
+            var indexObj=0;
+            while(colorCount>0){
+                colorObj[""+indexObj]={};
+                colorObj[""+indexObj]["color"]=colorRing[colorRingIndex];
+                colorCount--;
+                indexObj++;
+                colorRingIndex++;
+                if(colorRingIndex>9){colorRingIndex=0;}
+            }
+         
+            return colorObj;
+
+        }
+	
+	/**
+	 * Daten per Hand parsen, ersetzt JSON.parse, filtert zu kleine Datensätze und fasst diese zu einem Eintrag "sonstige" zusammen
+	 *
+	 * @param {Array} table Datentabelle
+	 * @return {Array} Beschreibung
+	 */
+	function formatTable(table){
+		//console.log("in formatTable")
+		
+		var result = [];
+		var sonstiges = 0;
+		result.push(table[0]);
+                gesamtSum = 0;
+		for(var i = 1; i < table.length; i++) {   //ermitteln der Gesamtsumme des Datensatzes
+			gesamtSum += table[i][1];
+		}
+		//alert(gesamtSum);
+		for(var j = 1; j < table.length; j++) {   // entscheidung ob ein datensatz einen zu kleinen Wert besitzt
+                    //    alert();
+			if((table[j][1]/gesamtSum) < 0.02) {
+				sonstiges += table[j][1];
+			}
+			else {
+				result.push(table[j]);
+			}
+		}
+		
+		// Hier muss noch gefixt werden
+		result.push(['sonstiges',sonstiges,'sonstiges']);
+		//console.log(result);
+		return result;
+	}
+	
+	/**
+	 * getter fuer Daten, benutzt ajax
+	 */
+	xmlhttp.onreadystatechange = function() {                     
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			str = JSON.parse(xmlhttp.responseText);                      //Daten werden geparsed
+			
+			//stores requested Data-table
+			data.push(google.visualization.arrayToDataTable(formatTable(str)));  //Daten werden nocheinmal aufbereitet
+                        lengthCounts.push(formatTable(str).length-1);   
+			data2.push(str);                                             //Daten werden nochmal in expliziter Form abgespeichert
+			changedFlag=true;                                            //Signal fuer den Select Handler, dass sich etwas verändert hat
+			//alert("answer: "+ str);
+			}
+		};
+	//die Anfragemethode und das Anfrageziel wird fesgelegt 	
+	xmlhttp.open("GET",  DiaURL + "start", false);            
+	xmlhttp.send();
+
+	// die Optionen fuer den ersten Ring des Diagrammms werden festgelegt
+	var options = {
+		tooltip: { trigger: 'none', text: 'both' },
+		pieSliceText: 'none',
+		legend: 'none',
+		pieHole: PIE_HOLE,
+		width: SIZE,
+		height: SIZE,
+		backgroundColor: { fill:'transparent' },
+		chartArea: {left:10, top:10, bottom:10, right:10},
+		};
+		
+	options.chartArea.width = SIZE-20;
+	options.chartArea.height = SIZE-20;
+        colorFields.push(genColorObj(lengthCounts[0]));
+        options.slices=colorFields[0];
+	
+	aktOpt=options;
+	
+	/**
+	* loescht alle Diagramme die sich innerhalb der angegeben Diagrammschicht befinden
+	*
+	* @param {integer} layerDia index der der Diagrammschicht 
+	*/
+	function cutOffChartArray(layerDia) {
+		for(var i=chartArray.length; i>layerDia; i--) {
+			chartArray[(i-1)].clearChart();
+			chartArray.pop();
+			jQuery("#chart_div" + (i) ).remove();
+			data.pop();
+			data2.pop();
+			selectedArr.pop();
+                        lengthCounts.pop();
+                        colorFields.pop();
+                        selectListenerArr.pop();
+                        mousemoveListenerArr.pop();
+                        redArr.pop();
+                        pie_holeArr.pop();
+		}
+		//alert("chartArray.length: "+chartArray.length +"\n"+"selectedArr.length: "+selectedArr.length +"\n"+"data.length: "+data.length);
+	}
+	
+	// weißt dem ersten div Element den äuersten Diagrammring zu 
+	chartArray.push( new google.visualization.PieChart(document.getElementById('chart_div1')) );
+	//Zeichnet das Diagramm
+	chartArray[0].draw(data[0], options);                                                       
+	jQuery('#chart_div1').attr(
+					  "style","position:relative; height:"+SIZE+"px; width:"+SIZE+"px; left:0px; top:0px; border-style: solid; border-width: 0px;"		
+					  );                                                                      
+	rect = document.getElementById("chart_div1").getBoundingClientRect();
+	
+	/**
+	* wartet bis das Dokument fertig geladen ist um sich dann die Position von Elementen zu holen die außerhalb des Diagrammbereiches liegen 
+	*/
+	jQuery(document).ready(function() {
+		//find position of first ring relativ to #content
+		offsetX = rect.left-document.getElementById("colx").getBoundingClientRect().left;      
+		offsetY = rect.top-document.getElementById("rowx").getBoundingClientRect().top;
+		jQuery( "#chart_div1" ).after("<div id='infoFieldData' >");
+		
+		// Anfangstext von #infoFieldData
+		document.getElementById("infoFieldData").innerHTML = "<h3>Kommunaler Haushalt des Jahres 2014</h3><h4>Gesamteinnahmen in Euro: " + numeral(gesamtSum).format('0,0') + "</h4>";
+		jQuery("#infoFieldData" ).attr("style","position:absolute; height:"+SIZE/3+"px; width:"+(SIZE/3+SIZE/9)+"px; left:"+(SIZE/3+offsetX-SIZE/18)+"px; top:"+(SIZE/3+offsetY)+"px; border-style: solid; border-width: 0px;"); 
+	});
+	
+	// Tabelle vorbereiten	
+	var tabledata = data2[data2.length-1];
+	var theTable = document.createElement('table');
+	jQuery(theTable).css("width", "100%");
+	jQuery(theTable).attr({'id': 'inner-table', 'class': 'table table-striped table-hover table-bordered'});
+	
+	/**
+	* Beschreibung
+	*
+	* @param {DATENTYP} array  
+	* @param {DATENTYP} theTable
+	*/
+	function drawTable(array, theTable) {
+		var arrayNames = ["Abteilung", "Betrag", "Posten", "Anteil"];
+		var arrayNameslength = arrayNames.length;
+		var arrayLength = array.length;
+		if(arrayLength != null) {
+			var arrayRange = array[0].length;
+			var tr = document.createElement('tr');
+			var thead = document.createElement('thead');
+			var tb = document.createElement('tbody');
+			
+			for(var i = 0,th, textnode; i < arrayNameslength; i++) {
+				th = document.createElement('th');
+				
+				textnode = document.createTextNode(arrayNames[i]); 
+				th.appendChild(textnode);
+				tr.appendChild(th);
+				
+				thead.appendChild(tr);
+			}
+			
+			theTable.appendChild(thead);
+  
+			for (var i = 1, tr, td; i < arrayLength; i++) {
+				tr = document.createElement('tr');
+			   
+				for(var j = 0; j < arrayRange; j++) {
+					td = document.createElement('td');
+					
+					// Nummern im Betragsfeld formatieren, muss aber noch für deutsche Zahlenformatierung angepasst werden
+					(j === 1) ? td.appendChild(document.createTextNode(numeral(array[i][j]).format('0,0'))) : td.appendChild(document.createTextNode(array[i][j]));
+					
+					tr.appendChild(td);
+					
+				}
+				
+				// Anteile
+				td = document.createElement('td');
+				
+				td.appendChild(document.createTextNode(numeral(array[i][1]/gesamtSum).format('0.00%')));
+				tr.appendChild(td);
+			
+				// Tabelle klickbar machen
+				tr.onclick=(function (){
+					var lay =chartArray.length;
+					var name=this.firstChild.innerHTML;
+
+					selectHandler(chartArray[lay-1], aktOpt, lay, name)
+				})
+				tb.appendChild(tr);
+			}
+			
+			theTable.appendChild(tb);
+
+			// Tabelle an div
+			jQuery(document).ready(function(){
+				document.getElementById('table').appendChild(theTable);
+			});
+		}
+	}
+
+	// Tabelle generieren
+	drawTable(tabledata,theTable);
+	// Tabelle sortieren
+	jQuery("#inner-table").tablesorter( {sortList: [[1,1], [2,0]]} ); 
+	
+	
+	/**
+	* Beschreibung
+	*
+	* @param {HTML-Element} theTable
+	*/
+	function clearTable(theTable) {
+		theTable.innerHTML = "";
+
+	}
+	
+ function getHaushaltsstelle(e, indexData){
+       var strHaus="";
+       var strBez="";
+       if(indexData==0){strHaus= data[indexData].getValue(e.row, 0); strHaus=strHaus.substr(5,6); strHaus=strHaus+"__:__________";}
+       if(indexData==1){strHaus= data[indexData].getValue(e.row, 0); strHaus=strHaus.substr(4,6); strHaus=strHaus+"_:__________";}
+       if(indexData==2){strHaus= data[indexData].getValue(e.row, 0); strHaus=strHaus.substr(5,8); strHaus=strHaus+":__________";}
+       if(indexData==3){strHaus= selectedArr[indexData-1]; strHaus=strHaus.substr(5,8); strHaus=strHaus+":"; strBez=data[indexData].getValue(e.row, 0); strHaus=strHaus+strBez.substr(5,14);}
+       return strHaus;
+    }
+
+    
+    /**
+    * überschreibt den Text in "infoFieldData" mit der Bezeichnung des Diagrammsegments über dem sich die Maus befindet
+    *
+    * @param {Objekt} e wird vom Eventlistener übergeben
+    * @param {integer} indexData Index der Datentabelle für das Entsprechende Diagramm
+    */    
+    function mouseoverHandler(e, indexData){
+            if(indexData==selectedArr.length){
+                document.getElementById("infoFieldPath").innerHTML ="Haushaltsstelle: "+getHaushaltsstelle(e, indexData);
+            }
+            var infoString=data[indexData].getValue(e.row, 2);
+            var infoStringArr=[];
+            if((infoString.length>30)&&(infoString.search(",")>-1)){
+                infoStringArr=infoString.split(",");
+                infoString="";
+                for(var i=0;i<infoStringArr.length; i++ ){
+                    if(i<(infoStringArr.length-1)){
+                        infoString+=infoStringArr[i]+", ";
+                    }else{
+                        infoString+=infoStringArr[i];
+                    }
+                }
+            }
+          
+            infoStringArr=[];
+            if((infoString.length>30)&&(infoString.search(".")>-1)){
+                infoStringArr=infoString.split(".");
+                infoString="";
+                for(var i=0;i<infoStringArr.length; i++ ){
+                    if(i<(infoStringArr.length-1)){
+                        infoString+=infoStringArr[i]+". ";
+                    }else{
+                        infoString+=infoStringArr[i];
+                    }
+                }
+            }
+            document.getElementById("infoFieldData").innerHTML = "<h3>" + infoString + "</h3><h4>Einnahmen in Euro: " + numeral(data[indexData].getValue(e.row, 1)).format('0,0') + "</h4>";
+	}
+	  
+	/**
+	* ausgeloest vom event 'select'
+	* kann vom Diagramm selbst oder von der Tabelle unter dem Diagramm aufgerufen werden
+	* erstellt einen neuen Diagrammring  
+	* @param {object} selectChart der Diagrammring aus dem der neue Diagrammring erstellt wird
+	* @param {object} opt die Optionen des Vorrangegangen Diagrammrings
+	* @param {integer} layerDia die Nummer des div-Elements des übergeordneten Diagramms
+	* @param {string} clickt nur belegt wenn die Funktion aus der Tabelle unter dem Diagramm aufgerufen wird
+	*/
+	function selectHandler(selectChart, opt, layerDia, clickt) {
+		cutOffChartArray(layerDia);
+		changedFlag = false;
+		if(layerDia <= 3) {clearTable(theTable);
+			var newData;
+			
+			if(clickt== undefined){                         //prueft ob die Funktion durch einen Klick auf eines der Diagrammringe ausgeloest wurde oder durch einen Klick auf die Tabelle
+				var selectedItem = selectChart.getSelection()[0];   //durch Klicken auf das Diagramm                                    
+			
+			
+				if (selectedItem) {
+					var topping = data[layerDia-1].getValue(selectedItem.row, 0);        //bekomme die Bezeichnung des angeklickten Diagramm segments
+				
+					if(topping!="sonstiges"){        
+						selectedArr.push(topping);
+						topping=getAllSelected();
+                                                //alert(topping);
+						xmlhttp.open("GET", DiaURL + topping, false);
+						xmlhttp.send(); 
+					}                                                                      
+				//send a request for a new data-table
+				}
+			}else{                                                 //durch Klicken auf die Tabelle
+				var topping = clickt;
+				selectedArr.push(topping);
+				topping=getAllSelected();
+				xmlhttp.open("GET", DiaURL + topping, false);
+				xmlhttp.send(); 
+																						 
+			}
+			if(changedFlag) {
+	   
+				// alte Tabelle loeschen
+				
+				
+				//berechnet die Größe des neuen Diagrammrings
+				var paddingDia = SIZE;
+				var paddingLoad;
+				var paddingEnd = 0;
+                                
+				var newRedu=(REDUCTION-1)/pHExtFak+1;
+                                var newPieHole=PIE_HOLE;
+				for(var i=0; i < chartArray.length;i++) {
+                                        newRedu=1-(1-newRedu)*pHExtFak;
+                                        newPieHole=1-(1-newPieHole)*pHExtFak;
+					paddingLoad=paddingDia; 
+					paddingDia= Math.round(paddingDia*newRedu); 
+					paddingEnd = paddingEnd + Math.round((paddingLoad-paddingDia)/2);
+				}
+				
+				var divID = "#chart_div"; var divLong="<div id='chart_div";
+				
+				 //berechnet die Optionen für den neuen Diagrammring
+				var newOpt = {                                                                          
+					tooltip: { trigger: 'none', text: 'both' },
+					legend: 'none',
+					pieSliceText: 'none',
+					pieHole: newPieHole,
+					width: Math.round(opt.width*newRedu),
+					height: Math.round(opt.height*newRedu),
+					backgroundColor: { fill:'transparent' },
+					chartArea: {left:10, top:10, bottom:10, right:10 }
+				}; 
+				
+				newOpt.chartArea.width=(newOpt.width-20);
+				newOpt.chartArea.height=(newOpt.height- 20);
+                                colorFields.push(genColorObj(lengthCounts[data2.length-1]))
+                                newOpt.slices=colorFields[colorFields.length-1];
+				aktOpt=newOpt;
+
+                                redArr.push(newRedu);
+                                pie_holeArr.push(newPieHole);
+				//erzeugt ein neues div-Element, welches den neuen Diagrammring enthalten wird
+				jQuery( "#chart_div"+(chartArray.length) ).after("<div id='chart_div" + (chartArray.length+1) +"' >");   
+				jQuery("#chart_div"+ (chartArray.length+1) ).attr("style","position:absolute; left:"+(paddingEnd+offsetX)+"px; top:"+(paddingEnd+offsetY)+"px; border-style: solid; border-width: 0px;");
+				chartArray.push( new google.visualization.PieChart(document.getElementById( 'chart_div'+(chartArray.length+1) ) ));
+				
+				//zeichnet den neuen Diagrammring
+				chartArray[chartArray.length-1].draw(data[data.length-1], newOpt);                                         
+				var indexPlus=chartArray.length;
+				
+				// setup event 'select'
+				selectListenerArr.push(google.visualization.events.addListener(chartArray[indexPlus-1], 'select', (function () { 
+					return function () { 
+						selectHandler(chartArray[indexPlus-1] , newOpt, indexPlus);
+					}
+				})()));
+				
+				// setup event 'mouseover'
+				google.visualization.events.addListener(chartArray[indexPlus-1], 'onmouseover', (function (e) { 
+					return function (e) { 
+						mouseoverHandler(e, indexPlus-1);
+					}
+				})()); 
+			
+				// setup event 'mousemove'
+                                mousemoveListenerArr.push(function(e) { 
+					var x = e.clientX ; 
+					var y = e.clientY ; 
+					findLayerByPos(x, y, newOpt, (indexPlus-1));     
+				});
+				document.getElementById("chart_div"+indexPlus).onmousemove = mousemoveListenerArr[mousemoveListenerArr.length-1];
+				var rect2 = document.getElementById("chart_div"+indexPlus).getBoundingClientRect();
+
+				// Neue Tabelle erstellen
+				drawTable(data2[data2.length-1], theTable);
+				// Tabelle sortieren
+				jQuery("#inner-table").trigger("update"); 
+				// set sorting column and direction, this will sort on the first and third column 
+				var sorting = [[1,1],[2,0]]; 
+				// sort on the first column 
+				jQuery("#inner-table").trigger("sorton",[sorting]); 
+				
+				
+				changedFlag=false;
+			}
+		} 
+	
+		selectChart.setSelection();
+	} 
+	/**
+	* ensures every part of the chart is clickable  
+	* @param {float} x current x-ordinate of the mouse
+	* @param {float} y current y-ordinate of the mouse
+	* @param {object} opt used by the respective chart-ring 
+	* @param {integer} indexPl index of the respective chart-ring
+	*/
+	function findLayerByPos(x, y, opt, indexPl) {
+		
+		var changed = false;    //fuer bessere performance ;nur wahr wenn etwas verändert werden muss            
+		var newStringCode="";
+		//speichert den z-index (html-attribute) von jedem div-Element
+		var layer2Array=[];               
+		var searchStringPos=0;            
+		var indexAr=0;
+		// Radius des betreffenden Diagrammrings
+		var radius=(opt.width-20)/2;         
+		var innerRadius=radius*pie_holeArr[indexPl];  
+		rect2=document.getElementById("chart_div"+(indexPl+1)).getBoundingClientRect();
+		// Position des Diagrammrings
+		offsetX2=rect2.left;              
+		offsetY2=rect2.top;	
+		for(var jindex=1;chartArray.length>=jindex;jindex++) {
+			//beschreibt die Position(z-index) von jedem div Element bezüglich der z-Achse
+			layer2Array.push(0);	 
+			//Zuordnung durch index index ('#chart_div'+index)
+		}
+		//Mausabstand zum Mittelpunkt des Diagramms
+		var distance= Math.sqrt((((x-offsetX2)-opt.width/2)*((x-offsetX2)-opt.width/2))+ (((y-offsetY2)-opt.width/2)*((y-offsetY2)-opt.width/2))); 
+		//überprüft ob der richtige Ring des Diagramms obenliegt
+		if ((distance<=innerRadius)&&(indexPl<(chartArray.length-1))) {
+			layer2Array[indexPl]=0;
+			layer2Array[indexPl+1]=1;
+			changed=true;
+		}
+		if ((distance>=radius)&&(indexPl>0)) {
+			layer2Array[indexPl]=0;
+			layer2Array[indexPl-1]=1;
+			changed=true;
+		}
+		if(changed) {			
+			 //veraendert den z-index von jedem div-Element entsprechend dem zugehörigen Eintrag in layer2Array
+			for(var i = 1;chartArray.length >= i; i++) {
+				indexAr = i-1;
+				newStringCode = "";
+				searchStringPos = jQuery("#chart_div"+i).attr("style").indexOf("z-index");
+				
+				if(searchStringPos == -1) { 
+					newStringCode=jQuery("#chart_div"+i).attr("style") + "z-index: " + layer2Array[i-1] +"; ";
+					jQuery("#chart_div"+i).attr("style",newStringCode);
+				} 
+				else {
+					newStringCode=jQuery("#chart_div"+i).attr("style").slice(0,searchStringPos)+"z-index: " + layer2Array[i-1]+"; ";
+					jQuery("#chart_div"+i).attr("style",newStringCode);
+				}	    
+			}
+		}
+	}
+	  
+	//nochmal ein paar Einstellungen am ersten Diagrammring
+	//setup event 'select'	  
+	selectListenerArr.push(google.visualization.events.addListener(chartArray[0], 'select', (function () { 
+		return function () { 
+			selectHandler(chartArray[0], options, 1);
+		}
+	})())); 
+
+	//setup event 'mousemove'
+        mousemoveListenerArr.push(function(e) { 
+		var x = e.clientX ; 
+		var y = e.clientY ; 
+		findLayerByPos(x, y, options, 0);
+	});
+	document.getElementById("chart_div1").onmousemove = mousemoveListenerArr[0];
+		
+	//setup event 'onmouseover'	
+	google.visualization.events.addListener(chartArray[0], 'onmouseover', (function (e) { 
+		return function (e) { 
+			mouseoverHandler(e, 0);
+		}
+	})()); 
+
+	/**
+	* @return {string} returns the full path of users selection; Form: "selectedItem1 selectedItem2 selectedItem3 ... selectedItemX "
+	*/
+	function getAllSelected() {
+		var resultStr = "";
+		for(var i = 0; i < selectedArr.length; i++) {
+			resultStr = resultStr + selectedArr[i] + " ";
+		}
+		
+		return resultStr;
+	}
+
+        function repaintDiaRecursive(checkNumb,opt){
+            if(checkNumb<chartArray.length){
+               //berechnet die Größe des neuen Diagrammrings
+		var paddingDia = SIZE;                                                                      
+		var paddingLoad;
+		var paddingEnd = 0;
+				
+		for(var i=0; i < checkNumb;i++) {
+	         	paddingLoad=paddingDia; 
+			paddingDia= Math.round(paddingDia*REDUCTION); 
+			paddingEnd = paddingEnd + Math.round((paddingLoad-paddingDia)/2);
+		}
+               var newOpt = {                                                                          
+					tooltipText: 'none',
+					tooltip: { trigger: 'none' },
+					legend: 'none',
+					pieHole: PIE_HOLE,
+					width: Math.round(opt.width*REDUCTION),
+					height: Math.round(opt.height*REDUCTION),
+					backgroundColor: { fill:'transparent' },
+				        chartArea: {left:10, top:10, bottom:10, right:10 }
+                             }; 
+
+				
+                             newOpt.chartArea.width=(newOpt.width-20);
+                             newOpt.chartArea.height=(newOpt.height- 20);
+                             newOpt.slices=colorFields[checkNumb];
+                if(checkNumb==chartArray.length-1){aktOpt=newOpt;}
+                if(checkNumb==0){
+                    jQuery('#chart_div1').attr(
+			    		      "style","position:relative; height:"+SIZE+"px; width:"+SIZE+"px; left:0px; top:0px; border-style: solid; border-width: 0px;"		
+					      );
+                }else{                                                                       
+                    jQuery("#chart_div"+ (checkNumb+1) ).attr("style","position:absolute; left:"+(paddingEnd+offsetX)+"px; top:"+(paddingEnd+offsetY)+"px; border-style: solid; border-width: 0px;");
+                }
+                chartArray[checkNumb].draw(data[checkNumb], newOpt);  
+                google.visualization.events.removeListener(selectListenerArr[checkNumb]);
+                selectListenerArr[checkNumb]=google.visualization.events.addListener(chartArray[checkNumb], 'select', (function () { 
+					return function () { 
+						selectHandler(chartArray[checkNumb] , newOpt, checkNumb+1);
+					}
+				})());
+
+                document.getElementById("chart_div"+(checkNumb+1)).removeEventListener('mousemove',mousemoveListenerArr[checkNumb],false);
+                mousemoveListenerArr[checkNumb]=(function(e) { 
+		    var x = e.clientX ; 
+		    var y = e.clientY ; 
+		    findLayerByPos(x, y, newOpt, checkNumb);
+	        });
+                document.getElementById("chart_div"+(checkNumb+1)).onmousemove =mousemoveListenerArr[checkNumb];
+                repaintDiaRecursive(checkNumb+1,newOpt)
+            }
+        }
+        
+        function resizeHandler(){
+               var w= jQuery(window).width();
+               var h= jQuery(window).height();
+
+               var scale1=1;
+               var scale2=1;
+               var UpperWidthSize=1150;
+               var lowerWidthSize=980;
+               var UpperHeightSize=750;
+               var lowerHeightSize=560;
+               
+               if((w<UpperWidthSize||h<UpperHeightSize)&&(w>lowerWidthSize&&h>lowerHeightSize)){
+                      scale1=(w-lowerWidthSize)/(UpperWidthSize-lowerWidthSize);
+                      scale2=(h-lowerHeightSize)/(UpperHeightSize-lowerHeightSize);
+                      if(scale1>scale2){
+                             scale1=scale2;
+                      }   
+               }
+               if(w<lowerWidthSize||h<lowerHeightSize){
+                      scale1=0;
+               }
+               SIZE=400+200*scale1;
+               var dummyOpt={};
+               dummyOpt.width=SIZE/REDUCTION;
+              // alert(dummyOpt.width);
+               dummyOpt.height=SIZE/REDUCTION;
+               repaintDiaRecursive(0,dummyOpt);           
+        }
+
+     //   window.addEventListener("resize", resizeHandler);
+
+        function urlPathDia(){
+            var sUrl=window.location.search.substring(1);
+            var aUrl=sUrl.split("/");
+            var urlIndex=2;
+            var breakFlag=true;
+            for(urlIndex=2;(urlIndex<aUrl.length)&&(urlIndex<5)&&breakFlag;urlIndex++){
+                if(aUrl[urlIndex]=="N"){
+                    breakFlag==false
+                }else{
+                    selectHandler(chartArray[chartArray.length-1], aktOpt, chartArray.length, aUrl[urlIndex]);
+                }
+                
+            }
+        }
+        
+        urlPathDia();
+}
+
+/**
+* Funktion zum Generieren des Links fuer den "Vorschlag einreichen"-Buttons
+*/
+function proposal(array) {
+if(!(jQuery("body.not-logged-in").length>0)) //check if logged in
+{
+	var tmp = selectedArr[0];
+	
+	if(typeof tmp === 'undefined') {
+		window.open(forumURL);
+	}
+	else {
+		if(tmp in map)
+		{
+			tmp = map[tmp];
+			var url = forumURL + "/" + tmp + "#overlay=%3Fq%3Dnode%252Fadd%252Fforum%252F" + tmp;
+			window.open(url);
+		}
+		else
+			window.open(forumURL);
+	}
+}
+else
+{
+alert("Für diese Funktion müssen sie sich einloggen")
+}
+}
+
+  
+
+</script>
+
+<div class="row" id="rowx">
+	<div class="col-sm-12">
+		<div class="col-md-3">
+			<button id="button1" class="btn btn-primary" onclick="proposal()">Vorschlag einreichen</button>
+			<div class="clearfix"></div>
+			<!--<br />
+			<p>Beispiel für Baumdarstellung:</p>
+			 <ul id="tree1" style="margin-left: 15px;">
+                <li><a href="#">TECH</a>
+
+                    <ul>
+                        <li>Company Maintenance</li>
+                        <li>Employees
+                            <ul>
+                                <li>Reports
+                                    <ul>
+                                        <li>Report1</li>
+                                        <li>Report2</li>
+                                        <li>Report3</li>
+                                    </ul>
+                                </li>
+                                <li>Employee Maint.</li>
+                            </ul>
+                        </li>
+                        <li>Human Resources</li>
+                    </ul>
+                </li>
+                <li>XRP
+                    <ul>
+                        <li>Company Maintenance</li>
+                        <li>Employees
+                            <ul>
+                                <li>Reports
+                                    <ul>
+                                        <li>Report1</li>
+                                        <li>Report2</li>
+                                        <li>Report3</li>
+                                    </ul>
+                                </li>
+                                <li>Employee Maint.</li>
+                            </ul>
+                        </li>
+                        <li>Human Resources</li>
+                    </ul>
+                </li>
+            </ul>-->
+			 <div id="infoFieldPath" style="margin-top: 20px;">Haushaltsstelle: <strong>____:_______________</strong></div>
+                  </div>
+                  <div class="col-md-9 text-center" id="colx">
+			<div id="chart_div1" style="width:50%; text-align: center; margin-top: 20px;"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row" style="margin-top: 40px;">
+	<div class="col-xs-12">
+		<div id="table" style="width: 100%"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+jQuery.fn.extend({
+    treed: function (o) {
+      
+      var openedClass = 'glyphicon-minus-sign';
+      var closedClass = 'glyphicon-plus-sign';
+      
+      if (typeof o != 'undefined'){
+        if (typeof o.openedClass != 'undefined'){
+        openedClass = o.openedClass;
+        }
+        if (typeof o.closedClass != 'undefined'){
+        closedClass = o.closedClass;
+        }
+      };
+      
+        //initialize each of the top levels
+        var tree = jQuery(this);
+        tree.addClass("tree");
+        tree.find('li').has("ul").each(function () {
+            var branch = jQuery(this); //li with children ul
+            branch.prepend("<i class='indicator glyphicon " + openedClass + "'></i>");
+            branch.addClass('branch');
+            branch.on('click', function (e) {
+                if (this == e.target) {
+                    var icon = jQuery(this).children('i:first');
+                    icon.toggleClass(closedClass + " " + openedClass);
+                    jQuery(this).children().children().toggle();
+                }
+            })
+            //branch.children().children().toggle();
+        });
+        //fire event from the dynamically added icon
+      tree.find('.branch .indicator').each(function(){
+        jQuery(this).on('click', function () {
+            jQuery(this).closest('li').click();
+        });
+      });
+        //fire event to open branch if the li contains an anchor instead of text
+        tree.find('.branch>a').each(function () {
+            jQuery(this).on('click', function (e) {
+                jQuery(this).closest('li').click();
+                e.preventDefault();
+            });
+        });
+        //fire event to open branch if the li contains a button instead of text
+        tree.find('.branch>button').each(function () {
+            jQuery(this).on('click', function (e) {
+                jQuery(this).closest('li').click();
+                e.preventDefault();
+            });
+        });
+    }
+});
+
+//Initialization of treeviews
+
+jQuery('#tree1').treed({openedClass:'glyphicon-chevron-right', closedClass:'glyphicon-chevron-down'});
+
+</script>

@@ -1,0 +1,3781 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+@prefix ihrdata: <http://haushaltsrechner.leipzig.de/Data/Observation/> .
+@prefix ihrds: <http://haushaltsrechner.leipzig.de/Data/Dataset/> .
+
+
+<http://haushaltsrechner.leipzig.de/Data/EH_14Ratsinfo/>
+    dct:contributor "Hans-Gert Gräbe" ;
+    dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" ;
+    a owl:Ontology ;
+    rdfs:comment "Quelle: HH2014/EH_14Ratsinfo.csv" ;
+    rdfs:label "RDF Cube Haushaltsdaten 2014. Ergebnishaushalt 2014."@de .
+
+#
+# DataSet
+# 
+ihrds:EH_14Ratsinfo a qb:DataSet ;
+        rdfs:label "Haushaltsdaten 2014 der Stadt Leipzig. Ergebnishaushalt Planansatz 2014."@de ;
+        rdfs:comment "Daten zum Haushalt 2014 der Stadt Leipzig"@de ;
+        dct:source "Kämmerei der Stadtverwaltung Leipzig" ;
+        qb:structure ihr:DSDShort .
+
+ihrdata:EH_14Ratsinfo-PrBer11
+    ihr:relatesTo ihr:PrBer11 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "84642290"; ihr:aus "-620150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111101
+    ihr:relatesTo ihr:Bezug1100111101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2177350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111102
+    ihr:relatesTo ihr:Bezug1100111102 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6480110"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111103
+    ihr:relatesTo ihr:Bezug1100111103 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1397400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111104
+    ihr:relatesTo ihr:Bezug1100111104 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1128930"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111201
+    ihr:relatesTo ihr:Bezug1100111201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1697550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111202
+    ihr:relatesTo ihr:Bezug1100111202 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10726650"; ihr:aus "-1150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111203
+    ihr:relatesTo ihr:Bezug1100111203 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3233200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111204
+    ihr:relatesTo ihr:Bezug1100111204 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1085850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111205
+    ihr:relatesTo ihr:Bezug1100111205 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1882250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111206
+    ihr:relatesTo ihr:Bezug1100111206 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "765100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111207
+    ihr:relatesTo ihr:Bezug1100111207 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "923600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111301
+    ihr:relatesTo ihr:Bezug1100111301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5505500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111302
+    ihr:relatesTo ihr:Bezug1100111302 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5905350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111303
+    ihr:relatesTo ihr:Bezug1100111303 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3898800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111304
+    ihr:relatesTo ihr:Bezug1100111304 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "17510550"; ihr:aus "-534200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111305
+    ihr:relatesTo ihr:Bezug1100111305 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "930700"; ihr:aus "-14300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111306
+    ihr:relatesTo ihr:Bezug1100111306 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "642400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111308
+    ihr:relatesTo ihr:Bezug1100111308 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1335800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111309
+    ihr:relatesTo ihr:Bezug1100111309 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111310
+    ihr:relatesTo ihr:Bezug1100111310 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "603750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111311
+    ihr:relatesTo ihr:Bezug1100111311 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111401
+    ihr:relatesTo ihr:Bezug1100111401 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2789150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111601
+    ihr:relatesTo ihr:Bezug1100111601 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "436850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111602
+    ihr:relatesTo ihr:Bezug1100111602 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2115150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111603
+    ihr:relatesTo ihr:Bezug1100111603 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "249600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111604
+    ihr:relatesTo ihr:Bezug1100111604 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "473650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111605
+    ihr:relatesTo ihr:Bezug1100111605 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1184600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111606
+    ihr:relatesTo ihr:Bezug1100111606 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2465450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111607
+    ihr:relatesTo ihr:Bezug1100111607 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4929000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111608
+    ihr:relatesTo ihr:Bezug1100111608 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2147000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100111609
+    ihr:relatesTo ihr:Bezug1100111609 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-70500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100121101
+    ihr:relatesTo ihr:Bezug1100121101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "995950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100121102
+    ihr:relatesTo ihr:Bezug1100121102 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100121201
+    ihr:relatesTo ihr:Bezug1100121201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "429950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122101
+    ihr:relatesTo ihr:Bezug1100122101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4451562"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122102
+    ihr:relatesTo ihr:Bezug1100122102 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1129584"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122103
+    ihr:relatesTo ihr:Bezug1100122103 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "763904"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122104
+    ihr:relatesTo ihr:Bezug1100122104 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122105
+    ihr:relatesTo ihr:Bezug1100122105 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2062000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122106
+    ihr:relatesTo ihr:Bezug1100122106 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "909500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122107
+    ihr:relatesTo ihr:Bezug1100122107 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-4384852"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122108
+    ihr:relatesTo ihr:Bezug1100122108 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "552164"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122109
+    ihr:relatesTo ihr:Bezug1100122109 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "852900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122201
+    ihr:relatesTo ihr:Bezug1100122201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1442746"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122202
+    ihr:relatesTo ihr:Bezug1100122202 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2583792"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122203
+    ihr:relatesTo ihr:Bezug1100122203 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122204
+    ihr:relatesTo ihr:Bezug1100122204 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1446000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100122205
+    ihr:relatesTo ihr:Bezug1100122205 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100126001
+    ihr:relatesTo ihr:Bezug1100126001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1148750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100126002
+    ihr:relatesTo ihr:Bezug1100126002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27073800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100127001
+    ihr:relatesTo ihr:Bezug1100127001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1325450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100128001
+    ihr:relatesTo ihr:Bezug1100128001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "513900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100211101
+    ihr:relatesTo ihr:Bezug1100211101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16738850"; ihr:aus "-12750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100215101
+    ihr:relatesTo ihr:Bezug1100215101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9021550"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100215301
+    ihr:relatesTo ihr:Bezug1100215301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "119600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100215401
+    ihr:relatesTo ihr:Bezug1100215401 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "221900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100217101
+    ihr:relatesTo ihr:Bezug1100217101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7280600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100217301
+    ihr:relatesTo ihr:Bezug1100217301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "98150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100221101
+    ihr:relatesTo ihr:Bezug1100221101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "251950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100221301
+    ihr:relatesTo ihr:Bezug1100221301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "928700"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100221401
+    ihr:relatesTo ihr:Bezug1100221401 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "764450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100221501
+    ihr:relatesTo ihr:Bezug1100221501 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2578750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100221601
+    ihr:relatesTo ihr:Bezug1100221601 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "625350"; ihr:aus "-113250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100221701
+    ihr:relatesTo ihr:Bezug1100221701 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1108650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100221801
+    ihr:relatesTo ihr:Bezug1100221801 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "97800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100231101
+    ihr:relatesTo ihr:Bezug1100231101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4996300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100231301
+    ihr:relatesTo ihr:Bezug1100231301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "754050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100241001
+    ihr:relatesTo ihr:Bezug1100241001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2915500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100242001
+    ihr:relatesTo ihr:Bezug1100242001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "55500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100243001
+    ihr:relatesTo ihr:Bezug1100243001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "300300"; ihr:aus "-14350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100243002
+    ihr:relatesTo ihr:Bezug1100243002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "237650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100243003
+    ihr:relatesTo ihr:Bezug1100243003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "568150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100243004
+    ihr:relatesTo ihr:Bezug1100243004 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "903850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100252001
+    ihr:relatesTo ihr:Bezug1100252001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3363980"; ihr:aus "-1000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100252002
+    ihr:relatesTo ihr:Bezug1100252002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "844400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100252003
+    ihr:relatesTo ihr:Bezug1100252003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2914350"; ihr:aus "-503850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100252004
+    ihr:relatesTo ihr:Bezug1100252004 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3781950"; ihr:aus "-20500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100253001
+    ihr:relatesTo ihr:Bezug1100253001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2801750"; ihr:aus "-68600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100254001
+    ihr:relatesTo ihr:Bezug1100254001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8969970"; ihr:aus "-28646100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100261001
+    ihr:relatesTo ihr:Bezug1100261001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14517350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100261002
+    ihr:relatesTo ihr:Bezug1100261002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3381750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100261003
+    ihr:relatesTo ihr:Bezug1100261003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "44623750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100262001
+    ihr:relatesTo ihr:Bezug1100262001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100262002
+    ihr:relatesTo ihr:Bezug1100262002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "641906"; ihr:aus "-124000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100262003
+    ihr:relatesTo ihr:Bezug1100262003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18043750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100262004
+    ihr:relatesTo ihr:Bezug1100262004 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1692394"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100263001
+    ihr:relatesTo ihr:Bezug1100263001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2743450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100271001
+    ihr:relatesTo ihr:Bezug1100271001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1960600"; ihr:aus "-1112800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100272001
+    ihr:relatesTo ihr:Bezug1100272001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8461150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100281001
+    ihr:relatesTo ihr:Bezug1100281001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1455650"; ihr:aus "-329050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100291001
+    ihr:relatesTo ihr:Bezug1100291001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100311101
+    ihr:relatesTo ihr:Bezug1100311101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5549100"; ihr:aus "-20550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100311201
+    ihr:relatesTo ihr:Bezug1100311201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12489750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100311301
+    ihr:relatesTo ihr:Bezug1100311301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "15420800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100311401
+    ihr:relatesTo ihr:Bezug1100311401 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5592150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100311501
+    ihr:relatesTo ihr:Bezug1100311501 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "596400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100311601
+    ihr:relatesTo ihr:Bezug1100311601 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2479200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100311701
+    ihr:relatesTo ihr:Bezug1100311701 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "559900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100312101
+    ihr:relatesTo ihr:Bezug1100312101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "106763650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100312201
+    ihr:relatesTo ihr:Bezug1100312201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "560100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100312301
+    ihr:relatesTo ihr:Bezug1100312301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5083350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100312601
+    ihr:relatesTo ihr:Bezug1100312601 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2833100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100313001
+    ihr:relatesTo ihr:Bezug1100313001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9882750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100315001
+    ihr:relatesTo ihr:Bezug1100315001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4506850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100315002
+    ihr:relatesTo ihr:Bezug1100315002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-406200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100315003
+    ihr:relatesTo ihr:Bezug1100315003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-77500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100331001
+    ihr:relatesTo ihr:Bezug1100331001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3529500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100341001
+    ihr:relatesTo ihr:Bezug1100341001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4223850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100343001
+    ihr:relatesTo ihr:Bezug1100343001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1115650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100343002
+    ihr:relatesTo ihr:Bezug1100343002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "608200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100344001
+    ihr:relatesTo ihr:Bezug1100344001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "56000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100345101
+    ihr:relatesTo ihr:Bezug1100345101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "294200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100345201
+    ihr:relatesTo ihr:Bezug1100345201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1024600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100351001
+    ihr:relatesTo ihr:Bezug1100351001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "68430100"; ihr:aus "-24332100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100351002
+    ihr:relatesTo ihr:Bezug1100351002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "967450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100361001
+    ihr:relatesTo ihr:Bezug1100361001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23853250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100362001
+    ihr:relatesTo ihr:Bezug1100362001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6190000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100363101
+    ihr:relatesTo ihr:Bezug1100363101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5511500"; ihr:aus "-80500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100363201
+    ihr:relatesTo ihr:Bezug1100363201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5031850"; ihr:aus "-23950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100363301
+    ihr:relatesTo ihr:Bezug1100363301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "40027900"; ihr:aus "-23550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100363401
+    ihr:relatesTo ihr:Bezug1100363401 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9729250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100363501
+    ihr:relatesTo ihr:Bezug1100363501 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3803100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100365001
+    ihr:relatesTo ihr:Bezug1100365001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "106964800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100366001
+    ihr:relatesTo ihr:Bezug1100366001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2145450"; ihr:aus "-85500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100367001
+    ihr:relatesTo ihr:Bezug1100367001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "599650"; ihr:aus "-159750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100411001
+    ihr:relatesTo ihr:Bezug1100411001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100414001
+    ihr:relatesTo ihr:Bezug1100414001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1136600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100414002
+    ihr:relatesTo ihr:Bezug1100414002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1820100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100414003
+    ihr:relatesTo ihr:Bezug1100414003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8859450"; ihr:aus "-351850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100421001
+    ihr:relatesTo ihr:Bezug1100421001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2370300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100421002
+    ihr:relatesTo ihr:Bezug1100421002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "680750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100424101
+    ihr:relatesTo ihr:Bezug1100424101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7667350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100424201
+    ihr:relatesTo ihr:Bezug1100424201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5230850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100511101
+    ihr:relatesTo ihr:Bezug1100511101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6532150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100511106
+    ihr:relatesTo ihr:Bezug1100511106 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1939950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100511108
+    ihr:relatesTo ihr:Bezug1100511108 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5714000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100511109
+    ihr:relatesTo ihr:Bezug1100511109 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "115200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100511110
+    ihr:relatesTo ihr:Bezug1100511110 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-30000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100511111
+    ihr:relatesTo ihr:Bezug1100511111 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-281100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100512001
+    ihr:relatesTo ihr:Bezug1100512001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "381100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100512002
+    ihr:relatesTo ihr:Bezug1100512002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "521650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100512003
+    ihr:relatesTo ihr:Bezug1100512003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "936950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100512004
+    ihr:relatesTo ihr:Bezug1100512004 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "685250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100512005
+    ihr:relatesTo ihr:Bezug1100512005 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "828650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100521001
+    ihr:relatesTo ihr:Bezug1100521001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1486200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100521002
+    ihr:relatesTo ihr:Bezug1100521002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "932250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100522001
+    ihr:relatesTo ihr:Bezug1100522001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "115750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100522002
+    ihr:relatesTo ihr:Bezug1100522002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "506750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100523001
+    ihr:relatesTo ihr:Bezug1100523001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1045950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100523002
+    ihr:relatesTo ihr:Bezug1100523002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "566700"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100531001
+    ihr:relatesTo ihr:Bezug1100531001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-21884200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100532001
+    ihr:relatesTo ihr:Bezug1100532001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1878900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100533001
+    ihr:relatesTo ihr:Bezug1100533001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "36600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100533002
+    ihr:relatesTo ihr:Bezug1100533002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-5292400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100534001
+    ihr:relatesTo ihr:Bezug1100534001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-989300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100537001
+    ihr:relatesTo ihr:Bezug1100537001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "740450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100538001
+    ihr:relatesTo ihr:Bezug1100538001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100538002
+    ihr:relatesTo ihr:Bezug1100538002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100538003
+    ihr:relatesTo ihr:Bezug1100538003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "150000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100541001
+    ihr:relatesTo ihr:Bezug1100541001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "30464212.04"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100542001
+    ihr:relatesTo ihr:Bezug1100542001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1614564.96"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100543001
+    ihr:relatesTo ihr:Bezug1100543001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "723565.96"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100544001
+    ihr:relatesTo ihr:Bezug1100544001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1592057.04"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100545101
+    ihr:relatesTo ihr:Bezug1100545101 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3552650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100545201
+    ihr:relatesTo ihr:Bezug1100545201 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1609450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100545301
+    ihr:relatesTo ihr:Bezug1100545301 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100545401
+    ihr:relatesTo ihr:Bezug1100545401 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100545501
+    ihr:relatesTo ihr:Bezug1100545501 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100546001
+    ihr:relatesTo ihr:Bezug1100546001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "321300"; ihr:aus "-2454850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100547001
+    ihr:relatesTo ihr:Bezug1100547001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100547002
+    ihr:relatesTo ihr:Bezug1100547002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-107400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100549001
+    ihr:relatesTo ihr:Bezug1100549001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-2264500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100549002
+    ihr:relatesTo ihr:Bezug1100549002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1495650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100551001
+    ihr:relatesTo ihr:Bezug1100551001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16121090"; ihr:aus "-903710"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100552001
+    ihr:relatesTo ihr:Bezug1100552001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "999000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100552002
+    ihr:relatesTo ihr:Bezug1100552002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1329700"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100553001
+    ihr:relatesTo ihr:Bezug1100553001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1156365"; ihr:aus "-1979595"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100554001
+    ihr:relatesTo ihr:Bezug1100554001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1284100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100554002
+    ihr:relatesTo ihr:Bezug1100554002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "484250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100555001
+    ihr:relatesTo ihr:Bezug1100555001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1311400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100561001
+    ihr:relatesTo ihr:Bezug1100561001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1004600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100561002
+    ihr:relatesTo ihr:Bezug1100561002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "556300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100561003
+    ihr:relatesTo ihr:Bezug1100561003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "57880"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100561004
+    ihr:relatesTo ihr:Bezug1100561004 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1442300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100561005
+    ihr:relatesTo ihr:Bezug1100561005 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "541750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100561006
+    ihr:relatesTo ihr:Bezug1100561006 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "57400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100571001
+    ihr:relatesTo ihr:Bezug1100571001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4187900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100571002
+    ihr:relatesTo ihr:Bezug1100571002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3544350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100571003
+    ihr:relatesTo ihr:Bezug1100571003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100571004
+    ihr:relatesTo ihr:Bezug1100571004 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100571005
+    ihr:relatesTo ihr:Bezug1100571005 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573001
+    ihr:relatesTo ihr:Bezug1100573001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3500000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573002
+    ihr:relatesTo ihr:Bezug1100573002 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "188000"; ihr:aus "-24250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573003
+    ihr:relatesTo ihr:Bezug1100573003 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573004
+    ihr:relatesTo ihr:Bezug1100573004 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1454250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573005
+    ihr:relatesTo ihr:Bezug1100573005 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573006
+    ihr:relatesTo ihr:Bezug1100573006 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573008
+    ihr:relatesTo ihr:Bezug1100573008 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-761800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573009
+    ihr:relatesTo ihr:Bezug1100573009 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "40050"; ihr:aus "-43700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573010
+    ihr:relatesTo ihr:Bezug1100573010 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-14270800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573011
+    ihr:relatesTo ihr:Bezug1100573011 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573012
+    ihr:relatesTo ihr:Bezug1100573012 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573013
+    ihr:relatesTo ihr:Bezug1100573013 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100573014
+    ihr:relatesTo ihr:Bezug1100573014 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100575001
+    ihr:relatesTo ihr:Bezug1100575001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2350100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100611001
+    ihr:relatesTo ihr:Bezug1100611001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-823477150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-Bezug1100612001
+    ihr:relatesTo ihr:Bezug1100612001 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "83392065"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr111
+    ihr:relatesTo ihr:PrGr111 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "84642290"; ihr:aus "-620150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1111
+    ihr:relatesTo ihr:PrUGr1111 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11183790"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1112
+    ihr:relatesTo ihr:PrUGr1112 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "20314200"; ihr:aus "-1150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1113
+    ihr:relatesTo ihr:PrUGr1113 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "36353850"; ihr:aus "-548500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1114
+    ihr:relatesTo ihr:PrUGr1114 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2789150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1116
+    ihr:relatesTo ihr:PrUGr1116 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14001300"; ihr:aus "-70500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer12
+    ihr:relatesTo ihr:PrBer12 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "47693652"; ihr:aus "-4384852"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr121
+    ihr:relatesTo ihr:PrGr121 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1425900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1211
+    ihr:relatesTo ihr:PrUGr1211 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "995950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1212
+    ihr:relatesTo ihr:PrUGr1212 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "429950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr122
+    ihr:relatesTo ihr:PrGr122 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16205852"; ihr:aus "-4384852"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1221
+    ihr:relatesTo ihr:PrUGr1221 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10721614"; ihr:aus "-4384852"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1222
+    ihr:relatesTo ihr:PrUGr1222 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5484238"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr126
+    ihr:relatesTo ihr:PrGr126 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "28222550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1260
+    ihr:relatesTo ihr:PrUGr1260 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "28222550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr127
+    ihr:relatesTo ihr:PrGr127 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1325450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1270
+    ihr:relatesTo ihr:PrUGr1270 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1325450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr128
+    ihr:relatesTo ihr:PrGr128 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "513900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr1280
+    ihr:relatesTo ihr:PrUGr1280 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "513900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer21
+    ihr:relatesTo ihr:PrBer21 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "33480650"; ihr:aus "-12850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr211
+    ihr:relatesTo ihr:PrGr211 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16738850"; ihr:aus "-12750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2111
+    ihr:relatesTo ihr:PrUGr2111 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16738850"; ihr:aus "-12750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr215
+    ihr:relatesTo ihr:PrGr215 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9363050"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2151
+    ihr:relatesTo ihr:PrUGr2151 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9021550"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2153
+    ihr:relatesTo ihr:PrUGr2153 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "119600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2154
+    ihr:relatesTo ihr:PrUGr2154 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "221900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr217
+    ihr:relatesTo ihr:PrGr217 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7378750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2171
+    ihr:relatesTo ihr:PrUGr2171 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7280600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2173
+    ihr:relatesTo ihr:PrUGr2173 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "98150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer22
+    ihr:relatesTo ihr:PrBer22 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6355650"; ihr:aus "-113250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr221
+    ihr:relatesTo ihr:PrGr221 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6355650"; ihr:aus "-113250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2211
+    ihr:relatesTo ihr:PrUGr2211 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "251950"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2213
+    ihr:relatesTo ihr:PrUGr2213 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "928700"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2214
+    ihr:relatesTo ihr:PrUGr2214 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "764450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2215
+    ihr:relatesTo ihr:PrUGr2215 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2578750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2216
+    ihr:relatesTo ihr:PrUGr2216 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "625350"; ihr:aus "-113250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2217
+    ihr:relatesTo ihr:PrUGr2217 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1108650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2218
+    ihr:relatesTo ihr:PrUGr2218 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "97800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer23
+    ihr:relatesTo ihr:PrBer23 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5750350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr231
+    ihr:relatesTo ihr:PrGr231 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5750350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2311
+    ihr:relatesTo ihr:PrUGr2311 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4996300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2313
+    ihr:relatesTo ihr:PrUGr2313 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "754050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer24
+    ihr:relatesTo ihr:PrBer24 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4980950"; ihr:aus "-14350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr241
+    ihr:relatesTo ihr:PrGr241 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2915500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2410
+    ihr:relatesTo ihr:PrUGr2410 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2915500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr242
+    ihr:relatesTo ihr:PrGr242 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "55500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2420
+    ihr:relatesTo ihr:PrUGr2420 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "55500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr243
+    ihr:relatesTo ihr:PrGr243 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2009950"; ihr:aus "-14350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2430
+    ihr:relatesTo ihr:PrUGr2430 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2009950"; ihr:aus "-14350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer25
+    ihr:relatesTo ihr:PrBer25 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22676400"; ihr:aus "-29240050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr252
+    ihr:relatesTo ihr:PrGr252 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10904680"; ihr:aus "-525350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2520
+    ihr:relatesTo ihr:PrUGr2520 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10904680"; ihr:aus "-525350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr253
+    ihr:relatesTo ihr:PrGr253 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2801750"; ihr:aus "-68600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2530
+    ihr:relatesTo ihr:PrUGr2530 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2801750"; ihr:aus "-68600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr254
+    ihr:relatesTo ihr:PrGr254 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8969970"; ihr:aus "-28646100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2540
+    ihr:relatesTo ihr:PrUGr2540 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8969970"; ihr:aus "-28646100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer26
+    ihr:relatesTo ihr:PrBer26 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "85644850"; ihr:aus "-124000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr261
+    ihr:relatesTo ihr:PrGr261 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "62522850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2610
+    ihr:relatesTo ihr:PrUGr2610 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "62522850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr262
+    ihr:relatesTo ihr:PrGr262 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "20378550"; ihr:aus "-124000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2620
+    ihr:relatesTo ihr:PrUGr2620 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "20378550"; ihr:aus "-124000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr263
+    ihr:relatesTo ihr:PrGr263 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2743450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2630
+    ihr:relatesTo ihr:PrUGr2630 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2743450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer27
+    ihr:relatesTo ihr:PrBer27 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10421750"; ihr:aus "-1112800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr271
+    ihr:relatesTo ihr:PrGr271 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1960600"; ihr:aus "-1112800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2710
+    ihr:relatesTo ihr:PrUGr2710 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1960600"; ihr:aus "-1112800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr272
+    ihr:relatesTo ihr:PrGr272 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8461150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2720
+    ihr:relatesTo ihr:PrUGr2720 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8461150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer28
+    ihr:relatesTo ihr:PrBer28 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1455650"; ihr:aus "-329050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr281
+    ihr:relatesTo ihr:PrGr281 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1455650"; ihr:aus "-329050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2810
+    ihr:relatesTo ihr:PrUGr2810 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1455650"; ihr:aus "-329050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer29
+    ihr:relatesTo ihr:PrBer29 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr291
+    ihr:relatesTo ihr:PrGr291 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr2910
+    ihr:relatesTo ihr:PrUGr2910 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer31
+    ihr:relatesTo ihr:PrBer31 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "172317100"; ihr:aus "-504250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr311
+    ihr:relatesTo ihr:PrGr311 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "42687300"; ihr:aus "-20550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3111
+    ihr:relatesTo ihr:PrUGr3111 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5549100"; ihr:aus "-20550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3112
+    ihr:relatesTo ihr:PrUGr3112 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12489750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3113
+    ihr:relatesTo ihr:PrUGr3113 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "15420800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3114
+    ihr:relatesTo ihr:PrUGr3114 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5592150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3115
+    ihr:relatesTo ihr:PrUGr3115 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "596400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3116
+    ihr:relatesTo ihr:PrUGr3116 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2479200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3117
+    ihr:relatesTo ihr:PrUGr3117 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "559900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr312
+    ihr:relatesTo ihr:PrGr312 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "115240200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3121
+    ihr:relatesTo ihr:PrUGr3121 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "106763650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3122
+    ihr:relatesTo ihr:PrUGr3122 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "560100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3123
+    ihr:relatesTo ihr:PrUGr3123 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5083350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3126
+    ihr:relatesTo ihr:PrUGr3126 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2833100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr313
+    ihr:relatesTo ihr:PrGr313 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9882750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3130
+    ihr:relatesTo ihr:PrUGr3130 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9882750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr315
+    ihr:relatesTo ihr:PrGr315 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4506850"; ihr:aus "-483700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3150
+    ihr:relatesTo ihr:PrUGr3150 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4506850"; ihr:aus "-483700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer33
+    ihr:relatesTo ihr:PrBer33 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3529500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr331
+    ihr:relatesTo ihr:PrGr331 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3529500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3310
+    ihr:relatesTo ihr:PrUGr3310 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3529500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer34
+    ihr:relatesTo ihr:PrBer34 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7322500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr341
+    ihr:relatesTo ihr:PrGr341 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4223850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3410
+    ihr:relatesTo ihr:PrUGr3410 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4223850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr343
+    ihr:relatesTo ihr:PrGr343 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1723850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3430
+    ihr:relatesTo ihr:PrUGr3430 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1723850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr344
+    ihr:relatesTo ihr:PrGr344 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "56000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3440
+    ihr:relatesTo ihr:PrUGr3440 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "56000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr345
+    ihr:relatesTo ihr:PrGr345 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1318800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3451
+    ihr:relatesTo ihr:PrUGr3451 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "294200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3452
+    ihr:relatesTo ihr:PrUGr3452 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1024600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer35
+    ihr:relatesTo ihr:PrBer35 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "69397550"; ihr:aus "-24332100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr351
+    ihr:relatesTo ihr:PrGr351 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "69397550"; ihr:aus "-24332100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3510
+    ihr:relatesTo ihr:PrUGr3510 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "69397550"; ihr:aus "-24332100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer36
+    ihr:relatesTo ihr:PrBer36 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "203856750"; ihr:aus "-373250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr361
+    ihr:relatesTo ihr:PrGr361 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23853250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3610
+    ihr:relatesTo ihr:PrUGr3610 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23853250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr362
+    ihr:relatesTo ihr:PrGr362 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6190000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3620
+    ihr:relatesTo ihr:PrUGr3620 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6190000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr363
+    ihr:relatesTo ihr:PrGr363 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "64103600"; ihr:aus "-128000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3631
+    ihr:relatesTo ihr:PrUGr3631 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5511500"; ihr:aus "-80500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3632
+    ihr:relatesTo ihr:PrUGr3632 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5031850"; ihr:aus "-23950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3633
+    ihr:relatesTo ihr:PrUGr3633 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "40027900"; ihr:aus "-23550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3634
+    ihr:relatesTo ihr:PrUGr3634 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9729250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3635
+    ihr:relatesTo ihr:PrUGr3635 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3803100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr365
+    ihr:relatesTo ihr:PrGr365 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "106964800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3650
+    ihr:relatesTo ihr:PrUGr3650 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "106964800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr366
+    ihr:relatesTo ihr:PrGr366 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2145450"; ihr:aus "-85500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3660
+    ihr:relatesTo ihr:PrUGr3660 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2145450"; ihr:aus "-85500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr367
+    ihr:relatesTo ihr:PrGr367 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "599650"; ihr:aus "-159750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr3670
+    ihr:relatesTo ihr:PrUGr3670 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "599650"; ihr:aus "-159750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer41
+    ihr:relatesTo ihr:PrBer41 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11816150"; ihr:aus "-351850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr411
+    ihr:relatesTo ihr:PrGr411 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr4110
+    ihr:relatesTo ihr:PrUGr4110 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr414
+    ihr:relatesTo ihr:PrGr414 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11816150"; ihr:aus "-351850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr4140
+    ihr:relatesTo ihr:PrUGr4140 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11816150"; ihr:aus "-351850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer42
+    ihr:relatesTo ihr:PrBer42 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "15949250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr421
+    ihr:relatesTo ihr:PrGr421 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3051050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr4210
+    ihr:relatesTo ihr:PrUGr4210 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3051050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr424
+    ihr:relatesTo ihr:PrGr424 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12898200"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr4241
+    ihr:relatesTo ihr:PrUGr4241 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7667350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr4242
+    ihr:relatesTo ihr:PrUGr4242 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5230850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer51
+    ihr:relatesTo ihr:PrBer51 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "17654900"; ihr:aus "-311100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr511
+    ihr:relatesTo ihr:PrGr511 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14301300"; ihr:aus "-311100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5111
+    ihr:relatesTo ihr:PrUGr5111 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14301300"; ihr:aus "-311100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr512
+    ihr:relatesTo ihr:PrGr512 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3353600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5120
+    ihr:relatesTo ihr:PrUGr5120 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3353600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer52
+    ihr:relatesTo ihr:PrBer52 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4653600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr521
+    ihr:relatesTo ihr:PrGr521 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2418450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5210
+    ihr:relatesTo ihr:PrUGr5210 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2418450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr522
+    ihr:relatesTo ihr:PrGr522 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "622500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5220
+    ihr:relatesTo ihr:PrUGr5220 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "622500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr523
+    ihr:relatesTo ihr:PrGr523 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1612650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5230
+    ihr:relatesTo ihr:PrUGr5230 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1612650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer53
+    ihr:relatesTo ihr:PrBer53 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "930650"; ihr:aus "-30044800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr531
+    ihr:relatesTo ihr:PrGr531 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-21884200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5310
+    ihr:relatesTo ihr:PrUGr5310 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-21884200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr532
+    ihr:relatesTo ihr:PrGr532 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1878900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5320
+    ihr:relatesTo ihr:PrUGr5320 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1878900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr533
+    ihr:relatesTo ihr:PrGr533 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "36600"; ihr:aus "-5292400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5330
+    ihr:relatesTo ihr:PrUGr5330 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "36600"; ihr:aus "-5292400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr534
+    ihr:relatesTo ihr:PrGr534 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-989300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5340
+    ihr:relatesTo ihr:PrUGr5340 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-989300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr537
+    ihr:relatesTo ihr:PrGr537 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "740450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5370
+    ihr:relatesTo ihr:PrUGr5370 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "740450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr538
+    ihr:relatesTo ihr:PrGr538 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "153600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5380
+    ihr:relatesTo ihr:PrUGr5380 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "153600"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer54
+    ihr:relatesTo ihr:PrBer54 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "41373450"; ihr:aus "-4826750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr541
+    ihr:relatesTo ihr:PrGr541 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "30464212.04"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5410
+    ihr:relatesTo ihr:PrUGr5410 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "30464212.04"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr542
+    ihr:relatesTo ihr:PrGr542 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1614564.96"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5420
+    ihr:relatesTo ihr:PrUGr5420 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1614564.96"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr543
+    ihr:relatesTo ihr:PrGr543 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "723565.96"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5430
+    ihr:relatesTo ihr:PrUGr5430 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "723565.96"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr544
+    ihr:relatesTo ihr:PrGr544 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1592057.04"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5440
+    ihr:relatesTo ihr:PrUGr5440 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1592057.04"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr545
+    ihr:relatesTo ihr:PrGr545 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5162100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5451
+    ihr:relatesTo ihr:PrUGr5451 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3552650"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5452
+    ihr:relatesTo ihr:PrUGr5452 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1609450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5453
+    ihr:relatesTo ihr:PrUGr5453 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5454
+    ihr:relatesTo ihr:PrUGr5454 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5455
+    ihr:relatesTo ihr:PrUGr5455 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr546
+    ihr:relatesTo ihr:PrGr546 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "321300"; ihr:aus "-2454850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5460
+    ihr:relatesTo ihr:PrUGr5460 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "321300"; ihr:aus "-2454850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr547
+    ihr:relatesTo ihr:PrGr547 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-107400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5470
+    ihr:relatesTo ihr:PrUGr5470 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-107400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr549
+    ihr:relatesTo ihr:PrGr549 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1495650"; ihr:aus "-2264500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5490
+    ihr:relatesTo ihr:PrUGr5490 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1495650"; ihr:aus "-2264500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer55
+    ihr:relatesTo ihr:PrBer55 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "22685905"; ihr:aus "-2883305"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr551
+    ihr:relatesTo ihr:PrGr551 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16121090"; ihr:aus "-903710"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5510
+    ihr:relatesTo ihr:PrUGr5510 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16121090"; ihr:aus "-903710"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr552
+    ihr:relatesTo ihr:PrGr552 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2328700"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5520
+    ihr:relatesTo ihr:PrUGr5520 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2328700"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr553
+    ihr:relatesTo ihr:PrGr553 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1156365"; ihr:aus "-1979595"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5530
+    ihr:relatesTo ihr:PrUGr5530 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1156365"; ihr:aus "-1979595"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr554
+    ihr:relatesTo ihr:PrGr554 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1768350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5540
+    ihr:relatesTo ihr:PrUGr5540 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1768350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr555
+    ihr:relatesTo ihr:PrGr555 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1311400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5550
+    ihr:relatesTo ihr:PrUGr5550 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1311400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer56
+    ihr:relatesTo ihr:PrBer56 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3660230"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr561
+    ihr:relatesTo ihr:PrGr561 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3660230"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5610
+    ihr:relatesTo ihr:PrUGr5610 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3660230"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer57
+    ihr:relatesTo ihr:PrBer57 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "15264650"; ihr:aus "-15101250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr571
+    ihr:relatesTo ihr:PrGr571 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7732250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5710
+    ihr:relatesTo ihr:PrUGr5710 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7732250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr573
+    ihr:relatesTo ihr:PrGr573 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5182300"; ihr:aus "-15101250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5730
+    ihr:relatesTo ihr:PrUGr5730 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5182300"; ihr:aus "-15101250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr575
+    ihr:relatesTo ihr:PrGr575 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2350100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr5750
+    ihr:relatesTo ihr:PrUGr5750 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2350100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrBer61
+    ihr:relatesTo ihr:PrBer61 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "83392065"; ihr:aus "-823477150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr611
+    ihr:relatesTo ihr:PrGr611 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-823477150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr6110
+    ihr:relatesTo ihr:PrUGr6110 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-823477150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrGr612
+    ihr:relatesTo ihr:PrGr612 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "83392065"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+ihrdata:EH_14Ratsinfo-PrUGr6120
+    ihr:relatesTo ihr:PrUGr6120 ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "83392065"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .
+
+
+ihrdata:EH_14Ratsinfo-Top
+    ihr:relatesTo ihr:Top ;
+    ihr:jahr "2014" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "976928992.00"; ihr:aus "-938157157.00";
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_14Ratsinfo ;
+    a qb:Observation .

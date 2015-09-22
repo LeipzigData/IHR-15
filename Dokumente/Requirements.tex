@@ -1,0 +1,1055 @@
+\documentclass[11pt,a4paper,twoside]{article}
+% Encoding lokal, da manche Editoren danach schauen
+\usepackage[utf8]{inputenc} 
+\usepackage{ihr-15}
+
+\newcommand{\todo}[1]{\begin{quote}\textbf{to do:} #1 \end{quote}}
+\newcommand{\kommentar}[1]{\begin{quote}\textbf{Kommentar:} #1 \end{quote}}
+
+\title{Zusammenfassung des Bearbeitungsstands\\[3pt] der Anmerkungen und
+  Auf"|träge\\[3pt] aus den projektbegleitenden Anforderungserhebungen} 
+
+\author{Projekt „Nachhaltige Stadtfinanzen“} 
+
+\date{Version vom 18. September 2015}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+\seitezwei
+\newpage
+
+\section{Vorbemerkung}
+
+\textbf{Ziel} des Projektbaustein „Interaktiver Haushaltsplanrechner Leipzig
+2015“ im Rahmen des Vorhabens „Nachhaltige Stadtfinanzen – Akzeptanzsteigerung
+der bürgerschaftlichen Beteiligung an der Haushaltsplanung“ war es,
+\begin{quote}
+  ein neues Online-Tool zur Bürgerbeteiligung im Rahmen der Haushaltsplanung
+  prototypisch zu entwickeln, welches sich an dem in der zweiten Phase des
+  Gesamtprojekts zu verabschiedenden Partizipationskonzept und den Bedürfnisse
+  der Zielgruppen orientiert.
+
+Die dafür in maschinenlesbarer Form durch das Dezernat für Finanzen der Stadt
+Leipzig zur Verfügung gestellten Haushaltsplandaten eines Referenzjahres waren
+dazu gemäß eines ebenfalls zu entwickelnden Datenstrukturierungskonzeptes
+zielgruppenspezifisch aufzubereiten sowie Anforderungsaufnahme und Entwurf eng
+mit den Verantwortlichen des Gesamtprojekts abzustimmen.
+\end{quote}
+In einem Meilenstein im Mai 2015 (so die ursprüngliche Planung, später
+verschoben auf Juli 2015) sollte das prototypische Online-Tool präsentiert,
+daran anschließend weiter konsolidiert und zum Projektende an die Stadt Leipzig
+übergeben werden. Die Integration dieses prototypischen Online-Tools in die
+städtische Infrastruktur und weitere Anpassungen an die Bedürfnisse der
+Stadtverwaltung waren nicht Gegenstand des Projektes. Dies wurde explizit als
+Aufgabe der städtischen IT-Beauftragten festgehalten.
+
+Methodisch wurden die im Projektbaustein auszuführenden Arbeiten im Rahmen von
+Praktikumsaufgaben in die Lehre in zwei Bachelormodule integriert und in
+diesem Kontext
+\begin{quote}
+  im Wintersemester 2014/15 ein Leistungsumfang von etwa 750\,h (entspricht 95
+  Personentagen bzw.\ 5.3 Personenmonaten\footnote{Dieser Umrechnung ist die
+    übliche Umrechnungseinheit von 18 Personentagen pro Personenmonat zu Grunde
+    gelegt.} und im Sommersemester im Rahmen des SWT-Praktikums ein
+  Leistungsumfang von etwa 900\,h (entspricht 115 Personentagen bzw.\ 6.4
+  Personenmonaten) sowie in der darauffolgenden Konsolidierungsphase ab Juni
+  2015 noch einmal etwa 325\,h (entspricht 40 Personentagen bzw.\ 2.3
+  Personenmonaten) studentischer Entwicklungsarbeit erbracht.
+\end{quote}
+Damit stehen allein im Rahmen dieses Projektbausteins 14 Personenmonate
+studentischer Entwicklungsleistung zu Buche, wobei die erforderliche
+konzeptionelle und inhaltliche Begleitung durch Prof. Gräbe (4\,h pro Woche
+über die gesamte Projektlaufzeit) noch nicht mit eingerechnet ist.
+
+\subsection{Rahmenbedingungen} 
+
+Die eingesetzte Methodik und Verfahrensspezifik der Umsetzung erforderte eine
+terminlich enge Bindung an die Taktung der universitären Lehrprozesse.  Auf
+die mit der verspäteten Bewilligung des Gesamtprojektes „Nachhaltige
+Stadtfinanzen“ verbundenen erheblichen Verzögerungen und mehrfachen
+Verschiebungen von Rahmenterminen im Ablauf des Gesamtprojekts konnte deshalb
+nur beschränkt reagiert werden. 
+
+Da frühzeitig absehbar war, dass wichtige Anforderungserhebungen des
+Gesamtprojektes erst im März 2015 vorgelegt werden können, wurden Anpassungen
+im anvisierten Ablauf vorgenommen. Gemeinsam mit den Projektverantwortlichen
+entwickelte ein interdisziplinär zusammengesetztes studentisches Team deshalb
+im Wintersemester 2014/2015 eine erste (vorläufige) Analyse, die als
+Ausgangspunkt für die weitere Arbeit genutzt wurde. Die Ergebnisse
+(Evaluationsbericht, Anforderungsanalyse und Partizipationskonzept) erwiesen
+sich für die weitere Arbeit im Projektbaustein als tragfähig. Wesentliche
+Anforderungen, die auf Grund der Umfragen und Workshops aufgestellt wurden,
+waren so bereits angedacht und ließen sich dadurch in die
+Anforderungsdokumente integrieren.
+
+Dessen ungeachtet stellte dies aber eine besondere Herausforderungen an die
+Projektorganisation: Denn einerseits galt es die Konzeption und die Entwicklung
+wesentlicher Teile der Software voranzubringen; andererseits lagen detaillierte
+Anforderungen und Vorgaben der Prozessbeschreibungen insbesondere der
+partizipativen Elemente noch gar nicht vor. Im Projektverlauf musste deshalb
+auf neue Anforderungen, geänderte Akzente und Schwerpunkte durch agile Ansätze
+reagiert werden können. In diesem Zusammenhang haben sich der Rückgriff auf die
+SCRUM-Entwicklungsmethodik\footnote{\url{https://de.wikipedia.org/wiki/Scrum}}
+und das Führen eines kontinuierlich fortgeschriebenen Anforderungs- und
+Aufgabenprotokolls ein weiteres Mal bewährt.
+
+Mit dieser strukturierten Vorgehensweise und dem Priorisieren und Bündeln von
+Anforderungen ist es insbesondere in der letzten Projektphase (Juni bis August
+2015) trotz hohem zeitlichen Druck gelungen, die Anforderungen aus den
+Analysen in den Rahmen einer \emph{prototypischen} Lösung zur
+Weiterentwicklung des Interaktiven Haushaltsplans einzuordnen und alle als
+wichtig gekennzeichneten Anforderungen auch umzusetzen.
+
+\subsection{Weiterführende Arbeiten} 
+
+Seitens der Stadt wurde betont, dass das Gesamtprojekt dazu dient, eine
+qualifizierte Entscheidungsgrundlage hinsichtlich eines möglichen Relaunchs des
+Interaktiven Haushaltsplans zu schaffen.
+
+Von Seiten der Stadt wurde dies am 07.05.2015 wie folgt zusammengefasst:
+\begin{quote}
+  Ausgangspunkt für uns war und ist die Frage, ob der Interaktive
+  Haushaltsplan das geeignete Medium ist, um möglichst viele Interessenten
+  über den Haushalt der Stadt Leipzig zu informieren, oder eben nicht.
+\end{quote}
+Es ist übliche Praxis, vor einer mit deutlichen Kosten verbundenen
+Entscheidung eine derartige Machbarkeitsstudie in Auftrag zu geben, die nicht
+nur die Einsatzbedingungen und -szenarien im Detail abklopft, sondern auch
+eine prototypische technische Lösung umfasst. Eine Entscheidung darüber, ob
+und ggf.\ unter Rahmenbedingungen ein Relaunch des Interaktiven Haushaltsplans
+stattfindet und inwiefern der Prototyp als Grundlage genutzt wird, fällt erst
+nach Abschluss des Gesamtprojektes.
+
+Eine Anforderungserhebung über mögliche konkrete Einsatzbedingungen ist vor
+einem solchen prinzipiellen Votum allerdings nur in sehr beschränktem Maße
+möglich.  Zur Überführung einer im Rahmen einer solchen Machbarkeitsstudie
+erstellten prototypischen technischen Lösung in den Regelbetrieb sind durch
+den künftigen Betreiber in jedem Fall umfangreichere Einarbei"|tungs- und
+Anpassungsarbeiten erforderlich. Unter den gegebenen konkreten Bedingungen
+hängt deren Umfang vom jeweiligen Ausroll-Szenario ab. Aus unserer Sicht sind
+hier drei prinzipielle Szenarien möglich:
+\begin{itemize}
+\item[1.] Die strategischen Architekturentscheidungen der Entwickler des
+  Prototyps über den Einsatz des OpenSource CMS \emph{Drupal} und des CSS
+  Frameworks \emph{Bootstrap} werden beibehalten und der Haushaltsplanrechner
+  wird nur lose in die Webarchitektur von \texttt{leipzig.de} eingebunden.
+
+  Schwerpunkt der Anpassung wäre in diesem Fall
+  \begin{itemize}
+  \item die Transformation der Daten einer durch das Dezernat für Finanzen der
+    Stadt Leipzig zur Verfügung zu stellenden \emph{konsolidierten} Datenbasis
+    in das Zielformat,
+  \item Bug fixing im Rahmen eines umfangreicheren Probebetriebs
+  \item sowie ggf.\ die Umsetzung weiterer Funktionen, die sich durch ein
+    übergreifendes Informations- und Beteiligungskonzept ergeben.
+  \end{itemize}
+  Geschätzter Beratungs- und Unterstützungsaufwand durch das Entwicklerteam:
+  2~Personenmonate auf Mitarbeiter-Niveau für Transformation und Bugfixing,
+  bedarfsabhän"|gig ggf.\ mehr für die Erweiterung der Funktionalität.
+
+  Die Schätzung geht davon aus, dass der Betreiber umfangreiche Erfahrungen mit
+  dem Einsatz von Drupal hat und damit über konkrete Architekturfragen
+  kompetent verhandeln kann. 
+\item [2.] Der Einsatz des OpenSource CMS \emph{Drupal} wird beibehalten, aber
+  das CSS Framework Bootstrap durch das stadteigene CSS Framework ersetzt. Dies
+  ist durch den (weiteren) Ausbau eines stadteigenen Drupal-Themas durchaus
+  möglich, erfordert aber umfangreiche CSS-Anpassungsarbeiten, mit denen eine
+  auf Webdesign spezialisierte Firma zu beauftragen wäre.  Dieser Aufwand fiele
+  zusätzlich zu 1. an.
+
+  Geschätzter zusätzlicher Beratungsaufwand der Webdesign-Firma durch das
+  Entwicklerteam: 1 Personenmonat.
+\item [3.] Der Prototyp wird nach Typo3 migriert, um den Haushaltsplanrechner
+  enger in die Webarchitektur von \texttt{leipzig.de} einzubinden.
+
+  Hierfür wären umfangreiche Reimplementierungen auszuführen und insbesondere
+  der gesamte Forumsbereich neu zu entwickeln, da der Prototyp einen
+  Forumsbereich aus dem Drupal-Kern eingesetzt und für die spezifischen
+  Projektanforderungen angepasst hat.
+
+  Die Architektur des Informationsteils des Prototyps ist dagegen nur lose in
+  Drupal integriert und lässt sich mit mittlerem Aufwand auf ein anderes
+  Framework auf der Basis von PHP und Javascript migrieren. 
+
+  Da auf wesentliche konzeptionelle Vorarbeiten der Entwickler des Prototyps
+  zurückgegriffen werden kann, sollte eine solche Migration des
+  Informationsteils mit einem Aufwand von 2 bis 4 Personenmonaten
+  IT-Entwicklerleistung möglich sein, wenn IT-Entwickler zum Einsatz kommen,
+  die sich sowohl mit PHP und Javascript als auch mit Typo3 auskennen.  
+
+  Die prinzipielle Realisierbarkeit einer Migration auf Typo3 wäre vorab zu
+  prüfen. 
+\end{itemize}
+Entsprechende Anpassungs-, Beratungs- sowie Weiterentwicklungs- und
+Betreuungsleistungen könnten durch die Arbeitsgruppe „Angewandte Semantische
+Technologien“ am Institut für Informatik der Universität Leipzig in einem
+Folgeprojekt bzw.\ dauerhaft erbracht werden. Eine entsprechende
+Aufwandsentschädigung wäre in diesem Fall zu vereinbaren.
+
+\subsection{Dieses Dokument} 
+
+Dieses Dokument enthält hinsichtlich der Erarbeitung und Umsetzung eines
+prototypischen Online-Tools eine aktualisierte und kommentierte
+Zusammenfassung des Stands der Bearbeitung der Anmerkungen und Aufträge aus
+den projektbegleitenden Anforderungserhebungen, wie sie in verschiedenen
+Anforderungsdokumenten aus dem Gesamtprojekt an uns herangetragen wurden.
+Diese Anforderungen wurden systematisiert, zu Anforderungsblöcken
+zusammengefasst, durch das Team auf Konsistenz und Machbarkeit geprüft,
+priorisiert und in die Entwicklungsplanung eingeordnet.
+
+Dieses Anforderungsdokument wurde kontinuierlich fortgeschrieben und
+regelmäßig mit den Projektpartnern in der Stadtverwaltung (insbesondere dem
+Dezernat für Finanzen und der Koordinierungsstelle für Bürgerbeteiligung
+„Leipzig weiter denken“) abgeglichen.
+
+In dieser finalen Version ist der Stand der Umsetzung der einzelnen
+Anforderungen genauer beschrieben bzw.\ begründet, warum einzelne Anforderungen
+unter den gegebenen Rahmenbedingungen für eine prototypische Implementierung
+außer Betracht blieben bzw.\ bleiben mussten. 
+
+\textbf{Zusammenfassend kann eingeschätzt werden:}
+\begin{itemize}
+\item Das mit dem Projektbaustein verfolgte \textbf{Ziel}, ein neues
+  Online-Tool „Haushaltsplanrechner“ auf der Basis moderner
+  informationstechnischer Konzepte aus dem Bereich semantischer Technologien
+  und Open Data \textbf{prototypisch} umzusetzen, wurde vollinhaltlich
+  erreicht.
+
+  Im Projekt wurde eine mit semantischen Technologien angereicherte Lösung
+  eines Interaktiven Haushaltsplans entwickelt, die über die Stadtgrenzen
+  hinaus wegweisend ist.
+
+\item Die Flexibilität der software-technischen Architekturkonzepte wird auch
+  daran deutlich, dass in der letzten Projekt"|etappe noch eine Reihe von
+  Anforderungen umgesetzt werden konnten, die in dieser Deutlichkeit erstmals
+  im Workshop am 08.07.2015 formuliert wurden und ein umfangreicheres Redesign
+  des Frontends erforderlich machten.
+\item Die verfügbare Datenbasis bleibt nach wie vor fragil.  Bis zum
+  Projektende konnten fundamentale Unstimmigkeiten in der Interpretation der
+  durch das Dezernat für Finanzen der Stadt Leipzig zur Verfü"|gung gestellten
+  Haushaltsdaten nicht ausgeräumt werden, so dass die mit dem Prototyp
+  ausgelieferten Daten \textbf{nur kursorisch die Funktionalitäten des
+    Haushaltsplanrechners demonstrieren, nicht aber belastbare Informationen
+    zur Haushaltsplanung der Stadt Leipzig wiedergeben.}
+\item Die Umsetzung bleibt auch insoweit \textbf{prototypisch}, als dass zwar
+  intensive interne Tests seitens des Projektteams durchgeführt wurden, aber
+  mit den Auftraggebern kein sinnvolles Test- und Abnahmeverfahren im Rahmen
+  der Projektlaufzeit vereinbart werden konnte, so dass die gesamte
+  Softwarebasis nur „as is“ übergeben wird.  
+
+  Zum nachhaltigen Einsatz des Prototyps ist ein Betreiberkonzept erforderlich,
+  das erst nach einer grundlegenden politischen Weichenstellung zur weiteren
+  Nutzung des Prototyps entwickelt werden kann.
+\end{itemize}
+
+\section{Betriebskonzept des Haushaltsplanrechners}
+
+Die folgenden Ausführungen gehen davon aus, dass die im Rahmen der
+projektinternen Anforderungserhebungen entwickelten konzeptionellen und
+begriff"|lichen Vorstellungen und insbesondere die Ausführungen zu engen und
+weiteren Partizipationsszenarien im Partizipa"|tions"|konzept bekannt sind,
+siehe dazu die \emph{Anforderungsanalyse} und das \emph{Partizipationskonzept}
+in den Projektunterlagen sowie den Projektbericht.
+
+Es wird von folgendem \textbf{Rollenkonzept} ausgegangen: Admins
+(Stadtangestellte), Moderatoren (Stadtangestellte und entsprechend autorisierte
+aktive Bürger/innen), Forumsnutzer (dürfen im Forum neue Threads anlegen),
+Benutzer (registrierte Nutzer/innen), Besucher/innen (nicht registriert,
+agieren anonym).
+
+Die Informationsfunktionen des Prototyps können anonym genutzt werden, für die
+Bewertungsfunktion kann durch den Betreiber eingestellt werden, ob dies anonym
+möglich sein soll oder eine Registrierung erforderlich ist.  
+
+Alle weiteren Funktionen setzen eine Registrierung, Zuweisung einer
+entsprechenden Rolle und Authentifizierung durch Login voraus, wofür
+Standard-Drupal-Prozesse genutzt werden. Auf Admin-Ebene bestehen hier
+umfangreiche Konfigurationsmöglichkeiten durch den Betreiber.
+
+\section{Anonym nutzbare Funktionalitäten des Frontends}
+
+\subsection{Erscheinungsbild und Layout}
+
+Beim Erscheinungsbild wurde sich am Interaktiven Haushaltsplan des Bundes
+orientiert. Im weiteren Verlauf der Entwicklung, insbesondere in den
+Workshops, wurden folgende Kritikpunkte an der Darstellung geäußert:
+\begin{itemize}\itemsep0pt
+\item Einstiegsseite ist optisch nicht ansprechend genug.  Verwendete Fotos
+  könnten ansprechender sein und auch unter dem Aspekt Bürgerbeteiligung als
+  nur unter dem Aspekt Finanzen/Business ausgewählt werden.  Visualisierung
+  durch Bilder mit Menschen. 
+
+\kommentar{Die Startseite wurde an das Look and Feel des Bundesrechners
+  angepasst. Umgestaltung der Einstiegsseite durch Einbau der Grafik eines
+  aufgeschlagenen Buchs.  Die verwendeten Bilder und Grafiken sind unter der
+  CC Zero Lizenz verfügbar.
+
+  Mit Blick auf die ungewisse Zukunft des Interaktives Haushaltsplans werden
+  weitere Anpassungen des Designs den Webdesignern der Stadt überlassen. }
+
+\item Ringe zu dick, Farben teilweise so, dass man die weiße Schrift der
+  Zahlenangaben nicht gut erkennen kann. Farben stringenter mit
+  Wiederkennungswert wählen: z.B. Produktbereich Sport in dunkelrot,
+  Produktgruppe in rot und einzelnen Produkte in Schattierungen, falls
+  möglich.  Gestaltung und Layout: Farben und Größen der Beschriftung ändern
+  sich bei Kreisdiagramm.
+
+\kommentar{Im Zuge des Redesigns in der letzten Projektphase wurde auch die
+  Visualisierung der Ringe überarbeitet und auf das Javascript-Framework D3
+  \url{http://d3js.org/} umgestellt.  In dem Kontext wurden diese Anregungen
+  noch einmal diskutiert und weitgehend eingearbeitet.}
+\end{itemize}
+Generell gibt es hier allerdings einen Zielkonflikt mit der Barrierefreiheit
+der Seiten, da sich etwa ausgefeilte Farbkonzepte für visuelle Darstellungen
+Blinden nicht erschließen.  Angepasste Lösungen für Zielgruppen mit
+verschiedenen Arten von Beeinträchtigungen erfordern zielgruppenspezifische
+Navigationsstrukturen.  Gute übergreifende Ergebnisse werden mit schlichten,
+informativ ausgerichteten Navigationsstrukturen erreicht, was aber im Konflikt
+mit der Forderung nach einer „optisch ansprechenden Visualisierung“ steht, mit
+der die Bedürfnisse „normaler“ Nutzer in den Vordergrund gerückt werden.
+
+Nur teilweise umgesetzte Kritikpunkte:
+\begin{itemize}\itemsep0pt
+\item Im Header muss neben dem Stadtwappen der Stadt Leipzig der Titel der
+Fachanwendung eingetragen sein. 
+\item Es muss die deutsche Sprache verwendet werden (trifft noch nicht
+  vollständig für Forum und Feedback-Box zu).
+\item Navigation ist bei Smartphone im Header nicht komplett sichtbar
+  (abgeschnitten). Darstellung auf mobilen Geräten ist generell zu prüfen
+  (Aussagen auch aus dem Alphatest). 
+\end{itemize}
+
+\subsection{Informationsseiten}
+
+Nach dem Workshop am 08.07.2015 und dem Alphatest wurde die Visualisierung im
+Prototyp noch einmal einem kompletten Redesign unterzogen. Der Inhaltsbereich
+besteht nun aus einem Meta-Panel (rechts), in dem (neben weiteren
+Informationen) die Stellung des jeweiligen Knotens des Produktgraphen sichtbar
+ist, und einem Infopanel (links).  Dort kann auch zwischen den Datensätzen
+verschiedener Jahre gewählt werden. 
+
+Das Infopanel untergliedert sich in mehrere Tabs (Einnahmen, Ausgaben, Tabelle,
+Jahresvergleich). In der Ansicht \emph{Tabelle} wird eine Tabelle zum aktuellen
+Jahr angezeigt, wie sich die angezeigte Summe auf Kindknoten des aktuell
+ausgewählten Knotens aufschlüsselt oder -- für ein Schlüsselprodukt als Blatt
+des Produktbaums ohne weitere Untergliederung -- die Produktbeschreibung
+angezeigt. Im \emph{Jahresvergleich} werden die Einnahmen und Ausgaben zum
+ausgewählten Knoten im Produktbaum für die verfügbaren Jahre tabellarisch
+dargestellt.
+
+Die Navigation erfolgt in den Bereichen „Einnahmen“ und „Ausgaben“ getrennt, da
+kleinteilige Posten zu einem Posten „Sonstiges“ auf der Seite der Einnahmen und
+der Ausgaben verschieden zusammengefasst sein können, also ein Knoten des
+Produktbaums im Bereich der Einnahmen sichtbar sein kann, im Bereich der
+Ausgaben aber nicht.  Die Navigation ist sowohl über die Ringe als auch die
+Tabellen möglich.
+
+\kommentar{Damit wird die Forderung aus dem Workshop am 08.07.2015
+  aufgegriffen, den verschiedenen Informationsbedarfen besser Rechnung zu
+  tragen.}
+
+\begin{itemize}\itemsep0pt
+\item Bundesrechner hat auf jeder Seite links oben ein Widget mit
+  zusammenfassenden Informationen zur gerade dargestellten Produktgruppe.
+
+  \kommentar{Im Redesign als Meta-Panel umgesetzt. }
+\item Dem Benutzer sollte eine einfache Navigation zwischen den Einnahmen und
+  den Ausgaben eines Produkts oder einer Produktgruppe möglich sein.
+
+  \kommentar{Im Redesign durch die neue Tab-Struktur des Info-Panels
+    umgesetzt.}
+\item Zur Vereinfachung der Lesbarkeit wäre es positiv, wenn die Zahlen durch
+  Komma und Punkte getrennt sowie rechtsbündig angeordnet wären. Zudem wäre es
+  hilfreich, wenn die Anteile in Prozentzahlen auch noch in einer Extraspalte
+  vermerkt werden könnten.  So könnten die Produkte auch nach Prozentzahlen
+  sortiert angezeigt werden.
+
+  Idee: Vereinfachung der Darstellung durch die Umrechnung des Haushalts
+  auf einen Bürger.  Prozentuale Verteilung der Einnahmen und Ausgaben
+  umrechnen auf einen Bürger und mit entsprechenden Zahlen versehen. Eine
+  Extraseite als Beispiel könnte eventuell so aufgebaut werden, mit
+  Darstellung der Einnahmen und Ausgaben in 100\% Säulen-Diagrammen.
+
+  \kommentar{Die Division durch die Anzahl der Einwohner Leipzigs gibt nur im
+    Jahresvergleich neue Einsichten.  Andere relative Angaben werden dadurch
+    nicht beeinflusst.  Entsprechende Erweiterungen der Daten und Funktionen
+    sind möglich. }
+
+\item Wichtig sind verständliche Grafiken, die zeigen, wie sich die einzelnen
+  Positionen einordnen. Gut wäre, wenn ggf. einzelne Produktgruppen ausgewählt
+  und zusammengefasst werden könnten. Eine wünschenswerte Option wäre die
+  grafische Darstellung in verschiedenen Varianten (z.B. Jahresverlauf;
+  Einordnung zu Vergleichsstädten etc.).
+
+\kommentar{Die Optik des Prototyps und insbesondere die verwendeten grafischen
+  Elemente orientieren sich am Haushaltsplanrechner des Bundes, um hier ein
+  gemeinsames „Look and Feel“ zu erreichen.  Vergleiche mit anderen Städten 
+  sind im Prototyp nicht vorgesehen, da hierfür keine Daten zur Verfügung
+  standen.  
+
+  Solche Vergleiche würden auch das Konzept eines Interaktiven
+  Haushaltsplanrechners, in dem es primär um Beteiligung an den
+  Haushaltsplanungen der \emph{eigenen} Stadt geht, unnötig überladen und
+  damit verwässern.
+
+  Es ist jedoch möglich, auf der Basis entsprechender Daten solche Vergleiche
+  nach der im Projekt verfolgten Methodik im Rahmen einer Vergleichsplattform
+  darzustellen.  Dies könnte in einem Folgeprojekt angegangen werden.} 
+\end{itemize}
+
+\subsection{Erläuterungskomponente}
+
+Zum Aufbau einer solchen Komponente ist es erforderlich, entsprechende
+Erläuterungsinhalte aus verschiedenen Quellen zu übernehmen.
+
+\begin{itemize}\itemsep0pt
+\item Übernahme der Erläuterungsinhalte aus dem bisherigen HH-Rechner.  
+  \kommentar{Umgesetzt.}
+\item Übernahme der Beschreibungen der einzelnen Produktnummern, die auch in
+  der pdf-Version des Haushaltsplans enthalten sind.  
+
+\kommentar{Solche Beschreibungen liegen nur für die Schlüsselprodukte als
+  Blätter des Produktbaums vor.  Diese Produktbeschreibungen sind komplett in
+  die Plattform integriert.
+
+  In der überarbeiteten Systematik werden die Haushaltszahlen (des
+  Ergebnishaushalts) nur bis zu dieser Ebene der Schlüsselprodukte angezeigt.
+  Entsprechend werden in der Datenbasis auch nur diese Aggregate vorgehalten. }
+
+\item Die Produktgruppe, Produktuntergruppen, Produkte folgen einer Logik, die
+  erklärt werden sollte. Daher wäre es gut, wenn in den Teil „Anleitung“
+  ebenfalls die Zusammensetzung der Produktbezeichnung erklärt werden könnte.
+  Mögliches Beispiel siehe
+  \url{http://www.bundeshaushalt-info.de/anleitung.html}.
+
+  \kommentar{Dieser Zusammenhang ist im neuen Menüpunkt „Haushaltsplanung“
+    erläutert.  }
+\end{itemize}
+
+Anforderungen:
+\begin{itemize}\itemsep0pt
+\item Eine verständlichere Sprache verwenden und Fachbegriffe gut umschreiben,
+  eine bürger- und benutzerfreundliche „Übersetzung“ der Thematik.
+
+  Auf der Einstiegsseite sollen mehr Informationen zum Thema der
+  Haushaltsplanung zu finden sein als beim ehemaligen „Haushaltsplanrechner“;
+  In erster Linie soll der gesamte städtische Haushalt verstehbar sein,
+  d.\,h.\ nicht so kompliziert!!! Ggf. hier eine knackige Aufbereitung der
+  Übersichts- und Einstiegsvorträge von Herrn Bonew. 
+
+  Übernahme von Inhalten von weiteren Erklärkomponenten aus dem alten
+  HH-Rechner: „Häufige Fragen“, „Informationen zur Haushaltsplanung“, „Hinweise
+  zur Benutzung des HH-Rechners“, „Fragen und Feedback“.
+
+  \kommentar{Die entsprechenden Erläuterungsinhalte aus dem bisherigen
+    HH-Rechner wurden übernommen, so dass in diesem Punkt zumindest der
+    bisherige Stand wieder erreicht ist.
+
+    Der Interaktive Haushaltsplan kann einfach um Menüpunkte erweitert werden.
+    Der weitere Ausbau der Erläuterungskomponente setzt ein entsprechendes
+    Informations- und Beteiligungskonzept voraus. Die inhaltliche Erarbeitung
+    der Erläuterungen erfordert zudem in den einzelnen Haushaltspositionen
+    vielfältige fachliche Kenntnisse und ressortübergreifende
+    Abstimmungen. Dies sind aus den genannten Gründen verwaltungsinterne
+    Aufgabe, die im Projektrahmen nicht geleistet werden konnten.
+
+    Wesentliche Grundvoraussetzungen für den weiteren Ausbau der
+    Erläuterungskomponente sind deshalb Zuarbeiten, die erst mit einer
+    Entscheidung über einen Relaunch des Interaktiven Haushaltsplans zur
+    Verfügung stehen werden. 
+
+    Die Implementierung und Erweiterung der Funktionalität kann deshalb nur
+    durch den zukünftigen Betreiber erfolgen.}
+
+\item Exportfunktion für die Daten einer Informationsseite.
+
+\kommentar{Eine solche Exportfunktion wurde erst zu einem späten Zeitpunkt des
+  Projektes in die Anforderungen aufgenommen, ist prinzipiell über Anfragen an
+  den SPARQL-Endpunkt realisierbar und wurde für ganze Jahres"|sätze (etwa 500
+  Datensätze pro Jahr bis zur Ebene der Schlüsselprodukte) in den Formaten CSV
+  und JSON prototypisch implementiert. }
+
+\end{itemize}
+
+\subsection{Suchfunktion}
+
+Eine Suchfunktion kann nur die textuelle Information auswerten, die im Backend
+verfügbar ist.  Hier existieren mehrere Handlungsansätze, die nach wachsender
+Komplexität aufgelistet sind. Im Prototyp sind die ersten beiden Ansätze
+umgesetzt. 
+\begin{itemize}\itemsep0pt
+\item [1.] Nutzung der intern in Drupal verfügbaren Suchfunktion.  Diese führt
+  eine Volltextsuche auf allen Seiten aus, also in unserem Fall auf den Threads
+  des Forumsbereichs.  Damit kann man Treffer im Vorschlagsbereich finden.
+
+  \kommentar{Umgesetzt, setzt allerdings ein gut befülltes Forum voraus.}
+\item [2.] Eine SPARQL-basierte semantische Textsuche kann über die
+  Informationen ausgeführt werden, die zu den Knoten des Produktbaums verfügbar
+  sind.
+
+\kommentar{Nach dem Redesign sind die Produktsteckbriefe von 205 der 282
+  Schlüsselprodukte (es fehlen Steckbriefe von Schlüsselprodukte vor allem aus
+  den Bereichen 53, 57 sowie 71--76) sowie die Bezeichnungen der 32
+  Produktbereiche, 92 Produktgruppen und 127 Produktuntergruppen in die
+  Datenbasis integriert.  Auf dieser Grundlage werden mit einer einfachen
+  RegEx-Suche relevante Knoten des Produktgraphen zu einem Suchbegriff
+  gefunden.}
+
+\item [3.] Die Suchergebnisse von 1. werden in einen zu erstellenden
+  Auswertemodul eingespeist, der Links automatisch heraussucht und das Ergebnis
+  vergleichbar zu 2. darstellt.
+\item [4.] Aufbau eines Tagging-Systems, das durch die Aufzeichnung der
+  Suchbegriffe der Nutzer weiter qualifiziert wird. 
+\item [5.] Anbindung eines NLP-Analysewerkzeugs, um aus den Volltexten ein
+  Taggingsystem werkzeuggestützt zu extrahieren.
+\item [6.] Aufsetzen eines nutzergetriebenen Community-Prozesses zur
+  Verbesserung der Verschlagwortung.  Nutzer haben die Möglichkeit, eigene
+  Schlagworte mit ins System einzubringen. 
+\end{itemize}
+
+Anforderungen seitens der Stadtverwaltung:
+\begin{itemize}
+\item Die Suchfunktion sollte als eine “intelligente Suchmaske” programmiert
+  werden, die es auch ermöglicht ähnliche Begriffe zu finden etc.  Wichtig ist
+  hier, eine Suchlogik zugrunde zu legen, die sich am allgemeinen Verständnis
+  und nicht an Fachtermini orientiert. Zudem sollten auch Wörter erkannt
+  werden, wenn sie evtl. falsch geschrieben werden.
+
+  \kommentar{Die Implementierung einer solchen „Intelligenz“ ist sehr
+    auf"|wändig und konnte im Prototyp, dessen Schwerpunkt auf der angemessenen
+    Strukturierung und Präsentation der Daten lag, nicht in Angriff genommen
+    werden. }
+
+\item Mit der Suchfunktion soll ein Glossar verbunden sein, das entweder im
+  Text der Seiten über das „Info I” oder „Mouseover” funktionieren sollte.
+
+  \kommentar{Ein solches Glossar kann als Erweiterung eines Schlagwortgraphen
+    eines Taggingsystems entstehen, wenn die Schlagworte mit Erläuterungen
+    unterlegt werden.  Eine solche Variante bleibt einem möglichen
+    Nachfolgeprojekt vorbehalten.
+
+  Das vom Dezernat für Finanzen der Stadt Leipzig gelieferte Glossar
+  (19~Begriffe) ist als Menü"|punkt im Frontend integriert und als
+  \texttt{skos:Concept"|Scheme} in der Datenbasis verfügbar. Ein darüber
+  hinausreichendes Glossar kann leicht auf dieselbe Weise integriert werden. }
+
+\end{itemize}
+
+\section{Frontendfunktionalität für registrierte Nutzer}
+
+\subsection{Registrierung und Datenschutz} 
+
+\subsection*{Stand der Umsetzung der Registrierfunktion} 
+
+\begin{itemize}\itemsep0pt
+\item Die Registrierung erfolgt über Drupal-Standardprozesse. 
+\item Ein Admin kann dabei konfigurieren, welche Felder obligatorisch sind und
+  welche Felder durch den Benutzer später nicht modifiziert werden können. 
+\item Die Selbst-Registrierung kann abgeschaltet bzw. durch eine Captcha-Seite
+  auf natürliche Personen beschränkt werden.  Im Zuge des Anmeldeprozesses wird
+  ein Verifikationslink per Email verschickt.
+\item Zusätzlich kann der Admin die Registrierung so konfigurieren, dass neue
+  Benutzer explizit vom Admin freigeschaltet werden müssen. 
+\item Eine Plausibilitätsprüfung der Angaben in einzelnen Feldern erfolgt
+  nicht (automatisch). 
+\item Ein Admin kann einzelne Benutzer sperren oder löschen. 
+\end{itemize}
+
+\textbf{Anmerkung:} Im Zuge des Alphatests hat sich gezeigt, dass auch
+umfangreiche präventive Maßnahmen nicht gegen eine massenhafte Einrichtung von
+Spam-Accounts helfen.  In einer Woche wurden über 25\,000 Accounts angelegt und
+teilweise über E-Mail-Verifikation aktiviert. Die Spammer ließen sich auch
+durch 2 Anti-Spam-Module nicht aufhalten.  Bei der derzeit vorgesehen
+Freischaltung durch den Admin kann zwar eine Registrierung verhindert werden,
+jedoch führt bereits der Registrierungsversuch zu einem Datenbankeintrag, der
+bereinigt werden muss. Darüber hinausgehender Spam-Schutz erfordert in jedem
+Fall eine stärkere manuelle Betreuung. 
+
+Im Forum der Drupal-Entwickler wird darauf hingewiesen, dass es derzeit keinen
+wirksamen Schutz gegen Spam-Anmeldungen gibt außer der Einstellung
+„Administrator only“, in der neue Nutzer zwingend vom Administrator eingetragen
+werden müssen. Dazu müsste ein Drupal-externer Registrierungsprozess aufgesetzt
+oder ein bereits bestehendes Registrierungsverfahren erweitert und über ein
+Sign-In-Verfahren an Drupal angebunden werden.  Zu letzterem Punkt gibt es
+umfassende Erfahrungsberichte\footnote{Siehe etwa
+  \url{https://groups.drupal.org/node/182004}.} der Drupal-Entwickler-Gemeinde.
+
+\subsection*{Aufgabenstellung Datenschutz}
+
+Zu datenschutzrechtlichen Aspekten wurden am 07.01.2015 von der
+Stadtverwaltung folgende Grundsätze übermittelt:
+\begin{itemize}\itemsep0pt
+\item Nur die Daten erheben, die benötigt werden.
+\item Information was mit den Daten passiert.
+\item Die erhobenen Daten nur zum angegebenen Zweck verwenden.
+\item Logins und Anmeldungen nur über double-opt-in Lösungen (Anmeldung und
+  Bestätigung per Mail-Link), damit niemand für jemand anderes eine Anmeldung
+  vornehmen kann.
+\item Einbindung von externen Diensten (z.B. facebook) nur über
+  2-Klick-Lösungen.  Alle verwendeten Tools zur Nutzungsauswertung müssen
+  datenschutzkonform sein (kein google analytics verwenden).
+\end{itemize}
+
+\subsection*{Stand der Realisierung}
+
+Anmeldung und Nutzerverwaltung erfolgen mit Standard-Drupal-Funktionen
+\emph{innerhalb} des Prototyps. Externe Login-Dienste (Google, Facebook)
+werden nicht verwendet, ebenso keine Single-Sign-On-Konzepte. 
+
+Eine Webanalyse kann durch das Drupal-Modul \emph{Statistics
+  Counter}\footnote{\url{https://www.drupal.org/project/statistics_counter}}
+umgesetzt werden, entsprechende Informationen verlassen dabei den
+Drupal-Kontext nicht.
+
+Im Einzelnen:
+\begin{itemize}\itemsep0pt
+\item In Drupal kann konfiguriert werden, welche Felder bei der Registrierung
+  verpflichtend auszufüllen sind. 
+\item Der Prototyp ist so konfiguriert, dass Klarnamenszwang herrscht, also
+  neben einem Nickname auch der richtige Name anzugeben ist. Das kann weiter
+  durch einen Admin manuell auf Plausibilität geprüft werden.  Weitere
+  verpflichtende Angaben können konfiguriert werden. Diese Informationen sind
+  für den Benutzer in dessen persönlichem Profil einseh- und änderbar, für
+  andere Nutzer bis zur Rolle „Forumsnutzer“ aber nicht sichtbar.  
+
+  Durch einen Admin können einzelne Felder des Benutzerprofils als durch den
+  Benutzer nicht änderbar konfiguriert werden.
+\item Die Registrierung wird durch einen Bestätigungslink verifiziert, eine
+  zusätzliche manuelle Freischaltung durch einen Administrator kann
+  konfiguriert werden. Für diese Funktionalität muss auf dem Server ein
+  Email-Dienst verfügbar sein.
+\end{itemize}
+
+\textbf{Mögliche Weiterentwicklung:} Einbindung von Social Media
+Funktionalitäten über ein entsprechendes Drupal-Modul.
+
+\subsection{Gestaltung des Forumsbereichs} 
+
+\subsection*{Stand der Umsetzung} 
+
+Für den Forumsbereich wurde ein Drupal-Forums-Modul eingebunden, womit
+wesentliche Elemente der geforderten Grundfunktionalität bereits verfügbar
+waren. 
+
+Ein Thread ist eine einfache Drupal-Seite mit einer Reihe von
+Drupal-Kommentaren.  Damit stehen für Threads alle Drupal-Funktionen zur
+Verfügung, die generell für Seiten verfügbar sind, und für Beiträge die
+allgemeinen Drupal-Funktionen für Kommentare zu einer Seite.
+
+\begin{itemize}\itemsep0pt
+\item Ein \emph{Thread} ist eine Menge von Beiträgen. 
+\item Einem Thread sind \emph{Metainformationen} zugeordnet.
+\item Threads können in \emph{Unterforen} aggregiert werden. Als Unterforen
+  sind die beiden Bereiche „Allgemeine Diskussion“ und „Offizielles“ (Themen
+  der Stadtverwaltung) sowie die 32 Produktbereiche der Haushaltssystematik
+  eingerichtet.
+\item Ein Thread fasst alle Beiträge zu einem \emph{Topic} zusammen. 
+\item Threads werden zum Einreichen und Kommentieren von Vorschlägen verwendet.
+\item Threads haben eine Bewertungsfunktion.
+\item Es ist möglich, geschlossene Threads zu bewerten, wenn diese sichtbar
+  sind.  
+\item Threads können als „veröffentlicht“ sowie „oben in Listen“ markiert
+  werden.  
+\end{itemize}
+
+Beiträge:
+\begin{itemize}\itemsep0pt
+\item Ein Thread wird mit einem \emph{Initialbeitrag} eröffnet. Alle weiteren
+  Beiträge sind Kommentare von Benutzern zum Thema des Threads.
+\item Beiträge in einem Thread sind nicht weiter hierarchisch strukturiert,
+  direktes Kommentieren anderer Beiträge erfolgt durch Zitieren von Passagen.
+\item Ein Beitrag kann vom Autor jederzeit editiert, aber nicht mehr gelöscht
+  werden.
+\item Beiträge in einem Thread werden chronologisch sortiert nach „neueste
+  zuerst“. Es gibt jedoch verschiedene Optionen, die Threads sowie die Beiträge
+  in einem Thread auf der Ebene individueller Nutzereinstellungen zu sortieren.
+\item Für längere Beiträge werden automatisch Kurzzusammenfassungen angezeigt,
+  die mit „read more“ expandiert werden können.
+\end{itemize}
+
+\subsection*{Bewertungsfunktionen für Threads} 
+
+Diese ist als einfache $+/-$ Bewertung für Threads umgesetzt:
+\begin{itemize}\itemsep0pt
+\item Jeder Benutzer kann jeden Thread höchstens einmal bewerten.
+\item Der Benutzer kann die eigene Bewertung zu einem späteren Zeitpunkt
+  ändern, wenn der Thread noch offen ist.
+\item Der Benutzer bekommt die eigenen Bewertungen angezeigt.
+\item Probleme können von Benutzern über einen Melden-Button an die Moderation
+  weitergeleitet werden. Alternativ steht das Kontaktformular der Plattform
+  dafür zur Verfügung. 
+\item Bewertungen können anonym vorgenommen werden, wenn dies so vom Admin
+  eingestellt ist.
+\end{itemize}
+Die Art der Bewertung (anonym oder nur Benutzer) kann vom Admin eingestellt
+werden. Im Benutzermodus ist es einfach, Mehrfachbewertungen durch dieselbe
+Person zu verwalten. Im anonymen Modus wird versucht, Mehrfachbewertungen über
+IP-Adressen zu verfolgen, die einen Tag lang gespeichert werden. 
+
+\textbf{Mögliche Weiterentwicklung:} Ein Analysetool für quantitative
+Auswertung von Bewertungen durch die Moderatoren.
+
+\subsection*{Anbindung des Forums an den Informationsteil und
+  Metainformationen}  
+
+Zwischen Forum und Informationsteil gibt es nur eine lose Verbindung, da als
+einziges Strukturierungselement die Einordnung von Vorschlags-Threads in
+Subforen zur Verfügung steht, von denen jedes einem definierten Produktbereich
+zugeordnet ist.  
+
+Eine solche lose Kopplung ist auch zielführend, da in den Workshops immer
+wieder betont wurde, dass sich die meisten Problemlagen im Haushalt, welche
+Bürger bewegen, nicht starr in die vorgegebene Produktsystematik einordnen
+lassen.  Die Knöpfe „Vorschlag einreichen“ im Informationsteil (einer für
+„Ausgaben“ und einer für „Einnahmen“) führen über die jeweilige
+Produktbereichs-Information in das zugeordnete Subforum im Forumsbereich.
+
+Neben der Zuordnung zu einem Produktbereich und der Thread-ID können zu einem
+Thread weitere Metainformationen ausgewertet werden.  Drupalseitig kann hier
+über Erweiterungen insbesondere eine genauere Webstatistik angebunden werden.
+Auch ein Tagging-System für Vorschläge wäre denkbar. 
+
+Mit Blick auf die wenig präzisen Vorgaben zum Partizipationskonzept wurde in
+diesem Teil des Prototyps nur ein Grundkonzept umgesetzt und der Ausbau der
+Funktionalitäten einem künftigen Projekt überlassen. 
+
+\subsection{Moderation des Forumsbereichs} 
+
+\subsection*{Stand der Umsetzung} 
+
+Folgende Funktionalitäten sind verfügbar:
+\begin{itemize}\itemsep0pt 
+\item Ein neuer Thread kann nur von einem Benutzer in der Rolle „Forumsnutzer“
+  angelegt werden.
+\item Jeder Benutzer kann in jedem (offenen) Thread kommentieren. 
+\item Um den administrativen Aufwand zu minimieren, ist im Prototyp eine minimal
+  moderierte Version umgesetzt, die eine Meldefunktion von Missbrauch und
+  potentiellen Verstößen an die Moderation und deren Prüfung vorsieht.  
+
+  Dies kann durch einfache Rekonfiguration des eingesetzten Drupal-Forums
+  geändert werden. 
+\end{itemize}
+
+\subsection*{Moderation von Threads und Beiträgen} 
+
+Da Threads und Beiträge spezielle Drupal-Seiten und Drupal-Kommentare sind,
+kann die Moderation auf die entsprechenden Moderationskonzepte für Seiten und
+Kommentare in Drupal zugreifen. 
+
+Durch die Nutzung dieser Möglichkeiten können Moderatoren
+\begin{itemize}\itemsep0pt
+\item unter „Einstellungen für Kommentare“ einzelne Threads schließen oder
+  unsichtbar schalten 
+\item Beiträge oder Threads löschen,
+\item die Diskussion zu einem Vorschlag beenden,
+\item damit manuell Zeitbgrenzungen für Threads realisieren. 
+\end{itemize}
+
+Eine Infrastruktur für automatische Zeitbegrenzungen von Threads ist aktuell
+nicht umgesetzt.
+
+\subsection*{Meldefunktion für Beiträge} 
+
+Jeder Thread hat einen „Melden-Knopf“, mit dem der Moderation des
+Forumsbereichs Beiträge angezeigt werden können, zu denen der Zugang zu
+beschränken ist.  Diese Meldungen werden im Backend aggregiert und müssen von
+den Moderatoren zeitnah manuell ausgewertet werden.
+
+\subsection{Bürgereinwände} 
+
+Vorschläge, die wirksam in die Haushaltsdiskussion eingehen sollen, müssen die
+Form eines \emph{Bürgereinwands} haben. Die Registrierungserfordernisse als
+Benutzer des Prototyps reichen nicht aus, um sich für die Formulierung eines
+qualifizierten Bürgereinwands zu legitimieren.  
+
+Eine Verarbeitung inkl.\ der Prüfung der personenbezogenen Daten ist
+ausschließlich über dazu autorisierte Stellen in der Stadtverwaltung
+möglich. Bürgereinwände können deshalb im Prototyp aus Vorschlägen zwar
+generiert, aber nicht weiter verarbeitet werden. Letzteres obliegt einer
+\emph{Bürgereinwandsbearbeitungsstelle} (BEBS), die von der Stadt eingerichtet
+werden muss.
+
+Vor der Implementierung weitergehender Funktionen muss deshalb in einem
+Beteiligungskonzept festgelegt werden, welche Funktion ein Interaktiver
+Haushaltsrechner erfüllen soll und darf. In der Besprechung vom 06.05.2015
+wurde von Seiten der Stadtverwaltung betont, dass die Beantwortung jedes
+Bürgereinwand vorgeschrieben sei und insofern ausreichend Personalmittel zur
+Verfügung stehen müssen. Die Online-Einbindung von Bürgereinwänden habe für
+die Stadt Leipzig hohe Priorität, derzeit sei jedoch rechtlich noch einiges zu
+klären. Fraglich sei u.a., wie mit „Like-Funktionen“ bzw. „Mitzeichnungen“
+umzugehen sei -- handelt es sich dann um jeweils eigenständige Einwände -- und
+ob jeder Nutzer individuell zu informieren sei oder eine Antwort in Form eines
+Beitrags ausreichen würde. Darüber hinaus müsse geprüft werden, ob jeder
+Bürgereinwand (ohne personenbezogene Daten) sofort frei online einsehbar sein
+kann oder zuvor eine BEBS einbezogen werden muss.
+
+Im Rahmen des Forums im Interaktiven Haushaltsplan ist deshalb das folgende
+\textbf{rudimentäre Konzept zum Einreichen von Bürgereinwänden} umgesetzt:
+\begin{itemize}
+\item Über einen Knopf „Bürgereinwand einreichen“ wird aus einem
+  Vorschlags-Thread heraus ein Webformular generiert, über das der
+  Bürgereinwand (BE) erstellt werden kann.  Jeder BE hat damit eine BE-ID,
+  einen Ersteller, ein Erstellungsdatum, eine Thread-ID und eine
+  Produktbereichs-ID als Metainformationen.  
+\item BE werden in einer separaten Datenstruktur (aktuell eine eigene Tabelle
+  in der Datenbank) gesammelt und können über eine gesicherte Webschnittstelle
+  autorisierten Personen der BEBS ausgeliefert werden.  
+
+  Entsprechende Rollen und Prozessabläufe sind zum produktiven Einsatz des
+  Prototyps noch zu definieren und die Datenweitergabe entsprechend technisch
+  umzusetzen.  Dabei sind Fragen des Datenschutzes zu berücksichtigen.
+\item BE können damit in der BEBS auf der Ebene von Threads aggregiert und im
+  Bündel ausgewertet werden.  Die Thread-ID erlaubt es auch, seitens der BEBS
+  einen Kommentar im jeweiligen Thread mit dem Verwaltungsstandpunkt zu
+  ver"|öffent"|lichen. 
+\end{itemize}
+Damit sind auch die Anforderungen umgesetzt, die am 08.06.2015 noch einmal wie
+folgt konkretisiert wurden:
+\begin{itemize}
+\item Einwände formulieren können und Rückinfo zum Einwand erhalten. Dabei ist
+  die Eingabe weiterer persönlicher Daten erforderlich. Bei
+  datenschutzrelevanten Eingaben müssen Seiten durch ein SSL-Zertifikat
+  gesichert werden. 
+\item Dies soll möglichst mit einem Formular gelöst werden. Dazu muss eine
+  Adresse aus dem Dezernat II zur Bearbeitung hinterlegt werden.
+\item Dabei muss der Unterscheid zwischen Kommentar und „förmlich rechtlicher
+  Einwand” berücksichtigt werden, siehe Formular für Online-Petitionen.
+\end{itemize}
+
+Weitere Aspekte -- wie das Einpflegen von Bürgereinwänden, die über andere
+Kanäle eingereicht werden, in die Plattform durch die BEBS -- müssten im
+Rahmen der Erarbeitung eines BEBS-Betriebskonzepts entschieden, prozessual
+untersetzt und ggf.\ über eine Plattformerweiterung technisch angebunden
+werden.  Im aktuellen Konzept kann die BEBS hierzu eigene Threads eröffnen,
+einen Bürgereinwand „im Namen des Bürgers“ auf dem beschriebenen Weg in die
+Plattform einspielen und ggf.\ auch beantworten. 
+
+In diesem Zusammenhang sind die folgenden weiteren Anforderungen zu
+berücksichtigen: 
+\begin{itemize}
+\item Ein Benutzer kann sich einem Bürgereinwand anschließen, vergleichbar dem
+  Mitzeichnen einer Petition.
+\item Grundsätzlich sei die Stadt mit den bisherigen Angeboten im Rahmen der
+  vorhandenen Möglichkeiten nicht schlecht aufgestellt. Problematisch sei
+  allerdings, dass Beteiligung im Prozess grundsätzlich erst nach der
+  Veröffentlichung des Haushaltsentwurfes möglich sei, aber zu diesem
+  Zeitpunkt viele Weichen schon gestellt sind.
+\item Zudem sollte der Umgang mit Einwänden und Vorschlägen möglichst noch
+  transparenter gestaltet werden.
+\item Alle eingehenden Vorschläge (Brief, Bürgerworkshop, E-Mail,
+  Online-Diskussionsforen, usw.) müssten idealerweise frei einsehbar seien.
+\end{itemize}
+
+\section{Allgemeine Anforderungen} 
+
+\subsection{Barrierefreiheit} 
+
+\subsection*{Vorgaben für die Barrierefreiheit}
+
+Die Vorgaben sind in der BITV 2.0 Verordnung geregelt.  Als barrierearm gilt
+eine Website, wenn 90 von 100 Punkten erreicht werden.  Dafür gibt es Tests
+(Selbsttest oder
+Firmen)\footnote{\url{http://www.bitvtest.de/bitvtest/das_testverfahren_im_detail/pruefschritte.html}}.
+
+\subsection*{Realisierung im Prototyp}
+
+Der Prototyp wurde auf der Basis von Drupal erstellt.  Die geforderten
+BITV-Werte werden bei professionellen Drupal-Instanzen
+erreicht\footnote{\url{http://www.bitvtest.de/90plus/cms/drupal.html}}.
+Drupal und der Prototyp setzen dabei auf dem diesbezüglich optimierten
+Bootstrap-CSS-Framework\footnote{\url{http://getbootstrap.com}} auf.
+
+\begin{itemize}\itemsep0pt
+\item Die Überprüfung des Prototyps mit einem automatisierten Werkzeug nach
+  amerikanischem Standard hat dieser erfolgreich bestanden.
+\item Für deutsche Standards haben wir keine automatisierten kostenfreien
+  Selbsttests gefunden, nur einen Fragebogentest, der jedoch
+  ressourcenintensiv ist.
+\item Die Stadt verwendet ein eigenes CSS-Framework. Im Projekt wurde nur eine
+  Anpassung an das Look-and-Feel der Stadtseiten auf der Basis des
+  Bootstrap-CSS-Frameworks ausgeführt.  Der zukünftige Betreiber hat zu
+  entscheiden, ob dies so übernommen wird oder noch einmal eigene Ressourcen
+  zur Design-Anpassung eingesetzt werden.  Im zweiten Fall steht die Bewertung
+  auf der Basis der BITV 2.0 sowieso neu.
+\end{itemize}
+Mit Blick auf diese Unwägbarkeiten wurden keine Projektressourcen eingesetzt,
+um über die durch das Bootstrap-CSS-Framework in diesem Bereich bereits
+garantierten hohen Standards hinauszugehen.
+
+\subsection{Integration in die Stadthomepage}
+
+\subsection*{Rahmenbedingungen}
+
+Der Prototyp wurde auf einem eigenen Webserver entwickelt und erprobt.  Zur
+Portierung auf einen anderen Webserver wurde ein detailliertes
+Relokationskonzept entwickelt, das in der „Installations- und
+Konfigurationsbeschreibung“ genauer ausgeführt ist. 
+
+Der Prototyp wurde im Rahmen der Möglichkeiten, die Drupal und das
+Bootstrap-CSS-Framework dafür bieten, an das Look-and-Feel der Stadtseiten
+angepasst. Dies wurde im Gespräch am 06.05.2015 mit der Online-Redaktion der
+Stadt umfassend diskutiert und im Nachgang dafür eine HTML-Vorlage der Stadt
+zur Verfügung gestellt.
+
+Damit sind die Voraussetzungen geschaffen, dass der Prototyp in der aktuellen
+Ausprägung nach einer positiven Einsatz-Entscheidung durch den künftigen
+Betreiber auf einem eigenen Webserver ausgerollt, in Betrieb genommen und über
+Verlinkungen leicht in die Stadthomepage integriert werden kann. 
+
+Eine tiefere Integration in die IT-Struktur der Stadthomepage ist grundsätzlich
+möglich, ließe sich jedoch nur mit einem erheblichen Mehraufwand und
+umfassender Einbeziehung der städtischen IT-Verantwortlichen realisieren.
+Überlegungen hierzu sind im Abschnitt 1.2 „Weiterführende Arbeiten“ genauer
+ausgeführt.
+
+\subsection*{Anforderungen}
+
+Folgende Punkte ergaben sich aus der Diskussion mit der Online-Redaktion der
+Stadt:
+\begin{itemize}\itemsep0pt
+\item Einhaltung der Anforderungen nach BITV 2.0 durch den Prototyp
+\kommentar{Da dies vom eingesetzten CSS-Framework abhängt, wurde diese Frage
+  über die bisherigen Untersuchungen hinaus nicht weiter verfolgt, siehe dazu
+  den Abschnitt „Allgemeine Anforderungen“.}
+\item Valides XHTML des Prototyps. 75 Fehler bei Validierung der URI
+  \begin{center}
+    \url{http://pcai042.informatik.uni-leipzig.de/~swp15-ihr/Drupal/}
+  \end{center}
+  mit \url{https://validator.w3.org} 
+
+\kommentar{Nach der konsequenten Umstellung auf HTML 5 liefert der Test nun
+  keine Validierungsfehler mehr -- nur eine Warnung. }
+\item Validierung CSS nicht erfolgreich: 591 Fehler bei Validierung der URI
+  \begin{center}
+    \url{http://pcai042.informatik.uni-leipzig.de/~swp15-ihr/Drupal/}
+  \end{center}
+  mit \url{http://www.css-validator.org/}. 
+
+\kommentar{Das eingesetzte CSS \texttt{Drupal/themes/IHR/css/style.css} ist
+  eine (minimale) Modifikation des Bootstrap-CSS, eines der weltweit
+  meistverwendeten CSS. Die 199 Fehler, die eine Analyse mit
+  \url{http://jigsaw.w3.org/css-validator/} liefert, hängen zum großen Teil
+  damit zusammen, dass Bootstrap Elemente im Draft-Status verwendet, die alle
+  modernen Browser beherrschen, die aber noch nicht vom Validator erkannt
+  werden.  Das „Parse Error [empty string]“ ist sogar ein Bug des
+  Validators\footnote{Siehe
+    \url{http://w3.org/Bugs/Public/show_bug.cgi?id=11975}.}.
+
+  Offizielle Aussage des Bootstrap-Entwicklungsteams: „Generally speaking, we
+  don't worry about W3C validation. Practically speaking, it honestly doesn't
+  make much sense to strive for it in most production environments if industry
+  accepted practices are viewed as errors.“\footnote{Siehe
+    \url{https://github.com/twbs/bootstrap/issues/6398#issuecomment-11692542}.}
+  }
+
+\item Verhalten bei deaktiviertem Javascript
+  \begin{itemize}
+  \item Alle Seiten können auch mit deaktiviertem Javascript aufgerufen
+    werden. 
+  \item Einnahmen und Ausgaben sind bei deaktiviertem Javascript nicht
+    verfügbar (Kerninhalt)
+  \item Suchvorschläge sind nicht verfügbar.
+  \end{itemize}
+
+\kommentar{Unser Prototyp verwendet wie alle modernen Webapplikationen
+  Javascript an verschiedenen Stellen, insbesondere zur visuellen Darstellung,
+  und kann deshalb nicht sinnvoll mit deaktiviertem Javascript betrieben
+  werden. }
+
+\item Look and Feel der Stadtseiten in den Prototyp einbauen.
+\kommentar{Umgesetzt im Drupal-Thema des Prototyps.}
+\item Angemessene Druckversion für die Webseiten des Prototyps.
+\kommentar{Umgesetzt im Drupal-Thema des Prototyps.}
+\item Anbindung des Drupal Statistics Counter an das Webanalysesystem der
+  Stadt
+\kommentar{Nicht untersucht.}
+\item Responsive Design: Darstellung soll sich auf die verschiedenen
+  Bildschirmgrößen anpassen, ebenso bei den Mobilgeräten. 
+\kommentar{Umgesetzt im Drupal-Thema des Prototyps als eine Grundfunktionalität
+  des Bootstrap-CSS-Frameworks.}
+
+\item Unterstützung verschiedener Browserversionen.
+  \begin{itemize}
+  \item Die Online-Redaktion stellt fest: Die Darstellung mit IE9, Firefox
+    31.7, Opera 23, Safari 5.1.7 und Chrome 41 sind identisch.
+  \end{itemize}
+\item Überschriften müssen korrekt mit den HTML-Strukturelementen h1 bis h6
+  ausgezeichnet sein und die Inhalte der Seite erschließen. (H1 fehlt auf
+  allen Seiten und es werden Ebenen übersprungen.)
+
+\kommentar{Drupal verwendet intern unsichtbare Überschriften der Ebenen h1 und
+  h2 zur Markierung des Seitenaufbaus, so dass nach entsprechender
+  Überarbeitung sichtbare eigene Überschriften nun sämtlich auf der Ebene h3
+  beginnen. }
+\end{itemize}
+Offene Fragen:
+\begin{itemize}
+\item Beschriftungen (label-Elemente) sollen über das entsprechende Markup
+  (das for-Attri"|but) mit den Eingabefeldern verknüpft sein, zu denen sie
+  gehören. (fehlt bei den Such-Formularen und im Forum.)
+\item Interaktive Bedienelemente wie Links und Schaltflächen haben
+  programmatisch ermittelbare Namen und Rollen (ist bei den Suche-Buttons
+  nicht erfüllt).
+\item Kontrast nicht ausreichend bei Button „Neues Benutzerkonto erstellen“.
+\item Verwendete englische Sprache im Forum ist nicht ausgezeichnet (für
+  Screenreader problematisch).
+\end{itemize}
+
+\section{Datenmodell}
+
+Für Details zum Datenmodell wird auf das Dokument „Designprinzipien des RDF
+Data Stores“ verwiesen.
+
+Mit dem URI-Präfix \url{http://haushaltsrechner.leipzig.de/Data} sind die
+Voraussetzungen geschaffen, dass die RDF-Datenbasis des neuen
+Haushaltsplanrechners von einem Betreiber unterhalb von \texttt{leipzig.de}
+auch nach Linked Open Data Prinzipien ausgeliefert werden kann.
+
+\subsection{Darstellung finanzieller Spielräume der Kommune}
+
+Anforderungen:
+\begin{itemize}\itemsep0pt
+\item Auswertung der Informationen zu finanziellen Spielräumen der einzelnen
+  Produktnummern und Einbau dieser Informationen in das visuelle Konzept des
+  Informationsteils. 
+\item Tatsächliche Stellschrauben und Einflussmöglichkeiten im städtischen
+  Haushalt für den interessierten Bürger müssen klarer erkennbar sein, als
+  beim ehemaligen „Haushaltsplanrechner“. Einflussgrößen sind erarbeitet
+  worden: der Vorschlag soll so umgesetzt werden, ggf. kann im Nachhinein noch
+  die eine oder andere Größe angepasst werden.
+\end{itemize}
+
+Diese Informationen sind im Produktmodell auf der Ebene der Schlüsselprodukte
+aus den vom Dezernat für Finanzen der Stadt Leipzig zur Verfügung gestellten
+Spielraumangaben als reelle Zahl $g$ mit $1\le g\le 3$ interpoliert, da die
+Angaben teilweise nur auf der Ebene von Unterprodukten vorlagen und in die
+Produktbeschreibungen der einzelnen Schlüsselprodukte integriert.
+
+Eine darüber hinausgehende Darstellung von Spielräumen lässt sich im
+Produktmodell leicht nachrüsten, wenn man sich über einen
+Berechnungsalgorithmus von Spielraumangaben für Knoten des Produktgraphen aus
+den Spielraumangaben der Kindknoten geeinigt hat. 
+
+\subsection{Vergleiche zwischen verschiedenen Jahren} 
+
+Anforderung:
+\begin{itemize}\itemsep0pt
+\item Darstellung der Entwicklung einzelner Produktgruppen im zeitlichen
+  Verlauf über mehrere Jahre und prozentuale Veränderung. 
+\end{itemize}
+
+Mit dem Prototyp wird eine Serie von Jahresdaten der Planung des
+Ergebnishaushalts für die Jahre 2014 bis 2019 ausgeliefert, die aus Daten
+extrahiert wurden, die uns das Dezernat für Finanzen der Stadt Leipzig zur
+Verfügung gestellt hat.  Auf dieser Basis wird prototypisch demonstriert, wie
+Daten verschiedener Jahre inspiziert und auch vergleichend dargestellt werden
+können.
+
+Diese Plandaten sind allerdings nur geeignet, die Möglichkeiten
+\emph{prinzipiell} zu demonstrieren, da sie von den veröffentlichten
+Haushaltsplandaten deutlich abweichen.  Für einen Produktivbetrieb müssten
+entsprechende konsolidierte Datenreihen zur Verfügung gestellt werden. 
+
+\end{document}

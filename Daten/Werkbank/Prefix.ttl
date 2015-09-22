@@ -1,0 +1,32 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+
+# --- Die folgenden Zeilen sind für jeden einzelnen Cube anzupassen
+  
+@prefix ihrdata: <http://haushaltsrechner.leipzig.de/Data/Observation/> .
+
+<http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/> a owl:Ontology ;
+    dct:contributor "Wolfgang Amann", "Hans-Gert Gräbe" ;
+    dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" ;
+    a owl:Ontology ;
+    rdfs:comment "Haushaltsdaten der Stadt Leipzig für 2014", 
+    "2015-06-21, Gräbe: Teilcubes extrahiert", 
+    "Quelle: Cube/observations/HaushaltLeipzig2014.ttl" ;
+    rdfs:label "RDF Cube Haushaltsrechner - Daten 2014"@de .
+
+#
+# DataSet
+#	
+ihrdata:TheDataSet a qb:DataSet ;
+	rdfs:label "Haushaltsdaten 2014 der Stadt Leipzig. Ergebnishaushalt 2017."@de ;
+	rdfs:comment "Daten zum Haushalt 2014 der Stadt Leipzig - abgeleitet aus dem Ratsinformationssystem Leipzig"@de ;
+	dct:source <https://ratsinfo.leipzig.de> ;
+	qb:structure ihr:DSD .
+
+# --- Ende der Anpassungszone 

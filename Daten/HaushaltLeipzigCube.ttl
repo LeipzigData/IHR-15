@@ -1,0 +1,243 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+
+@prefix sdmx: <http://purl.org/linked-data/sdmx#> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+
+# Dieser RDF Graph enthält nur noch die beiden qb:DataStructureDefinition der
+# alten und der neuen Haushaltsversion. Die zugehörigen Instanzen sind nun in
+# den jeweiligen Observation-Graphen definiert. 
+
+<http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigCube/> a owl:Ontology ;
+	dct:contributor "Hans-Gert Gräbe", "Wolfgang Amann" ;
+    	dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" ;
+	rdfs:label "RDF Cube Haushaltsrechner - die Data Structure Definitionen"@de .
+
+# 
+# Data Structure Definition - old version
+#
+ihr:DSD a qb:DataStructureDefinition ;
+    rdfs:label "Data Structure Definition für den Leipziger Haushalt - alte Langversion"@de ;
+    qb:component  
+		# Dimensions
+		ihr:jahrComponent,
+		ihr:kategorieComponent,
+		ihr:prBerNummerComponent,
+		ihr:prGrNummerComponent,
+		ihr:prUGrNummerComponent,
+		ihr:bezugComponent,
+		
+		# Attributes
+		ihr:waehrungComponent,
+
+		# Measures
+		ihr:summeComponent,
+		ihr:einComponent,
+		ihr:ausComponent,
+		ihr:rechnungsendbetragComponent,
+		ihr:plansummeVorjahrComponent,
+		ihr:plansummeFolgejahr1Component,
+		ihr:plansummeFolgejahr2Component,
+		ihr:plansummeFolgejahr3Component .
+		
+# 
+# Data Structure Definition - new version
+#
+ihr:DSDShort a qb:DataStructureDefinition ;
+    rdfs:comment "ihr:summeComponent deprecated"; 
+    rdfs:label "Data Structure Definition für den Leipziger Haushalt - neue Kurzversion"@de ;
+    qb:component  
+		# Dimensions
+		ihr:jahrComponent,
+		ihr:kategorieComponent,
+		ihr:relatesComponent,
+		
+		# Attributes
+		ihr:waehrungComponent,
+
+		# Measures
+		ihr:einComponent,
+		ihr:ausComponent .
+		
+			
+# 
+#  Component Specifications
+#
+# Dimensions
+ihr:jahrComponent a qb:ComponentSpecification ;
+	rdfs:label "Jahr-Component"@de ;
+	qb:dimension ihr:jahr .
+	
+ihr:kategorieComponent a qb:ComponentSpecification ;
+	rdfs:label "Kategorie-Component"@de ;
+	qb:dimension ihr:kategorie .
+	
+ihr:prBerNummerComponent a qb:ComponentSpecification ;
+	rdfs:label "Produktbereichs-Component"@de ;
+	qb:dimension ihr:prBerNummer .
+
+ihr:prGrNummerComponent a qb:ComponentSpecification ;
+	rdfs:label "Produktgruppen-Component"@de ;
+	qb:dimension ihr:prGrNummer .
+	
+ihr:prUGrNummerComponent a qb:ComponentSpecification ;
+	rdfs:label "Produktuntergruppen-Component"@de ;
+	qb:dimension ihr:prUGrNummer .
+	
+ihr:bezugComponent a qb:ComponentSpecification ;
+	rdfs:label "Bezug-Component"@de ;
+	qb:dimension ihr:bezugNummer .	
+	
+ihr:relatesComponent a qb:ComponentSpecification ;
+	rdfs:label "Produkt-Component"@de ;
+	qb:dimension ihr:relatesTo .	
+	
+# Attributes	
+ihr:waehrungComponent a qb:ComponentSpecification ;
+	rdfs:label "Währungs-Component"@de ;
+	qb:attribute ihr:waehrung .
+	
+# Measures		
+ihr:summeComponent a qb:ComponentSpecification ;
+	rdfs:label "Summe-Component"@de ;
+	qb:measure ihr:summe .
+	
+ihr:einComponent a qb:ComponentSpecification ;
+	rdfs:label "Einnahmen-Component"@de ;
+	qb:measure ihr:ein .
+	
+ihr:ausComponent a qb:ComponentSpecification ;
+	rdfs:label "Ausgaben-Component"@de ;
+	qb:measure ihr:aus .
+
+ihr:rechnungsendbetragComponent a qb:ComponentSpecification ;
+	rdfs:label "Rechnungsendbetrag-Component"@de ;
+	qb:measure ihr:rechnungsendbetrag .
+
+ihr:plansummeVorjahrComponent a qb:ComponentSpecification ;
+	rdfs:label "PlanVorjahr-Component"@de ;
+	qb:measure ihr:plansummeVorjahr .
+
+ihr:plansummeFolgejahr1Component a qb:ComponentSpecification ;
+	rdfs:label "PlanFolgejahr1-Component"@de ;
+	qb:measure ihr:plansummeFolgejahr1 .
+	
+ihr:plansummeFolgejahr2Component a qb:ComponentSpecification ;
+	rdfs:label "PlanFolgejahr2-Component"@de ;
+	qb:measure ihr:plansummeFolgejahr2 .
+
+ihr:plansummeFolgejahr3Component a qb:ComponentSpecification ;
+	rdfs:label "PlanFolgejahr3-Component"@de ;
+	qb:measure ihr:plansummeFolgejahr3 .
+
+                 
+#
+# Properties
+#
+ihr:jahr a rdf:Property, qb:DimensionProperty ;
+	rdfs:label "Jahr"@de ;
+	rdfs:range xsd:gYear ;
+	qb:concept sdmx-concept:refPeriod .
+
+ihr:kategorie a rdf:Property, qb:DimensionProperty ;
+	rdfs:label "Kategorie"@de ;
+	rdfs:comment "Zuordnung des jeweiligen Bezugs zu Finanz- oder Ergebnishaushalt."@de ;
+	rdfs:range ihr:Kategorie .
+	
+ihr:prBerNummer a rdf:Property, qb:DimensionProperty ;
+	rdfs:label "Produktbereichsnummer"@de ;
+	rdfs:comment "Ein Produktbereich ist die erste Gliederungsebene des Haushaltsplans."@de ;
+	rdfs:range ihr:PrBer ;
+	qb:concept ihr:PrBerConcept .
+	
+ihr:prGrNummer a rdf:Property, qb:DimensionProperty ;
+	rdfs:label "Produktgruppennummer"@de ;
+	rdfs:comment "Produktbereiche sind in Produktguppen, die zweite Gliederungsebene des Haushaltsplans, unterteilt."@de ;
+	rdfs:range ihr:PrGr ;
+	qb:concept ihr:PrGrConcept .
+	
+ihr:prUGrNummer a rdf:Property, qb:DimensionProperty ;
+	rdfs:label "Produktuntergruppennummer"@de ;
+	rdfs:comment "Produktuntergruppen sind die nächste Gliederungsebene einer Produktgruppe und somit die unterste Aufgliederungsebene des Produktplans."@de ;
+	rdfs:range ihr:PrUGr ;
+	qb:concept ihr:PrUGrConcept .
+	
+ihr:bezugNummer a rdf:Property, qb:DimensionProperty ;
+	rdfs:label "Bezug"@de ;
+	rdfs:comment "Eindeutige Zuordnung einer Transaktion auf der Ebene der Produktuntergruppennummern (PSP)."@de ;
+	rdfs:range ihr:Bezug ;
+	qb:concept ihr:BezugConcept .	
+
+ihr:relatesTo a rdf:Property, qb:DimensionProperty ;
+	rdfs:label "Bezug"@de ;
+	rdfs:comment "Eindeutige Zuordnung einer Transaktion zu Produkt, Gruppe oder Bereich."@de ;
+	rdfs:range ihr:Bezug, ihr:PrUGr, ihr:PrGr, ihr:PrBer ;
+	qb:concept ihr:RelatesConcept .	
+
+ihr:waehrung a rdf:Property, qb:AttributeProperty;
+	rdfs:label "Währung"@de ;
+	#rdfs:range 
+	qb:concept sdmx-concept:currency .
+	
+ihr:summe a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "Summe"@de ;
+	rdfs:comment "Summe der Einnahmen und Ausgaben"@de ;
+	rdfs:range xsd:decimal .	
+	
+ihr:ein a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "Einnahmen"@de ;
+	rdfs:comment "Einnahmen (positiv)"@de ;
+	rdfs:range xsd:decimal .	
+
+ihr:aus a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "Ausgaben"@de ;
+	rdfs:comment "Ausgaben (negativ)"@de ;
+	rdfs:range xsd:decimal .		
+
+ihr:plansummeVorjahr a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "PlansummeVorjahr"@de ;
+	rdfs:comment "Plansumme im Vorjahr"@de ;
+	rdfs:range xsd:decimal .		
+	
+ihr:plansummeFolgejahr1 a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "PlansummeFolgejahr1"@de ;
+	rdfs:comment "Plansumme im ersten Folgejahr"@de ;
+	rdfs:range xsd:decimal .		
+	
+ihr:plansummeFolgejahr2 a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "PlansummeFolgejahr2"@de ;
+	rdfs:comment "Plansumme im zweiten Folgejahr"@de ;
+	rdfs:range xsd:decimal .	
+
+ihr:plansummeFolgejahr3 a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "PlansummeFolgejahr3"@de ;
+	rdfs:comment "Plansumme im dritten Folgejahr"@de ;
+	rdfs:range xsd:decimal .	
+	
+#	
+# Hierarchie der Produktgruppen		
+#
+ihr:ProduktGruppenSchema rdf:type skos:ConceptScheme ;
+	skos:hasTopConcept ihr:PrBerConcept .
+	
+ihr:PrBerConcept skos:topConceptOf ihr:ProduktGruppenSchema ;
+	skos:narrowerTransitive ihr:PrGrConcept .
+
+ihr:PrGrConcept skos:inScheme ihr:ProduktGruppenSchema ;
+	skos:narrowerTransitive ihr:PrUGrConcept .
+
+ihr:PrUGrConcept skos:inScheme ihr:ProduktGruppenSchema ;
+	skos:narrowerTransitive ihr:BezugConcept .
+	
+ihr:BezugConcept skos:inScheme ihr:ProduktGruppenSchema .	
+
+ihr:RelatesConcept skos:inScheme ihr:ProduktGruppenSchema .	

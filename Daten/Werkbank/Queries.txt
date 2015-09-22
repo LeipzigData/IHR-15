@@ -1,0 +1,487 @@
+# -------------------------------------------------------
+Knoten ihr:Top im neuen Produktmodell
+
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+construct { ihr:Top ihr:hasChild ?u . }
+from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+from <http://haushaltsrechner.leipzig.de/Data/NeuerProduktgraph/>
+WHERE {
+?u a ihr:PrBer .
+} 
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?ds sum(xsd:decimal(?ein)) sum(xsd:decimal(?aus))
+WHERE {
+?u  qb:dataSet ?ds ; ihr:ein ?ein ; ihr:aus ?aus .
+filter regex(?u,"PrBer")
+} 
+
+
+
+# -------------------------------------------------------
+Abgleich Neues Produktmodell
+
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select count(distinct ?u)
+from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+from <http://haushaltsrechner.leipzig.de/Data/NeuerProduktgraph/>
+WHERE {
+?u a ihr:PrBer .
+} 
+
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?u count(?v) 
+from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+from <http://haushaltsrechner.leipzig.de/Data/NeuerProduktgraph/>
+WHERE {
+?u a ihr:Schluesselprodukt .
+optional { ?v ihr:hasChild ?u . }
+} 
+
+282 Schlüsselprodukte, 75 davon waren keiner PrUGr zugeordnet - nachgetragen
+127 PrUGr, alle genau einer PrGr zugeordnet 
+92 PrGr, alle genau einem PrBer zugeordnet
+32 PrBer
+
+# Welche Schlüsselprodukte sind ohne Steckbrief?
+
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?u ?s
+from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+from <http://haushaltsrechner.leipzig.de/Data/Produktsteckbriefe/>
+WHERE {
+?u a ihr:Schluesselprodukt .
+optional {?s a ihr:Produktsteckbrief; ihr:bezugNummer ?u . }
+} 
+
+77 Schlüsselprodukte sind ohne Steckbrief, vor allem aus den Produktgruppen 53,
+57 und 71-76
+
+# -------------------------------------------------------
+Abgleich Ämterzuordnung
+
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?u ?a xsd:string(?l)
+from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+WHERE {
+?u ihr:zumAmt ?a; rdfs:label ?l .
+} order by ?a ?u
+
+# -------------------------------------------------------
+Abgleich Gebührenberechnende Bereiche
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?u ?g
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+from <http://haushaltsrechner.leipzig.de/Data/Test/>
+WHERE {
+?u a ihr:GebuehrenberechnenderBereich .
+optional { ?u ihr:hatGrad ?g . }
+} order by ?u
+
+
+# -------------------------------------------------------
+Abfrage der Observations zu einem Knotens des Produktbaums nach Jahren
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?b ?j xsd:decimal(?ein) xsd:decimal(?aus)
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan14/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan15/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan16/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan17/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan18/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan19/>
+WHERE {
+?u a qb:Observation ; ihr:relatesTo ?b; 
+ihr:ein ?ein; ihr:aus ?aus; ihr:jahr ?j .
+filter regex(?b,"110061") 
+} order by ?b
+
+# -------------------------------------------------------
+Abfrage der Observations zu einem Jahr
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?b xsd:string(?bn) as ?bezeichnung xsd:decimal(?ein) as
+?einnahmen xsd:decimal(?aus) as ?ausgaben
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_14Ratsinfo/>
+WHERE {
+?u a qb:Observation ; ihr:relatesTo ?b; ihr:ein ?ein; ihr:aus ?aus .
+?b rdfs:label ?bn .
+} order by ?b
+
+# Nur die Produktbereiche
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?b xsd:string(?bn) as ?bezeichnung xsd:decimal(?ein) as
+?einnahmen xsd:decimal(?aus) as ?ausgaben
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_14Ratsinfo/>
+WHERE {
+?u a qb:Observation ; ihr:relatesTo ?b; ihr:ein ?ein; ihr:aus ?aus .
+?b rdfs:label ?bn .
+filter regex(?b,"PrBer") 
+} order by ?b
+
+# -------------------------------------------------------
+GanzNeueDaten 
+
+ErgHH_2015.xlsx
+ErgHH_2016.xlsx
+
+1) Nach csv konvertiert. 
+2) Enthält in jeder Zeile einen Eintrag "Planwert|2014" u.ä. Danach wurden die
+   einzelnen Dateien ErgHH_2014.csv usw. extrahiert. Plandaten zum selben Jahr
+   in den beiden Dateien sind identisch, deshalb wurde nur eine solche Datei
+   aufgenommen. 
+
+Anmerkung: Dieselben Dateien können aus dem Planansatz 2014
+UnterlagenStadt/Primaerdaten/ErgHH_PB11_2014.csv extrahiert werden, die sind
+aber verschieden zu denen aus dem Planansatz 2015, selbst für das Jahr 2014.
+Diese Daten finden keine weitere Beachtung.
+
+Dasselbe gilt für die unter "NeueDaten" nach gleicher Systematik abgelegten
+Dateien - diese enthalten ebenfalls leicht andere Zahlen. 
+
+3) perl parseErgHH.pl ... extrahiert daraus eine Cube-Datei, wobei die Daten
+   auf 10-stelligen PSP-Nummern aggregiert werden, da dies nach Aussage der
+   Kämmerei die relevanten Zahlen sind. Als Observation-URI wird eine
+   Kombination aus einem Datensatzpräfix und der Bezugnummer genommen, da ja
+   durch die Methode garantiert ist, dass es nur eine Observation pro
+   Bezugnummer gibt.  Präfix und Jahr sind im Kopf von parseErgHH.pl vor der
+   Transformation einzustellen.
+
+Checke das gegen die Produktsteckbriefe - alle Nummern sind 10-stellig, aber 8
+der 10-stelligen PSP-Nummern kommen nicht vor.  Die wurden in
+Produktsteckbriefe.ttl mit einer einheitlichen Kurzbeschreibung nachgetragen. 
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?b xsd:string(?bl)
+from <http://haushaltsrechner.leipzig.de/Data/Produktsteckbriefe/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan14/>
+WHERE {
+?u a qb:Observation ; ihr:bezugNummer ?b . 
+optional { ?s a ihr:Produktsteckbrief; ihr:bezugNummer ?b . }
+optional { ?b a ihr:Schluesselprodukt; rdfs:label ?bl . }
+filter (!bound(?s))
+} order by ?b
+
+Checke das gegen das neue HaushaltLeipzigModel - alle 202 Observations haben
+verschiedene Nummern, sind 10-stellig und ein ihr:Schluesselprodukt.
+
+Checke das gegen den Produktgraphen und ergänze dort die fehlenden PrBer, PrGr,
+PrUgr, Bezug und die ihr:belongsTo Statements.
+
+Prüfe die Datenaufnahme auf Plausibilität für Planansatz 2014: 
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?b ?ein ?aus
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan14/>
+WHERE {
+?u a qb:Observation; ihr:ein ?ein; ihr:aus ?aus ; ihr:bezugNummer ?b . 
+} order by ?b
+
+Probeweise Vergleiche mit ErgHH_2014.csv zeigen, dass richtig gerechnet wurde.
+Probeweise Vergleiche mit Ratsinfo_2015.xlsx zeigen, dass in der Spalte
+"Plansumme_Vorjahr" (also 2014) die aufsummierten Posten zu einem
+Schlüsselprodukt (also alle Posten, welche diese 10-stellige Angabe als Präfix
+enthalten) gleich "ein+aus" in der erstellten Übersicht sind. 
+
+Prüfe Aggregate: 
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?c sum(xsd:decimal(?ein)) sum(xsd:decimal(?aus)) 
+from <http://haushaltsrechner.leipzig.de/Data/Produktgraph/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan14/>
+WHERE {
+?u a qb:Observation; ihr:ein ?ein; ihr:aus ?aus ; ihr:bezugNummer ?b . 
+?s ihr:hasChild ?d . ?d ihr:hasChild ?c . ?c ihr:hasChild ?b . 
+} order by ?c
+
+Stimmt auch alles. 
+
+Vergleiche die berechneten Aggregate gegen eine erneute Aggregierung. Stimmt
+auch alles. 
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?c (sum(xsd:decimal(?ein))-xsd:decimal(?vein)) (sum(xsd:decimal(?aus))-xsd:decimal(?vaus))
+from <http://haushaltsrechner.leipzig.de/Data/Produktgraph/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan14/>
+WHERE {
+?u a qb:Observation; ihr:ein ?ein; ihr:aus ?aus ; ihr:relatesTo ?b .
+?c ihr:hasChild ?b . 
+?v a qb:Observation; ihr:ein ?vein; ihr:aus ?vaus ; ihr:relatesTo ?c . 
+} 
+
+# -------------------------------------------------------
+
+HaushaltLeipzigModel.ttl aus Produktplan_2015_mit_Spielraumangaben.csv neu
+aufgebaut.
+
+# Welche Bezugnummern sind nicht zugeordnet? - Wurden als ihr:belongsTo
+# ihr:Ergebnishaushalt nachgetragen.
+
+# Welche Bezugnummern sind nicht in den Produktbaum eingetragen? - Wurden zur
+# entsprechenden PrUGr als ihr:hasChild nachgetragen.
+
+# Welche PrUGr sind neu? - Wurden im HaushaltLeipzigModel ergänzt und als
+# ihr:hasChild im Produktbaum nachgetragen.
+
+# Welche PrGr sind neu? - Keine.
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?v ?w
+from <http://haushaltsrechner.leipzig.de/Data/Produktgraph/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?u a ihr:PrGr . 
+?v ihr:hasChild ?u . 
+optional { ?v a ?w . }
+}
+
+# -------------------------------------------------------
+Suche
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?u ?l
+from <http://haushaltsrechner.leipzig.de/Data/Produktsteckbriefe/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE { 
+{ ?u rdfs:label ?l .  }
+union 
+{ ?u a ihr:Produktsteckbrief; ?b ?l . }
+filter regex(?l,"Oper","i")
+}
+
+# -------------------------------------------------------
+Steckbrief
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?b xsd:string(?k)
+from <http://haushaltsrechner.leipzig.de/Data/Produktsteckbriefe/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE { 
+{ ?u a ihr:Produktsteckbrief; ihr:bezugNummer ?b ; ihr:Kurzbeschreibung ?k . }
+filter regex(?b,"111102")
+}
+
+# -------------------------------------------------------
+# -------------------------------------------------------
+
+# Zähle die Instanzen pro Klasse
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT count (distinct ?a) ?t
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?a a ?t.
+}
+
+# Zuordnung von BezugNummern zu Kategorien
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select count(distinct ?b) ?k
+from <http://haushaltsrechner.leipzig.de/Data/Produktgraph/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?b a ihr:Bezug .
+optional { ?b ihr:belongsTo  ?k .}
+}
+
+HaushaltLeipzigModel enthält aktuell nur 1222 PSPs aus dem Ergebnishaushalt.
+Im Produktgraphen sind aber weitere Bezungsnummern aus dem Finanzhaushalt
+enthalten. 
+
+# Wie sieht es aber mit den Produktbereichen aus? 
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+select distinct ?u ?b ?l
+from <http://haushaltsrechner.leipzig.de/Data/Produktgraph/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?u a ihr:PrGr ; ihr:BezeichnungStadt ?l . 
+optional { ?u ihr:hasChild ?b1 . ?b1 ihr:hasChild ?b .
+?b ihr:belongsTo ihr:Finanzhaushalt .}
+}
+
+# -------------------------------------------------------
+# Sind alle Produkte aus einem RDF Cube im Produktgraph gelistet?
+
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT distinct ?bn ?ugn 
+from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan15/>
+from <http://haushaltsrechner.leipzig.de/Data/Produktgraph/>
+WHERE {
+?a a qb:Observation ; ihr:relatesTo ?bn .
+optional { ?ugn ihr:hasChild ?bn . }
+}
+order by ?bn
+
+# -------------------------------------------------------
+# Haushalt2014 analysieren
+
+# Observations zählen
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT ?l ?ln ?s ?r
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?q a qb:Observation; ihr:bezugNummer ?l ;
+ihr:summe ?s ;
+ihr:rechnungsendbetrag ?r ;
+ihr:kategorie ihr:Ergebnishaushalt .
+?l ihr:BezeichnungStadt ?ln .
+}
+
+# data-1.csv
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT ?l ?ln ?r ?s ?pv ?pf1 ?pf2 ?pf3
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?q a qb:Observation; ihr:bezugNummer ?l ;
+ihr:summe ?s ;
+ihr:plansummeVorjahr ?pv ;
+ihr:plansummeFolgejahr1 ?pf1 ;
+ihr:plansummeFolgejahr2 ?pf2  ;
+ihr:plansummeFolgejahr3 ?pf3  ;
+ihr:rechnungsendbetrag ?r ;
+ihr:kategorie ihr:Ergebnishaushalt .
+?l ihr:BezeichnungStadt ?ln .
+filter (xsd:float(?s)=0)
+}
+
+
+filter (xsd:float(?s)=xsd:float(?e)+xsd:float(?a))
+filter (xsd:float(?s)=0)
+filter ((xsd:float(?e)=0) or (xsd:float(?a)=0))
+
+# data-2.csv
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT ?bn ?bnl ?r ?s ?pv ?pf1 ?pf2 ?pf3
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?q a qb:Observation; 
+ihr:summe ?s ;
+ihr:plansummeVorjahr ?pv ;
+ihr:plansummeFolgejahr1 ?pf1 ;
+ihr:plansummeFolgejahr2 ?pf2  ;
+ihr:plansummeFolgejahr3 ?pf3  ;
+ihr:rechnungsendbetrag ?r ;
+ihr:kategorie ihr:Finanzhaushalt .
+optional {?q ihr:prBerNummer ?pbn .} 
+optional {?q ihr:bezugNummer ?bn . }
+optional {?bn ihr:BezeichnungStadt ?bnl . }
+filter (!bound(?pbn))
+}
+
+# data-3.csv
+# Observations im Finanzhaushalt mit derselben Bezugsnummer
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT count(?q) as ?summe ?bn ?bnl
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+WHERE {
+?q a qb:Observation; ihr:bezugNummer ?bn ;
+ihr:kategorie ihr:Finanzhaushalt .
+optional {?bn ihr:BezeichnungStadt ?bnl . }
+} order by desc(?summe) 
+
+# Observations mit derselben Bezugsnummer
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT count(distinct ?bn) 
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+WHERE {
+?q1 a qb:Observation; ihr:bezugNummer ?bn ; ihr:kategorie ihr:Finanzhaushalt .
+?q2 a qb:Observation; ihr:bezugNummer ?bn ; ihr:kategorie ihr:Ergebnishaushalt .
+} 
+
+# data-4.csv
+# 225 Bereichsnummern im HH kommen im Produktgraph nicht vor, weil sie keiner
+# Untergruppe zugeordnet sind.
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+SELECT distinct ?bn ?bnl
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+from <http://haushaltsrechner.leipzig.de/Data/Produktgraph/>
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzigModel/>
+WHERE {
+?q a qb:Observation ; ihr:bezugNummer ?bn .
+optional {?c ihr:hasChild ?bn . }
+optional {?bn ihr:BezeichnungStadt ?bnl . }
+filter (!bound(?c)) 
+}
+
+
+5075 Observations, alle mit summe=ein+aus und ein=0 oder aus=0
+1128 Ergebnishaushalt
+  - alle mit ihr:prBerNummer, jede ihr:bezugNummer kommt genau einmal vor
+  - 315 der Einträge mit summe=ein=aus=0, meist rechnungsendbetrag<>0 
+    	-> data-1.csv 
+3947 Finanzhaushalt
+  - 1870 der Einträge haben keine ihr:prBerNummer, diese haben ausschließlich
+    	 ihr:bezugNummer, diese kommen aber mehrfach vor -> data-2.csv
+  - es gibt nur 897 verschiedene ihr:bezugNummer -> data-3.csv
+Die ihr:bezugNummer in beiden Haushalten sind disjunkt. 
+
+
+
+
+
+
+# -------------------------------------------------------
+# Haushalt2014 zerlegen - Virtuoso CONSTRUCT standard settings erlauben nur
+# 10000 Tripel. Deshalb muss beim Finanzhaushalt besonders stark getrickst
+# werden.
+
+# Ergebnishaushalt zerlegen
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+CONSTRUCT { 
+?a a qb:Observation ;
+ihr:kategorie ihr:Ergebnishaushalt ;
+ihr:bezugNummer ?bn ;
+ihr:summe ?s .
+}
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+WHERE {
+?a a qb:Observation ; 
+ihr:kategorie ihr:Ergebnishaushalt ;
+ihr:bezugNummer ?bn ;
+ihr:rechnungsendbetrag ?s .
+}
+
+# Finanzhaushalt zerlegen
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+CONSTRUCT { 
+?a ihr:bezugNummer ?bn ;
+ihr:summe ?s .
+}
+from <http://haushaltsrechner.leipzig.de/Data/HaushaltLeipzig2014/>
+WHERE {
+?a a qb:Observation ; 
+ihr:kategorie ihr:Finanzhaushalt ;
+ihr:bezugNummer ?bn ;
+ihr:summe ?s .
+}

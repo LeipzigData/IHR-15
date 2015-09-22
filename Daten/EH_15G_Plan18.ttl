@@ -1,0 +1,3852 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> .
+@prefix ihrdata: <http://haushaltsrechner.leipzig.de/Data/Observation/> .
+@prefix ihrds: <http://haushaltsrechner.leipzig.de/Data/Dataset/> .
+
+<http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan18/>
+    dct:contributor "Hans-Gert Gräbe" ;
+    dct:creator "Projekt Interaktiver Haushaltsrechner für Leipzig 2015" ;
+    a owl:Ontology ;
+    rdfs:comment "Quelle: HH2015-2/EH_15G_Plan18.csv" ;
+    rdfs:label "RDF Cube Haushaltsdaten 2015. Ergebnishaushalt 2018."@de .
+
+#
+# DataSet
+# 
+ihrds:EH_15G_Plan18 a qb:DataSet ;
+        rdfs:label "Haushaltsdaten 2015 der Stadt Leipzig. Ergebnishaushalt Planansatz 2018."@de ;
+        rdfs:comment "Daten zum Haushalt 2015 der Stadt Leipzig"@de ;
+        dct:source "Kämmerei der Stadtverwaltung Leipzig" ;
+        qb:structure ihr:DSDShort .
+
+ihrdata:EH_15G_Plan18-PrBer11
+    ihr:relatesTo ihr:PrBer11 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "119610480"; ihr:aus "-29249600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111101
+    ihr:relatesTo ihr:Bezug1100111101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2334550"; ihr:aus "-5950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111102
+    ihr:relatesTo ihr:Bezug1100111102 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6790130"; ihr:aus "-1524900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111103
+    ihr:relatesTo ihr:Bezug1100111103 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1395700"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111104
+    ihr:relatesTo ihr:Bezug1100111104 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1209400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111201
+    ihr:relatesTo ihr:Bezug1100111201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2011850"; ihr:aus "-97000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111202
+    ihr:relatesTo ihr:Bezug1100111202 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16928700"; ihr:aus "-1901550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111203
+    ihr:relatesTo ihr:Bezug1100111203 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5491400"; ihr:aus "-1374550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111204
+    ihr:relatesTo ihr:Bezug1100111204 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1162850"; ihr:aus "-4750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111205
+    ihr:relatesTo ihr:Bezug1100111205 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2076500"; ihr:aus "-61000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111206
+    ihr:relatesTo ihr:Bezug1100111206 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "838500"; ihr:aus "-250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111207
+    ihr:relatesTo ihr:Bezug1100111207 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "350100"; ihr:aus "-10000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111301
+    ihr:relatesTo ihr:Bezug1100111301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5268300"; ihr:aus "-103500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111302
+    ihr:relatesTo ihr:Bezug1100111302 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8259850"; ihr:aus "-2295150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111303
+    ihr:relatesTo ihr:Bezug1100111303 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3281650"; ihr:aus "-38350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111304
+    ihr:relatesTo ihr:Bezug1100111304 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27337850"; ihr:aus "-8325400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111305
+    ihr:relatesTo ihr:Bezug1100111305 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12490350"; ihr:aus "-12458800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111306
+    ihr:relatesTo ihr:Bezug1100111306 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "632850"; ihr:aus "-250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111308
+    ihr:relatesTo ihr:Bezug1100111308 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1384350"; ihr:aus "-52850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111309
+    ihr:relatesTo ihr:Bezug1100111309 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111310
+    ihr:relatesTo ihr:Bezug1100111310 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "650550"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111311
+    ihr:relatesTo ihr:Bezug1100111311 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "69300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111401
+    ihr:relatesTo ihr:Bezug1100111401 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3146300"; ihr:aus "-128100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111601
+    ihr:relatesTo ihr:Bezug1100111601 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "496800"; ihr:aus "-8000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111602
+    ihr:relatesTo ihr:Bezug1100111602 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2504050"; ihr:aus "-71000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111603
+    ihr:relatesTo ihr:Bezug1100111603 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "339400"; ihr:aus "-65250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111604
+    ihr:relatesTo ihr:Bezug1100111604 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1181550"; ihr:aus "-342550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111605
+    ihr:relatesTo ihr:Bezug1100111605 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1412850"; ihr:aus "-82450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111606
+    ihr:relatesTo ihr:Bezug1100111606 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2792550"; ihr:aus "-20000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111607
+    ihr:relatesTo ihr:Bezug1100111607 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5343860"; ihr:aus "-72750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111608
+    ihr:relatesTo ihr:Bezug1100111608 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2428390"; ihr:aus "-119550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100111609
+    ihr:relatesTo ihr:Bezug1100111609 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-85700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100121101
+    ihr:relatesTo ihr:Bezug1100121101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "899950"; ihr:aus "-35800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100121102
+    ihr:relatesTo ihr:Bezug1100121102 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "244850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100121201
+    ihr:relatesTo ihr:Bezug1100121201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "220700"; ihr:aus "-147000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122101
+    ihr:relatesTo ihr:Bezug1100122101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6030800"; ihr:aus "-1138350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122102
+    ihr:relatesTo ihr:Bezug1100122102 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2334850"; ihr:aus "-1027650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122103
+    ihr:relatesTo ihr:Bezug1100122103 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5267430"; ihr:aus "-4068100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122104
+    ihr:relatesTo ihr:Bezug1100122104 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122105
+    ihr:relatesTo ihr:Bezug1100122105 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2354900"; ihr:aus "-78650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122106
+    ihr:relatesTo ihr:Bezug1100122106 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1054050"; ihr:aus "-34500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122107
+    ihr:relatesTo ihr:Bezug1100122107 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8004500"; ihr:aus "-12537500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122108
+    ihr:relatesTo ihr:Bezug1100122108 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1058850"; ihr:aus "-406050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122109
+    ihr:relatesTo ihr:Bezug1100122109 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1503650"; ihr:aus "-384250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122201
+    ihr:relatesTo ihr:Bezug1100122201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5279570"; ihr:aus "-3854800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122202
+    ihr:relatesTo ihr:Bezug1100122202 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3774700"; ihr:aus "-586450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122203
+    ihr:relatesTo ihr:Bezug1100122203 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21800"; ihr:aus "-7050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122204
+    ihr:relatesTo ihr:Bezug1100122204 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2285100"; ihr:aus "-697800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100122205
+    ihr:relatesTo ihr:Bezug1100122205 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "500"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100126001
+    ihr:relatesTo ihr:Bezug1100126001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1868600"; ihr:aus "-512100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100126002
+    ihr:relatesTo ihr:Bezug1100126002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "30773200"; ihr:aus "-608200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100127001
+    ihr:relatesTo ihr:Bezug1100127001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18760400"; ihr:aus "-21157150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100127002
+    ihr:relatesTo ihr:Bezug1100127002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4973500"; ihr:aus "-1582000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100128001
+    ihr:relatesTo ihr:Bezug1100128001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "604900"; ihr:aus "-8650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100211101
+    ihr:relatesTo ihr:Bezug1100211101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "20006700"; ihr:aus "-2259700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100215101
+    ihr:relatesTo ihr:Bezug1100215101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10588400"; ihr:aus "-673950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100215301
+    ihr:relatesTo ihr:Bezug1100215301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "134000"; ihr:aus "-3750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100215401
+    ihr:relatesTo ihr:Bezug1100215401 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "263100"; ihr:aus "-18650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100217101
+    ihr:relatesTo ihr:Bezug1100217101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10562900"; ihr:aus "-1262400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100217301
+    ihr:relatesTo ihr:Bezug1100217301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "102450"; ihr:aus "-1950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100221101
+    ihr:relatesTo ihr:Bezug1100221101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "309550"; ihr:aus "-36000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100221301
+    ihr:relatesTo ihr:Bezug1100221301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "999600"; ihr:aus "-83500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100221401
+    ihr:relatesTo ihr:Bezug1100221401 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "911650"; ihr:aus "-125400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100221501
+    ihr:relatesTo ihr:Bezug1100221501 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3577400"; ihr:aus "-844400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100221601
+    ihr:relatesTo ihr:Bezug1100221601 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "801800"; ihr:aus "-153450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100221701
+    ihr:relatesTo ihr:Bezug1100221701 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1242950"; ihr:aus "-93950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100221801
+    ihr:relatesTo ihr:Bezug1100221801 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "90150"; ihr:aus "-26200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100231101
+    ihr:relatesTo ihr:Bezug1100231101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6408150"; ihr:aus "-500700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100231301
+    ihr:relatesTo ihr:Bezug1100231301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "922800"; ihr:aus "-6950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100241001
+    ihr:relatesTo ihr:Bezug1100241001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3399100"; ihr:aus "-300000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100242001
+    ihr:relatesTo ihr:Bezug1100242001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "70900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100243001
+    ihr:relatesTo ihr:Bezug1100243001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "307150"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100243002
+    ihr:relatesTo ihr:Bezug1100243002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "274300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100243003
+    ihr:relatesTo ihr:Bezug1100243003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "596050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100243004
+    ihr:relatesTo ihr:Bezug1100243004 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1014400"; ihr:aus "-24000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100252001
+    ihr:relatesTo ihr:Bezug1100252001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3858980"; ihr:aus "-222550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100252002
+    ihr:relatesTo ihr:Bezug1100252002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1019450"; ihr:aus "-29500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100252003
+    ihr:relatesTo ihr:Bezug1100252003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3282795"; ihr:aus "-728400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100252004
+    ihr:relatesTo ihr:Bezug1100252004 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4889050"; ihr:aus "-727800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100253001
+    ihr:relatesTo ihr:Bezug1100253001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2802050"; ihr:aus "-714000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100254001
+    ihr:relatesTo ihr:Bezug1100254001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9481050"; ihr:aus "-32237200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100261001
+    ihr:relatesTo ihr:Bezug1100261001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "15515050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100261002
+    ihr:relatesTo ihr:Bezug1100261002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3562050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100261003
+    ihr:relatesTo ihr:Bezug1100261003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "46102050"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100262001
+    ihr:relatesTo ihr:Bezug1100262001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "600"; ihr:aus "-350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100262002
+    ihr:relatesTo ihr:Bezug1100262002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "789600"; ihr:aus "-150500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100262003
+    ihr:relatesTo ihr:Bezug1100262003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18302750"; ihr:aus "-220000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100262004
+    ihr:relatesTo ihr:Bezug1100262004 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2221855"; ihr:aus "-263650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100263001
+    ihr:relatesTo ihr:Bezug1100263001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3988750"; ihr:aus "-940000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100271001
+    ihr:relatesTo ihr:Bezug1100271001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3954150"; ihr:aus "-2858400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100272001
+    ihr:relatesTo ihr:Bezug1100272001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9686700"; ihr:aus "-567350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100281001
+    ihr:relatesTo ihr:Bezug1100281001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2584810"; ihr:aus "-1419970"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100291001
+    ihr:relatesTo ihr:Bezug1100291001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100311101
+    ihr:relatesTo ihr:Bezug1100311101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8053350"; ihr:aus "-1276950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100311201
+    ihr:relatesTo ihr:Bezug1100311201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14816350"; ihr:aus "-531000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100311301
+    ihr:relatesTo ihr:Bezug1100311301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18773100"; ihr:aus "-1205000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100311401
+    ihr:relatesTo ihr:Bezug1100311401 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5560300"; ihr:aus "-65000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100311501
+    ihr:relatesTo ihr:Bezug1100311501 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "702050"; ihr:aus "-12100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100311601
+    ihr:relatesTo ihr:Bezug1100311601 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2422350"; ihr:aus "-260350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100311701
+    ihr:relatesTo ihr:Bezug1100311701 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23486250"; ihr:aus "-22827400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100312101
+    ihr:relatesTo ihr:Bezug1100312101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "176664250"; ihr:aus "-64048750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100312201
+    ihr:relatesTo ihr:Bezug1100312201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "400100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100312301
+    ihr:relatesTo ihr:Bezug1100312301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5243350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100312601
+    ihr:relatesTo ihr:Bezug1100312601 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2878850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100313001
+    ihr:relatesTo ihr:Bezug1100313001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "34313350"; ihr:aus "-18576900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100315001
+    ihr:relatesTo ihr:Bezug1100315001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5275450"; ihr:aus "-743350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100315002
+    ihr:relatesTo ihr:Bezug1100315002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-536700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100315003
+    ihr:relatesTo ihr:Bezug1100315003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-118700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100331001
+    ihr:relatesTo ihr:Bezug1100331001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3771950"; ihr:aus "-26000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100341001
+    ihr:relatesTo ihr:Bezug1100341001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11900000"; ihr:aus "-7278050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100343001
+    ihr:relatesTo ihr:Bezug1100343001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1170250"; ihr:aus "-5000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100343002
+    ihr:relatesTo ihr:Bezug1100343002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "631300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100344001
+    ihr:relatesTo ihr:Bezug1100344001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "169400"; ihr:aus "-110000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100345101
+    ihr:relatesTo ihr:Bezug1100345101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "320350"; ihr:aus "-1000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100345201
+    ihr:relatesTo ihr:Bezug1100345201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1104650"; ihr:aus "-7000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100351001
+    ihr:relatesTo ihr:Bezug1100351001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6309500"; ihr:aus "-1850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100351002
+    ihr:relatesTo ihr:Bezug1100351002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1115950"; ihr:aus "-200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100361001
+    ihr:relatesTo ihr:Bezug1100361001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23106900"; ihr:aus "-265250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100362001
+    ihr:relatesTo ihr:Bezug1100362001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8429600"; ihr:aus "-1375550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100363101
+    ihr:relatesTo ihr:Bezug1100363101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6631200"; ihr:aus "-841300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100363201
+    ihr:relatesTo ihr:Bezug1100363201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5829700"; ihr:aus "-271600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100363301
+    ihr:relatesTo ihr:Bezug1100363301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "53240650"; ihr:aus "-3735000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100363401
+    ihr:relatesTo ihr:Bezug1100363401 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12688700"; ihr:aus "-545150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100363501
+    ihr:relatesTo ihr:Bezug1100363501 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4503050"; ihr:aus "-8700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100365001
+    ihr:relatesTo ihr:Bezug1100365001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "237920050"; ihr:aus "-101072900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100366001
+    ihr:relatesTo ihr:Bezug1100366001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3126150"; ihr:aus "-406900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100367001
+    ihr:relatesTo ihr:Bezug1100367001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3483300"; ihr:aus "-401550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100411001
+    ihr:relatesTo ihr:Bezug1100411001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-111000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100414001
+    ihr:relatesTo ihr:Bezug1100414001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1413650"; ihr:aus "-188000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100414002
+    ihr:relatesTo ihr:Bezug1100414002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2450400"; ihr:aus "-421900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100414003
+    ihr:relatesTo ihr:Bezug1100414003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10764550"; ihr:aus "-1980600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100421001
+    ihr:relatesTo ihr:Bezug1100421001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2616700"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100421002
+    ihr:relatesTo ihr:Bezug1100421002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "726400"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100424101
+    ihr:relatesTo ihr:Bezug1100424101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10036250"; ihr:aus "-1441050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100424201
+    ihr:relatesTo ihr:Bezug1100424201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5231750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100511101
+    ihr:relatesTo ihr:Bezug1100511101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7333300"; ihr:aus "-366950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100511106
+    ihr:relatesTo ihr:Bezug1100511106 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13514650"; ihr:aus "-11411200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100511108
+    ihr:relatesTo ihr:Bezug1100511108 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8911100"; ihr:aus "-2750500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100511109
+    ihr:relatesTo ihr:Bezug1100511109 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "216200"; ihr:aus "-313000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100511110
+    ihr:relatesTo ihr:Bezug1100511110 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-23000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100511111
+    ihr:relatesTo ihr:Bezug1100511111 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1312500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100512001
+    ihr:relatesTo ihr:Bezug1100512001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "710950"; ihr:aus "-250600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100512002
+    ihr:relatesTo ihr:Bezug1100512002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1001050"; ihr:aus "-311700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100512003
+    ihr:relatesTo ihr:Bezug1100512003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1313650"; ihr:aus "-293700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100512004
+    ihr:relatesTo ihr:Bezug1100512004 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1905350"; ihr:aus "-1102100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100512005
+    ihr:relatesTo ihr:Bezug1100512005 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1333350"; ihr:aus "-457450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100521001
+    ihr:relatesTo ihr:Bezug1100521001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5446000"; ihr:aus "-4002450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100521002
+    ihr:relatesTo ihr:Bezug1100521002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3187250"; ihr:aus "-2138700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100522001
+    ihr:relatesTo ihr:Bezug1100522001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "127050"; ihr:aus "-4550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100522002
+    ihr:relatesTo ihr:Bezug1100522002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "581100"; ihr:aus "-10000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100523001
+    ihr:relatesTo ihr:Bezug1100523001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1333250"; ihr:aus "-141250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100523002
+    ihr:relatesTo ihr:Bezug1100523002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "641050"; ihr:aus "-311150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100531001
+    ihr:relatesTo ihr:Bezug1100531001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-22524200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100532001
+    ihr:relatesTo ihr:Bezug1100532001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1878900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100533001
+    ihr:relatesTo ihr:Bezug1100533001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "171800"; ihr:aus "-127600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100533002
+    ihr:relatesTo ihr:Bezug1100533002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-5322400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100534001
+    ihr:relatesTo ihr:Bezug1100534001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1544300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100535001
+    ihr:relatesTo ihr:Bezug1100535001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100537001
+    ihr:relatesTo ihr:Bezug1100537001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "669150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100538001
+    ihr:relatesTo ihr:Bezug1100538001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "171750"; ihr:aus "-160600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100538002
+    ihr:relatesTo ihr:Bezug1100538002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100538003
+    ihr:relatesTo ihr:Bezug1100538003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "150000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100541001
+    ihr:relatesTo ihr:Bezug1100541001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "35881500"; ihr:aus "-3481900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100542001
+    ihr:relatesTo ihr:Bezug1100542001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2060050"; ihr:aus "-413750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100543001
+    ihr:relatesTo ihr:Bezug1100543001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "981700"; ihr:aus "-234050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100544001
+    ihr:relatesTo ihr:Bezug1100544001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2590400"; ihr:aus "-949050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100545101
+    ihr:relatesTo ihr:Bezug1100545101 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3800350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100545201
+    ihr:relatesTo ihr:Bezug1100545201 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1722450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100545301
+    ihr:relatesTo ihr:Bezug1100545301 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100545401
+    ihr:relatesTo ihr:Bezug1100545401 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100545501
+    ihr:relatesTo ihr:Bezug1100545501 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100546001
+    ihr:relatesTo ihr:Bezug1100546001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "501550"; ihr:aus "-2632450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100547001
+    ihr:relatesTo ihr:Bezug1100547001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100547002
+    ihr:relatesTo ihr:Bezug1100547002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100549001
+    ihr:relatesTo ihr:Bezug1100549001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1412250"; ihr:aus "-3576550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100549002
+    ihr:relatesTo ihr:Bezug1100549002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1596200"; ihr:aus "-450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100551001
+    ihr:relatesTo ihr:Bezug1100551001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18020235"; ihr:aus "-1943220"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100552001
+    ihr:relatesTo ihr:Bezug1100552001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1841150"; ihr:aus "-757350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100552002
+    ihr:relatesTo ihr:Bezug1100552002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1788000"; ihr:aus "-368700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100553001
+    ihr:relatesTo ihr:Bezug1100553001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4498670"; ihr:aus "-5013550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100554001
+    ihr:relatesTo ihr:Bezug1100554001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1399600"; ihr:aus "-28650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100554002
+    ihr:relatesTo ihr:Bezug1100554002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "521572.1"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100555001
+    ihr:relatesTo ihr:Bezug1100555001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1782263"; ihr:aus "-256450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100561001
+    ihr:relatesTo ihr:Bezug1100561001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1071600"; ihr:aus "-900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100561002
+    ihr:relatesTo ihr:Bezug1100561002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "604000"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100561003
+    ihr:relatesTo ihr:Bezug1100561003 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1928000"; ihr:aus "-142900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100561004
+    ihr:relatesTo ihr:Bezug1100561004 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1620600"; ihr:aus "-78800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100561005
+    ihr:relatesTo ihr:Bezug1100561005 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "537150"; ihr:aus "-63350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100561006
+    ihr:relatesTo ihr:Bezug1100561006 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "375350"; ihr:aus "-215100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100571001
+    ihr:relatesTo ihr:Bezug1100571001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4919300"; ihr:aus "-18400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100571002
+    ihr:relatesTo ihr:Bezug1100571002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3575550"; ihr:aus "-225700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100571005
+    ihr:relatesTo ihr:Bezug1100571005 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-14250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573001
+    ihr:relatesTo ihr:Bezug1100573001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4800000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573002
+    ihr:relatesTo ihr:Bezug1100573002 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1557250"; ihr:aus "-1314400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573004
+    ihr:relatesTo ihr:Bezug1100573004 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1581550"; ihr:aus "-127300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573005
+    ihr:relatesTo ihr:Bezug1100573005 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-47000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573006
+    ihr:relatesTo ihr:Bezug1100573006 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573008
+    ihr:relatesTo ihr:Bezug1100573008 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-13264800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573009
+    ihr:relatesTo ihr:Bezug1100573009 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "247550"; ihr:aus "-248000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573010
+    ihr:relatesTo ihr:Bezug1100573010 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-38608400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573011
+    ihr:relatesTo ihr:Bezug1100573011 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "894300"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573014
+    ihr:relatesTo ihr:Bezug1100573014 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100573015
+    ihr:relatesTo ihr:Bezug1100573015 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "50000"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100575001
+    ihr:relatesTo ihr:Bezug1100575001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2360250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100611001
+    ihr:relatesTo ihr:Bezug1100611001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "86882000"; ihr:aus "-983461190"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100612001
+    ihr:relatesTo ihr:Bezug1100612001 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19912650"; ihr:aus "-5507750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100742052
+    ihr:relatesTo ihr:Bezug1100742052 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Bezug1100755067
+    ihr:relatesTo ihr:Bezug1100755067 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr111
+    ihr:relatesTo ihr:PrGr111 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "119610480"; ihr:aus "-29249600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1111
+    ihr:relatesTo ihr:PrUGr1111 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11729780"; ihr:aus "-1530850"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1112
+    ihr:relatesTo ihr:PrUGr1112 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "28859900"; ihr:aus "-3449100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1113
+    ihr:relatesTo ihr:PrUGr1113 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "59375050"; ihr:aus "-23274300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1114
+    ihr:relatesTo ihr:PrUGr1114 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3146300"; ihr:aus "-128100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1116
+    ihr:relatesTo ihr:PrUGr1116 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "16499450"; ihr:aus "-867250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer12
+    ihr:relatesTo ihr:PrBer12 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "97316800"; ihr:aus "-48872050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr121
+    ihr:relatesTo ihr:PrGr121 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1365500"; ihr:aus "-182800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1211
+    ihr:relatesTo ihr:PrUGr1211 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1144800"; ihr:aus "-35800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1212
+    ihr:relatesTo ihr:PrUGr1212 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "220700"; ihr:aus "-147000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr122
+    ihr:relatesTo ihr:PrGr122 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "38970700"; ihr:aus "-24821150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1221
+    ihr:relatesTo ihr:PrUGr1221 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "27609030"; ihr:aus "-19675050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1222
+    ihr:relatesTo ihr:PrUGr1222 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11361670"; ihr:aus "-5146100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr126
+    ihr:relatesTo ihr:PrGr126 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "32641800"; ihr:aus "-1120300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1260
+    ihr:relatesTo ihr:PrUGr1260 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "32641800"; ihr:aus "-1120300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr127
+    ihr:relatesTo ihr:PrGr127 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23733900"; ihr:aus "-22739150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1270
+    ihr:relatesTo ihr:PrUGr1270 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23733900"; ihr:aus "-22739150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr128
+    ihr:relatesTo ihr:PrGr128 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "604900"; ihr:aus "-8650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr1280
+    ihr:relatesTo ihr:PrUGr1280 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "604900"; ihr:aus "-8650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer21
+    ihr:relatesTo ihr:PrBer21 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "41657550"; ihr:aus "-4220400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr211
+    ihr:relatesTo ihr:PrGr211 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "20006700"; ihr:aus "-2259700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2111
+    ihr:relatesTo ihr:PrUGr2111 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "20006700"; ihr:aus "-2259700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr215
+    ihr:relatesTo ihr:PrGr215 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10985500"; ihr:aus "-696350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2151
+    ihr:relatesTo ihr:PrUGr2151 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10588400"; ihr:aus "-673950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2153
+    ihr:relatesTo ihr:PrUGr2153 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "134000"; ihr:aus "-3750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2154
+    ihr:relatesTo ihr:PrUGr2154 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "263100"; ihr:aus "-18650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr217
+    ihr:relatesTo ihr:PrGr217 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10665350"; ihr:aus "-1264350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2171
+    ihr:relatesTo ihr:PrUGr2171 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10562900"; ihr:aus "-1262400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2173
+    ihr:relatesTo ihr:PrUGr2173 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "102450"; ihr:aus "-1950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer22
+    ihr:relatesTo ihr:PrBer22 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7933100"; ihr:aus "-1362900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr221
+    ihr:relatesTo ihr:PrGr221 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7933100"; ihr:aus "-1362900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2211
+    ihr:relatesTo ihr:PrUGr2211 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "309550"; ihr:aus "-36000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2213
+    ihr:relatesTo ihr:PrUGr2213 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "999600"; ihr:aus "-83500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2214
+    ihr:relatesTo ihr:PrUGr2214 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "911650"; ihr:aus "-125400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2215
+    ihr:relatesTo ihr:PrUGr2215 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3577400"; ihr:aus "-844400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2216
+    ihr:relatesTo ihr:PrUGr2216 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "801800"; ihr:aus "-153450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2217
+    ihr:relatesTo ihr:PrUGr2217 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1242950"; ihr:aus "-93950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2218
+    ihr:relatesTo ihr:PrUGr2218 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "90150"; ihr:aus "-26200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer23
+    ihr:relatesTo ihr:PrBer23 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7330950"; ihr:aus "-507650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr231
+    ihr:relatesTo ihr:PrGr231 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7330950"; ihr:aus "-507650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2311
+    ihr:relatesTo ihr:PrUGr2311 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6408150"; ihr:aus "-500700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2313
+    ihr:relatesTo ihr:PrUGr2313 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "922800"; ihr:aus "-6950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer24
+    ihr:relatesTo ihr:PrBer24 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5661900"; ihr:aus "-324100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr241
+    ihr:relatesTo ihr:PrGr241 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3399100"; ihr:aus "-300000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2410
+    ihr:relatesTo ihr:PrUGr2410 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3399100"; ihr:aus "-300000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr242
+    ihr:relatesTo ihr:PrGr242 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "70900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2420
+    ihr:relatesTo ihr:PrUGr2420 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "70900"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr243
+    ihr:relatesTo ihr:PrGr243 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2191900"; ihr:aus "-24100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2430
+    ihr:relatesTo ihr:PrUGr2430 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2191900"; ihr:aus "-24100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer25
+    ihr:relatesTo ihr:PrBer25 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "25333375"; ihr:aus "-34659450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr252
+    ihr:relatesTo ihr:PrGr252 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13050275"; ihr:aus "-1708250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2520
+    ihr:relatesTo ihr:PrUGr2520 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13050275"; ihr:aus "-1708250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr253
+    ihr:relatesTo ihr:PrGr253 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2802050"; ihr:aus "-714000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2530
+    ihr:relatesTo ihr:PrUGr2530 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2802050"; ihr:aus "-714000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr254
+    ihr:relatesTo ihr:PrGr254 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9481050"; ihr:aus "-32237200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2540
+    ihr:relatesTo ihr:PrUGr2540 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9481050"; ihr:aus "-32237200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer26
+    ihr:relatesTo ihr:PrBer26 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "90482705"; ihr:aus "-1574500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr261
+    ihr:relatesTo ihr:PrGr261 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "65179150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2610
+    ihr:relatesTo ihr:PrUGr2610 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "65179150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr262
+    ihr:relatesTo ihr:PrGr262 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21314805"; ihr:aus "-634500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2620
+    ihr:relatesTo ihr:PrUGr2620 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "21314805"; ihr:aus "-634500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr263
+    ihr:relatesTo ihr:PrGr263 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3988750"; ihr:aus "-940000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2630
+    ihr:relatesTo ihr:PrUGr2630 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3988750"; ihr:aus "-940000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer27
+    ihr:relatesTo ihr:PrBer27 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "13640850"; ihr:aus "-3425750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr271
+    ihr:relatesTo ihr:PrGr271 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3954150"; ihr:aus "-2858400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2710
+    ihr:relatesTo ihr:PrUGr2710 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3954150"; ihr:aus "-2858400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr272
+    ihr:relatesTo ihr:PrGr272 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9686700"; ihr:aus "-567350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2720
+    ihr:relatesTo ihr:PrUGr2720 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9686700"; ihr:aus "-567350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer28
+    ihr:relatesTo ihr:PrBer28 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2584810"; ihr:aus "-1419970"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr281
+    ihr:relatesTo ihr:PrGr281 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2584810"; ihr:aus "-1419970"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2810
+    ihr:relatesTo ihr:PrUGr2810 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2584810"; ihr:aus "-1419970"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer29
+    ihr:relatesTo ihr:PrBer29 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr291
+    ihr:relatesTo ihr:PrGr291 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr2910
+    ihr:relatesTo ihr:PrUGr2910 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer31
+    ihr:relatesTo ihr:PrBer31 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "298589100"; ihr:aus "-110202200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr311
+    ihr:relatesTo ihr:PrGr311 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "73813750"; ihr:aus "-26177800"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3111
+    ihr:relatesTo ihr:PrUGr3111 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8053350"; ihr:aus "-1276950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3112
+    ihr:relatesTo ihr:PrUGr3112 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14816350"; ihr:aus "-531000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3113
+    ihr:relatesTo ihr:PrUGr3113 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18773100"; ihr:aus "-1205000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3114
+    ihr:relatesTo ihr:PrUGr3114 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5560300"; ihr:aus "-65000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3115
+    ihr:relatesTo ihr:PrUGr3115 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "702050"; ihr:aus "-12100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3116
+    ihr:relatesTo ihr:PrUGr3116 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2422350"; ihr:aus "-260350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3117
+    ihr:relatesTo ihr:PrUGr3117 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23486250"; ihr:aus "-22827400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr312
+    ihr:relatesTo ihr:PrGr312 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "185186550"; ihr:aus "-64048750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3121
+    ihr:relatesTo ihr:PrUGr3121 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "176664250"; ihr:aus "-64048750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3122
+    ihr:relatesTo ihr:PrUGr3122 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "400100"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3123
+    ihr:relatesTo ihr:PrUGr3123 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5243350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3126
+    ihr:relatesTo ihr:PrUGr3126 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2878850"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr313
+    ihr:relatesTo ihr:PrGr313 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "34313350"; ihr:aus "-18576900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3130
+    ihr:relatesTo ihr:PrUGr3130 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "34313350"; ihr:aus "-18576900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr315
+    ihr:relatesTo ihr:PrGr315 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5275450"; ihr:aus "-1398750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3150
+    ihr:relatesTo ihr:PrUGr3150 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5275450"; ihr:aus "-1398750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer33
+    ihr:relatesTo ihr:PrBer33 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3771950"; ihr:aus "-26000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr331
+    ihr:relatesTo ihr:PrGr331 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3771950"; ihr:aus "-26000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3310
+    ihr:relatesTo ihr:PrUGr3310 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3771950"; ihr:aus "-26000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer34
+    ihr:relatesTo ihr:PrBer34 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "15295950"; ihr:aus "-7401050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr341
+    ihr:relatesTo ihr:PrGr341 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11900000"; ihr:aus "-7278050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3410
+    ihr:relatesTo ihr:PrUGr3410 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11900000"; ihr:aus "-7278050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr343
+    ihr:relatesTo ihr:PrGr343 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1801550"; ihr:aus "-5000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3430
+    ihr:relatesTo ihr:PrUGr3430 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1801550"; ihr:aus "-5000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr344
+    ihr:relatesTo ihr:PrGr344 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "169400"; ihr:aus "-110000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3440
+    ihr:relatesTo ihr:PrUGr3440 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "169400"; ihr:aus "-110000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr345
+    ihr:relatesTo ihr:PrGr345 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1425000"; ihr:aus "-8000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3451
+    ihr:relatesTo ihr:PrUGr3451 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "320350"; ihr:aus "-1000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3452
+    ihr:relatesTo ihr:PrUGr3452 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1104650"; ihr:aus "-7000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer35
+    ihr:relatesTo ihr:PrBer35 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7425450"; ihr:aus "-2050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr351
+    ihr:relatesTo ihr:PrGr351 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7425450"; ihr:aus "-2050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3510
+    ihr:relatesTo ihr:PrUGr3510 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "7425450"; ihr:aus "-2050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer36
+    ihr:relatesTo ihr:PrBer36 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "358959300"; ihr:aus "-108923900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr361
+    ihr:relatesTo ihr:PrGr361 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23106900"; ihr:aus "-265250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3610
+    ihr:relatesTo ihr:PrUGr3610 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "23106900"; ihr:aus "-265250"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr362
+    ihr:relatesTo ihr:PrGr362 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8429600"; ihr:aus "-1375550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3620
+    ihr:relatesTo ihr:PrUGr3620 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8429600"; ihr:aus "-1375550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr363
+    ihr:relatesTo ihr:PrGr363 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "82893300"; ihr:aus "-5401750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3631
+    ihr:relatesTo ihr:PrUGr3631 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6631200"; ihr:aus "-841300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3632
+    ihr:relatesTo ihr:PrUGr3632 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5829700"; ihr:aus "-271600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3633
+    ihr:relatesTo ihr:PrUGr3633 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "53240650"; ihr:aus "-3735000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3634
+    ihr:relatesTo ihr:PrUGr3634 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "12688700"; ihr:aus "-545150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3635
+    ihr:relatesTo ihr:PrUGr3635 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4503050"; ihr:aus "-8700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr365
+    ihr:relatesTo ihr:PrGr365 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "237920050"; ihr:aus "-101072900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3650
+    ihr:relatesTo ihr:PrUGr3650 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "237920050"; ihr:aus "-101072900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr366
+    ihr:relatesTo ihr:PrGr366 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3126150"; ihr:aus "-406900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3660
+    ihr:relatesTo ihr:PrUGr3660 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3126150"; ihr:aus "-406900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr367
+    ihr:relatesTo ihr:PrGr367 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3483300"; ihr:aus "-401550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr3670
+    ihr:relatesTo ihr:PrUGr3670 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3483300"; ihr:aus "-401550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer41
+    ihr:relatesTo ihr:PrBer41 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14628600"; ihr:aus "-2701500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr411
+    ihr:relatesTo ihr:PrGr411 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-111000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr4110
+    ihr:relatesTo ihr:PrUGr4110 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-111000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr414
+    ihr:relatesTo ihr:PrGr414 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14628600"; ihr:aus "-2590500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr4140
+    ihr:relatesTo ihr:PrUGr4140 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "14628600"; ihr:aus "-2590500"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer42
+    ihr:relatesTo ihr:PrBer42 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18611100"; ihr:aus "-1441150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr421
+    ihr:relatesTo ihr:PrGr421 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3343100"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr4210
+    ihr:relatesTo ihr:PrUGr4210 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3343100"; ihr:aus "-100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr424
+    ihr:relatesTo ihr:PrGr424 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "15268000"; ihr:aus "-1441050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr4241
+    ihr:relatesTo ihr:PrUGr4241 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "10036250"; ihr:aus "-1441050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr4242
+    ihr:relatesTo ihr:PrUGr4242 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5231750"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer51
+    ihr:relatesTo ihr:PrBer51 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "36239600"; ihr:aus "-18592700"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr511
+    ihr:relatesTo ihr:PrGr511 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "29975250"; ihr:aus "-16177150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5111
+    ihr:relatesTo ihr:PrUGr5111 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "29975250"; ihr:aus "-16177150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr512
+    ihr:relatesTo ihr:PrGr512 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6264350"; ihr:aus "-2415550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5120
+    ihr:relatesTo ihr:PrUGr5120 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6264350"; ihr:aus "-2415550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer52
+    ihr:relatesTo ihr:PrBer52 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "11315700"; ihr:aus "-6608100"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr521
+    ihr:relatesTo ihr:PrGr521 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8633250"; ihr:aus "-6141150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5210
+    ihr:relatesTo ihr:PrUGr5210 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8633250"; ihr:aus "-6141150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr522
+    ihr:relatesTo ihr:PrGr522 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "708150"; ihr:aus "-14550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5220
+    ihr:relatesTo ihr:PrUGr5220 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "708150"; ihr:aus "-14550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr523
+    ihr:relatesTo ihr:PrGr523 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1974300"; ihr:aus "-452400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5230
+    ihr:relatesTo ihr:PrUGr5230 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1974300"; ihr:aus "-452400"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer53
+    ihr:relatesTo ihr:PrBer53 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1162700"; ihr:aus "-31558000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr531
+    ihr:relatesTo ihr:PrGr531 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-22524200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5310
+    ihr:relatesTo ihr:PrUGr5310 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-22524200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr532
+    ihr:relatesTo ihr:PrGr532 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1878900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5320
+    ihr:relatesTo ihr:PrUGr5320 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1878900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr533
+    ihr:relatesTo ihr:PrGr533 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "171800"; ihr:aus "-5450000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5330
+    ihr:relatesTo ihr:PrUGr5330 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "171800"; ihr:aus "-5450000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr534
+    ihr:relatesTo ihr:PrGr534 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1544300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5340
+    ihr:relatesTo ihr:PrUGr5340 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "-1544300"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr535
+    ihr:relatesTo ihr:PrGr535 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5350
+    ihr:relatesTo ihr:PrUGr5350 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr537
+    ihr:relatesTo ihr:PrGr537 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "669150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5370
+    ihr:relatesTo ihr:PrUGr5370 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "669150"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr538
+    ihr:relatesTo ihr:PrGr538 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "321750"; ihr:aus "-160600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5380
+    ihr:relatesTo ihr:PrUGr5380 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "321750"; ihr:aus "-160600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer54
+    ihr:relatesTo ihr:PrBer54 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "50547250"; ihr:aus "-11288200"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr541
+    ihr:relatesTo ihr:PrGr541 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "35881500"; ihr:aus "-3481900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5410
+    ihr:relatesTo ihr:PrUGr5410 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "35881500"; ihr:aus "-3481900"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr542
+    ihr:relatesTo ihr:PrGr542 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2060050"; ihr:aus "-413750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5420
+    ihr:relatesTo ihr:PrUGr5420 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2060050"; ihr:aus "-413750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr543
+    ihr:relatesTo ihr:PrGr543 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "981700"; ihr:aus "-234050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5430
+    ihr:relatesTo ihr:PrUGr5430 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "981700"; ihr:aus "-234050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr544
+    ihr:relatesTo ihr:PrGr544 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2590400"; ihr:aus "-949050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5440
+    ihr:relatesTo ihr:PrUGr5440 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2590400"; ihr:aus "-949050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr545
+    ihr:relatesTo ihr:PrGr545 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "5522800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5451
+    ihr:relatesTo ihr:PrUGr5451 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3800350"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5452
+    ihr:relatesTo ihr:PrUGr5452 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1722450"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5453
+    ihr:relatesTo ihr:PrUGr5453 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5454
+    ihr:relatesTo ihr:PrUGr5454 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5455
+    ihr:relatesTo ihr:PrUGr5455 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr546
+    ihr:relatesTo ihr:PrGr546 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "501550"; ihr:aus "-2632450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5460
+    ihr:relatesTo ihr:PrUGr5460 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "501550"; ihr:aus "-2632450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr547
+    ihr:relatesTo ihr:PrGr547 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5470
+    ihr:relatesTo ihr:PrUGr5470 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "800"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr549
+    ihr:relatesTo ihr:PrGr549 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3008450"; ihr:aus "-3577000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5490
+    ihr:relatesTo ihr:PrUGr5490 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3008450"; ihr:aus "-3577000"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer55
+    ihr:relatesTo ihr:PrBer55 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "29851490.1"; ihr:aus "-8367920"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr551
+    ihr:relatesTo ihr:PrGr551 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18020235"; ihr:aus "-1943220"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5510
+    ihr:relatesTo ihr:PrUGr5510 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "18020235"; ihr:aus "-1943220"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr552
+    ihr:relatesTo ihr:PrGr552 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3629150"; ihr:aus "-1126050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5520
+    ihr:relatesTo ihr:PrUGr5520 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "3629150"; ihr:aus "-1126050"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr553
+    ihr:relatesTo ihr:PrGr553 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4498670"; ihr:aus "-5013550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5530
+    ihr:relatesTo ihr:PrUGr5530 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "4498670"; ihr:aus "-5013550"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr554
+    ihr:relatesTo ihr:PrGr554 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1921172.1"; ihr:aus "-28650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5540
+    ihr:relatesTo ihr:PrUGr5540 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1921172.1"; ihr:aus "-28650"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr555
+    ihr:relatesTo ihr:PrGr555 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1782263"; ihr:aus "-256450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5550
+    ihr:relatesTo ihr:PrUGr5550 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1782263"; ihr:aus "-256450"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer56
+    ihr:relatesTo ihr:PrBer56 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6136700"; ihr:aus "-501150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr561
+    ihr:relatesTo ihr:PrGr561 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6136700"; ihr:aus "-501150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5610
+    ihr:relatesTo ihr:PrUGr5610 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "6136700"; ihr:aus "-501150"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer57
+    ihr:relatesTo ihr:PrBer57 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19985750"; ihr:aus "-53868950"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr571
+    ihr:relatesTo ihr:PrGr571 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8494850"; ihr:aus "-258350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5710
+    ihr:relatesTo ihr:PrUGr5710 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "8494850"; ihr:aus "-258350"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr573
+    ihr:relatesTo ihr:PrGr573 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9130650"; ihr:aus "-53610600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5730
+    ihr:relatesTo ihr:PrUGr5730 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "9130650"; ihr:aus "-53610600"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr575
+    ihr:relatesTo ihr:PrGr575 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2360250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr5750
+    ihr:relatesTo ihr:PrUGr5750 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "2360250"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer61
+    ihr:relatesTo ihr:PrBer61 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "106794650"; ihr:aus "-988968940"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr611
+    ihr:relatesTo ihr:PrGr611 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "86882000"; ihr:aus "-983461190"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr6110
+    ihr:relatesTo ihr:PrUGr6110 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "86882000"; ihr:aus "-983461190"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr612
+    ihr:relatesTo ihr:PrGr612 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19912650"; ihr:aus "-5507750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr6120
+    ihr:relatesTo ihr:PrUGr6120 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "19912650"; ihr:aus "-5507750"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer74
+    ihr:relatesTo ihr:PrBer74 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr742
+    ihr:relatesTo ihr:PrGr742 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr7420
+    ihr:relatesTo ihr:PrUGr7420 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrBer75
+    ihr:relatesTo ihr:PrBer75 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrGr755
+    ihr:relatesTo ihr:PrGr755 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-PrUGr7550
+    ihr:relatesTo ihr:PrUGr7550 ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "0"; ihr:aus "0"; 
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
+ihrdata:EH_15G_Plan18-Top
+    ihr:relatesTo ihr:Top ;
+    ihr:jahr "2018" ;
+    ihr:kategorie ihr:Ergebnishaushalt ;
+    ihr:ein "1390890960.10"; ihr:aus "-1476068180.00";
+    ihr:waehrung dbpedia:Euro ;
+    qb:dataSet ihrds:EH_15G_Plan18 ;
+    a qb:Observation .
+
