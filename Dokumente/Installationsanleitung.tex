@@ -9,7 +9,7 @@
 
 \title{Installationsanleitung „Interaktiver Haushaltsrechner“}
  
-\date{Version vom 9. September 2015}
+\date{Version vom 7. Oktober 2015}
 
 \begin{document}
 \maketitle
@@ -19,106 +19,107 @@
 \newpage
 
 \section{Einleitung}
-In diesem Dokument wird erklärt, welche serverseitigen Voraussetzungen für das
-Aufsetzen des Prototyps erfüllt sein müssen, wie man eine Drupal-Instanz auf
-diesem Server aufbaut, unsere Drupal-Anpassungen einspielt, welche weiteren
-Module mit welchen Einstellungen wie verwendet werden sowie wie unser Code
-funktioniert und genutzt wird.
-
-Die Ausführungen gehen davon aus, dass der Leser mit den Konzepten von RDF und
-RDF Data
-Stores\footnote{\url{https://de.wikipedia.org/wiki/Resource_Description_Framework}}
-sowie der SPAQRL
-Anfragesprache\footnote{\url{https://de.wikipedia.org/wiki/SPARQL}}
-hinreichend vertraut ist.
+In diesem Dokument wird erklärt, 
+\begin{itemize}\itemsep0pt
+\item welche serverseitigen Voraussetzungen für das Aufsetzen des Prototyps
+  erforderlich sind, 
+\item wie man eine Drupal-Instanz auf diesem Server aufbaut, 
+\item wie unsere Drupal-Anpassungen einspielt werden, 
+\item welche weiteren Module mit welchen Einstellungen wie verwendet werden und
+\item welche weiteren Konfigurationsschritte erforderlich sind.
+\end{itemize}
 
 \section{Voraussetzungen}
 In unserer Entwicklungsumgebung kamen
 Drupal~7.36\footnote{\url{https://www.drupal.org/}} als CMS, MySQL~5 als
-Datenbank und der Virtuoso Universal
-Server\footnote{\url{http://www.openlinksw.com/}}~7 als RDF Store in einer
+Datenbank für Drupal und der Virtuoso Universal
+Server\footnote{\url{http://www.openlinksw.com/}}~7.0.0 als RDF Store in einer
 Linux OpenSuse Plattform zum Einsatz.  Drupal und Virtuoso sind für die
 gängigen Betriebssysteme frei herunterladbar bzw.\ in Linux-Distributionen als
-Pakete verfügbar.  
+Pakete verfügbar.
 
 Der Prototyp sollte auch mit anderen gängigen Versionen von Drupal~7 und
-Virtuoso laufen.  Weiterhin wird ein http-Server mit PHP-5.x Unterstützung
-benötigt.
+Virtuoso~6 oder 7 laufen.  Weiterhin wird ein für diese Anwendungen
+konfigurierter http-Server mit PHP-5.x Unterstützung benötigt.
 
 \subsection{Drupal}
 
-Drupal~7 ist zwar ein webserverunabhänigiges Framework. Allerdings wird ein
-Apache 1.3 oder 2.x empfohlen, da Drupal mit diesem Server entwickelt wurde
-und somit mehr Erfahrungsberichte von Seiten der Community existieren, wodurch
-man bei Problemen auf verschiedene Foren zurückgreifen kann. Für die
-Installation sollte mindestens 60 MB Speicher auf dem Server frei sein und das
-Modul \texttt{mod\_rewrite} muss innerhalb von Apache aktiviert sein. Da
-Drupal in PHP geschrieben wurde, muss auf dem Server PHP (für Drupal~7.36
-mindestens PHP~5.2) vorhanden sein. Als Datenbankanbindungen kommen MySQL~5
-sowie PostgreSQL~7.4 in Frage. Wir arbeiteten mit MySQL.
+Drupal~7 ist zwar ein webserverunabhänigiges Framework, allerdings wird Apache
+1.3 oder 2.x als Webserver empfohlen, da Drupal für diese Server optimiert
+wurde und auch mehr Erfahrungsberichte von Seiten der Community existieren,
+wodurch man bei Problemen auf verschiedene Foren zurückgreifen kann. Für die
+Installation sollte mindestens 60 MB Speicher auf dem Server frei sein. Das
+Modul \texttt{mod\_rewrite} muss innerhalb von Apache aktiviert sein. Da Drupal
+in PHP geschrieben ist, muss auf dem Server PHP (für Drupal~7.36 mindestens
+PHP~5.2) mit den üblichen Erweiterungen für LAMP-Anwendungen\footnote{LAMP ist
+  ein Kurzwort für eine standardisierte Serverumgebungen mit Linux, Apache,
+  MySQL, PHP.  Meist ist klar, wie dafür entwickelte Applikationen an andere
+  gängige Serverumgebungen angepasst werden können. Siehe dazu auch
+  \url{https://de.wikipedia.org/wiki/LAMP_(Softwarepaket)}.}  installiert
+sein. Als Datenbankanbindungen kommen MySQL~5 sowie PostgreSQL~7.4 in
+Frage. Wir arbeiteten mit MySQL.
 
 \subsection{Virtuoso}
 
 Virtuoso ist eine RDF Data Store Engine mit einem eigenen SPARQL-Endpunkt.
-Bei der Installation eines neuen Virtuoso Images wird ein erster Benutzer
-(Standard: 'dba', mit Passwort 'dba') angelegt, dessen Passwort unbedingt
-angepasst werden sollte.
+Bei der Installation eines Virtuoso Images für einen neuen Data Store wird ein
+erster Benutzer (Standard: 'dba', mit Passwort 'dba') angelegt, dessen
+Passwort unbedingt anzupassen ist.  Passwörter werden von Virtuoso auf der
+Ebene von Data Stores vergeben, es können also verschiedene Data Stores unter
+demselben Benutzer 'dba' angelegt und eigenständig verwaltet werden, was
+üblicherweise auch so praktiziert wird. Weitere Hinweise zur Installation und
+Konfiguration von Virtuoso sowie (optional) eines OntoWiki Web-Frontends auf
+einem lokalen Host sind unter
+\url{http://wiki.symbolicdata.org/LocalSparqlEndpoint} zu finden.
 
 Zugriff und Verwaltung der Daten ist über die Konsole und einen
 \emph{Datenport} (Standard 1111) oder über einen \emph{Webport} auf dem
-Web-Server (Standard 8890) möglich, der über den \emph{Conductor}
-administriert werden kann.  Letzterer ist unter
+Web-Server (Standard 8890) möglich, der über den \emph{Conductor} administriert
+werden kann.  Letzterer ist unter
 \texttt{\textit{[Serverroot]}:\textit{[webport]}} erreichbar und nach
-Authentifizierung mit den Datenbank-Zugangsdaten voll nutzbar.  Der
+Authentifizierung mit den Zugangsdaten des Data Stores voll nutzbar.  Der
 SPARQL-Endpunkt ist über die Webschnittstelle
-\texttt{\textit{[Serverroot]}:\textit{[webport]}/sparql} zu erreichen. 
-
-Im Projekt wurden beide Zugangsformen zur Datenverwaltung verwendet. 
+\texttt{\textit{[Serverroot]}:\textit{[webport]}/sparql} zu erreichen.
 
 \section{Daten}
 
 Die Datentripel liegen als RDF Data Cube Serien im Verzeichnis \texttt{Daten}
 der Distribution und müssen in den Virtuoso Triplestore hochgeladen werden.
-Details zur Struktur dieser Daten sind im Dokument \emph{Designprinzipien des
+Details zur Struktur dieser Daten sowie die genaue Beschreibung des mit diesem
+Release ausgelieferten Datenbündels sind im Dokument \emph{Designprinzipien des
   IHR-15 RDF Data Stores} zu finden.
 
-\Anmerkung{Hierzu ist noch ein Upload-Skript zu erstellen, mit dem die Serie
-  gleich als Ganzes über die Konsole hochgeladen werden kann.}
+Die Daten in unserem Release zeigen nur beispielhaft, wie die Applikation
+funktioniert, da es bis zum Projektende nicht gelungen ist, vom Dezernat für
+Finanzen der Stadt Leipzig widerspruchsfreie und konsolidierte Daten zum
+Haushalt der Stadt Leipzig zu bekommen. Der Datenimport in die Applikation ist
+deshalb auch nur provisorisch über ein einfaches Perl-Skript
+\texttt{Daten/Werkbank/loaddata.pl} realisiert, mit dem eine Eingabedatei
+erzeugt und an die Virtuoso-Konsole \texttt{iswql-vt} (Ubuntu Linux, in anderen
+Serverumgebungen heißt diese Virtuoso-Konsole ggf.\ anders) weitergereicht
+werden kann.  Die Parameter in diesem Skript sind an die konkrete
+Verzeichnisstruktur der Zielplattform entsprechend anzupassen.
 
-Nachdem der Virtuoso Universal Server aufgesetzt ist, können die Daten über
-den Conductor eingespielt werden. Über den Menüpunkt \textit{Linked Data $>$
-  Quad Store Upload} kommt man zur Uploadansicht.  Für jeden einzelnen RDF
-Graphen (dieser ist identisch mit einer *.ttl Datei) muss dazu die
-entsprechende Datei ausgewählt \emph{und} der \textit{Graph Name} auf den in
-der Datei definierten Wert gesetzt werden. 
-
-Beide Größen sind durch ein einfaches Namensschema miteinander verbunden.  Die
-Turtle Datei \texttt{Daten/EH\_15G\_Plan15.ttl} etwa enthält den Graphen 
-\begin{quote}\tt
-  http://haushaltsrechner.leipzig.de/Data/EH\_15G\_Plan15/
-\end{quote}
-
-Die Namen der Graphen der verwendeten RDF Data Cube Serie sind in der Datei
-\texttt{Config.ttl} aufgelistet, die ebenfalls als RDF Graph 
-\begin{quote}\tt
-  http://haushaltsrechner.leipzig.de/Data/Config/
-\end{quote}
-in den RDF Store zu laden ist.  Diese Information wird vom Software-Controller
-des IHR-Prototyps ausgelesen.
+Alternativ können die Daten über den Virtuoso-Conductor eingespielt werden.
+Über den Menüpunkt \textit{Linked Data $>$ Quad Store Upload} kommt man zur
+Uploadansicht.  Für jeden einzelnen RDF Graphen (dieser ist identisch mit einer
+*.ttl Datei) muss dazu die entsprechende Datei ausgewählt \emph{und} der
+\textit{Graph Name} auf den in der Datei definierten Wert gesetzt werden.
+Details erschließen sich aus der Ausgabe von \texttt{loaddata.pl}.
 
 \section{Drupal-Installation -- vereinfacht}
-Um die Installation zu vereinfachen, haben wir ein Paket zusammengestellt, in
-dem bereits alle von uns verwendeten Module, Themes und Sprachanpassungen
-enthalten sind. Außerdem ist in dem Paket ein Datenbankbackup enthalten, das
-über das Drupal-Modul \emph{Backup and Migrate} eingespielt werden kann.
-Dadurch wird die Drupal-Instanz innerhalb weniger Schritte mit unseren
-Anpassungen und Inhalten installiert. Das konkrete Vorgehen wird im Folgenden
-beschrieben.
+Um die Installation zu vereinfachen, ist im Release die zip-Datei
+\texttt{IHR.zip} enthalten, in der bereits alle von uns verwendeten Module,
+Themes und Sprachanpassungen zusammengepackt sind. Außerdem ist in dort ein
+Datenbankbackup enthalten, das über das Drupal-Modul \emph{Backup and Migrate}
+eingespielt werden kann.  Dadurch wird die Drupal-Instanz innerhalb weniger
+Schritte mit unseren Anpassungen und Inhalten installiert. Das konkrete
+Vorgehen wird im Folgenden beschrieben.
 
 \subsection{Step-By-Step-Anleitung}
 \begin{enumerate}
-\item Entpacken Sie das Paket, benennen Sie den entpackten Ordner ggf.\ nach
-  ihren Vorstellungen um und laden Sie ihn an den gewünschten Ort
+\item Entpacken Sie die zip-Datei, benennen Sie den entpackten Ordner
+  ggf.\ nach ihren Vorstellungen um und laden Sie ihn an den gewünschten Ort
   \textit{[Drupalfolder]} auf dem Server hoch.
 \item Setzen Sie die Rechte des Ordners
   \texttt{\textit{[Drupalfolder]}/sites/default} auf 777 und die Rechte der
@@ -148,56 +149,72 @@ beschrieben.
 \item Rufen Sie nun noch die Seite \texttt{\textit{[Drupalfolder]}/clear.php}
   auf.  Löschen Sie diese Datei im Anschluss.
 \end{enumerate}
+Damit wird ein kompletter Dump unserer Entwicklungsinstanz auf dem Stand des
+finalen Release eingespielt. Zu beachten ist, dass dabei auch alle Accounts
+übernommen werden. Diese müssen in einem letzten Schritt den lokalen
+Gegebenheiten angepasst werden. \textbf{Insbesondere sollten alle zusätzlichen
+Accounts mit Administratorrechten angepasst oder gelöscht werden.}
 
 \section{Drupal manuell installieren und konfigurieren}
 \subsection{Drupal aufsetzen}
 
-Drupal 7.36 diente in diesem Projekt als Basis-Framework. Zum Herunterladen
-und Installieren von Drupal kann die Dokumentation unter
-\url{https://www.drupal.org/} zu Hilfe gezogen werden. Da die Dokumentation
-dort zur grundlegenden Installation ausreichend ist, soll hier nicht weiter
-darauf eingegangen werden.
+In unserem Projekt wurde Drupal 7.36 als Basis verwendet, aber andere Versionen
+von Drupal~7 können ebenfalls eingesetzt werden.  Zum Herunterladen und
+Installieren von Drupal verweisen wir auf die ausführliche Dokumentation unter
+\url{https://www.drupal.org/} und gehen im Weiteren von einer solchen
+Basisinstallation von Drupal aus.
 
 \subsection{Module}
 Um den Funktionsumfang von Drupal auf unsere Bedürfnisse anzupassen, müssen
-einige zusätzliche Module installiert werden. Diese können über die Webseite
-\url{https://www.drupal.org/} heruntergeladen und eingefügt werden. Eine
-Anleitung hierzu findet sich unter
-\url{https://www.drupal.org/documentation/install/modules-themes}.  Die Module
-sind alle unter der GNU GPL erhältlich.  
+einige zusätzliche Module installiert werden. Diese können ebenfalls über die
+Webseite 
+\begin{center}
+  \url{https://www.drupal.org/}
+\end{center}
+heruntergeladen und eingefügt werden.  Eine Anleitung hierzu findet sich unter
+\begin{center}
+  \url{https://www.drupal.org/documentation/install/modules-themes}.
+\end{center}
+Die Module stehen lizenzrechtlich alle unter der GNU GPL.
 
 Folgende Module sind zu installieren: 
 \begin{enumerate}
+
 \item \emph{jQuery Update}
 
 Dieses Modul stellt die aktuelle Version von jQuery zur Verfügung, die für
 \textit{bootstrap} benötigt wird.
+
 \item \emph{advanced forum}
 
 Das Advanced Forum ergänzt das von Haus aus in Drupal integrierte Forum um
-einige Funktionen, die bei anderen Forensoftwares standardmäßig enthalten
-sind. Nach Aktivierung des Moduls können über \emph{Struktur $>$ Foren} nach
-der gewünschten Gliederung Foren und Ordner, in die Foren eingeordnet werden
+einige Funktionen, die bei anderen Forensoftwares standardmäßig enthalten sind.
+
+Nach Aktivierung des Moduls können über \emph{Struktur $>$ Foren} nach der
+gewünschten Gliederung Foren und Ordner, in die Foren eingeordnet werden
 können, erstellt werden. Unter \emph{Konfiguration $>$ Inhaltserstellung $>$
   Advanced Forum} können grundlegende Einstellungen angepasst werden, wie das
 Design des Forums. Im Projekt wurde das \emph{Bootstrap}-Theme verwendet,
 welches wiederum ein eigenes Modul darstellt.
+
 \item \emph{advanced forum bootstrap}
 
-Das für unser Projekt verwendete Design für das Forum -- setzt \emph{Advanced
+Das für unser Projekt verwendete Design für das Forum setzt \emph{Advanced
   Forum} voraus.
 
 \item \emph{flag / flag abuse}
 
 Diese Pakete dienen zum Erstellen von Flags für das Melden von Kommentaren und
-Beiträgen. Dieses Paket ist notwendig zur Erstellung von Flags für das Melden
-von Beiträgen im Forum. Hierzu wurden im Projekt Flags \textit{Comment Abuse}
-aus den Standardflags und die die eigens erstellte Flag \textit{Topic Abuse}
-zum Melden von Kommentaren bzw.\ Themen im Forum verwendet. Zum Erstellen einer
-Flag dient der Menü-Eintrag \textit{Struktur $>$ Flags $>$ Add Flags}.
+Beiträgen und kommt für das Melden von Beiträgen im Forum zum Einsatz.
+
+Dazu werden Flags \textit{Comment Abuse} aus den Standardflags und die eigens
+erstellte Flag \textit{Topic Abuse} zum Melden von Kommentaren bzw.\ Themen im
+Forum verwendet. Zum Erstellen einer Flag dient der Menü-Eintrag
+\textit{Struktur $>$ Flags $>$ Add Flags}.
+
 \item \emph{views}
 
-Mit Views lassen sich Ansichten gefilterter Inhalte erstellen. Zum Beipiel zum
+Mit Views lassen sich Ansichten gefilterter Inhalte erstellen, zum Beipiel zum
 Anzeigen aller gemeldeten Kommentare oder Themen. Das Erstellen einer View sei
 hier am Beispiel des Views für gemeldete Kommentare erklärt.
 
@@ -220,70 +237,96 @@ einführen, die Kennzeichnung Abuse und den Punkt \textit{beliebiger Benutzer}
 anwählen. Anschließend kann unter Filterkriterien ausgewählt werden, dass nur
 solche Kommentare angezeigt werden, die geflagt wurden, indem man den Eintrag
 \textit{Flag Kennzeichnung} hinzufügt.
+\pagebreak[3]
+
 \item \emph{printfriendly}
+
+Funktionalität hinter dem Button „Als PDF ausdrucken“, mit der Drupal Webseiten
+ohne speziellen Code, css oder \texttt{print.css} auch für andere
+Druckansichten aufbereitet werden.
+
 \item \emph{votingapi}
 
-Hier können wichtige Einstellungen für das \emph{Rate Widget} bestimmt werden.
-Es kann bestimmt werden, wann anonyme Nutzer erneut von einem Rechner wählen
-könnne (wenn sie es denn dürfen -- dies wird für jedes Rate Widget einzeln
-bestimmt).  Gleiches kann für registrierte Nutzer bestimmt werden. Bei hoher
-Serverlast können auch die Berechnungszeiten der Bewertungen auf bestimmte
-Cron-Zeiten festgelegt werden.
+Standardisierte Drupal-API für Bewertungen, die ein einheitliches Daten- und
+Prozessmodell für Bewertungsprozesse von Drupal-Inhalten anbietet.
+
+Hier können wichtige Einstellungen für das \emph{Rate Widget} vorgenommen
+werden.  Es kann bestimmt werden, wann anonyme Nutzer erneut von einem Rechner
+wählen könnne (wenn sie es denn dürfen -- dies wird für jedes Rate Widget
+einzeln bestimmt).  Gleiches kann für registrierte Nutzer bestimmt werden. Bei
+hoher Serverlast können auch die Berechnungszeiten der Bewertungen auf
+bestimmte Cron-Zeiten festgelegt werden.
+
 \item \emph{rate}
 
-Mit \emph{rate} können verschiedene Beiträge bewertet werden. Um ein neues
-\emph{Rate Widget} zu erstellen, geht man auf \textit{Struktur $>$ Rate
-  Widgets}.  Dort kann man neue \emph{Rate Widgets} bearbeiten und erstellen.
-Es kann Name, Tag, Inhaltstyp etc.\ festgelegt werden.
+Mit \emph{rate} können verschiedene Beiträge bewertet werden. 
+
+Um ein neues \emph{Rate Widget} zu erstellen, geht man auf \textit{Struktur $>$
+  Rate Widgets}.  Dort kann man neue \emph{Rate Widgets} bearbeiten und
+erstellen.  Es kann Name, Tag, Inhaltstyp etc.\ festgelegt werden.
 
 \item \emph{statistics counter}
 
-Zusätzlich zur Installation sollte unter \textit{Konfiguration $>$ System $>$
+Kleine Erweiterung der grundlegenden Statistik-Funktionen im Drupal Core. 
+
+Zusätzlich zur Installation muss unter \textit{Konfiguration $>$ System $>$
   Statistiken} die Optionen \textit{Zugriffsprotokoll aktivieren} und
 \textit{Inhaltsabrufe zählen} aktiviert werden. Danach können
-Besucherstatistiken unter dem Menüpunkt \textit{Berichte} eingesehen werden.
+Besucherstatistiken unter dem Admin-Menüpunkt \textit{Berichte} eingesehen
+werden.
 
 \item \emph{relation, ctools}
 
 Helper-Module, die für Funktionen der anderen, essentiellen Module benötigt
 werden.
+
 \end{enumerate}
 
-\subsection{IHR-Theme hinzufügen}
+\subsection{Themes hinzufügen}
 Das Design der Website basiert auf dem freien CSS Framework \emph{Bootstrap},
 das Gestaltungsvorlagen für Typografie, Formulare, Buttons, Tabellen etc.\ und
 optionale JavaScript-Erweite"|rungen enthält. Für die Projektseite wurde das
 Basis-Theme \url{https://www.drupal.org/project/bootstrap} verwendet, das die
 grundlegenden Elemente des Frameworks in die Funktionalität von Drupal
-einbindet.  Zur besseren Annäherung an die offizielle Website der Stadt wurde
-ein \emph{Subtheme} erstellt, welches das oben genannte Theme ergänzt.
+einbindet, und durch das Subtheme \texttt{IHR} erweitert. Dieses enthält
+\begin{itemize}\itemsep0pt
+\item die grundlegenden Erweiterungen des Prototypen wie etwa die
+  Diagrammdarstellungen und die Anbindung des RDF Data Stores sowie 
+\item die Modifikationen von Bootstrap zur Anpassung an das Look and Feel der
+  offiziellen Website der Stadt.
+\end{itemize}
+Als weiteres Theme wird \texttt{Forum-Theme} verwendet, das Erweiterungen und
+Modifikationen des Moduls „Advanced Forum“ enthält. 
 
-Zur Aktivierung des Themes reicht es, das Bootstrap-Theme gemeinsam mit dem
-IHR-Theme in den \texttt{theme}-Ordner der installierten Drupal-Instanz zu
-laden (Standard: \texttt{/themes/}) und anschließend im
-Design-Administrationsmenü zu aktivieren.
+Zur Aktivierung eines Themes reicht es, das Basis-Theme gemeinsam mit dem
+Subtheme in den \texttt{theme}-Ordner der installierten Drupal-Instanz zu laden
+(Standard: \texttt{/themes/}) und anschließend im Design-Administrationsmenü zu
+aktivieren.
 
 \subsubsection{Menüs erstellen}
 Die Menüs der Website werden über den Punkt \textit{Struktur $>$ Menüs}
 administriert. Dabei stellt das Menü mit dem Namen "`Main menu"' das Hauptmenü
-im Kopfbereich der Seite dar -- zusätzlich dazu kann ein Menü in der Fußleiste
-erstellt werden, in dem Links wie das Impressum, Datenschutzerklärung und
-Kontaktformular abgelegt werden können.
+im Kopfbereich der Seite dar.
 
-Dazu muss unter oben genanntem Menü auf \emph{Menü hinzufügen} geklickt werden
-und der Titel so gewählt werden, dass im rechten Bereich der maschinenlesbare
-Name \textit{menu-footer-menu} entsteht. Danach können Links hinzugefügt
-werden, die dann im rechten unteren Fußbereich der Website erscheinen.
+Zusätzlich mussdas Menü in der Fußleiste erstellt werden, in dem Links wie das
+Impressum, Datenschutzerklärung und Kontaktformular abgelegt sind bzw.\ werden
+können.  Dazu muss unter oben genanntem Menü auf \emph{Menü hinzufügen}
+geklickt und der Titel so gewählt werden, dass im rechten Bereich der
+maschinenlesbare Name \textit{menu-footer-menu} entsteht. Danach können Links
+hinzugefügt werden, die dann im rechten unteren Fußbereich der Website
+erscheinen.
 
 \subsubsection{Pages erstellen}
-Im Releasepaket sind im Ordner \emph{IHR-Pages} drei Dateien enthalten, die
+Im Releasepaket sind im Ordner \emph{IHR-Pages} Musterdateien enthalten, die
 nach Installation von Drupal über \textit{Inhalt $>$ Inhalt hinzufügen $>$
-  Basic Page} eingepflegt werden können. In \textit{EinnahmenDia.html} und
-\textit{AusgabenDia.html} ist der Code für die beiden Diagramme enthalten.
-Wichtig ist hierbei, als Textformat \emph{Full HTML} auszuwählen.
+  Basic Page} eingepflegt werden müssen. Sie stellen verschiedene
+HTML-Schnipsel zur Verfügung, mit denen die einzelnen Tabs des
+Informationsteils aufgebaut werden.
 
-In der Datei \texttt{indexpage.php} ist der Inhalt der bei Projektende
-erstellten Startseite enthalten. Hier ist bei Hinzufügen \emph{PHP Code}
-auszuwählen.
+In der Datei \texttt{indexpage.html} ist der Inhalt der bei Projektende
+erstellten Startseite enthalten. 
+
+Für alle Seiten ist als Textformat \emph{Full HTML} auszuwählen.
+
 
 \end{document}

@@ -48,18 +48,21 @@
 
 <?php if($block->region === 'footer') { ?>
 <div class="col-sm-2">
- <?php print $content ?>
+	<?php print $content ?>
 </div>
+
 <?php } else { ?>
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
+	<?php print render($title_prefix); ?>
+	
+	<?php if ($title): ?>
     <p class="h2"><?php print $title_attributes; ?>><?php print $title; ?></p>
-  <?php endif;?>
-  <?php print render($title_suffix); ?>
+	<?php endif;?>
+  
+	<?php print render($title_suffix); ?>
 
-  <?php print $content ?>
+	<?php print $content ?>
 
 </section> <!-- /.block -->
 <?php

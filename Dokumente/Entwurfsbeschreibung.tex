@@ -5,7 +5,7 @@
 
 \title{Entwurfsbeschreibung „Interaktiver Haushaltsplanrechner“}
  
-\date{Version vom 10. September 2015}
+\date{Version vom 25. September 2015}
 
 \begin{document}
 \maketitle
@@ -14,51 +14,87 @@
 \seitezwei
 \newpage
 
-\section{Einführung (noch zu kürzen)}
-Im Rahmen der Beteiligungsprozesse wurde durch die Leipziger Agenda 21 Gruppe
-in Zusammenarbeit mit der Stadtverwaltung über mehrere Jahre (seit 2007) ein
-Haushaltsrechner angeboten, über den Bürgerinnen und Bürger im Zuge der
-Verabschiedung des jeweiligen Haushalts durch den Stadtrat interaktiv
-Vorschläge zur Änderung der Haushaltsplanung einbringen konnten. Diese
-Möglichkeit wurde zuletzt im Jahr 2012 für den Haushalt 2013 in überarbeiteter
-Form angeboten. Für den Haushalt 2014 wurde diese Beteiligungsoption
-aufgegeben. Ziel des Projekts „Interaktiver Haushaltsplanrechner für die Stadt
-Leipzig“ (IHR) ist die Neugestaltung des Haushaltsplanrechners der Stadt
-Leipzig, aufbauend auf den Anforderungsanalysen der Gruppe „haushalt-14“.
+\section{Einführung}
 
-Der neue Haushaltsrechner ermöglicht eine übersichtliche Darstellung des
-Ergebnishaushalts eines Jahres bis hin zur Ebene der 283 Schlüsselprodukte
-(Ebene~4 der Haushaltssystematik der Stadt Leipzig) und stellt ein
-Diskussionsforum mit Vorschlagsfunktion für die partizipative Haushaltsdebatte
-zur Verfügung. 
+Der im Rahmen des Projekts erstellte Prototyp eines neuen Interaktiven
+Haushaltsplanrechners für die Stadt Leipzig verbindet drei Elemente modernen
+Designs:
+\begin{itemize}
+\item Die Datenschicht setzt auf moderne semantische Konzepte auf RDF-Basis,
+  was eine leichte Anbindung der Anwendung an die Linked Open Data Welt im
+  Rahmen einer zukünftigen Open Data Strategie der Stadt Leipzig ermöglicht. 
+\item Die Präsentationsschicht setzt mit Drupal und Visualisierungen auf der
+  Basis des verbreiteten Javascript-Frameworks D3 auf nachhaltige
+  Standardlösungen aus dem Open Source Bereich, die perspektivisch von einem
+  kleineren, einschlägig qualifizierten IT-Team betreut und weiterentwickelt
+  werden können.
+\item Partizipative Elemente sind als „kleine Lösung“ über einen
+  Drupal-Forums-Baustein in die Anwendung integriert, lassen sich aber in eine
+  (noch zu entwickelnde) dezentrale, modular vernetzte „große Lösung“ eines
+  anwendungsübergreifenden Partizipationskonzepts integrieren.
+\end{itemize}
+Dieses Konzept und dessen Realisierung wurde in drei Etappen entwickelt und
+umgesetzt.
 
-Die Plattform basiert auf dem weit verbreiteten CMS Drupal und setzt
-konsequent auf semantische Technologien. Die Basisdaten des Prototyps wurden
-aus Daten extrahiert, welche die Kämmerei der Stadt Leipzig für diese Zwecke
-zur Verfügung gestellt hatte, und in eine RDF Data Cube Serie transformiert,
-die innerhalb der Plattform über einen RDF Data Store ausgeliefert wird.  
+In einer \emph{ersten Etappe} (Oktober 2014 bis Januar 2015) analysierte ein
+interdisziplinär zusammengesetztes studentisches Team Gestaltungsvarianten und
+Erfahrungen bereits existierender Haushaltsrechner und verdichtete die
+Recherchen zu einem \emph{Evaluationsbericht}, aus dem eine
+\emph{Anforderungsanalyse} und ein \emph{Partizipationskonzept} abgeleitet
+wurden.  In letzerem ist bereits festgehalten, dass Beteiligungskonzepte
+übergreifenden Charakter haben müssen und eine allein auf den
+Haushaltsplanrechner fokussierte Partizipationslösung zu einer unzulässigen
+Engführung der Fragestellungen führt. Diese Position bestätigte sich bei den
+Anforderungsaufnahmen in späteren Workshops und Bürgerbeteiligungsphasen im
+Rahmen des Projekts.  Zugleich wurde in dieser ersten Phase ein genaueres
+Datenmodell für Haushaltsdaten auf der Basis des RDF Data Cube entwickelt und
+die vorliegenden Haushaltsdaten für 2014 in dieses Format transformiert.
 
-Als RDF Data Store kommt eine Instanz von Virtuoso zum Einsatz, deren SPARQL
-Endpunkt öffentlich zugänglich ist und damit das Potenzial bietet, die
-Plattform in einen größeren Open Data Verbund zu integrieren. 
+In einer \emph{zweiten Etappe} (Januar bis Mai 2015) wurde im Rahmen einer
+Projektgruppenarbeit im Softwaretechnik-Praktikum auf der Basis der
+vorliegenden Anforderungsanalyse der neue Interaktiven Haushaltsplanrechner als
+Online-Tool zur Bürgerbeteiligung prototypisch entwickelt.  Mit \emph{Drupal}
+kommt dabei ein weit verbreitetes Open Source CMS zum Einsatz, das einerseits
+um entsprechende semantische Konzepte für Management und Darstellung von
+RDF-basierten Daten und andererseits um angemessene Visualisierungskonzepte zu
+erweitern war. Die technischen Voraussetzungen für die Umsetzung des
+Partizipationskonzept wurden durch Einbindung und Anpassung eines Drupal-Forums
+geschaffen.  Als RDF Data Store kommt eine Instanz von Virtuoso zum Einsatz,
+deren SPARQL Endpunkt öffentlich zugänglich ist und damit das Potenzial bietet,
+die Plattform in einen größeren Open Data Verbund zu integrieren.
+
+In einer \emph{abschließenden dritten Etappe} (Juni bis September 2015)
+arbeitete ein Teil des zweiten Projektteams an der weiteren Konsolidierung des
+Prototyps, wobei weitere Anforderungen aus Bürgerbefragungen und
+Good-Practice-Analysen aufgearbeitet, priorisiert und im Rahmen eines Redesigns
+vor allem des Informationsteils des Interaktiven Haushaltsplanrechners
+umgesetzt und integriert wurden.  Außerdem wurde die Datenbasis auf den
+aktuellen Stadt-Haushalt 2015/16 aktualisiert. 
+
+In der finalen Version des Haushaltsplanrechners werden die Haushaltsdaten bis
+zur vierten Ebene der Schlüsselprodukte aggregiert dargestellt, zu denen auch
+Produktsteckbriefe vorliegen. Entsprechende Informationen wurden im Rahmen der
+Datenaufbereitung aus den vorliegenden detaillierteren Primärdaten für die
+Planwerte der Jahre 2014 bis 2019 aggregiert.
 
 \section{Grundsätzliche Struktur- und Entwurfsprinzipien}
 
 \subsection{Barrierefreiheit}
-Die gesamte Website soll gemäß BITV 2.0 \cite{bitv} barrierefrei gestaltet
-sein. Bei der Wahl der Farben muss also auf die üblichen Farbschwächen und
-Farbenblindheit geachtet werden. Beim Aufbau der Website sollte darauf
-geachtet werden, dass Programme und Techniken, die Websiten für blinde
-Personen aufbereiten, möglichst wenig behindert werden. Dies ermöglicht die
-Partizipation für alle Bürger/innen und wirkt nicht ausgrenzend, was für
-öffentliche Institutionen und für einen demokratischen Prozess notwendig ist.
+
+Beim Design der Website wurde darauf geachtet, diese gemäß BITV 2.0 \cite{bitv}
+barrierearm zu gestalten.  Die Entwickler von Drupal und des eingesetzten
+CSS-Frameworks Bootstrap legen auf diese Fragen bereits großen Wert, so dass
+allein die Wahl der Softwarebasis des Projekts hohe Standards in Bezug auf
+Barrierefreiheit sichert. Bei den Anpassungen, die für den Prototyp
+erforderlich waren, wurden diese Standards ebenfalls berücksichtigt. 
 
 \subsection{MVC-Architekturmodell}
-Da die Kernfunktion des Projekts auf einer festen und einheitlichen Basis von
-Datensätzen basiert, haben wir uns an das MVC-Architekturmodell \cite{MVC}
-gehalten.  Eine typische HTTP-Anfrage wird dabei zunächst aufbereitet und an
-die Vermittlungsschicht („Controler“) weitergereicht, welche den Auftrag für
-die Verarbeitung in der Modellschicht vorbereitet. Die dort zusammengestellte
+
+Für die Kernfunktionen des Projekts, besonders für die Anbindung der
+RDF-basierten Datenschicht, kam das MVC-Architekturmodell \cite{MVC} zum
+Einsatz.  Eine typische HTTP-Anfrage wird dabei zunächst aufbereitet und an die
+Vermittlungsschicht („Controler“) weitergereicht, welche den Auftrag für die
+Verarbeitung in der Modellschicht vorbereitet. Die dort zusammengestellte
 inhaltliche Antwort wird an den „View“ weitergereicht, um die Daten
 entsprechend zu visualisieren (z.\,B.\ in einem Kreisdiagramm).
 
@@ -74,60 +110,67 @@ MVC-Muster jedoch oft nicht strikt eingehalten. Eine zentrale Aufgabe des
 allgemeinen und übersichtlichen Informationspräsentation für die Benutzer.
 
 \subsection{PAC-Architekturmodell}
-Die Verwaltung des Forums und der Vorschläge wird komplett über Drupal-interne
-Funktionen abgewickelt. Dabei kommt das PAC-Architekturmodell \cite{PAC} 
-(„Presentation-Abstraction-Control“) als ein spezifisches MVC-Modell zum
-Einsatz, in dem die Informationsverteilung über die Controler auf spezifische
-Weise organisiert ist -- Controler sind verschiedenen
-Datenabstraktionskonzepten zugeordnet, die als „Agenten“ bezeichnet werden.
+
+Drupal selbst orientiert sich stärker am PAC-Architekturmodell \cite{PAC}
+(„Presentation-Abstrac"|tion-Control“) als einem spezifischen MVC-Modell, in dem
+die Informationsverteilung über die Controler auf spezifische Weise organisiert
+ist -- Controler sind verschiedenen Datenabstraktionskonzepten zugeordnet, die
+als „Agenten“ bezeichnet werden.  Dieses Architekturmodell wurde bei den
+Erweiterungen des Forums-Moduls berücksichtigt, um die Verwaltung des Forums
+und der Vorschläge so weit wie möglich über Drupal-interne Funktionen
+abzuwickeln.  
 
 \subsection{Semantische Technologien}
+
 Der Haushaltsrechner verwendet auf der Datenebene die semantische Technologie
 RDF \cite{RDF} in der Form von RDF Data Cubes \cite{RDFCube}. Das bedeutet,
 dass die in unserer Datenbank dargestellten Ressourcen eindeutig bezeichnete
 Dinge der Welt sind, die durch Darstellung in Tripel in eine Relation mit
 anderen Ressourcen gebracht werden.
 
+Um diese Daten an die Modellschicht zu binden und mit der RDF Datenbasis über
+deren SPARQL Endpunkt zu kommunizieren, wurde die \emph{BorderCloud SPARQL 1.1
+  PHP Bibliothek}~\cite{BorderCloud} eingesetzt.  Sämtlicher diesbezüglicher
+Code einschließlich der zur Verbindung mit dem SPARQL-Endpunkt benötigten
+BorderCloud Bibliothek ist im \emph{Theme}-Ordner \texttt{data} abgelegt.
+
 \section{Frontendgestaltung -- Informationsteil}
 
 \subsection{Allgemeiner Aufbau}
 
-Zur Umsetzung des MVC-Architekturmodells muss im Informationsteil der
-Plattform intensiv mit der RDF Datenbasis über deren SPARQL Endpunkt
-kommuniziert werden. Dazu wurde die \emph{BorderCloud SPARQL 1.1 PHP
-  Bibliothek} \cite{BorderCloud} eingesetzt.
-
-Sämtlicher im Laufe des Projekts entstandener Code einschließlich der zur
-Verbindung mit dem SPARQL-Endpunkt benötigten BorderCloud Bibliothek ist im
-\emph{Theme}-Ordner \texttt{data} abgelegt.
-
 \subsubsection*{Abstraktionsebenen}
-Die Präsentation der Daten erfolgt über verschiedene Abstraktionsebenen. Die
+
+Die Präsentation der Daten erfolgt über verschiedene Abstraktionsebenen, die
+als verschiedene Ringe in der Diagrammvisualisierung präsentiert werden. Die
 Abstraktionsebenen haben den Zweck, die Menge an Daten übersichtlich zu
 präsentieren und ein intuitives Verständnis sowohl der Größenverhältnisse als
 auch der Verteilung der Ausgaben und Einnahmen zu gewinnen. Die
-Abstraktionsebenen orientieren sich hierbei an den Hierarchien aus dem
-Haushaltsplan der Stadt Leipzig. Hierbei sollten möglichst alle
+Abstraktionsebenen orientieren sich hierbei an den Produktebenen des
+Haushaltsplans der Stadt Leipzig. Hierbei sollten möglichst alle
 Hierarchieebenen bis zum kleinsten Element verfügbar sein.
 
 \subsubsection*{Designkonzept}
 Das Aussehen der Website des interaktiven Haushaltsrechners der Stadt Leipzig
-orientiert sich stark am Look and Feel des Bundeshaushaltsrechners. Wie beim
-Bundeshaushaltsrechner werden die Daten in Form von Kreisdiagrammen
-angezeigt. Zusätzlich werden Produktbereiche, die kleine Beträge aufweisen (im
-Diagramm weniger als 2\,\%) zu einem Segment \textit{Sonstiges}
-zusammengefasst.  Dieses soll in einer Tabelle unterhalb des Diagramms
-aufgeschlüsselt dargestellt werden. Grundlage für die Implementation des
-Designs bildet das \textit{Bootstrap}-Framework \cite{Bootstrap} bzw.\ dessen
-Portierung für Drupal~7.
+orientiert sich stark am grundlegenden Design des Bundeshaushaltsrechners und
+wurde an das Look and Feel der Webseiten der Stadt Leipzig angepasst.  Zum
+Einsatz kam eine leichte Anpassung des CSS-Frameworks \textit{Bootstrap}
+\cite{Bootstrap} und dessen Portierung für Drupal~7 sowie die
+Javascript-Bibliothek D3 für die Diagrammdarstellungen.
+
+Wie beim Bundeshaushaltsrechner werden die Daten in Form von Kreisdiagrammen
+angezeigt.  Zusätzlich werden Produktbereiche, die kleine Beträge aufweisen
+(weniger als 2\,\% der Gesamtsumme der jeweiligen Ebene), in den Diagrammen zu
+einem Segment \textit{Sonstiges} zusammengefasst, das nicht weiter expandiert
+werden kann.  In der tabellarischen Darstellung der Daten der jeweiligen Ebene
+werden diese kleinen Beträge jedoch einzeln ausgewiesen.
 
 \subsection{Controller-Struktur}
 
-Controller dienen dazu, SPARQL-Anfragen an das Model zu übergeben, damit
-das Model die Daten aus dem Datacube auslesen kann. Dabei werden entweder die
-Ausgaben oder die Einnahmen der Stadt ausgelesen, je nachdem wie der Modus
-gesetzt ist. Zudem parst der Controller noch die richtigen Namen der
-Kostenbeschreibung hinzu.
+Die zusätzlichen Controller unserer Erweiterung dienen vor allem dazu,
+SPARQL-Anfragen an das Model zu übergeben, damit das Model die Daten aus dem
+Datacube auslesen kann. Dabei werden entweder die Ausgaben oder die Einnahmen
+der Stadt ausgelesen, je nachdem wie der Modus gesetzt ist. Zudem parst der
+Controller noch die richtigen Namen der Kostenbeschreibung hinzu.
 
 \subsubsection{EndpointHandler (= Model)}
 Im EndpointHandler werden die Klarnamen der Produktnummer hinzugefügt, zudem
@@ -206,7 +249,7 @@ Umschalten zwischen den verschiedenen Ansichten (Einnahmen, Ausgaben etc.)
 angelegt. Weiterhin werden hier verschiedene Behälter für die Diagramme und
 dem Infopanel neben den Tabs festgelegt.
 
-\subsection{Datenstruktur}
+\subsubsection{Datenstruktur}
 Die Daten für die Diagramme und Tabellen sind in Levels/Layers organisiert.
 Entsprechend sind Arrays innerhalb des Quelltextes angelegt. So gehören zum
 Beispiel die Daten des ersten Diagrammrings zum Layer1, die Daten des zweiten
@@ -383,20 +426,24 @@ Mitbestimmung liefern, sollten auch nicht auswählbar sein. Es sollte die
 Möglichkeit bestehen, Vorschläge zu bewerten und zu kommentieren. Die
 Vorschläge und die Diskussion dazu sind mit dem Forum verbunden.
 
+\subsection{Bürgereinwände}
+
+Zu ergänzen. 
+
 \section{Datenmodell}
-Da die Datenkonvertierung bereits in der Prototyp-Phase abgeschlossen wurde,
-gibt es beim Datenmodell keinerlei Änderungen gegenüber dem Prototyp. Die vom
-Auftraggeber zur Ver"|fügung gestellte Datengrundlage für unser Projekt besteht
-aus mehreren Excel-Dateien, die per dynamischer Listenausgabe aus SAP
-exportierte relevante Daten (derzeit noch aus dem Jahr 2014) enthalten. Im
-Vorprojekt wurde diese Datenbasis bereits schrittweise in das
-RDF-Data-Cube-Format übertragen und in einen RDF Data Store eingespielt, der
-über seinen SPARQL-Endpunkt
-\begin{center}
-  \url{http://pcai042.informatik.uni-leipzig.de:1524/sparql}
-\end{center}
-erreichbar ist. In der Entwurfsbeshreibung des Prototyps gibt es eine genauere
-Darstellung des Datenmodells.
+
+Die vom Auftraggeber zur Ver"|fügung gestellten Daten für unser Projekt
+bestehen aus mehreren Excel-Dateien, die per dynamischer Listenausgabe aus SAP
+exportierte relevante Daten zum Doppelhaushalt 2015/16 enthalten.  In Zuge des
+Redesigns wurden diese Daten in RDF Cube Serien transformiert.  Weiterhin
+wurden aus den Daten der Produktbaum, das Produktmodell sowie die
+Produktbeschreibungen der Schlüsselprodukte extrahiert.  Ergänzend enthalten
+die Daten einen RDF Graphen \emph{Config}, der die Jahreszuordnung der
+eingesetzte RDF Data Cube Serie näher beschreibt, sowie eine Beschreibung des
+Dataset-Formats der RDF Data Cube Serie. 
+
+Details hierzu sind im Dokument \emph{Designprinzipien des IHR-15 RDF Data
+  Stores} zu finden. 
 
 \section{Dokumentationskonzept}
 

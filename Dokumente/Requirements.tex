@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc} 
 \usepackage{ihr-15}
 
-\newcommand{\todo}[1]{\begin{quote}\textbf{to do:} #1 \end{quote}}
 \newcommand{\kommentar}[1]{\begin{quote}\textbf{Kommentar:} #1 \end{quote}}
 
 \title{Zusammenfassung des Bearbeitungsstands\\[3pt] der Anmerkungen und
@@ -11,7 +10,7 @@
 
 \author{Projekt „Nachhaltige Stadtfinanzen“} 
 
-\date{Version vom 18. September 2015}
+\date{Version vom 7. Oktober 2015}
 
 \begin{document}
 \maketitle
@@ -46,22 +45,24 @@ Stadtverwaltung waren nicht Gegenstand des Projektes. Dies wurde explizit als
 Aufgabe der städtischen IT-Beauftragten festgehalten.
 
 Methodisch wurden die im Projektbaustein auszuführenden Arbeiten im Rahmen von
-Praktikumsaufgaben in die Lehre in zwei Bachelormodule integriert und in
-diesem Kontext
+Praktikumsaufgaben in die Lehre in zwei Bachelormodule am Institut für
+Informatik der Universität Leipzig integriert und in diesem Kontext
 \begin{quote}
   im Wintersemester 2014/15 ein Leistungsumfang von etwa 750\,h (entspricht 95
-  Personentagen bzw.\ 5.3 Personenmonaten\footnote{Dieser Umrechnung ist die
-    übliche Umrechnungseinheit von 18 Personentagen pro Personenmonat zu Grunde
-    gelegt.} und im Sommersemester im Rahmen des SWT-Praktikums ein
-  Leistungsumfang von etwa 900\,h (entspricht 115 Personentagen bzw.\ 6.4
+  Personentagen bzw.\ 5{,}3 Personenmonaten\footnote{Dieser Umrechnung ist die
+    übliche Umrechnungseinheit von 18 Personentagen pro Personenmonat zu
+    Grunde gelegt.} und im Sommersemester im Rahmen des SWT-Praktikums ein
+  Leistungsumfang von etwa 900\,h (entspricht 115 Personentagen bzw.\ 6{,}4
   Personenmonaten) sowie in der darauffolgenden Konsolidierungsphase ab Juni
-  2015 noch einmal etwa 325\,h (entspricht 40 Personentagen bzw.\ 2.3
+  2015 noch einmal etwa 325\,h (entspricht 40 Personentagen bzw.\ 2{,}3
   Personenmonaten) studentischer Entwicklungsarbeit erbracht.
 \end{quote}
 Damit stehen allein im Rahmen dieses Projektbausteins 14 Personenmonate
 studentischer Entwicklungsleistung zu Buche, wobei die erforderliche
 konzeptionelle und inhaltliche Begleitung durch Prof. Gräbe (4\,h pro Woche
-über die gesamte Projektlaufzeit) noch nicht mit eingerechnet ist.
+über die gesamte Projektlaufzeit) sowie von Philipp Glinka und Matthias
+Redlich (jeweils 2\,h pro Woche über die gesamte Projektlaufzeit) noch nicht
+mit eingerechnet ist.
 
 \subsection{Rahmenbedingungen} 
 
@@ -81,19 +82,21 @@ Ausgangspunkt für die weitere Arbeit genutzt wurde. Die Ergebnisse
 (Evaluationsbericht, Anforderungsanalyse und Partizipationskonzept) erwiesen
 sich für die weitere Arbeit im Projektbaustein als tragfähig. Wesentliche
 Anforderungen, die auf Grund der Umfragen und Workshops aufgestellt wurden,
-waren so bereits angedacht und ließen sich dadurch in die
+waren so bereits angedacht und ließen sich dadurch später in die
 Anforderungsdokumente integrieren.
 
 Dessen ungeachtet stellte dies aber eine besondere Herausforderungen an die
-Projektorganisation: Denn einerseits galt es die Konzeption und die Entwicklung
-wesentlicher Teile der Software voranzubringen; andererseits lagen detaillierte
-Anforderungen und Vorgaben der Prozessbeschreibungen insbesondere der
-partizipativen Elemente noch gar nicht vor. Im Projektverlauf musste deshalb
-auf neue Anforderungen, geänderte Akzente und Schwerpunkte durch agile Ansätze
-reagiert werden können. In diesem Zusammenhang haben sich der Rückgriff auf die
+Projektorganisation: Denn einerseits galt es die Konzeption und die
+Entwicklung wesentlicher Teile der Software voranzubringen; andererseits lagen
+detaillierte Anforderungen und Vorgaben der Prozessbeschreibungen insbesondere
+der partizipativen Elemente noch gar nicht vor. Im Projektverlauf musste
+deshalb auf neue Anforderungen, geänderte Akzente und Schwerpunkte durch agile
+Ansätze reagiert werden können. In diesem Zusammenhang haben sich der
+Rückgriff auf die
 SCRUM-Entwicklungsmethodik\footnote{\url{https://de.wikipedia.org/wiki/Scrum}}
-und das Führen eines kontinuierlich fortgeschriebenen Anforderungs- und
-Aufgabenprotokolls ein weiteres Mal bewährt.
+und das Führen eines kontinuierlich fortgeschriebenen und mit den Partnern in
+der Leipziger Stadtverwaltung abgestimmten Anforderungs- und
+Aufgabenprotokolls bewährt.
 
 Mit dieser strukturierten Vorgehensweise und dem Priorisieren und Bündeln von
 Anforderungen ist es insbesondere in der letzten Projektphase (Juni bis August
@@ -102,13 +105,22 @@ Analysen in den Rahmen einer \emph{prototypischen} Lösung zur
 Weiterentwicklung des Interaktiven Haushaltsplans einzuordnen und alle als
 wichtig gekennzeichneten Anforderungen auch umzusetzen.
 
+Die verfügbaren Ressourcen wurden in dieser letzten Projektphase auf die
+prototypische Umsetzung aller wichtigen \emph{funktionalen} Anforderungen
+(Umstellung des Frontends auf das überarbeitete Datenformat,
+Auswahlmöglichkeit verschiedener Jahre, Jahresvergleich, Datenexport als CSV,
+semantische Suche über den Beschreibungen der Schlüsselprodukte,
+Bürgereinwand) konzentriert. Für eine intensive Test- und Bugfixing-Phase
+reichte die Zeit nicht aus. \textbf{Dies ist bei der Planung der Vorbereitung
+  des Prototyps auf einen zukünftigen produktiven Einsatz zu
+  berücksichtigen. }
+
 \subsection{Weiterführende Arbeiten} 
 
 Seitens der Stadt wurde betont, dass das Gesamtprojekt dazu dient, eine
-qualifizierte Entscheidungsgrundlage hinsichtlich eines möglichen Relaunchs des
-Interaktiven Haushaltsplans zu schaffen.
-
-Von Seiten der Stadt wurde dies am 07.05.2015 wie folgt zusammengefasst:
+qualifizierte Entscheidungsgrundlage hinsichtlich eines möglichen Relaunchs
+des Interaktiven Haushaltsplans zu schaffen.  Von Seiten der Stadt wurde dies
+am 07.05.2015 wie folgt zusammengefasst:
 \begin{quote}
   Ausgangspunkt für uns war und ist die Frage, ob der Interaktive
   Haushaltsplan das geeignete Medium ist, um möglichst viele Interessenten
@@ -118,9 +130,9 @@ Es ist übliche Praxis, vor einer mit deutlichen Kosten verbundenen
 Entscheidung eine derartige Machbarkeitsstudie in Auftrag zu geben, die nicht
 nur die Einsatzbedingungen und -szenarien im Detail abklopft, sondern auch
 eine prototypische technische Lösung umfasst. Eine Entscheidung darüber, ob
-und ggf.\ unter Rahmenbedingungen ein Relaunch des Interaktiven Haushaltsplans
-stattfindet und inwiefern der Prototyp als Grundlage genutzt wird, fällt erst
-nach Abschluss des Gesamtprojektes.
+und ggf.\ unter welchen Rahmenbedingungen ein Relaunch des Interaktiven
+Haushaltsplans stattfindet und inwiefern der Prototyp als Grundlage genutzt
+wird, fällt erst nach Abschluss des Gesamtprojektes.
 
 Eine Anforderungserhebung über mögliche konkrete Einsatzbedingungen ist vor
 einem solchen prinzipiellen Votum allerdings nur in sehr beschränktem Maße
@@ -141,13 +153,14 @@ hier drei prinzipielle Szenarien möglich:
   \item die Transformation der Daten einer durch das Dezernat für Finanzen der
     Stadt Leipzig zur Verfügung zu stellenden \emph{konsolidierten} Datenbasis
     in das Zielformat,
-  \item Bug fixing im Rahmen eines umfangreicheren Probebetriebs
+  \item Tests und Bug fixing im Rahmen eines umfangreicheren Probebetriebs
   \item sowie ggf.\ die Umsetzung weiterer Funktionen, die sich durch ein
     übergreifendes Informations- und Beteiligungskonzept ergeben.
   \end{itemize}
   Geschätzter Beratungs- und Unterstützungsaufwand durch das Entwicklerteam:
-  2~Personenmonate auf Mitarbeiter-Niveau für Transformation und Bugfixing,
-  bedarfsabhän"|gig ggf.\ mehr für die Erweiterung der Funktionalität.
+  2~Personenmonate auf Mitarbeiter-Niveau für Transformation, Tests und
+  Bugfixing, bedarfs"|abhän"|gig ggf.\ mehr für die Erweiterung der
+  Funktionalität.
 
   Die Schätzung geht davon aus, dass der Betreiber umfangreiche Erfahrungen mit
   dem Einsatz von Drupal hat und damit über konkrete Architekturfragen
@@ -210,22 +223,22 @@ unter den gegebenen Rahmenbedingungen für eine prototypische Implementierung
 außer Betracht blieben bzw.\ bleiben mussten. 
 
 \textbf{Zusammenfassend kann eingeschätzt werden:}
-\begin{itemize}
+\begin{itemize}\itemsep0pt
 \item Das mit dem Projektbaustein verfolgte \textbf{Ziel}, ein neues
   Online-Tool „Haushaltsplanrechner“ auf der Basis moderner
   informationstechnischer Konzepte aus dem Bereich semantischer Technologien
   und Open Data \textbf{prototypisch} umzusetzen, wurde vollinhaltlich
-  erreicht.
-
-  Im Projekt wurde eine mit semantischen Technologien angereicherte Lösung
-  eines Interaktiven Haushaltsplans entwickelt, die über die Stadtgrenzen
-  hinaus wegweisend ist.
+  erreicht.  Im Projekt wurde eine mit semantischen Technologien angereicherte
+  Lösung eines Interaktiven Haushaltsplans entwickelt, die mit ihrer Kopplung
+  semantischer Konzepte des Web 2.0 an verbreitete Visualisierungsstandards
+  über die Stadtgrenzen hinaus wegweisend ist.
 
 \item Die Flexibilität der software-technischen Architekturkonzepte wird auch
   daran deutlich, dass in der letzten Projekt"|etappe noch eine Reihe von
-  Anforderungen umgesetzt werden konnten, die in dieser Deutlichkeit erstmals
-  im Workshop am 08.07.2015 formuliert wurden und ein umfangreicheres Redesign
-  des Frontends erforderlich machten.
+  funktionalen Anforderungen umgesetzt werden konnten, die in dieser
+  Deutlichkeit erstmals im Workshop am 08.07.2015 formuliert wurden und ein
+  umfangreicheres Redesign sowohl der Datenschicht als auch des Frontends
+  erforderlich machten.
 \item Die verfügbare Datenbasis bleibt nach wie vor fragil.  Bis zum
   Projektende konnten fundamentale Unstimmigkeiten in der Interpretation der
   durch das Dezernat für Finanzen der Stadt Leipzig zur Verfü"|gung gestellten
@@ -237,11 +250,10 @@ außer Betracht blieben bzw.\ bleiben mussten.
   intensive interne Tests seitens des Projektteams durchgeführt wurden, aber
   mit den Auftraggebern kein sinnvolles Test- und Abnahmeverfahren im Rahmen
   der Projektlaufzeit vereinbart werden konnte, so dass die gesamte
-  Softwarebasis nur „as is“ übergeben wird.  
-
-  Zum nachhaltigen Einsatz des Prototyps ist ein Betreiberkonzept erforderlich,
-  das erst nach einer grundlegenden politischen Weichenstellung zur weiteren
-  Nutzung des Prototyps entwickelt werden kann.
+  Softwarebasis nur „as is“ übergeben wird.  Zum nachhaltigen Einsatz des
+  Prototyps ist ein Betreiberkonzept erforderlich, das erst nach einer
+  grundlegenden politischen Weichenstellung zur weiteren Nutzung des Prototyps
+  entwickelt werden kann.
 \end{itemize}
 
 \section{Betriebskonzept des Haushaltsplanrechners}
@@ -272,9 +284,9 @@ umfangreiche Konfigurationsmöglichkeiten durch den Betreiber.
 
 \subsection{Erscheinungsbild und Layout}
 
-Beim Erscheinungsbild wurde sich am Interaktiven Haushaltsplan des Bundes
-orientiert. Im weiteren Verlauf der Entwicklung, insbesondere in den
-Workshops, wurden folgende Kritikpunkte an der Darstellung geäußert:
+Das Erscheinungsbild unseres Prototyps orientiert sich am Interaktiven
+Haushaltsplan des Bundes. Im weiteren Verlauf der Entwicklung, insbesondere in
+den Workshops, wurden folgende Kritikpunkte an der Darstellung geäußert:
 \begin{itemize}\itemsep0pt
 \item Einstiegsseite ist optisch nicht ansprechend genug.  Verwendete Fotos
   könnten ansprechender sein und auch unter dem Aspekt Bürgerbeteiligung als
@@ -282,12 +294,13 @@ Workshops, wurden folgende Kritikpunkte an der Darstellung geäußert:
   durch Bilder mit Menschen. 
 
 \kommentar{Die Startseite wurde an das Look and Feel des Bundesrechners
-  angepasst. Umgestaltung der Einstiegsseite durch Einbau der Grafik eines
-  aufgeschlagenen Buchs.  Die verwendeten Bilder und Grafiken sind unter der
-  CC Zero Lizenz verfügbar.
+  angepasst. Die Einstiegsseite wurde durch den Einbau der Grafik eines
+  aufgeschlagenen Buchs umgestaltet.  Die verwendeten Bilder und Grafiken sind
+  unter der CC Zero Lizenz verfügbar.
 
-  Mit Blick auf die ungewisse Zukunft des Interaktives Haushaltsplans werden
-  weitere Anpassungen des Designs den Webdesignern der Stadt überlassen. }
+  Mit Blick auf die noch ausstehende grundsätzliche Entscheidunge zum weiteren
+  Einsatz des Interaktiven Haushaltsplans werden weitere Anpassungen des
+  Designs den Webdesignern der Stadt überlassen. }
 
 \item Ringe zu dick, Farben teilweise so, dass man die weiße Schrift der
   Zahlenangaben nicht gut erkennen kann. Farben stringenter mit
@@ -326,9 +339,10 @@ Fachanwendung eingetragen sein.
 Nach dem Workshop am 08.07.2015 und dem Alphatest wurde die Visualisierung im
 Prototyp noch einmal einem kompletten Redesign unterzogen. Der Inhaltsbereich
 besteht nun aus einem Meta-Panel (rechts), in dem (neben weiteren
-Informationen) die Stellung des jeweiligen Knotens des Produktgraphen sichtbar
-ist, und einem Infopanel (links).  Dort kann auch zwischen den Datensätzen
-verschiedener Jahre gewählt werden. 
+Informationen) die Stellung des jeweiligen Knotens des Produktgraphen --
+getrennt nach Einnahemn und Ausgaben -- sichtbar ist, und einem Infopanel
+(links).  Dort kann auch zwischen den Datensätzen verschiedener Jahre
+umgeschaltet werden.
 
 Das Infopanel untergliedert sich in mehrere Tabs (Einnahmen, Ausgaben, Tabelle,
 Jahresvergleich). In der Ansicht \emph{Tabelle} wird eine Tabelle zum aktuellen
@@ -350,6 +364,7 @@ Tabellen möglich.
   aufgegriffen, den verschiedenen Informationsbedarfen besser Rechnung zu
   tragen.}
 
+Einzelne Anforderungen:
 \begin{itemize}\itemsep0pt
 \item Bundesrechner hat auf jeder Seite links oben ein Widget mit
   zusammenfassenden Informationen zur gerade dargestellten Produktgruppe.
@@ -428,16 +443,16 @@ Erläuterungsinhalte aus verschiedenen Quellen zu übernehmen.
     erläutert.  }
 \end{itemize}
 
-Anforderungen:
+Weitere Anforderungen:
 \begin{itemize}\itemsep0pt
 \item Eine verständlichere Sprache verwenden und Fachbegriffe gut umschreiben,
   eine bürger- und benutzerfreundliche „Übersetzung“ der Thematik.
 
   Auf der Einstiegsseite sollen mehr Informationen zum Thema der
-  Haushaltsplanung zu finden sein als beim ehemaligen „Haushaltsplanrechner“;
+  Haushaltsplanung zu finden sein als beim ehemaligen „Haushaltsplanrechner“.
   In erster Linie soll der gesamte städtische Haushalt verstehbar sein,
   d.\,h.\ nicht so kompliziert!!! Ggf. hier eine knackige Aufbereitung der
-  Übersichts- und Einstiegsvorträge von Herrn Bonew. 
+  Übersichts- und Einstiegsvorträge von Herrn Bonew.
 
   Übernahme von Inhalten von weiteren Erklärkomponenten aus dem alten
   HH-Rechner: „Häufige Fragen“, „Informationen zur Haushaltsplanung“, „Hinweise
@@ -451,17 +466,14 @@ Anforderungen:
     Der weitere Ausbau der Erläuterungskomponente setzt ein entsprechendes
     Informations- und Beteiligungskonzept voraus. Die inhaltliche Erarbeitung
     der Erläuterungen erfordert zudem in den einzelnen Haushaltspositionen
-    vielfältige fachliche Kenntnisse und ressortübergreifende
-    Abstimmungen. Dies sind aus den genannten Gründen verwaltungsinterne
-    Aufgabe, die im Projektrahmen nicht geleistet werden konnten.
+    vielfältige fachliche Kenntnisse und ressortübergreifende Abstimmungen.
+    Dies sind verwaltungsinterne Aufgabe, die über den Rahmen dieses Projekts
+    hinausgehen.
 
     Wesentliche Grundvoraussetzungen für den weiteren Ausbau der
-    Erläuterungskomponente sind deshalb Zuarbeiten, die erst mit einer
-    Entscheidung über einen Relaunch des Interaktiven Haushaltsplans zur
-    Verfügung stehen werden. 
-
-    Die Implementierung und Erweiterung der Funktionalität kann deshalb nur
-    durch den zukünftigen Betreiber erfolgen.}
+    Erläuterungskomponente sind Zuarbeiten, die erst mit einer Entscheidung
+    über einen Relaunch des Interaktiven Haushaltsplans zur Verfügung stehen
+    werden und damit dem zukünftigen Betreiber überlassen bleiben müssen.}
 
 \item Exportfunktion für die Daten einer Informationsseite.
 
@@ -559,22 +571,22 @@ Anforderungen seitens der Stadtverwaltung:
 
 \textbf{Anmerkung:} Im Zuge des Alphatests hat sich gezeigt, dass auch
 umfangreiche präventive Maßnahmen nicht gegen eine massenhafte Einrichtung von
-Spam-Accounts helfen.  In einer Woche wurden über 25\,000 Accounts angelegt und
-teilweise über E-Mail-Verifikation aktiviert. Die Spammer ließen sich auch
+Spam-Accounts helfen.  In einer Woche wurden über 25\,000 Accounts angelegt
+und teilweise über E-Mail-Verifikation aktiviert. Die Spammer ließen sich auch
 durch 2 Anti-Spam-Module nicht aufhalten.  Bei der derzeit vorgesehen
 Freischaltung durch den Admin kann zwar eine Registrierung verhindert werden,
 jedoch führt bereits der Registrierungsversuch zu einem Datenbankeintrag, der
 bereinigt werden muss. Darüber hinausgehender Spam-Schutz erfordert in jedem
-Fall eine stärkere manuelle Betreuung. 
-
-Im Forum der Drupal-Entwickler wird darauf hingewiesen, dass es derzeit keinen
-wirksamen Schutz gegen Spam-Anmeldungen gibt außer der Einstellung
-„Administrator only“, in der neue Nutzer zwingend vom Administrator eingetragen
-werden müssen. Dazu müsste ein Drupal-externer Registrierungsprozess aufgesetzt
-oder ein bereits bestehendes Registrierungsverfahren erweitert und über ein
-Sign-In-Verfahren an Drupal angebunden werden.  Zu letzterem Punkt gibt es
-umfassende Erfahrungsberichte\footnote{Siehe etwa
-  \url{https://groups.drupal.org/node/182004}.} der Drupal-Entwickler-Gemeinde.
+Fall eine stärkere manuelle Betreuung.  Im Forum der Drupal-Entwickler wird
+darauf hingewiesen, dass es derzeit keinen wirksamen Schutz gegen
+Spam-Anmeldungen gibt außer der Einstellung „Administrator only“, in der neue
+Nutzer zwingend vom Administrator eingetragen werden müssen. Dazu müsste ein
+Drupal-externer Registrierungsprozess aufgesetzt oder ein bereits bestehendes
+Registrierungsverfahren erweitert und über ein Sign-In-Verfahren an Drupal
+angebunden werden.  Zu letzterem Punkt gibt es umfassende
+Erfahrungsberichte\footnote{Siehe etwa
+  \url{https://groups.drupal.org/node/182004}.} der
+Drupal-Entwickler-Gemeinde.
 
 \subsection*{Aufgabenstellung Datenschutz}
 
@@ -602,6 +614,7 @@ Eine Webanalyse kann durch das Drupal-Modul \emph{Statistics
   Counter}\footnote{\url{https://www.drupal.org/project/statistics_counter}}
 umgesetzt werden, entsprechende Informationen verlassen dabei den
 Drupal-Kontext nicht.
+\pagebreak[3]
 
 Im Einzelnen:
 \begin{itemize}\itemsep0pt
@@ -652,7 +665,9 @@ allgemeinen Drupal-Funktionen für Kommentare zu einer Seite.
   sind.  
 \item Threads können als „veröffentlicht“ sowie „oben in Listen“ markiert
   werden.  
+\item Ein Thread kann als „Bürgereinwand“ markiert werden.
 \end{itemize}
+\pagebreak[3]
 
 Beiträge:
 \begin{itemize}\itemsep0pt
@@ -736,12 +751,12 @@ Folgende Funktionalitäten sind verfügbar:
 
 Da Threads und Beiträge spezielle Drupal-Seiten und Drupal-Kommentare sind,
 kann die Moderation auf die entsprechenden Moderationskonzepte für Seiten und
-Kommentare in Drupal zugreifen. 
+Kommentare in Drupal zurückgreifen. 
 
 Durch die Nutzung dieser Möglichkeiten können Moderatoren
 \begin{itemize}\itemsep0pt
 \item unter „Einstellungen für Kommentare“ einzelne Threads schließen oder
-  unsichtbar schalten 
+  diese unsichtbar schalten,
 \item Beiträge oder Threads löschen,
 \item die Diskussion zu einem Vorschlag beenden,
 \item damit manuell Zeitbgrenzungen für Threads realisieren. 
@@ -759,15 +774,20 @@ den Moderatoren zeitnah manuell ausgewertet werden.
 
 \subsection{Bürgereinwände} 
 
-Vorschläge, die wirksam in die Haushaltsdiskussion eingehen sollen, müssen die
-Form eines \emph{Bürgereinwands} haben. Die Registrierungserfordernisse als
-Benutzer des Prototyps reichen nicht aus, um sich für die Formulierung eines
-qualifizierten Bürgereinwands zu legitimieren.  
+\subsubsection*{Rahmenvorgaben für qualifizierte Bürgereinwände} 
 
-Eine Verarbeitung inkl.\ der Prüfung der personenbezogenen Daten ist
-ausschließlich über dazu autorisierte Stellen in der Stadtverwaltung
-möglich. Bürgereinwände können deshalb im Prototyp aus Vorschlägen zwar
-generiert, aber nicht weiter verarbeitet werden. Letzteres obliegt einer
+Vorschläge, die wirksam in die Haushaltsdiskussion eingehen sollen, müssen die
+Form eines \emph{qualifizierten Bürgereinwands} haben. In der
+Anforderungserhebung wurde festgestellt, dass ein in den Befragungen
+gefordertes leichtgewichtiges Partizipationskonzept mit geringen Zugangshürden
+und die Registrierungserfordernisse für die Formulierung eines qualifizierten
+Bürgereinwands zueinander im Widerspruch stehen. 
+
+Die Verarbeitung inkl.\ der Prüfung der personenbezogenen Daten, die für einen
+qualifizierten Bürgereinwand zu erheben sind, ist ausschließlich über dazu
+autorisierte Stellen in der Stadtverwaltung möglich. Bürgereinwände können
+deshalb im Haushaltsrechner zwar aus Vorschlägen generiert, aber dort nicht
+weiter verarbeitet werden. Letzteres obliegt einer
 \emph{Bürgereinwandsbearbeitungsstelle} (BEBS), die von der Stadt eingerichtet
 werden muss.
 
@@ -785,27 +805,56 @@ Beitrags ausreichen würde. Darüber hinaus müsse geprüft werden, ob jeder
 Bürgereinwand (ohne personenbezogene Daten) sofort frei online einsehbar sein
 kann oder zuvor eine BEBS einbezogen werden muss.
 
-Im Rahmen des Forums im Interaktiven Haushaltsplan ist deshalb das folgende
-\textbf{rudimentäre Konzept zum Einreichen von Bürgereinwänden} umgesetzt:
-\begin{itemize}
-\item Über einen Knopf „Bürgereinwand einreichen“ wird aus einem
-  Vorschlags-Thread heraus ein Webformular generiert, über das der
-  Bürgereinwand (BE) erstellt werden kann.  Jeder BE hat damit eine BE-ID,
-  einen Ersteller, ein Erstellungsdatum, eine Thread-ID und eine
-  Produktbereichs-ID als Metainformationen.  
-\item BE werden in einer separaten Datenstruktur (aktuell eine eigene Tabelle
-  in der Datenbank) gesammelt und können über eine gesicherte Webschnittstelle
-  autorisierten Personen der BEBS ausgeliefert werden.  
+\subsubsection*{Stand der Umsetzung} 
 
-  Entsprechende Rollen und Prozessabläufe sind zum produktiven Einsatz des
+Mit Blick auf diese bis zuletzt unklare Anforderungslage sowie die generellen
+Unwägbarkeiten, ob überhaupt ein Forum wie im Prototyp vorgeschlagen zum
+Einsatz kommt, wurde deshalb nur die folgende Variante eines \emph{einfachen
+  Bürgereinwands} umgesetzt:
+\begin{itemize}
+\item Angemeldete Benutzer können einzelne Vorschläge über einen Knopf als
+  (einfachen) Bürgereinwand einreichen. 
+  
+  Ein spezifischer Registrierungsprozess, wie für \emph{qualifizierte
+    Bürgereinwände} gefordert, findet dabei nicht statt. Moderatoren haben
+  Zugriff auf die für sie durch die Administration freigeschalteten
+  persönlichen Daten der Einreicher, welche diese zu ihrem Account übermittelt
+  haben, und können auf diesem Weg Benutzerinformationen einsehen und
+  ggf. weitere Informationen über die Kontaktfunktionen der Plattform
+  anfordern. 
+
+\item So markierte Vorschläge werden zusammen mit dem Verweis auf den
+  Einreicher in einer drupalinternen Liste aggregiert, die nur in der
+  Moderatorensicht zugänglich ist.
+
+  Damit kann erfasst werden, welche Vorschläge wie oft als Bürgereinwände
+  eingereicht wurden.
+
+\item Reaktionen der BEBS auf einzelne Vorschläge (Verwaltungsstandpunkt)
+  können als Beitrag im entsprechenden Vorschlagsthread veröffentlicht werden.
+\end{itemize}
+
+\subsubsection*{Mögliche Erweiterung des Konzepts} 
+
+Dieses Konzept könnte wie folgt zu einem \textbf{Konzept zum Einreichen von
+  qualifizierten Bürgereinwänden} erweitert werden:
+\begin{itemize}
+\item Über den Knopf „Bürgereinwand einreichen“ wird aus einem
+  Vorschlags-Thread heraus ein Webformular generiert, über das der
+  qualifizierte Bürgereinwand (QBE) erstellt werden kann.  Jeder QBE hat damit
+  eine QBE-ID, einen Ersteller, ein Erstellungsdatum, eine Thread-ID und eine
+  Produktbereichs-ID als Metainformationen.
+\item QBE werden in einer separaten Datenstruktur gesammelt und können über
+  eine gesicherte Webschnittstelle der BEBS ausgeliefert werden.
+  Weiterführende Rollen und Prozessabläufe sind zum produktiven Einsatz des
   Prototyps noch zu definieren und die Datenweitergabe entsprechend technisch
   umzusetzen.  Dabei sind Fragen des Datenschutzes zu berücksichtigen.
-\item BE können damit in der BEBS auf der Ebene von Threads aggregiert und im
+\item QBE können damit in der BEBS auf der Ebene von Threads aggregiert und im
   Bündel ausgewertet werden.  Die Thread-ID erlaubt es auch, seitens der BEBS
   einen Kommentar im jeweiligen Thread mit dem Verwaltungsstandpunkt zu
   ver"|öffent"|lichen. 
 \end{itemize}
-Damit sind auch die Anforderungen umgesetzt, die am 08.06.2015 noch einmal wie
+Damit wären auch die Anforderungen umgesetzt, die am 08.06.2015 noch einmal wie
 folgt konkretisiert wurden:
 \begin{itemize}
 \item Einwände formulieren können und Rückinfo zum Einwand erhalten. Dabei ist
@@ -814,9 +863,11 @@ folgt konkretisiert wurden:
   gesichert werden. 
 \item Dies soll möglichst mit einem Formular gelöst werden. Dazu muss eine
   Adresse aus dem Dezernat II zur Bearbeitung hinterlegt werden.
-\item Dabei muss der Unterscheid zwischen Kommentar und „förmlich rechtlicher
+\item Dabei muss der Unterschied zwischen Kommentar und „förmlich rechtlicher
   Einwand” berücksichtigt werden, siehe Formular für Online-Petitionen.
 \end{itemize}
+
+\subsubsection*{Weitere Anforderungen} 
 
 Weitere Aspekte -- wie das Einpflegen von Bürgereinwänden, die über andere
 Kanäle eingereicht werden, in die Plattform durch die BEBS -- müssten im
@@ -910,9 +961,9 @@ Folgende Punkte ergaben sich aus der Diskussion mit der Online-Redaktion der
 Stadt:
 \begin{itemize}\itemsep0pt
 \item Einhaltung der Anforderungen nach BITV 2.0 durch den Prototyp
-\kommentar{Da dies vom eingesetzten CSS-Framework abhängt, wurde diese Frage
-  über die bisherigen Untersuchungen hinaus nicht weiter verfolgt, siehe dazu
-  den Abschnitt „Allgemeine Anforderungen“.}
+  \kommentar{Da dies vom eingesetzten CSS-Framework abhängt, wurde diese Frage
+    über erste Untersuchungen hinaus nicht weiter verfolgt, siehe dazu den
+    Abschnitt „Allgemeine Anforderungen“.}
 \item Valides XHTML des Prototyps. 75 Fehler bei Validierung der URI
   \begin{center}
     \url{http://pcai042.informatik.uni-leipzig.de/~swp15-ihr/Drupal/}
@@ -1004,7 +1055,7 @@ Data Stores“ verwiesen.
 
 Mit dem URI-Präfix \url{http://haushaltsrechner.leipzig.de/Data} sind die
 Voraussetzungen geschaffen, dass die RDF-Datenbasis des neuen
-Haushaltsplanrechners von einem Betreiber unterhalb von \texttt{leipzig.de}
+Haushaltsplanrechners von einem Betreiber in der Domäne \texttt{leipzig.de}
 auch nach Linked Open Data Prinzipien ausgeliefert werden kann.
 
 \subsection{Darstellung finanzieller Spielräume der Kommune}
@@ -1031,6 +1082,7 @@ Eine darüber hinausgehende Darstellung von Spielräumen lässt sich im
 Produktmodell leicht nachrüsten, wenn man sich über einen
 Berechnungsalgorithmus von Spielraumangaben für Knoten des Produktgraphen aus
 den Spielraumangaben der Kindknoten geeinigt hat. 
+\pagebreak
 
 \subsection{Vergleiche zwischen verschiedenen Jahren} 
 

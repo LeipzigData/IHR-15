@@ -123,7 +123,7 @@ class EndpointHandler {
 					}
 					else 
 					{
-						$result .= ',';
+						$result .= '|';
 					}
 				}
 				
@@ -137,7 +137,7 @@ class EndpointHandler {
 						
 						if ($j != ($variablecount-1))
 						{
-							$result .= ',';
+							$result .= '|';
 						}
 						$j++;
 					}
@@ -216,8 +216,7 @@ class QueryWriter {
 	/**
 	*Stellt die From Klausel unserer Queryabfrage dar
 	**/
-	private $sparql_from = 'from <http://haushaltsrechner.leipzig.de/Data/2014/Ergebnishaushalt/2014/>
-                            from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>';
+	private $sparql_from = 'http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan15/';
 	/**
 	 * Attribute des Haushalts, welche fuer die Anfrageerstellung benoetigt wird. 
 	 */ 
@@ -255,7 +254,7 @@ class QueryWriter {
 
                          SELECT distinct ?b as ?prBerNummer xsd:decimal(?'. ($this->amount[$this->choose_amount]) .') as ?endsumme xsd:string(?bn) as ?label
 
-                         from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan' . substr($year, -2) . '/>
+                         from <'.($this->sparql_from).'>
 
                          from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
 
@@ -367,21 +366,10 @@ class QueryWriter {
 	 * @return SPARQL-Query als String
 	 */
 	function firstRing($year = 2015) {
-/**		$controller_query = 'SELECT ?prBerNummer SUM(xsd:decimal(?' . ($this->amount[$this->choose_amount]) . ')) AS ?endsumme ?label 
-                WHERE {
-					?x ihr:kategorie ihr:Ergebnishaushalt; ihr:prBerNummer ?prBerNummer; ihr:' . ($this->amount[$this->choose_amount]).' ?' . ($this->amount[$this->choose_amount]) . '; qb:dataSet ihr:haushalt' . strval($year) . '.
-					?prBerNummer rdfs:label ?label. 
-				} 
-				GROUP BY ?prBerNummer ?label
-				HAVING (SUM(xsd:decimal(?'. ($this->amount[$this->choose_amount]) .')) != 0)
-				ORDER BY ?prBerNummer ';
-				
-		return ($this->prefix) . ($this->ihr_uri). $controller_query ;**/
-
      		     $controller_query = 'PREFIX qb: <http://purl.org/linked-data/cube#>
  PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
  SELECT distinct ?b as ?prBerNummer  xsd:decimal(?'.($this->amount[$this->choose_amount]).') AS ?endsumme xsd:string(?bn) as ?label
- from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan' . substr($year, -2) . '/>
+ from <'.($this->sparql_from).'>
  from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
  WHERE {
  ?a a qb:Observation ; ihr:relatesTo ?b .
@@ -393,59 +381,9 @@ order by ?bn';
                 return  $controller_query ;    
 	}
 	
-	/**
-	 * Dise Methode sucht auf der Bezugsebenene nach der Nutzereingabe. Dabei werden immer nach Uebereinstimmung gesucht. So 
-	 * findet er bei der Eingabe "und" auch Gesundheit. Dabei wird der komplette Pfad zurueckgegeben. 
-	 *
-	 * @param String $term  Stellt die Nutzereingabe dar
-	 * @return SPARQL-Query als String
-	**/
-    function searchData($term){
-		$controller_query = "SELECT  DISTINCT ?prBerNummer  ?prGrNummer ?prUGrNummer ?bezugNummer  SUM(xsd:decimal(?ein)) ?label
-                             WHERE { {?x ihr:kategorie ihr:Ergebnishaushalt;
-                                        ihr:prBerNummer ?prBerNummer;
-                                        ihr:prGrNummer ?prGrNummer; 
-                                        ihr:prUGrNummer ?prUGrNummer;
-                                        ihr:bezugNummer ?bezugNummer; ihr:". ($this->amount[$this->choose_amount])." ?". ($this->amount[$this->choose_amount]).".
-                                        ?bezugNummer rdfs:label ?label.
-                                        FILTER regex(?label, \"".$term."\").}
-                                    UNION {
-                                       {?y ihr:kategorie ihr:Ergebnishaushalt;
-                                        ihr:prBerNummer ?prBerNummer; ihr:". ($this->amount[$this->choose_amount])." ?". ($this->amount[$this->choose_amount]).".
-                                        ?prBerNummer rdfs:label ?label .
-                                        FILTER regex(?label, \"".$term."\").}
-                                      }
-                                    UNION {
-                                       {?z ihr:kategorie ihr:Ergebnishaushalt;
-                                        ihr:prBerNummer ?prBerNummer;
-                                        ihr:prGrNummer ?prGrNummer; ihr:". ($this->amount[$this->choose_amount])." ?". ($this->amount[$this->choose_amount]).".
-                                        ?prGrNummer rdfs:label ?label .
-                                        FILTER regex(?label, \"".$term."\").}
-                                      }
-                                   UNION {
-                                       {?w ihr:kategorie ihr:Ergebnishaushalt;
-                                         ihr:prBerNummer ?prBerNummer;
-                                        ihr:prGrNummer ?prGrNummer;
-                                        ihr:prUGrNummer ?prUGrNummer; ihr:". ($this->amount[$this->choose_amount])." ?". ($this->amount[$this->choose_amount]).".
-                                        ?prUGrNummer rdfs:label ?label .
-                                        FILTER regex(?label, \"".$term."\").}
-                                      }
-                                     
-                             }
-                          GROUP BY ?prUGrNummer ?prBerNummer ?prGrNummer ?bezugNummer ?label
-                          HAVING (SUM(xsd:decimal(?". ($this->amount[$this->choose_amount]).")) != 0)
-                          ORDER BY ?label";
-		return ($this->prefix) . ($this->ihr_uri) . $controller_query;
-	}
-        	
-	/**
-	* Diese Funktion setzt einen neue From Klausel, falls sich das Jahr aendert
-	* @param $year gibt das neue Jahr aus
-	**/
-	function setFrom($year){
-	  $this->sparql_from = 'from <http://haushaltsrechner.leipzig.de/Data/'. strval($year) . '/Ergebnishaushalt/'. strval($year) . '/>
-                            from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>';
-	}
+	
+                              	
+	
 	/**
 	* Gibt die beiden From Klausen aus.
 	* @return die beiden From Klauseln
@@ -526,7 +464,7 @@ order by ?bn';
 
                      SELECT distinct ?b xsd:decimal(?ein) xsd:decimal(?aus) 
 
-                     from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan15/>
+                     from <'.$this->sparql_from.'>
 
                      from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
 
@@ -558,7 +496,7 @@ order by ?bn';
 
                 SELECT distinct ?b 
 
-                from <http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan15/>
+                from <'.($this->sparql_from).'>
 
                 from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
 
@@ -636,7 +574,88 @@ order by ?bn';
 
 	return $query;
 
-   }  
+   }
+    function setFrom($year = 2015){
+
+  $parse = new EndpointHandler();
+
+  $rows = $parse->sparqling('prefix ihr: <http://haushaltsrechner.leipzig.de/Data/Model#>
+
+                      SELECT ?a ?b 
+
+                                  from <http://haushaltsrechner.leipzig.de/Data/Config/>
+
+
+
+                                  WHERE
+
+
+
+                                  {
+
+
+
+                                          ?a  ihr:jahr "'.$year.'"; ihr:Cube ?b.
+
+
+
+                                  }',0);
+   if( count( $rows['result']['rows']) == 0){
+     $this->sparql_from = 'http://haushaltsrechner.leipzig.de/Data/EH_15G_Plan15/';
+   }
+    $this->sparql_from = $rows['result']['rows'][0]["b"];
+
+ } 
+
+  function getCube($year = 2015 ){
+      $query = ' PREFIX qb: <http://purl.org/linked-data/cube#>
+                                  PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+                                  SELECT distinct ?b xsd:string(?bn) xsd:decimal(?ein) xsd:decimal(?aus) 
+                                  from <'.($this->sparql_from).'>
+                                  from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+                                  WHERE {
+                                  ?a a qb:Observation ; ihr:relatesTo ?b .
+                                  optional { ?a ihr:aus ?aus . }
+                                  optional { ?a ihr:ein ?ein . }
+                                  optional { ?b rdfs:label ?bn . }
+                                  }
+                                  order by ?bn';
+   return $query;
+  }
+
+   function searchData($term){
+  $query = 'PREFIX qb: <http://purl.org/linked-data/cube#>
+            PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 
+            SELECT distinct ?b as ?prBerNummer xsd:string(?bn) as ?label xsd:decimal(?ein) as ?Einnahme  xsd:decimal(?aus) AS ?Ausgabe
+            from <'.$this->sparql_from.'>
+            from <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+            WHERE {
+                ?a a qb:Observation ; ihr:relatesTo ?b .
+                optional { ?a ihr:aus ?aus . }
+                optional { ?a ihr:ein ?ein . }
+                optional { ?b rdfs:label ?bn . }
+                filter regex(?bn,"'.$term.'")
+           }'; 
+   return $query; 
+  }
+
+  function getSpielraum($number){
+
+	 $query = 'PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#>
+
+	           SELECT  ?grad 
+
+               FROM <http://haushaltsrechner.leipzig.de/Data/NeuesProduktModell/>
+
+               WHERE {
+
+                      ?x ihr:hatGrad ?grad.
+
+                       filter regex(?x,"'.$number.'")}';
+
+	 return $query;
+
+ } 
 } 
 
 

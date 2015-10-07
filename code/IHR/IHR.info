@@ -18,6 +18,7 @@ regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
+regions[search]			= 'Search'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -25,7 +26,6 @@ regions[page_bottom]    = 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
-
 
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:
@@ -52,15 +52,4 @@ stylesheets[all][] = css/style.css
 ; scripts[] = 'bootstrap/js/tab.js'
 ; scripts[] = 'bootstrap/js/transition.js'
 scripts[] = 'js/bootstrap/bootstrap.min.js'
-;
-; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
-;settings[bootstrap_cdn] = '3.3.5'
 
-
-; ;-------------------------
-; ; METHOD 2: Bootstrap CDN
-; ;-------------------------
-;
-; Method 2 uses BootstrapCDN, the only thing you might need to provide here
-; is overrides to Bootstrap theme settings. Copy them here from the base theme
-; to override.

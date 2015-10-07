@@ -8,12 +8,12 @@
 /* Font */ 
 @font-face {
     font-family: "PT_Sans";
-    src: url("../font/PT_Sans-Web-Regular.eot?") format("eot"), url("../font/PT_Sans.woff") format("woff");
+    src: url("../fonts/PT_Sans-Web-Regular.eot?") format("eot"), url("../fonts/PT_Sans.woff") format("woff");
 }
 
 @font-face {
     font-family: "PT_Sans_Bold";
-    src: url("../font/PT_Sans-Web-Bold.eot?") format("eot"), url("../font/PT_Sans_Bold.woff") format("woff");
+    src: url("../fonts/PT_Sans-Web-Bold.eot?") format("eot"), url("../fonts/PT_Sans_Bold.woff") format("woff");
 } 
 
 /* Allgemeines */
@@ -368,11 +368,34 @@ ul.tabulator  {
 
 .forum-add-node > a,
 .forum-add-forum > a {
-	@extend .btn;
 	@extend .btn-primary;
+	@extend .btn;
 	
 	color: white;
 	margin-bottom: 15px;
+}
+
+.flag-buergereinwand-local > a {
+	@extend .btn;
+	@extend .btn-xs;
+	@extend .btn-info;
+	
+	color: white;
+	font-size: 12px;
+}
+
+.flag-thread-abuse > a,
+.flag-comment-abused > a {
+	@extend .btn;
+	@extend .btn-xs;
+	@extend .btn-danger;
+	
+	color: white;
+	font-size: 12px;
+}
+
+.views-table > caption {
+	@extend .h3;
 }
 
 /*
@@ -407,13 +430,13 @@ ul.tabulator  {
 		margin:0;
 		padding:0 1em;
 		line-height:2em;
-		color:#369;
+		color:#000;
 		font-weight:700;
 		position:relative;	
 		
 		a {
 			text-decoration: none;
-			color:#369;		
+			color:#000;		
 		}
 	}
 }
@@ -433,10 +456,10 @@ ul.tabulator  {
     margin-top:-1px;
     position:absolute;
     top:1em;
-    left:0
+    left:0;
 }
 .tree ul li:last-child:before {
-    background:#fff;
+    background:#ededed;
     height:auto;
     top:1em;
     bottom:0
@@ -447,7 +470,7 @@ ul.tabulator  {
 
 .tree li button, .tree li button:active, .tree li button:focus {
     text-decoration: none;
-    color:#369;
+    color:#000;
     border:none;
     background:transparent;
     margin:0px 0px 0px 0px;
