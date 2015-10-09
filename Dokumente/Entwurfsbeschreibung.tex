@@ -5,7 +5,7 @@
 
 \title{Entwurfsbeschreibung „Interaktiver Haushaltsplanrechner“}
  
-\date{Version vom 25. September 2015}
+\date{Version vom 9. Oktober 2015}
 
 \begin{document}
 \maketitle
@@ -428,7 +428,34 @@ Vorschläge und die Diskussion dazu sind mit dem Forum verbunden.
 
 \subsection{Bürgereinwände}
 
-Zu ergänzen. 
+Mit Blick auf die bis zuletzt unklare Anforderungslage zum Thema
+„Bürgereinwände“ sowie die generellen Unwägbarkeiten, ob überhaupt ein Forum
+wie im Prototyp vorgeschlagen zum Einsatz kommt, wurde nur die folgende
+Variante eines \emph{einfachen Bürgereinwands} umgesetzt:
+\begin{itemize}
+\item Angemeldete Benutzer können einzelne Vorschläge über einen Knopf als
+  (einfachen) Bürgereinwand einreichen. 
+  
+  Ein spezifischer Registrierungsprozess, wie für \emph{qualifizierte
+    Bürgereinwände} gefordert, findet dabei nicht statt. Moderatoren haben
+  Zugriff auf die für sie durch die Administration freigeschalteten
+  persönlichen Daten der Einreicher, welche diese zu ihrem Account übermittelt
+  haben, und können auf diesem Weg Benutzerinformationen einsehen und
+  ggf. weitere Informationen über die Kontaktfunktionen der Plattform
+  anfordern. 
+
+\item So markierte Vorschläge werden zusammen mit dem Verweis auf den
+  Einreicher in einer drupalinternen Liste aggregiert, die nur in der
+  Moderatorensicht zugänglich ist.
+
+  Damit kann erfasst werden, welche Vorschläge wie oft als Bürgereinwände
+  eingereicht wurden.
+
+\item Reaktionen der BEBS auf einzelne Vorschläge (Verwaltungsstandpunkt)
+  können als Beitrag im entsprechenden Vorschlagsthread veröffentlicht werden.
+\end{itemize}
+Ausführungen zu möglichen Erweiterungen dieses Konzepts sind im Dokument
+„Anforderungserhebungen“ zu finden.
 
 \section{Datenmodell}
 
