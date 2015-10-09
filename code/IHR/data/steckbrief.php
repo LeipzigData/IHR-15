@@ -28,17 +28,25 @@ $err = $EndpointH->getErrors();
 
 $result= $rows['result']['rows']['0']['l'];
 $Spielraum=$rows2['result']['rows']['0']['grad'];
-if($Spielraum<1.7){$Spielraum="Gestaltungsspielraum: klein";}
-elseif($Spielraum>=1.7&&$Spielraum<=2.3){$Spielraum="Gestaltungsspielraum: mittelmäßig";}
-elseif($Spielraum>2.3){$Spielraum="Gestaltungsspielraum: groß";}
+
+if($Spielraum<1.7) {
+	$Spielraum = "klein";
+}
+elseif($Spielraum>=1.7&&$Spielraum<=2.3) {
+	$Spielraum = "mittelmäßig";
+}
+elseif($Spielraum>2.3) {
+	$Spielraum = "groß";
+}
 
 ?>
 <div class="region region-help alert alert-info">
-    <i class="icon glyphicon glyphicon-question-sign" aria-hidden="true"></i>
 	<h4>Name</h4>
 	<div id="abtName" class="block-region"></div> 
-	<h4>Beschreibung</h4>
 	
-	<div class="block-region"><?php echo $result; ?></div> 	
-	<div class="block-region"><?php echo $Spielraum; ?></div> 	
+	<h4 style="margin-top: 10px">Beschreibung</h4>
+	<p><?php echo $result; ?></p> 	
+	
+	<h4 style="margin-top: 10px">Gestaltungsspielraum</h4>
+	<p><?php echo $Spielraum; ?></p>
 </div>
