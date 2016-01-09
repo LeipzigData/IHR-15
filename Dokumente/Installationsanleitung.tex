@@ -9,7 +9,7 @@
 
 \title{Installationsanleitung „Interaktiver Haushaltsrechner“}
  
-\date{Version vom 7. Oktober 2015}
+\date{Version vom 16. Oktober 2015}
 
 \begin{document}
 \maketitle
@@ -109,11 +109,11 @@ Details erschließen sich aus der Ausgabe von \texttt{loaddata.pl}.
 
 \section{Drupal-Installation -- vereinfacht}
 Um die Installation zu vereinfachen, ist im Release die zip-Datei
-\texttt{IHR.zip} enthalten, in der bereits alle von uns verwendeten Module,
-Themes und Sprachanpassungen zusammengepackt sind. Außerdem ist in dort ein
-Datenbankbackup enthalten, das über das Drupal-Modul \emph{Backup and Migrate}
-eingespielt werden kann.  Dadurch wird die Drupal-Instanz innerhalb weniger
-Schritte mit unseren Anpassungen und Inhalten installiert. Das konkrete
+\texttt{drupalDump.zip} enthalten, in der bereits alle von uns verwendeten
+Module, Themes und Sprachanpassungen zusammengepackt sind. Außerdem ist in dort
+ein Datenbankbackup enthalten, das über das Drupal-Modul \emph{Backup and
+  Migrate} eingespielt werden kann.  Dadurch wird die Drupal-Instanz innerhalb
+weniger Schritte mit unseren Anpassungen und Inhalten installiert. Das konkrete
 Vorgehen wird im Folgenden beschrieben.
 
 \subsection{Step-By-Step-Anleitung}
@@ -327,6 +327,29 @@ In der Datei \texttt{indexpage.html} ist der Inhalt der bei Projektende
 erstellten Startseite enthalten. 
 
 Für alle Seiten ist als Textformat \emph{Full HTML} auszuwählen.
+
+\section{Anhang: Vorgehen für das Erstellen des Installationspakets}
+
+Das Paket \texttt{drupalDump.zip} wurde wie folgt erstellt: 
+
+\begin{enumerate}\itemsep0pt
+\item Standard-Installationspaket von der Drupalwebseite laden. Das ist die
+  Grundlage.
+\item Mit Hilfe von „Backup \& Migrate“ ein Datenbankbackup der aktuellen
+  Installation erstellen. (Nur „Default Database“, nicht „Entire Site“ oder
+  ähnliches.)
+\item Datenbankbackup in einem Ordner hinterlegen, auf den Drupal dann Zugriff
+  hat (hier im Installationspaket: \texttt{sites/default}).
+\item Die Module aus der bestehenden Drupalinstallation in das
+  Installationspaket übertragen (aus den Ordnern \texttt{modules} und
+  \texttt{sites/all/modules}).
+\item Die Themes aus der bestehenden Drupalinstallation in das
+  Installationspaket übertragen (aus dem Ordner \texttt{themes}).
+\item Die Sprachdatei \texttt{drupal-7.39.de.po} im Ordner
+  \texttt{profiles/standard/translations} einfügen.
+\item Ein Kopie \texttt{settings.php} der Datei \texttt{default.settings.php}
+  im Ordner \texttt{sites/default} anlegen.
+\end{enumerate}
 
 
 \end{document}
