@@ -9,7 +9,7 @@
 
 \title{Installationsanleitung „Interaktiver Haushaltsrechner“}
  
-\date{Version vom 16. Oktober 2015}
+\date{Version vom 18. Februar 2016}
 
 \begin{document}
 \maketitle
@@ -174,7 +174,9 @@ Webseite
 \begin{center}
   \url{https://www.drupal.org/}
 \end{center}
-heruntergeladen und eingefügt werden.  Eine Anleitung hierzu findet sich unter
+heruntergeladen und eingefügt werden\footnote{Aktuelle Versionen dieser Module
+  sind auch im Repo-Verzeichnis \texttt{Drupal-Module} zu finden.}.  Eine
+Anleitung hierzu findet sich unter
 \begin{center}
   \url{https://www.drupal.org/documentation/install/modules-themes}.
 \end{center}
@@ -289,9 +291,11 @@ werden.
 Das Design der Website basiert auf dem freien CSS Framework \emph{Bootstrap},
 das Gestaltungsvorlagen für Typografie, Formulare, Buttons, Tabellen etc.\ und
 optionale JavaScript-Erweite"|rungen enthält. Für die Projektseite wurde das
-Basis-Theme \url{https://www.drupal.org/project/bootstrap} verwendet, das die
-grundlegenden Elemente des Frameworks in die Funktionalität von Drupal
-einbindet, und durch das Subtheme \texttt{IHR} erweitert. Dieses enthält
+Basis-Theme \url{https://www.drupal.org/project/bootstrap}
+verwendet\footnote{Eine aktuelle Version ist auch im Repo-Verzeichnis
+  \texttt{Drupal-Themes} zu finden.}, das die grundlegenden Elemente des
+Frameworks in die Funktionalität von Drupal einbindet, und durch das Subtheme
+\texttt{IHR} erweitert. Dieses enthält
 \begin{itemize}\itemsep0pt
 \item die grundlegenden Erweiterungen des Prototypen wie etwa die
   Diagrammdarstellungen und die Anbindung des RDF Data Stores sowie 
@@ -311,13 +315,13 @@ Die Menüs der Website werden über den Punkt \textit{Struktur $>$ Menüs}
 administriert. Dabei stellt das Menü mit dem Namen "`Main menu"' das Hauptmenü
 im Kopfbereich der Seite dar.
 
-Zusätzlich mussdas Menü in der Fußleiste erstellt werden, in dem Links wie das
-Impressum, Datenschutzerklärung und Kontaktformular abgelegt sind bzw.\ werden
-können.  Dazu muss unter oben genanntem Menü auf \emph{Menü hinzufügen}
-geklickt und der Titel so gewählt werden, dass im rechten Bereich der
-maschinenlesbare Name \textit{menu-footer-menu} entsteht. Danach können Links
-hinzugefügt werden, die dann im rechten unteren Fußbereich der Website
-erscheinen.
+Zusätzlich muss das Menü in der Fußleiste erstellt werden, in dem Links wie
+das Impressum, Datenschutzerklärung und Kontaktformular abgelegt sind
+bzw.\ werden können.  Dazu muss unter oben genanntem Menü auf \emph{Menü
+  hinzufügen} geklickt und der Titel so gewählt werden, dass im rechten
+Bereich der maschinenlesbare Name \textit{menu-footer-menu} entsteht. Danach
+können Links hinzugefügt werden, die dann im rechten unteren Fußbereich der
+Website erscheinen.
 
 \subsubsection{Pages erstellen}
 Im Releasepaket sind im Ordner \emph{IHR-Pages} Musterdateien enthalten, die
@@ -353,6 +357,7 @@ Das Paket \texttt{drupalDump.zip} wurde wie folgt erstellt:
 \item Ein Kopie \texttt{settings.php} der Datei \texttt{default.settings.php}
   im Ordner \texttt{sites/default} anlegen.
 \end{enumerate}
+Dies wird dann alles zu einer zip-Datei zusammengepackt.
 
 
 \end{document}
