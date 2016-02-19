@@ -368,6 +368,18 @@ erstellten Startseite enthalten.
 
 Für alle Seiten ist als Textformat \emph{Full HTML} auszuwählen.
 
+\section{Probleme beheben}
+
+Wenn das Layout nicht richtig erscheint, liegt es wahrscheinlich daran, dass
+keine CSS-Datei eingebunden wird.  Dazu muss zunächst die Datei
+\texttt{style.scss} im Verzeichnis \texttt{code/IHR/css} kompiliert werden,
+z.B. mit dem Befehl
+\begin{quote}\tt
+  sass style.scss:style.css --style compressed
+\end{quote}
+nachdem man das sass-rubygem installiert hat. Eine kompilierte Version befindet
+sich aber auch im Repo-Verzeichnis \texttt{code/IHR/css}.
+
 \section{Anhang: Vorgehen für das Erstellen des Installationspakets}
 
 Das Paket \texttt{drupalDump.zip} wurde wie folgt erstellt: 
