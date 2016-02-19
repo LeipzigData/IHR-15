@@ -10,8 +10,7 @@
 */
 include("modelcontroller.php");
 
-$endpoint = 'http://pcai042.informatik.uni-leipzig.de:1524/sparql';
-$EndpointH = new Endpoint($endpoint);
+$EndpointH = new Endpoint();
 
 $query = 'PREFIX qb: <http://purl.org/linked-data/cube#>
                          PREFIX ihr: <http://haushaltsrechner.leipzig.de/Data/Model#> 

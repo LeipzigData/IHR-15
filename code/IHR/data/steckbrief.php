@@ -10,7 +10,6 @@
 */
 include("modelcontroller.php");
 
-$endpoint = 'http://pcai042.informatik.uni-leipzig.de:1524/sparql';
 // QueryWriter erzeugen
 $contr = new QueryWriter();
 
@@ -20,7 +19,7 @@ $Bezug=$qArray[count($qArray)-1];
 
 $year = 2014;
 
-$EndpointH=new Endpoint($endpoint);
+$EndpointH=new Endpoint();
 
 $rows = $EndpointH->query($contr->getInforamtion($q), 'rows');
 $rows2= $EndpointH->query($contr->getSpielraum($Bezug), 'rows');

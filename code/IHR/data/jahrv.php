@@ -29,8 +29,7 @@ $contr = new QueryWriter();
 
 $q = $_GET["q"];
 
-$endpoint = 'http://pcai042.informatik.uni-leipzig.de:1524/sparql';
-$EndpointH = new Endpoint($endpoint);
+$EndpointH = new Endpoint();
 
 $rows = $EndpointH->query(jahresvergleich($q), 'rows');
 $err = $EndpointH->getErrors();

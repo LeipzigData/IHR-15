@@ -210,7 +210,7 @@ class QueryWriter {
 	private $prefix = 'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xsd:<http://www.w3.org/2001/XMLSchema#> PREFIX qb: <http://purl.org/linked-data/cube#>';
 	
 	/**
-	 * Unsere URI
+	 * Unsere URI -- obsolet, wird aber auch nicht verwendet. HGG, 2016-02-19
 	 */
 	private $ihr_uri = ' PREFIX ihr: <http://pcai042.informatik.uni-leipzig.de/~swp15-ihr/leipzighaushalt#> ';
 	/**
@@ -344,8 +344,8 @@ class QueryWriter {
 	/**
 	 * Eingaben oder Ausgaben ausgeben?
 	 * Diese Funktion stellt den Modus fuer die Trennung zwischen Einnahmen und Ausgabe.
-     * Ist er auf er auf Null gestellt, so gibt er die Einnahmen der Kategorie ausgeben (Standartmodus).
-	 * ISt er auf Eins gestellt, gibt er die Ausgabe der Kategorie aus. 
+	 * Ist er auf er auf Null gestellt, so gibt er die Einnahmen der Kategorie ausgeben (Standardmodus).
+	 * Ist er auf Eins gestellt, gibt er die Ausgabe der Kategorie aus. 
 	 */  
 	function setAmount() {
 		if($this->choose_amount != 1) {

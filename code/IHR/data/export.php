@@ -10,8 +10,6 @@
 */
 include("modelcontroller.php");
 
-$endpoint = 'http://pcai042.informatik.uni-leipzig.de:1524/sparql';
-
 // Standardwert fuer Jahr festlegen
 $year = ($_GET["year"] ? (int) $_GET["year"] : 2015);
 

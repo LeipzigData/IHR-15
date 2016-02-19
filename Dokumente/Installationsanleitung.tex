@@ -9,7 +9,7 @@
 
 \title{Installationsanleitung „Interaktiver Haushaltsrechner“}
  
-\date{Version vom 18. Februar 2016}
+\date{Version vom 19. Februar 2016}
 
 \begin{document}
 \maketitle
@@ -41,6 +41,13 @@ Pakete verfügbar.
 Der Prototyp sollte auch mit anderen gängigen Versionen von Drupal~7 und
 Virtuoso~6 oder 7 laufen.  Weiterhin wird ein für diese Anwendungen
 konfigurierter http-Server mit PHP-5.x Unterstützung benötigt.
+
+Der Prototyp verwendet eine Reihe von Drupal-Modulen in unveränderter Form.
+Diese Module können unkompliziert durch aktualisierte Versionen ersetzt
+werden.  Alle Drupal-Anpassungen sind im Subtheme \emph{IHR} enthalten, das
+zusammen mit dem Basistheme \emph{bootstrap} im Theme-Bereich ausgerollt und
+aktiviert werden muss. Danach ist die Plattform entsprechend zu konfigureren
+(Menüs und Seiten). 
 
 \subsection{Drupal}
 
@@ -107,6 +114,16 @@ Uploadansicht.  Für jeden einzelnen RDF Graphen (dieser ist identisch mit einer
 \textit{Graph Name} auf den in der Datei definierten Wert gesetzt werden.
 Details erschließen sich aus der Ausgabe von \texttt{loaddata.pl}.
 
+Der SPARQL Endpunkt des RDF Stores auf dem Praktikumsserver ist als privater
+Parameter \texttt{private \$endpoint} des Konstruktors
+\texttt{EndpointHandler()} in der Datei
+\begin{center}
+  \texttt{code/IHR/data/modelcontroller.php}
+\end{center}
+hart codiert.  Für einen anderen RDF Store muss das entsprechend angepasst
+werden.
+\newpage
+
 \section{Drupal-Installation -- vereinfacht}
 Um die Installation zu vereinfachen, ist im Release die zip-Datei
 \texttt{drupalDump.zip} enthalten, in der bereits alle von uns verwendeten
@@ -118,9 +135,8 @@ Vorgehen wird im Folgenden beschrieben.
 
 \subsection{Step-By-Step-Anleitung}
 \begin{enumerate}
-\item Entpacken Sie die zip-Datei, benennen Sie den entpackten Ordner
-  ggf.\ nach ihren Vorstellungen um und laden Sie ihn an den gewünschten Ort
-  \textit{[Drupalfolder]} auf dem Server hoch.
+\item Entpacken Sie die zip-Datei und verschieben Sie den Ordner an den
+  gewünschten Ort \textit{[Drupalfolder]} auf dem Server.
 \item Setzen Sie die Rechte des Ordners
   \texttt{\textit{[Drupalfolder]}/sites/default} auf 777 und die Rechte der
   Datei \texttt{\textit{[Drupalfolder]}/sites/default/settings.php} auf 666
@@ -137,7 +153,7 @@ Vorgehen wird im Folgenden beschrieben.
   der Datei \texttt{\textit{[Drupalfolder]}/sites/default/settings.php} wieder
   auf 644 (chmod).
 \item Rufen sie nun erneut die Adresse des Drupal-Ordners auf. Hier sollte
-  Ihnen nun ihre neu installierte Drupal-Instanz angezeigt werden.
+  ihre neu installierte Drupal-Instanz angezeigt werden.
 \item Loggen Sie sich als Administrator ein, rufen Sie die Modul-Seite auf und
   aktivieren Sie das Modul \emph{Backup and Migrate}.
 \item Navigieren Sie über das Menü zu \emph{Konfiguration $>$ System $>$
@@ -159,6 +175,7 @@ System-Mailadresse geändert werden, da auch diese Information aus dem Backup
 übernommen wird.
 
 \section{Drupal manuell installieren und konfigurieren}
+
 \subsection{Drupal aufsetzen}
 
 In unserem Projekt wurde Drupal 7.36 als Basis verwendet, aber andere Versionen
@@ -166,6 +183,11 @@ von Drupal~7 können ebenfalls eingesetzt werden.  Zum Herunterladen und
 Installieren von Drupal verweisen wir auf die ausführliche Dokumentation unter
 \url{https://www.drupal.org/} und gehen im Weiteren von einer solchen
 Basisinstallation von Drupal aus.
+
+Eine deutsche Menüführung wird installiert, indem die Sprachdatei
+\texttt{drupal-xx.de.po}\footnote{Eine aktuelle Version ist im
+  Repo-Verzeichnis \texttt{Drupal-Modules} zu finden.} im Ordner
+\texttt{profiles/standard/translations} einfügt wird.
 
 \subsection{Module}
 Um den Funktionsumfang von Drupal auf unsere Bedürfnisse anzupassen, müssen
@@ -175,7 +197,10 @@ Webseite
   \url{https://www.drupal.org/}
 \end{center}
 heruntergeladen und eingefügt werden\footnote{Aktuelle Versionen dieser Module
-  sind auch im Repo-Verzeichnis \texttt{Drupal-Module} zu finden.}.  Eine
+  sind auch im Repo-Verzeichnis \texttt{Drupal-Module} zu finden.}.  Zum
+Installieren eines Moduls muss die jeweilige zip-Datei in das Verzeichnis
+\texttt{sites/all/modules} kopiert und dort entpackt werden.  Verzeichnisse
+von Vorläuferversionen sollten vorher gelöscht werden.  Eine detailliertere
 Anleitung hierzu findet sich unter
 \begin{center}
   \url{https://www.drupal.org/documentation/install/modules-themes}.
@@ -206,6 +231,9 @@ welches wiederum ein eigenes Modul darstellt.
 
 Das für unser Projekt verwendete Design für das Forum setzt \emph{Advanced
   Forum} voraus.
+
+\Anmerkung{Ist im Drupal-Dump nicht mit eingebunden. In welcher Bezishung
+  steht das zum \emph{Forum-Theme} und wo muss das ggf. ausgerollt werden? }
 
 \item \emph{flag / flag abuse}
 
@@ -242,7 +270,11 @@ einführen, die Kennzeichnung Abuse und den Punkt \textit{beliebiger Benutzer}
 anwählen. Anschließend kann unter Filterkriterien ausgewählt werden, dass nur
 solche Kommentare angezeigt werden, die geflagt wurden, indem man den Eintrag
 \textit{Flag Kennzeichnung} hinzufügt.
-\pagebreak[3]
+
+\item \emph{pathauto}
+
+Damit werden automatisch URL/Pfad-Aliase für verschiedene Inhaltsarten
+erstellt.
 
 \item \emph{printfriendly}
 
@@ -287,13 +319,14 @@ werden.
 
 \end{enumerate}
 
+
 \subsection{Themes hinzufügen}
 Das Design der Website basiert auf dem freien CSS Framework \emph{Bootstrap},
 das Gestaltungsvorlagen für Typografie, Formulare, Buttons, Tabellen etc.\ und
 optionale JavaScript-Erweite"|rungen enthält. Für die Projektseite wurde das
 Basis-Theme \url{https://www.drupal.org/project/bootstrap}
-verwendet\footnote{Eine aktuelle Version ist auch im Repo-Verzeichnis
-  \texttt{Drupal-Themes} zu finden.}, das die grundlegenden Elemente des
+verwendet\footnote{Eine aktuelle Version ist im Repo-Verzeichnis
+  \texttt{Drupal-Modules} zu finden.}, das die grundlegenden Elemente des
 Frameworks in die Funktionalität von Drupal einbindet, und durch das Subtheme
 \texttt{IHR} erweitert. Dieses enthält
 \begin{itemize}\itemsep0pt
@@ -305,9 +338,9 @@ Frameworks in die Funktionalität von Drupal einbindet, und durch das Subtheme
 Als weiteres Theme wird \texttt{Forum-Theme} verwendet, das Erweiterungen und
 Modifikationen des Moduls „Advanced Forum“ enthält. 
 
-Zur Aktivierung eines Themes reicht es, das Basis-Theme gemeinsam mit dem
-Subtheme in den \texttt{theme}-Ordner der installierten Drupal-Instanz zu laden
-(Standard: \texttt{/themes/}) und anschließend im Design-Administrationsmenü zu
+Zur Aktivierung eines Themes ist das Basis-Theme gemeinsam mit dem Subtheme in
+den \texttt{theme}-Ordner der installierten Drupal-Instanz zu laden (Standard:
+\texttt{/themes/}) und anschließend im Design-Administrationsmenü zu
 aktivieren.
 
 \subsubsection{Menüs erstellen}
