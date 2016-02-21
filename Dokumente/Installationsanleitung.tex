@@ -9,7 +9,7 @@
 
 \title{Installationsanleitung „Interaktiver Haushaltsrechner“}
  
-\date{Version vom 19. Februar 2016}
+\date{Version vom 21. Februar 2016}
 
 \begin{document}
 \maketitle
@@ -227,14 +227,6 @@ können, erstellt werden. Unter \emph{Konfiguration $>$ Inhaltserstellung $>$
 Design des Forums. Im Projekt wurde das \emph{Bootstrap}-Theme verwendet,
 welches wiederum ein eigenes Modul darstellt.
 
-\item \emph{advanced forum bootstrap}
-
-Das für unser Projekt verwendete Design für das Forum setzt \emph{Advanced
-  Forum} voraus.
-
-\Anmerkung{Ist im Drupal-Dump nicht mit eingebunden. In welcher Bezishung
-  steht das zum \emph{Forum-Theme} und wo muss das ggf. ausgerollt werden? }
-
 \item \emph{flag / flag abuse}
 
 Diese Pakete dienen zum Erstellen von Flags für das Melden von Kommentaren und
@@ -367,6 +359,32 @@ In der Datei \texttt{indexpage.html} ist der Inhalt der bei Projektende
 erstellten Startseite enthalten. 
 
 Für alle Seiten ist als Textformat \emph{Full HTML} auszuwählen.
+
+\section{Drupal update}
+
+Der Drupal Core muss regelmäßig an neue Versionen angepasst werden, um
+Sicherheitslücken zu schließen. Eine solche Anpassung ist in der
+Drupal-Version~7 nur manuell möglich, siehe die Ausführungen in der Datei
+\url{UPGRADE.txt} der Core-Distribution.
+
+Im Wesentlichen ist die neue Core-Distribution in einem Verzeichnis
+\texttt{newDrupal/} auszurollen, die deutssche Sprachdatei zu übernehmen,
+danach die Verzeichnisse \texttt{oldDrupal/sites/},
+\texttt{oldDrupal/themes/bootstrap} und \texttt{oldDrupal/themes/IHR} in das
+neue Verzeichnis zu kopieren
+\begin{quote}\tt
+  cp oldDrupal/profiles/standard/translations/drupal-xx.de.po\\\hspace*{2cm} 
+  newDrupal/profiles/standard/translations/\\
+  cp -R oldDrupal/sites/ newDrupal/\\
+  cp -R oldDrupal/themes/bootstrap newDrupal/themes/\\
+  cp -R oldDrupal/themes/IHR newDrupal/themes/
+\end{quote}
+und dann die Produktiv-Version auf das neue Verzeichnis umzustellen. 
+
+Einzelne Module, das Basis-Theme oder die Sprachdatei können durch eine neue
+Version ersetzt werden, indem die neue Version an der Stelle der alten
+ausgerollt wird. Das Verzeichnis der alten Version sollte vorher gelöscht
+werden. 
 
 \section{Probleme beheben}
 

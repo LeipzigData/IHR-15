@@ -11,6 +11,7 @@
  *  Lib Sparql 1.1 HTTP Client 
  */
   include_once("bordercloud-php/Endpoint.php");
+  include_once("config.php");
 
 /**
  * Klasse zum Parsen des RDF Cubes
@@ -19,7 +20,7 @@ class EndpointHandler {
 	/**
 	 * Adresse des Endpunkts festlegen
 	 */
-	private $endpoint = 'http://pcai042.informatik.uni-leipzig.de:1524/sparql';
+        private $endpoint = getEndpoint();
 	
 	/**
 	 * Variable für den offenen Endpunkt
