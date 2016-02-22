@@ -21,8 +21,6 @@ class EndpointHandler {
 	 */        
      // private $endpoint = 'http://pcai042.informatik.uni-leipzig.de:1524/sparql';
         private $endpoint = 'http://leipzig-data.de:8891/sparql';
-
-        private $endpoint = getEndpoint();
 	
 	/**
 	 * Variable für den offenen Endpunkt
