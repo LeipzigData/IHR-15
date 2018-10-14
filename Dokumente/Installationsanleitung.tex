@@ -396,11 +396,15 @@ Verzeichnis der alten Version sollte vorher gelöscht werden.
 Beim Update des Basis-Themes \emph{bootstrap} muss das Unterverzeichnis
 \texttt{bootstrap/theme} übernommen werden.
 \begin{quote}\tt
-  mv bootstrap ../bootstrap.old\\
+  zip bootstrap\_old.zip -r bootstrap\\ 
+  mv bootstrap bootstrap.old\\
   unzip bootstrap-(new).zip\\
-  cp -R ../bootstrap.old/theme bootstrap
+  cp -R bootstrap.old/theme bootstrap
 \end{quote}
-Danach kann das Verzeichnis \texttt{../bootstrap.old} gelöscht werden.
+Danach das Verzeichnis \texttt{bootstrap.old} löschen, damit es keine
+Interferenzen der Themen gibt.  Falls es mit der neuen Version Probleme gibt
+(so beim Versuch des Updates auf die Version 3.21 -- HGG, 2018-10-14), kann die
+alte Konfiguration aus dem Backup restauriert werden.
 
 \section{Probleme beheben}
 
